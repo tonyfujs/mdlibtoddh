@@ -1,0 +1,41 @@
+#' get_ddh_records_status
+#'
+#' Compare DDH and Microdata library records
+#'
+#' @param mdlib_token character: Microdatalib API authentication token
+#'
+#' @return data frame
+#' @export
+#'
+
+get_ddh_records_status <- function(mdlib_token) {
+
+  # ddh
+  ddh_list <- get_ddh_datasets_list()
+  ddh_list$updated <- as.numeric(lubridate::ymd_hms(ddh_list$updated))
+  names(ddh_list) <- c('ddh_nids', 'md_internal_id', 'md_refids', 'ddh_dataclass', 'ddh_updated')
+  ddh_list$ddh <- 'ddh'
+  # mdlib
+  md_list <- get_md_datasets_list(token = Sys.getenv('mdlib_token'))
+  md_list$md_internal <- 'md_internal'
+  # md external
+  md_list_public <- get_md_public_datasets_list(token = Sys.getenv('mdlib_token'))
+
+  # Identidy Official / Public microdata records
+  md_list$data_classification <- 'official'
+  md_list$data_classification[md_list$md_internal_refid %in% md_list_public$md_external_refid] <- 'public'
+
+  # Combine datasets
+  full_list <- dplyr::full_join(ddh_list, md_list, by = 'md_internal_id')
+  full_list$status <- NA
+  full_list$status[is.na(full_list$ddh_nids) & !is.na(full_list$md_internal_id)] <- 'new'
+  full_list$status[!is.na(full_list$ddh_nids) & !is.na(full_list$md_internal_id)] <- 'current'
+  full_list$status[!is.na(full_list$ddh_nids) & is.na(full_list$md_internal_id)] <- 'old'
+
+  # Compare last updated dates
+  full_list$sync_status <- NA
+  full_list$sync_status[full_list$status == 'current' & full_list$ddh_updated == full_list$md_internal_id] <- 'in sync'
+  full_list$sync_status[full_list$status == 'current' & full_list$ddh_updated != full_list$md_internal_id] <- 'out of sync'
+
+  return(full_list)
+}
