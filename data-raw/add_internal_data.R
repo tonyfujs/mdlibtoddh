@@ -48,10 +48,16 @@ taxonomy <- taxonomy %>%
 lookup <- lookup %>%
   dplyr::left_join(taxonomy, by = c('ddh_machine_name', 'field_lovs'))
 
+# Generate microdata placeholder for DDH
+machine_names <- sort(unique(fields$ddh_machine_name))
+md_placeholder <- vector(mode = 'list', length = length(machine_names))
+names(md_placeholder) <- machine_names
+
 # Save lookup table -------------------------------------------------------
 
 lookup <- as.data.frame(lookup)
 devtools::use_data(lookup,
+                   md_placeholder,
                    overwrite = TRUE)
 
 

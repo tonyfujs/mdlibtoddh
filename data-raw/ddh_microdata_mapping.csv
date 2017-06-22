@@ -1,5 +1,4 @@
 ddh_fields,microdatalib_section,microdatalib_field,json_fields
-abstract,,,
 accessAuthName,data access,access authority,  codeBook/stdyDscr/dataAccs/useStmt/contact
 acronym,identification,abbreviation,  codeBook/stdyDscr/citation/titlStmt/altTitl
 body,overview,abstract,  codeBook/stdyDscr/stdyInfo/abstract
