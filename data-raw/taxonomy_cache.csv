@@ -1,0 +1,853 @@
+vocabulary_name,list_value_name,tid
+Format,,1323
+Format,APF,964
+Format,data,1319
+Format,html,1322
+Format,CSV,14
+Format,CSV ZIP,659
+Format,DBF,1215
+Format,EXCEL,1181
+Format,EXCEL ZIP,871
+Format,GDB,664
+Format,GIF,667
+Format,JPEG,850
+Format,KML,22
+Format,MDB,1216
+Format,MPK,1217
+Format,OTHER,889
+Format,PDF,839
+Format,PNG,663
+Format,POWERPOINT,18
+Format,PYTHON,953
+Format,R,954
+Format,RASTER,890
+Format,SD,1218
+Format,SHP ZIP,957
+Format,SPSS,955
+Format,STATA,956
+Format,TAB,891
+Format,TIFF,952
+Format,VECTOR,17
+Format,WORD,1219
+Format,ZIP,666
+Format,Format Not Specified,1006
+Tags,ASEAN,1312
+Tags,COMESA,1311
+Tags,country,1308
+Tags,country-afghanistan,7
+Tags,d,1304
+Tags,data,1296
+Tags,ddh,1208
+Tags,ddh-test,1209
+Tags,Development,1309
+Tags,election,8
+Tags,India,1211
+Tags,ini,1305
+Tags,Kishore Kasina,1210
+Tags,Light,1263
+Tags,mahesh,1297
+Tags,mahesh2,1300
+Tags,meena,1307
+Tags,municipal,11
+Tags,NAFTA,1313
+Tags,one,1212
+Tags,politics,9
+Tags,price,12
+Tags,SACU,1310
+Tags,SAFTA,1314
+Tags,test tag,1214
+Tags,time-series,13
+Tags,transparency,10
+Tags,work,1207
+Data Type,Time Series,293
+Data Type,Microdata,294
+Data Type,Geospatial,295
+Data Type,Other,853
+Data Classification,Public,358
+Data Classification,Official Use Only,359
+Data Classification,Confidential,360
+Data Classification,Strictly Confidential,361
+Data Classification,Not Specified,879
+Document Type,Raster,658
+Document Type,Vector,657
+Document Type,XLS,581
+Document Type,PDF,616
+Document Type,CSV,561
+Document Type,ZIP,591
+Document Type,DOC,656
+Document Type,PPT,626
+Document Type,Other,646
+Document Type,APF,651
+Document Type,REST,601
+Document Type,Document Type not specified,878
+Economy Coverage,Blend,1010
+Economy Coverage,High Income,288
+Economy Coverage,IBRD,290
+Economy Coverage,IDA,291
+Economy Coverage,Low Income,1008
+Economy Coverage,Lower Middle Income,289
+Economy Coverage,Upper Middle Income,1009
+Economy Coverage,Economy Coverage not Specified,1318
+Global Practices,Agriculture,423
+Global Practices,Climate Change,424
+Global Practices,Education,420
+Global Practices,Energy &amp; Extractives,425
+Global Practices,Environment &amp; Natural Resources,426
+Global Practices,Finance &amp; Markets,415
+Global Practices,"Fragility, Conflict &amp; Violence",431
+Global Practices,Gender,432
+Global Practices,Governance,416
+Global Practices,"Health, Nutrition &amp; Population",421
+Global Practices,Jobs,433
+Global Practices,Macroeconomics &amp; Fiscal Management,417
+Global Practices,Poverty &amp; Equity,418
+Global Practices,Public-Private Partnerships,427
+Global Practices,Social Protection &amp; Labor,422
+Global Practices,"Social, Urban, Rural &amp; Resilience",428
+Global Practices,Trade &amp; Competitiveness,419
+Global Practices,Transport &amp; ICT,429
+Global Practices,Water,430
+Kind of Data,Administrative records data,857
+Kind of Data,Aggregate data,858
+Kind of Data,Census/enumeration data,856
+Kind of Data,Clinical data,867
+Kind of Data,Event/transaction data,859
+Kind of Data,Geospatial data,864
+Kind of Data,Observation data/ratings,860
+Kind of Data,Process-produced data,861
+Kind of Data,Sample survey data,855
+Kind of Data,Time budget diaries,862
+Kind of Data,Time series data,863
+Kind of Data,Kind of Data not specified,884
+Languages Supported,English,337
+Languages Supported,Abkhaz,1011
+Languages Supported,Afar,1012
+Languages Supported,Afrikaans,1013
+Languages Supported,Akan,1014
+Languages Supported,Albanian,1015
+Languages Supported,Amharic,1016
+Languages Supported,Arabic,339
+Languages Supported,Aragonese,1017
+Languages Supported,Armenian,1018
+Languages Supported,Assamese,1019
+Languages Supported,Avaric,1020
+Languages Supported,Avestan,1021
+Languages Supported,Aymara,1022
+Languages Supported,Azerbaijani,1023
+Languages Supported,Bahasa Indonesia (Indonesian),345
+Languages Supported,Bambara,1024
+Languages Supported,Bashkir,1025
+Languages Supported,Basque,1026
+Languages Supported,Belarusian,1027
+Languages Supported,Bengali,1028
+Languages Supported,Bihari,1029
+Languages Supported,Bislama,1030
+Languages Supported,Bosnian,1031
+Languages Supported,Breton,1032
+Languages Supported,Bulgarian,340
+Languages Supported,Burmese,1033
+Languages Supported,Catalan,1034
+Languages Supported,Chamorro,1035
+Languages Supported,Chechen,1036
+Languages Supported,Chichewa,1037
+Languages Supported,Chinese,342
+Languages Supported,Church Slavic,1038
+Languages Supported,Chuvash,1039
+Languages Supported,Cornish,1040
+Languages Supported,Corsican,1041
+Languages Supported,Cree,1042
+Languages Supported,Croatian,1043
+Languages Supported,Czech,1044
+Languages Supported,Danish,1045
+Languages Supported,Divehi,1046
+Languages Supported,Dutch,865
+Languages Supported,Dzongkha,1047
+Languages Supported,Esperanto,1048
+Languages Supported,Estonian,1049
+Languages Supported,Ewe,1050
+Languages Supported,Faroese,1051
+Languages Supported,Fijian,1052
+Languages Supported,Finnish,1053
+Languages Supported,French,343
+Languages Supported,Fulah,1054
+Languages Supported,Galician,1055
+Languages Supported,Ganda,1056
+Languages Supported,Georgian,1057
+Languages Supported,German,866
+Languages Supported,Greek,1058
+Languages Supported,Guarani,1059
+Languages Supported,Gujarati,1060
+Languages Supported,Haitian,1061
+Languages Supported,Hausa,1062
+Languages Supported,Hebrew,1063
+Languages Supported,Herero,1064
+Languages Supported,Hindi,344
+Languages Supported,Hiri Motu,1065
+Languages Supported,Hungarian,1066
+Languages Supported,Icelandic,1067
+Languages Supported,Ido,1068
+Languages Supported,Igbo,1069
+Languages Supported,Indonesian,1070
+Languages Supported,Interlingua,1071
+Languages Supported,Interlingue,1072
+Languages Supported,Inukitut,1073
+Languages Supported,Inupiaq,1074
+Languages Supported,Irish,1075
+Languages Supported,Italian,1076
+Languages Supported,Japanese,346
+Languages Supported,Javanese,1077
+Languages Supported,Kalaallisut,1078
+Languages Supported,Kannada,1079
+Languages Supported,Kanuri,1080
+Languages Supported,Kashmiri,1081
+Languages Supported,Kazakh,1082
+Languages Supported,Khmer,1083
+Languages Supported,Khmer(Cambodian),341
+Languages Supported,Kikuyu,1084
+Languages Supported,Kinyarwanda,1085
+Languages Supported,Kirundi,1086
+Languages Supported,Komi,1087
+Languages Supported,Kongo,1088
+Languages Supported,Korean,1089
+Languages Supported,Kuanyama,1090
+Languages Supported,Kurdish,1091
+Languages Supported,Kyrgyz,1092
+Languages Supported,Ladin,1093
+Languages Supported,Lao,1094
+Languages Supported,Latin,1095
+Languages Supported,Latvian,1096
+Languages Supported,Limburgan,1097
+Languages Supported,Lingala,1098
+Languages Supported,Lithuanian,1099
+Languages Supported,Luba-Katanga,1100
+Languages Supported,Luxembourgish,1101
+Languages Supported,Macedonian,347
+Languages Supported,Malagasy,1102
+Languages Supported,Malay,1103
+Languages Supported,Malayalam,1104
+Languages Supported,Maltese,1105
+Languages Supported,Manx,1106
+Languages Supported,Maori,1107
+Languages Supported,Marathi,1108
+Languages Supported,Marshallese,1109
+Languages Supported,Mongolian,348
+Languages Supported,Nauru,1110
+Languages Supported,Navajo,1111
+Languages Supported,Ndonga,1112
+Languages Supported,Nepali,1113
+Languages Supported,Northern Ndebele,1114
+Languages Supported,Northern Sami,1115
+Languages Supported,Norwegian,1116
+Languages Supported,Norwegian Bokmal,1117
+Languages Supported,Norwegian Nynorsk,1118
+Languages Supported,Nuosu,1119
+Languages Supported,Occitan,1120
+Languages Supported,Ojibwa,1121
+Languages Supported,Oriya,1122
+Languages Supported,Oromo,1123
+Languages Supported,Ossetian,1124
+Languages Supported,Pali,1125
+Languages Supported,Panjabi,1126
+Languages Supported,Persian,1127
+Languages Supported,Polish,349
+Languages Supported,Portuguese,350
+Languages Supported,Pushto,1128
+Languages Supported,Quechua,1129
+Languages Supported,Romanian,351
+Languages Supported,Romansh,1130
+Languages Supported,Russian,352
+Languages Supported,Samoan,1131
+Languages Supported,Sango,1132
+Languages Supported,Sanskrit,1133
+Languages Supported,Sardinian,1134
+Languages Supported,Serbian,1135
+Languages Supported,Shona,1136
+Languages Supported,Shqip(Albanian),338
+Languages Supported,Sichuan Yi,1137
+Languages Supported,Sindhi,1138
+Languages Supported,Sinhala,1139
+Languages Supported,Slovak,1140
+Languages Supported,Slovene,1141
+Languages Supported,Somali,1142
+Languages Supported,Southern Ndebele,1143
+Languages Supported,Southern Sotho,1144
+Languages Supported,Spanish,353
+Languages Supported,Sundanese,1145
+Languages Supported,Swahili,1146
+Languages Supported,Swati,1147
+Languages Supported,Swedish,1148
+Languages Supported,Tagalog,1149
+Languages Supported,Tahitian,1150
+Languages Supported,Tajik,1151
+Languages Supported,Tamil,1152
+Languages Supported,Tatar,1153
+Languages Supported,Telugu,1154
+Languages Supported,Thai,354
+Languages Supported,Tibetan,1155
+Languages Supported,Tigrinya,1156
+Languages Supported,Tonga (Tonga Islands),1157
+Languages Supported,Tsonga,1158
+Languages Supported,Tswana,1159
+Languages Supported,Turkish,355
+Languages Supported,Turkmen,1160
+Languages Supported,Twi,1161
+Languages Supported,Ukrainian,356
+Languages Supported,Urdu,1162
+Languages Supported,Uyghur,1163
+Languages Supported,Uzbek,1164
+Languages Supported,Venda,1165
+Languages Supported,Vietnamese,357
+Languages Supported,Volapuk,1166
+Languages Supported,Walloon,1167
+Languages Supported,Welsh,1168
+Languages Supported,Western Frisian,1169
+Languages Supported,Wolof,1170
+Languages Supported,Xhosa,1171
+Languages Supported,Yiddish,1172
+Languages Supported,Yoruba,1173
+Languages Supported,Zhuang,1174
+Languages Supported,Zulu,1175
+Languages Supported,Language not specified,873
+Mode of Data Collection,Computer Assisted Personal Interview,476
+Mode of Data Collection,Computer Assisted Telephone Interview,477
+Mode of Data Collection,Face-to-face,478
+Mode of Data Collection,Focus Group,480
+Mode of Data Collection,Internet,481
+Mode of Data Collection,Mail Questionnaire,479
+Mode of Data Collection,Other,482
+Mode of Data Collection,Mode of Data Collection not specified,886
+Source,Academia,949
+Source,Civil Society,950
+Source,Government Agency,947
+Source,Other International Organization,406
+Source,Private Firms,948
+Source,Research and Think Tanks,409
+Source,World Bank Group,410
+Source,Source not specified,872
+Spatial Data Type,Geometry,918
+Spatial Data Type,Linestring,919
+Spatial Data Type,Point,920
+Spatial Data Type,Polygon,921
+Region,Africa,27
+Region,East Asia and Pacific,28
+Region,Europe and Central Asia,29
+Region,Latin America &amp; Caribbean,30
+Region,Middle East and North Africa,32
+Region,South Asia,31
+Region,Region not specified,934
+Country,Afghanistan,35
+Country,Albania,36
+Country,Algeria,37
+Country,American Samoa,38
+Country,Angola,40
+Country,Antigua and Barbuda,43
+Country,Bermuda,58
+Country,East Asia &amp; Pacific,847
+Country,Andorra,39
+Country,Aruba,46
+Country,Australia,47
+Country,Bahrain,51
+Country,Bangladesh,52
+Country,Benin,57
+Country,Canada,73
+Country,Europe &amp; Central Asia,841
+Country,Argentina,44
+Country,Armenia,45
+Country,Bhutan,59
+Country,Botswana,62
+Country,Brunei Darussalam,66
+Country,Djibouti,94
+Country,Latin America &amp; Caribbean,842
+Country,United States,267
+Country,Austria,48
+Country,"Bahamas, The",50
+Country,Burkina Faso,68
+Country,Cambodia,71
+Country,"Egypt, Arab Rep.",98
+Country,India,135
+Country,Middle East &amp; North Africa,845
+Country,Azerbaijan,49
+Country,Barbados,53
+Country,Burundi,69
+Country,China,78
+Country,Iraq,138
+Country,Maldives,169
+Country,North America,844
+Country,Belarus,54
+Country,Belize,56
+Country,Cabo Verde,70
+Country,Fiji,106
+Country,"Iran, Islamic Rep.",137
+Country,Nepal,190
+Country,South Asia,843
+Country,Belgium,55
+Country,Bolivia,60
+Country,Cameroon,72
+Country,French Polynesia,110
+Country,Israel,141
+Country,Pakistan,203
+Country,Sub-Saharan Africa,840
+Country,Bosnia and Herzegovina,61
+Country,Brazil,64
+Country,Central African Republic,75
+Country,Guam,122
+Country,Jordan,146
+Country,Region/Country not specified,874
+Country,Sri Lanka,240
+Country,British Virgin Islands,273
+Country,Bulgaria,67
+Country,Chad,76
+Country,"Hong Kong SAR, China",132
+Country,Kuwait,153
+Country,Cayman Islands,74
+Country,Channel Islands,82
+Country,Comoros,83
+Country,Indonesia,136
+Country,Lebanon,157
+Country,Chile,77
+Country,"Congo, Dem. Rep.",84
+Country,Croatia,89
+Country,Japan,144
+Country,Libya,160
+Country,"Congo, Rep.",85
+Country,Costa Rica,87
+Country,Cyprus,91
+Country,Kiribati,149
+Country,Malta,171
+Country,Colombia,81
+Country,Côte d&#039;Ivoire,88
+Country,Czech Republic,92
+Country,"Korea, Dem. People&#039;s Rep.",150
+Country,Morocco,185
+Country,Cuba,90
+Country,Denmark,93
+Country,Ethiopia,103
+Country,"Korea, Rep.",151
+Country,Oman,202
+Country,Curaçao,33
+Country,Eritrea,101
+Country,Estonia,102
+Country,Lao PDR,155
+Country,Qatar,214
+Country,Dominica,95
+Country,Equatorial Guinea,100
+Country,Faroe Islands,105
+Country,"Macao SAR, China",164
+Country,Saudi Arabia,227
+Country,Dominican Republic,96
+Country,Finland,107
+Country,Gabon,112
+Country,Malaysia,168
+Country,Syrian Arab Republic,248
+Country,Ecuador,97
+Country,France,108
+Country,"Gambia, The",113
+Country,Marshall Islands,172
+Country,Tunisia,258
+Country,El Salvador,99
+Country,Georgia,114
+Country,Ghana,116
+Country,"Micronesia, Fed. Sts.",178
+Country,United Arab Emirates,265
+Country,Germany,115
+Country,Grenada,120
+Country,Guinea,125
+Country,Mongolia,182
+Country,West Bank and Gaza,276
+Country,Gibraltar,117
+Country,Guatemala,123
+Country,Guinea-Bissau,126
+Country,Myanmar,187
+Country,"Yemen, Rep.",278
+Country,Greece,118
+Country,Guyana,127
+Country,Kenya,148
+Country,Nauru,189
+Country,Greenland,119
+Country,Haiti,128
+Country,Lesotho,158
+Country,New Caledonia,193
+Country,Honduras,131
+Country,Hungary,133
+Country,Liberia,159
+Country,New Zealand,194
+Country,Iceland,134
+Country,Jamaica,143
+Country,Madagascar,166
+Country,Northern Mariana Islands,200
+Country,Ireland,139
+Country,Malawi,167
+Country,Martinique,173
+Country,Palau,204
+Country,Isle of Man,140
+Country,Mali,170
+Country,Mexico,177
+Country,Papua New Guinea,206
+Country,Italy,142
+Country,Mauritania,174
+Country,Montserrat,184
+Country,Philippines,209
+Country,Kazakhstan,147
+Country,Mauritius,175
+Country,Netherlands Antilles,192
+Country,Samoa,224
+Country,Kosovo,152
+Country,Mozambique,186
+Country,Nicaragua,195
+Country,Singapore,232
+Country,Kyrgyz Republic,154
+Country,Namibia,188
+Country,Panama,205
+Country,Solomon Islands,235
+Country,Latvia,156
+Country,Niger,196
+Country,Paraguay,207
+Country,"Taiwan, China",249
+Country,Liechtenstein,161
+Country,Nigeria,197
+Country,Peru,208
+Country,Thailand,252
+Country,Lithuania,162
+Country,Puerto Rico,213
+Country,Reunion,215
+Country,Timor-Leste,253
+Country,Luxembourg,163
+Country,Rwanda,218
+Country,Sint Maarten (Dutch part),868
+Country,Tonga,256
+Country,"Macedonia, FYR",165
+Country,São Tomé and Principe,226
+Country,St. Kitts and Nevis,220
+Country,Tuvalu,262
+Country,Moldova,180
+Country,Seychelles,230
+Country,St. Lucia,221
+Country,Vanuatu,270
+Country,Monaco,181
+Country,Senegal,228
+Country,St. Martin (French part),869
+Country,Vietnam,272
+Country,Montenegro,183
+Country,Sierra Leone,231
+Country,St. Vincent and the Grenadines,223
+Country,Netherlands,191
+Country,Somalia,236
+Country,Suriname,243
+Country,Norway,201
+Country,South Africa,237
+Country,Trinidad and Tobago,257
+Country,Poland,211
+Country,South Sudan,34
+Country,Turks and Caicos Islands,261
+Country,Portugal,212
+Country,Sudan,242
+Country,Uruguay,268
+Country,Romania,216
+Country,Swaziland,245
+Country,"Venezuela, RB",271
+Country,Russian Federation,217
+Country,Tanzania,251
+Country,Virgin Islands (U.S.),870
+Country,San Marino,225
+Country,Togo,254
+Country,Serbia,229
+Country,Uganda,263
+Country,Slovak Republic,233
+Country,Zambia,279
+Country,Slovenia,234
+Country,Zimbabwe,280
+Country,Spain,239
+Country,Sweden,246
+Country,Switzerland,247
+Country,Tajikistan,250
+Country,Turkey,259
+Country,Turkmenistan,260
+Country,Ukraine,264
+Country,United Kingdom,266
+Country,Uzbekistan,269
+Country,World,848
+Periodicity,Annual,474
+Periodicity,Day,468
+Periodicity,Hour/Minute/Second,475
+Periodicity,Month,470
+Periodicity,Other,882
+Periodicity,Quarter,471
+Periodicity,Week,469
+Periodicity,Frequency not specified,987
+API Format,HTML,457
+API Format,JSON,458
+API Format,KML,465
+API Format,Other,459
+API Format,REST,466
+API Format,WCS,464
+API Format,WFS,460
+API Format,WIS,467
+API Format,WMS,461
+API Format,WMTS,462
+API Format,WPS,463
+API Format,XML,456
+API Format,API Format not specified,887
+Resource type,Data Visualization,984
+Resource type,Landing page,1007
+Resource type,Documentation,985
+Resource type,Download,986
+Resource type,Related Material,983
+Resource type,API,621
+Resource type,Code,446
+Resource type,Dataset,443
+Resource type,License,451
+Resource type,Map View,917
+Resource type,Memorandum of Understanding (MOU),453
+Resource type,Metadata,454
+Resource type,Mobile app,641
+Resource type,Query Tool,631
+Resource type,Terms of Reference,566
+Resource type,Other,636
+Resource type,Resource Type not specified,877
+Terms of use,Data from External Repositories,438
+Terms of use,Direct Access,435
+Terms of use,Enclave,440
+Terms of use,Esri Credits,442
+Terms of use,Licensed Data Files,437
+Terms of use,No Access,439
+Terms of use,Open Data Access,434
+Terms of use,Public Use,436
+Terms of use,Restricted Data,441
+Terms of use,Terms of Use Not Specified,876
+Update Frequency,Annually,541
+Update Frequency,Annually +,551
+Update Frequency,Biannually,546
+Update Frequency,Daily,516
+Update Frequency,Monthly,501
+Update Frequency,No fixed schedule,526
+Update Frequency,No further updates planned,511
+Update Frequency,Quarterly,531
+Update Frequency,Triannually,536
+Update Frequency,Weekly,521
+Update Frequency,Update Frequency not specified,883
+Status,Complete,393
+Status,Obsolete,403
+Status,Ongoing,390
+Status,Planned,397
+Status,Required,398
+Status,Under Development,391
+Status,Status not specified,885
+World,Afghanistan,809
+World,Africa,668
+World,Albania,740
+World,Algeria,815
+World,Angola,675
+World,Antigua and Barbuda,769
+World,Bermuda,836
+World,Cambodia,719
+World,Latin America &amp; Caribbean,672
+World,Argentina,800
+World,Armenia,741
+World,Bahrain,816
+World,Bangladesh,810
+World,Benin,676
+World,Canada,837
+World,China,720
+World,East Asia and Pacific,670
+World,Middle East and North Africa,674
+World,Azerbaijan,742
+World,"Bahamas, The",808
+World,Botswana,677
+World,Djibouti,817
+World,Europe and Central Asia,671
+World,Fiji,721
+World,India,811
+World,North America,835
+World,United States,838
+World,Barbados,802
+World,Belarus,743
+World,Burkina Faso,678
+World,"Egypt, Arab Republic of",818
+World,Indonesia,722
+World,Nepal,812
+World,South Asia,673
+World,Belize,803
+World,Bosnia and Herzegovina,744
+World,Burundi,679
+World,"Iran, Islam Republic of",819
+World,Kiribati,723
+World,Pakistan,813
+World,Bolivia,774
+World,Bulgaria,745
+World,Ethiopia,689
+World,Iraq,820
+World,"Korea, Republic of",724
+World,Sri Lanka,814
+World,Brazil,804
+World,Croatia,746
+World,Equatorial Guinea,688
+World,Jordan,821
+World,Lao People&#039;s Democratic Republic,725
+World,Cabo Verde,680
+World,Chile,805
+World,Cyprus,747
+World,Kuwait,822
+World,Malaysia,726
+World,Cameroon,681
+World,Colombia,806
+World,Czech Republic,748
+World,Lebanon,823
+World,Marshall Islands,727
+World,Central African Republic,682
+World,Costa Rica,807
+World,Estonia,749
+World,Libya,824
+World,"Micronesia, Federated States of",728
+World,Chad,683
+World,Dominica,779
+World,Georgia,750
+World,Malta,825
+World,Mongolia,729
+World,Comoros,684
+World,Dominican Republic,780
+World,Greenland,852
+World,Morocco,826
+World,Myanmar,730
+World,"Congo, Democratic Republic of",685
+World,El Salvador,781
+World,Holy See (Vatican City State),851
+World,Oman,827
+World,Palau,731
+World,"Congo, Republic of",686
+World,Grenada,782
+World,Hungary,751
+World,Papua New Guinea,732
+World,Qatar,828
+World,Cote d&#039;Ivoire,687
+World,Guatemala,783
+World,Kazakhstan,752
+World,Philippines,733
+World,Saudi Arabia,829
+World,Gabon,690
+World,Guyana,784
+World,Kyrgyz Republic,753
+World,Samoa,734
+World,Syrian Arab Republic,830
+World,Guinea,693
+World,Haiti,785
+World,Latvia,754
+World,Solomon Islands,735
+World,Tunisia,831
+World,Guinea - Bissau,694
+World,Honduras,786
+World,Lithuania,755
+World,Thailand,736
+World,United Arab Emirates,832
+World,"Gambia, The",691
+World,Jamaica,787
+World,"Macedonia, former Yugoslav Republic of",756
+World,Tonga,737
+World,West Bank of Gaza,833
+World,Ghana,692
+World,Mexico,788
+World,Moldova,757
+World,Vanuatu,738
+World,"Yemen, Republic of",834
+World,Kenya,695
+World,Nicaragua,789
+World,Poland,758
+World,Vietnam,739
+World,Lesotho,696
+World,Panama,790
+World,Romania,759
+World,Liberia,697
+World,Paraguay,791
+World,Russian Federation,760
+World,Madagascar,698
+World,Peru,792
+World,Serbia,761
+World,Malawi,699
+World,Slovak Republic,762
+World,St. Kitts and Nevis,793
+World,Mali,700
+World,Slovenia,763
+World,St. Lucia,794
+World,Mauritania,701
+World,St. Vincent and the Grenadines,795
+World,Tajikistan,764
+World,Mauritius,702
+World,Suriname,796
+World,Turkey,765
+World,Mozambique,703
+World,Trinidad and Tobago,797
+World,Turkmenistan,766
+World,Namibia,704
+World,Ukraine,767
+World,Uruguay,798
+World,Niger,705
+World,Uzbekistan,768
+World,"Venezuela, Republica Bolivariana de",799
+World,Nigeria,706
+World,Rwanda,707
+World,Sao Tome and Principe,708
+World,Senegal,709
+World,Seychelles,710
+World,Sierra Leone,711
+World,South Africa,712
+World,Swaziland,713
+World,Tanzania,714
+World,Togo,715
+World,Uganda,716
+World,Zambia,717
+World,Zimbabwe,718
+World,World,669
+World,"Guernsey, C.I.",854
+Working Unit VPU,DEC,894
+Working Unit VPU,DFD,1004
+Working Unit VPU,DFG,898
+Working Unit VPU,EAC,893
+Working Unit VPU,ECC,910
+Working Unit VPU,ECR,895
+Working Unit VPU,GCC,914
+Working Unit VPU,GED,913
+Working Unit VPU,GEE,896
+Working Unit VPU,GEN,911
+Working Unit VPU,GGO,906
+Working Unit VPU,GHN,915
+Working Unit VPU,GOK,999
+Working Unit VPU,GPV,912
+Working Unit VPU,GSD,928
+Working Unit VPU,GSP,1005
+Working Unit VPU,GSU,1003
+Working Unit VPU,GTC,897
+Working Unit VPU,GTI,907
+Working Unit VPU,IEG,908
+Working Unit VPU,ITS,892
+Working Unit VPU,SAR,1002
+Working Unit VPU,WFA,909
+Programatical Country,Region/Country not specified,935
+Programatical Region,East Asia &amp; Pacific,930
+Programatical Region,East Asia and Pacific,904
+Programatical Region,Europe &amp; Central Asia,931
+Programatical Region,Europe and Central Asia,899
+Programatical Region,Latin America &amp; Caribbean,905
+Programatical Region,Middle East &amp; North Africa,929
+Programatical Region,Middle East and North Africa,903
+Programatical Region,North America,900
+Programatical Region,Region/Country not specified,932
+Programatical Region,South Asia,901
+Programatical Region,Sub-Saharan Africa,902
+Programatical Region,World,933
+Harvest Source,Energy Info,1188
+Harvest Source,Finances,1189
+Harvest Source,Microdata,1190
+Exception(s),Forecast,1196
+Exception(s),Security &amp; Safety,1192
+Exception(s),Analysis,1197
+Exception(s),Personal,1193
+Exception(s),Transactions,1198
+Exception(s),Banking &amp; Billing,1199
+Exception(s),Other Disclosure Regimes,1194
+Exception(s),Financial,1195
+Exception(s),Executive Director&#039;s Communications,1200
+Exception(s),Deliberative,1201
+Exception(s),Board Ethics Committee,1202
+Exception(s),Bank&#039;s Prerogative to Restrict,1203
+Exception(s),Client/Third Party Confidence,1204
+Exception(s),Attorney-Client Privilege,1205
+Exception(s),Corporate/Administrative,1206

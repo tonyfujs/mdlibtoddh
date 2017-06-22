@@ -1,0 +1,24 @@
+#' lookup data
+#'
+#' This data provides a lookup table to map Microdata vocabulary to DDH vocabulary
+#'
+#' @format A data.frame with 827 observations and 13 variables:
+#' \describe{
+#' \item{field_label}{Field label in the DDH user interface}
+#' \item{field_key}{Unique field key}
+#' \item{field_type}{The type of data supported by each field}
+#' \item{field_selection}{single or multiple selection}
+#' \item{field_limit}{Maximum number of character}
+#' \item{field_lovs}{List of accepted values}
+#' \item{form}{Form (Basic, Microdata)}
+#' \item{ddh_machine_name}{Unique machine name}
+#' \item{microdata_library}{Equivalent field label in the Microdata library}
+#' \item{mdlib_section}{Microdata library section}
+#' \item{mdlib_field}{Equivalent field in the Microdata library}
+#' \item{mdlib_json_field}{Microdata library json key}
+#' \item{tid}{DDH tid (Unique identifier for field_lovs)}
+#'
+#' }
+#' @examples
+#' lookup
+"lookup"

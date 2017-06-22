@@ -1,0 +1,79 @@
+ddh_fields,microdatalib_section,microdatalib_field,json_fields
+abstract,,,
+accessAuthName,data access,access authority,  codeBook/stdyDscr/dataAccs/useStmt/contact
+acronym,identification,abbreviation,  codeBook/stdyDscr/citation/titlStmt/altTitl
+body,overview,abstract,  codeBook/stdyDscr/stdyInfo/abstract
+citationText,data access,citation requirements,  codeBook/stdyDscr/dataAccs/useStmt/citReq
+collabUPI,,,
+contactEmail,contacts,contact,  codeBook/stdyDscr/citation/distStmt/contact
+copyright,disclaimer and copyright,copyright,  codeBook/stdyDscr/citation/prodStmt/copyright
+dataClassification,,,
+dataEdit,data processing,data entry and editing,  codeBook/stdyDscr/method/dataColl/cleanOps
+dataNotes,,,
+dataType,,,
+startDate,data collection,collection_dates,  codeBook/stdyDscr/stdyInfo/sumDscr/collDate
+endDate,data collection,collection_dates,  codeBook/stdyDscr/stdyInfo/sumDscr/collDate
+devSampleDesign,sampling,deviations from sample design,  codeBook/stdyDscr/method/dataColl/deviat
+disclaimer,disclaimer and copyright,disclaimer,  codeBook/stdyDscr/dataAccs/useStmt/disclaimer
+disclosureRisk,,,
+econCoverage,,,
+embargoDate,,,
+embargoNotes,,,
+estSampleError,data appraisal,estimates of sampling error,  codeBook/stdyDscr/method/anlyInfo/EstSmpErr
+fundingName,,funding_agency,codebook_stdydscr_citation_prodstmt_fundag
+geographicalCoverage,coverage,country,  codeBook/stdyDscr/stdyInfo/sumDscr/nation
+globalPractice,,,
+granularity,coverage,geographic coverage,  codeBook/stdyDscr/stdyInfo/sumDscr/geogCover
+kindData,overview,kind of data,  codeBook/stdyDscr/stdyInfo/sumDscr/dataKind
+language,,,
+license,,,
+limitExcept,,,
+lineage,,,
+maintenance,,,
+md_referenceID,identification,id number,  codeBook/stdyDscr/citation/titlStmt/IDNo
+metadataCharSet,,,
+metadataFileID,,,
+metadataProdName,,,
+metadataStandName,,,
+modeDataColl,data collection,mode of data collection,  codeBook/stdyDscr/method/dataColl/collMode
+modified,,,
+nameDataColl,data collection,data collectors,  codeBook/stdyDscr/method/dataColl/dataCollector
+notesDataColl,data collection,notes on data collection,  codeBook/stdyDscr/method/dataColl/collSitu
+otherAckName,producers and sponsors,other acknowledgements,  codeBook/stdyDscr/citation/rspStmt/othId
+otherDataAppraisail,data appraisal,other forms of data appraisal,  codeBook/stdyDscr/method/anlyInfo/dataAppr
+otherProcess,data processing,other processing,  codeBook/stdyDscr/method/notes
+otherProdName,,,
+parentCatalogID,,,
+primaryInvName,producers and sponsors,primary investigator,  codeBook/stdyDscr/citation/rspStmt/AuthEnty
+projectID,,,
+publisher,producers and sponsors,Producers,  codeBook/stdyDscr/citation/prodStmt/producer
+pubPlace,,,
+questionnaire,data collection,questionnaires,  codeBook/stdyDscr/method/dataColl/resInstru
+releaseDate,,,
+responseRate,sampling,response rate,  codeBook/stdyDscr/method/anlyInfo/respRate
+sampProc,sampling,sampling procedure,  codeBook/stdyDscr/method/dataColl/sampProc
+searchTags,,,
+seriesInfo,,series information,  codeBook/stdyDscr/citation/serStmt/serInfo
+source,data collection,data sources,  codeBook/stdyDscr/method/dataColl/sources/dataSrc
+status,,,
+studyType,identification,study type,  codeBook/stdyDscr/citation/serStmt/serName
+subscription,,,
+subtitle,identification,subtitle,  codeBook/stdyDscr/citation/titlStmt/subTitl
+supervision,data collection,supervision,  codeBook/stdyDscr/method/dataColl/actMin
+termsofUse,,,
+timePeriods,data collection,time periods,
+title,identification,title,  codeBook/stdyDscr/citation/titlStmt/titl
+topic,scope,topic,  codeBook/stdyDscr/stdyInfo/subject/topcClas
+transTitle,identification,translated title,  codeBook/stdyDscr/citation/titlStmt/parTitl
+ttlUPI,,,
+UID,,,
+unitAnalysis,overview,unit of analysis,  codeBook/stdyDscr/stdyInfo/sumDscr/anlyUnit
+universe,coverage,universe,  codeBook/stdyDscr/stdyInfo/sumDscr/universe
+verDescript,version,version,  codeBook/stdyDscr/citation/verStmt/version
+verNotes,version,version_notes,  codeBook/stdyDscr/citation/verStmt/notes
+verProdDate,version,version_date,  codeBook/stdyDscr/citation/verStmt/version/@date
+weighting,sampling,weighting,  codeBook/stdyDscr/method/dataColl/weight
+,data access,confidentiality,  codeBook/stdyDscr/dataAccs/useStmt/confDec
+,data collection,frequency,  codeBook/stdyDscr/method/dataColl/frequenc
+,coverage,geographic unit,  codeBook/stdyDscr/stdyInfo/sumDscr/geogUnit
+,scope,scope description,  codeBook/stdyDscr/stdyInfo/notes
