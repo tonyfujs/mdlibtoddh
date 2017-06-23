@@ -53,11 +53,35 @@ machine_names <- sort(unique(fields$ddh_machine_name))
 md_placeholder <- vector(mode = 'list', length = length(machine_names))
 names(md_placeholder) <- machine_names
 
+
+# Generate a lkup table to map Microdata values to DDH LOVs ---------------
+
+field_to_machine <- create_lkup_vector(lookup, vector_keys = 'field_key', vector_values = 'ddh_machine_name')
+my_sheets <- readxl::excel_sheets('./data-raw/control_vocab_mapping.xlsx')
+md_ddh_lovs <- purrr::map_df(my_sheets, function(x) {
+  temp <- readxl::read_excel('./data-raw/control_vocab_mapping.xlsx', sheet = x)
+  temp$ddh_machine_name <- field_to_machine[x]
+  return(temp)
+})
+
+md_ddh_lovs <- bind_rows(md_ddh_lovs)
+md_ddh_lovs <- md_ddh_lovs %>%
+  select(-ddh_category_multiple, field_lovs = ddh_category)
+
+md_ddh_names <- sort(unique(md_ddh_lovs$ddh_machine_name))
+md_ddh_lovs <- purrr::map(md_ddh_names, function(x){
+  temp <- md_ddh_lovs[md_ddh_lovs$ddh_machine_name == x, ]
+  out <- create_lkup_vector(temp, vector_keys = 'microdata_category' , vector_values = 'field_lovs')
+  return(out)
+})
+names(md_ddh_lovs) <- md_ddh_names
+
 # Save lookup table -------------------------------------------------------
 
 lookup <- as.data.frame(lookup)
 devtools::use_data(lookup,
                    md_placeholder,
+                   md_ddh_lovs,
                    overwrite = TRUE)
 
 
