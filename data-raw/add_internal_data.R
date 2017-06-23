@@ -76,12 +76,27 @@ md_ddh_lovs <- purrr::map(md_ddh_names, function(x){
 })
 names(md_ddh_lovs) <- md_ddh_names
 
+
+# Generate a lookup table to map DDH LOVs to tids ---------------------------
+
+ddh_tid_lovs <- lookup %>%
+  select(ddh_machine_name, field_lovs, tid)
+
+ddh_tid_names <- sort(unique(ddh_tid_lovs$ddh_machine_name))
+ddh_tid_lovs <- purrr::map(ddh_tid_names, function(x){
+  temp <- ddh_tid_lovs[ddh_tid_lovs$ddh_machine_name == x, ]
+  out <- create_lkup_vector(temp, vector_keys = 'field_lovs' , vector_values = 'tid')
+  return(out)
+})
+names(ddh_tid_lovs) <- ddh_tid_names
+
 # Save lookup table -------------------------------------------------------
 
 lookup <- as.data.frame(lookup)
 devtools::use_data(lookup,
                    md_placeholder,
                    md_ddh_lovs,
+                   ddh_tid_lovs,
                    overwrite = TRUE)
 
 
