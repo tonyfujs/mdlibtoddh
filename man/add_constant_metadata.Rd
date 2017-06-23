@@ -18,4 +18,5 @@ Currently adds values for the following fields:
 field_wbddh_languages_supported ('English')
 field_wbddh_data_type ('Microdata')
 field_contact_email ('microdata@worldbank.org')
+field_ddh_harvest_src ("Microdata")
 }
