@@ -48,6 +48,10 @@ flatten_md_metadata <- function(metadata_in,
     metadata_in[[field]] <- metadata_in[[field]][[1]]$date
   }
 
+  # CHECK: List has been correctly flattened
+  assertthat::validate_that(all(purrr::map_int(metadata_in, purrr::depth) == 1),
+                            msg = "Some elements of the list have not been flattened correctly")
+
   return(metadata_in)
 
 }
