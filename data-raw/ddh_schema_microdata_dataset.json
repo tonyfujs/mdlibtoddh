@@ -1,0 +1,167 @@
+{
+	"title": "",
+	"body": {
+		"und": [{
+			"value": ""
+		}]
+	},
+	"field_contact_email": {
+		"und": [{
+			"value": ""
+		}]
+	},
+	"field_topic": [],
+	"field_wbddh_data_class": {
+		"und": {
+			"tid": ""
+		}
+	},
+	"field_wbddh_produced_by": [],
+	"field_wbddh_data_collector": [],
+	"field_wbddh_collaborator_upi": [],
+	"field_wbddh_data_type": {
+		"und": {
+			"tid": ""
+		}
+	},
+	"field_wbddh_disclaimer": {
+		"und": {
+			"value": ""
+		}
+	},
+	"field_wbddh_disclosure_risk": [],
+	"field_wbddh_economy_coverage": [],
+	"field_wbddh_estimate_sampling": [],
+	"field_wbddh_kind_of_data": {
+		"und": [{
+			"tid": ""
+		}]
+	},
+	"field_wbddh_languages_supported": {
+		"und": [{
+			"tid": ""
+		}]
+	},
+	"field_wbddh_mode_data_collection": {
+		"und": [{
+			"tid": ""
+		}]
+	},
+	"field_wbddh_no_of_economies": [],
+	"field_wbddh_primary_investigator": {
+		"und": [{
+			"value": ""
+		}]
+	},
+	"field_wbddh_response_rates": [],
+	"field_wbddh_study_type": {
+		"und": [{
+			"value": ""
+		}]
+	},
+	"field_wbddh_terms_of_use": {
+		"und": [{
+			"tid": ""
+		}]
+	},
+	"field_wbddh_unit_of_analysis": {
+		"und": [{
+			"value": ""
+		}]
+	},
+	"field_wbddh_universe": [],
+	"field_wbddh_update_frequency": [],
+	"field_wbddh_weighting": [],
+	"field_wbddh_acronym": {
+		"und": [{
+			"value": ""
+		}]
+	},
+	"field_wbddh_country": {
+		"und": [{
+			"tid": ""
+		}]
+	},
+	"field_wbddh_ds_embargo_date": [],
+	"field_wbddh_ds_source": [],
+	"field_wbddh_dsttl_upi": [],
+	"field_wbddh_search_tags": {
+		"und": [{
+			"value": ""
+		}]
+	},
+	"field_wbddh_release_date": {
+		"und": [{
+			"value": {
+				"day": "",
+				"month": "",
+				"year": "",
+				"hour": "",
+				"minute": "",
+				"ampm": ""
+			}
+		}]
+	},
+	"field_wbddh_modified_date": {
+		"und": [{
+			"value": {
+				"day": "",
+				"month": "",
+				"year": "",
+				"hour": "",
+				"minute": "",
+				"ampm": ""
+			}
+		}]
+	},
+	"field_wbddh_sampling_procedure": {
+		"und": [{
+			"value": ""
+		}]
+	},
+	"field_wbddh_deviations_sample": [],
+	"field_wbddh_questionnaires": {
+		"und": [{
+			"value": ""
+		}]
+	},
+	"field_ddh_external_contact_email": [],
+	"field_wbddh_embargo": [],
+	"field_wbddh_organization": [],
+	"field_wbddh_statistical_concept": [],
+	"field_wbddh_citation_text": {
+		"und": [{
+			"value": ""
+		}]
+	},
+	"field_wbddh_aggregation_method": [],
+	"field_ddh_harvest_src": [],
+	"field_ddh_harvest_sys_id": [],
+	"field_exception_s_": []
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

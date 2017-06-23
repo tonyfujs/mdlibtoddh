@@ -1,4 +1,5 @@
 library(dplyr)
+library(jsonlite)
 
 # STEP 1: Get data --------------------------------------------------------
 
@@ -92,6 +93,12 @@ ddh_tid_lovs <- purrr::map(ddh_tid_names, function(x){
 names(ddh_tid_lovs) <- ddh_tid_names
 ddh_tid_lovs <- ddh_tid_lovs[purrr::map_int(ddh_tid_lovs, length) > 0]
 
+
+# Add JSON templates ------------------------------------------------------
+
+json_template_dataset <- fromJSON('./data-raw/ddh_schema_microdata_dataset.json')
+json_template_resource <- fromJSON('./data-raw/ddh_schema_microdata_resource.json')
+
 # Save lookup table -------------------------------------------------------
 
 lookup <- as.data.frame(lookup)
@@ -99,6 +106,8 @@ devtools::use_data(lookup,
                    md_placeholder,
                    md_ddh_lovs,
                    ddh_tid_lovs,
+                   json_template_dataset,
+                   json_template_resource,
                    overwrite = TRUE)
 
 
