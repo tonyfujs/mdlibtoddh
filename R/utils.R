@@ -26,3 +26,20 @@ create_lkup_vector <- function(lkup_table = mdlibtoddh::lookup,
 
   return(out)
 }
+
+map_valid_lovs <- function(values, lkup_vector) {
+  names(lkup_vector) <- tolower(names(lkup_vector))
+  out <- unname(lkup_vector[tolower(values)])
+  out[is.na(out)] <- values[is.na(out)]
+  out <- unique(stringr::str_trim(out))
+
+  assertthat::assert_that(are_valid_lovs(out, lkup_vector),
+                          msg = "No valid mapping found in lkup_vector")
+
+  return(out)
+}
+
+
+are_valid_lovs <- function(values, accepted_values) {
+  all(values %in% accepted_values)
+}
