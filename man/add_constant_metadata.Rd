@@ -6,6 +6,9 @@
 \usage{
 add_constant_metadata(metadata_list)
 }
+\arguments{
+\item{metadata_list}{list: List returned by flatten_md_metadata()}
+}
 \value{
 list
 }

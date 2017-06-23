@@ -7,7 +7,8 @@
 flatten_md_metadata(metadata_in,
   multiple_fields = c("field_wbddh_primary_investigator",
   "field_wbddh_authority_name", "field_wbddh_publisher_name"),
-  name_fields = c("field_wbddh_country", "field_wbddh_region"))
+  name_fields = c("field_wbddh_country", "field_wbddh_region",
+  "field_wbddh_data_collector"))
 }
 \arguments{
 \item{metadata_in}{list: Output of mdlibtoddh::extract_md_metadata}

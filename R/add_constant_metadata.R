@@ -6,6 +6,7 @@
 #' field_wbddh_data_type ('Microdata')
 #' field_contact_email ('microdata@worldbank.org')
 #'
+#' @param metadata_list list: List returned by flatten_md_metadata()
 #' @return list
 #' @export
 #'

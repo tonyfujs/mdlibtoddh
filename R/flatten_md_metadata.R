@@ -13,7 +13,8 @@ flatten_md_metadata <- function(metadata_in,
                                                     "field_wbddh_authority_name",
                                                     "field_wbddh_publisher_name"),
                                 name_fields = c('field_wbddh_country',
-                                                'field_wbddh_region')) {
+                                                'field_wbddh_region',
+                                                'field_wbddh_data_collector')) {
 
   # Handle shallow indexes
   shallow <- purrr::map_int(metadata_in, purrr::depth) == 2
