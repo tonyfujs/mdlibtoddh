@@ -80,7 +80,8 @@ names(md_ddh_lovs) <- md_ddh_names
 # Generate a lookup table to map DDH LOVs to tids ---------------------------
 
 ddh_tid_lovs <- lookup %>%
-  select(ddh_machine_name, field_lovs, tid)
+  select(ddh_machine_name, field_lovs, tid) %>%
+  filter(!is.na(tid))
 
 ddh_tid_names <- sort(unique(ddh_tid_lovs$ddh_machine_name))
 ddh_tid_lovs <- purrr::map(ddh_tid_names, function(x){
@@ -89,6 +90,7 @@ ddh_tid_lovs <- purrr::map(ddh_tid_names, function(x){
   return(out)
 })
 names(ddh_tid_lovs) <- ddh_tid_names
+ddh_tid_lovs <- ddh_tid_lovs[purrr::map_int(ddh_tid_lovs, length) > 0]
 
 # Save lookup table -------------------------------------------------------
 
