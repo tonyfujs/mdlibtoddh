@@ -1,0 +1,828 @@
+field_label,field_key,field_type,field_selection,field_limit,field_lovs,form,ddh_machine_name,microdata_library,mdlib_section,mdlib_field,mdlib_json_field,tid
+Data Collector(s) Abbreviation,abbrDataColl,,,,,Basic,,,,,,
+Abstract,abstract,text,,,,Microdata,field_wbddh_abstract,Abstract,,,,
+Access Authority Affiliation,accessAuthAff,text,,,,Microdata,field_wbddh_access_authority,Access Authority Affiliation,,,,
+Access Authority Email,accessAuthEmail,text,,,,Microdata,,Access Authority Email,,,,
+Access Authority Name,accessAuthName,text,,,,Microdata,field_wbddh_authority_name,"Access Authority Name, Emai",data access,access authority,codeBook/stdyDscr/dataAccs/useStmt/contact,
+Access Authority URL,accessAuthURL,text,,,,Microdata,,,,,,
+Access Conditions,accessConditions,,,,,Microdata,,,,,,
+Access Options,accessOptions,display,,,,Basic,,,,,,
+Acronym,acronym,text,,25,,Basic,field_wbddh_acronym,,identification,abbreviation,codeBook/stdyDscr/citation/titlStmt/altTitl,
+Data Collector(s) Affiliation,affDataColl,,,,,Basic,,,,,,
+API Format,apiFormat,list,,,HTML,Basic,,,,,,
+API Format,apiFormat,list,,,JSON,Basic,,,,,,
+API Format,apiFormat,list,,,KML,Basic,,,,,,
+API Format,apiFormat,list,,,Other,Basic,,,,,,
+API Format,apiFormat,list,,,REST,Basic,,,,,,
+API Format,apiFormat,list,,,WCS,Basic,,,,,,
+API Format,apiFormat,list,,,WFS,Basic,,,,,,
+API Format,apiFormat,list,,,WIS,Basic,,,,,,
+API Format,apiFormat,list,,,WMS,Basic,,,,,,
+API Format,apiFormat,list,,,WMTS,Basic,,,,,,
+API Format,apiFormat,list,,,WPS,Basic,,,,,,
+API Format,apiFormat,list,,,XML,Basic,,,,,,
+Description,body,text,,,,Basic,body,,overview,abstract,codeBook/stdyDscr/stdyInfo/abstract,
+Citation Text,citationText,text,,,,Microdata,field_wbddh_citation_text,Citation Requirements (?),data access,citation requirements,codeBook/stdyDscr/dataAccs/useStmt/citReq,
+Collaborator Email,collabEmail,lookup,,,,Basic,,,,,,
+Collaborator Name,collabName,lookup,,80,,Basic,,,,,,
+Collaborator Title,collabTitle,lookup,,40,,Basic,,,,,,
+Collaborator Unit,collabUnit,lookup,,,,Basic,,,,,,
+Collaborator Name (s) UPI,collabUPI,lookup,,255,,Basic,field_wbddh_collaborator_upi,,,,,
+Collections,collectionsWB,,,,"DataFirst, University of Cape Town, South Africa",Basic,field_wbddh_collections,Collections,,,,
+Collections,collectionsWB,,,,Devleopment Research Microdata,Basic,field_wbddh_collections,Collections,,,,
+Collections,collectionsWB,,,,Enterprise Surveys,Basic,field_wbddh_collections,Collections,,,,
+Collections,collectionsWB,,,,Global Financial Inclusion (Global Findex) Database,Basic,field_wbddh_collections,Collections,,,,
+Collections,collectionsWB,,,,"Global Health Data Exchange (GHDx), Institute for Health Metrics and Evaluation (IHME)",Basic,field_wbddh_collections,Collections,,,,
+Collections,collectionsWB,,,,Impact Evaluation Surveys,Basic,field_wbddh_collections,Collections,,,,
+Collections,collectionsWB,,,,Integrated Public Use Microdata Series (IPUMS) International,Basic,field_wbddh_collections,Collections,,,,
+Collections,collectionsWB,,,,Living Standards Measurement Sutdy (LSMS),Basic,field_wbddh_collections,Collections,,,,
+Collections,collectionsWB,,,,Measure DHS: Demographic and Health Surveys,Basic,field_wbddh_collections,Collections,,,,
+Collections,collectionsWB,,,,Migration and Remittances Surveys,Basic,field_wbddh_collections,Collections,,,,
+Collections,collectionsWB,,,,Milennium Challenge Corporation (MCC),Basic,field_wbddh_collections,Collections,,,,
+Collections,collectionsWB,,,,Service Delivery Facility Surveys,Basic,field_wbddh_collections,Collections,,,,
+Collections,collectionsWB,,,,The STEP Skills Measurement Program,Basic,field_wbddh_collections,Collections,,,,
+Collections,collectionsWB,,,,The World Bank Group Country Opinon Survey Program (COS),Basic,field_wbddh_collections,Collections,,,,
+Collections,collectionsWB,,,,UNICEF Mulitple Indicator Cluster Surveys (MICS),Basic,field_wbddh_collections,Collections,,,,
+Collections,collectionsWB,,,,WHO's Multi-Country Studies Programmes,Basic,field_wbddh_collections,Collections,,,,
+Confidentiality,confidentiality,,,,,Microdata,,,,,,
+Contact Email,contactEmail,lookup,,255,,Basic,field_contact_email,,contacts,contact,codeBook/stdyDscr/citation/distStmt/contact,
+Copyright,copyright,text,,255,,Basic,field_wbddh_copyright,,disclaimer and copyright,copyright,codeBook/stdyDscr/citation/prodStmt/copyright,
+Data Classification,dataClassification,list,,40,Confidential,Basic,field_wbddh_data_class,,,,,360
+Data Classification,dataClassification,list,,40,Not Specified,Basic,field_wbddh_data_class,,,,,879
+Data Classification,dataClassification,list,,40,Official Use Only,Basic,field_wbddh_data_class,,,,,359
+Data Classification,dataClassification,list,,40,Public,Basic,field_wbddh_data_class,,,,,358
+Data Classification,dataClassification,list,,40,Strictly Confidential,Basic,field_wbddh_data_class,,,,,361
+Data Collection Cycle,datacollCycle,text,,,,Microdata,,,,,,
+Data Editing,dataEdit,text,,,,Microdata,field_wbddh_data_editing,Data Editing,data processing,data entry and editing,codeBook/stdyDscr/method/dataColl/cleanOps,
+Data Notes,dataNotes,text,,200,,Basic,field_wbddh_data_notes,,,,,
+Data Type,dataType,list,,50,Geospatial,Basic,field_wbddh_data_type,,,,,295
+Data Type,dataType,list,,50,Microdata,Basic,field_wbddh_data_type,,,,,294
+Data Type,dataType,list,,50,Other,Basic,field_wbddh_data_type,,,,,853
+Data Type,dataType,list,,50,Time Series,Basic,field_wbddh_data_type,,,,,293
+Dates of Data Collection,datesDataColl,date,,,,Microdata,field_wbddh_data_dates,"Start, End",,,,
+Description of Scope,descScope,,,,,Microdata,,,,,,
+Deviations from Sample Design,devSampleDesign,text,,,,Microdata,field_wbddh_deviations_sample,,sampling,deviations from sample design,codeBook/stdyDscr/method/dataColl/deviat,
+Disclaimer,disclaimer,text,,,,Basic,field_wbddh_disclaimer,Disclaimer,disclaimer and copyright,disclaimer,codeBook/stdyDscr/dataAccs/useStmt/disclaimer,
+Disclosure Risk,disclosureRisk,text,,,,Basic,field_wbddh_disclosure_risk,Dislosure Risk,,,,
+Is there an embargo date for this dataset?,embargo,y/n,,,,Basic,field_wbddh_embargo,,,,,
+Embargo Date,embargoDate,text,,11,,Basic,field_wbddh_embargo_date,,,,,
+Embargo Comments,embargoNotes,text,,255,,Basic,field_wbddh_embargo_comments,,,,,
+Date Range - To Date,endDate,date,multiselect,11,,Microdata,field_wbddh_end_date,,data collection,collection_dates,codeBook/stdyDscr/stdyInfo/sumDscr/collDate,
+Estimates of Sampling Error,estSampleError,text,,,,Microdata,field_wbddh_estimate_sampling,,data appraisal,estimates of sampling error,codeBook/stdyDscr/method/anlyInfo/EstSmpErr,
+External Contact Email,extcontactEmail,,,,,Basic,,,,,,
+Data Classification of Resource of Dataset,fileuplaoddataClassification,list,,,Confidential,Basic,field_wbddh_data_class,,,,,360
+Data Classification of Resource of Dataset,fileuplaoddataClassification,list,,,Official Use Only,Basic,field_wbddh_data_class,,,,,359
+Data Classification of Resource of Dataset,fileuplaoddataClassification,list,,,Public,Basic,field_wbddh_data_class,,,,,358
+Data Classification of Resource of Dataset,fileuplaoddataClassification,list,,,Strictly Confidential,Basic,field_wbddh_data_class,,,,,361
+Description of file,fileuploadBody,text,,,,Basic,,,,,,
+Document Type,fileuploadDocumentType,list,,,CSV,Basic,field_wbddh_document_type,,,,,561
+Document Type,fileuploadDocumentType,list,,,DOC,Basic,field_wbddh_document_type,,,,,656
+Document Type,fileuploadDocumentType,list,,,Other,Basic,field_wbddh_document_type,,,,,646
+Document Type,fileuploadDocumentType,list,,,PDF,Basic,field_wbddh_document_type,,,,,616
+Document Type,fileuploadDocumentType,list,,,PPT,Basic,field_wbddh_document_type,,,,,626
+Document Type,fileuploadDocumentType,list,,,XLS,Basic,field_wbddh_document_type,,,,,581
+Document Type,fileuploadDocumentType,list,,,ZIP,Basic,field_wbddh_document_type,,,,,591
+Resource Type - upload,fileuploadResourceType,list,,,.Code,Basic,,,,,,
+Resource Type - upload,fileuploadResourceType,list,,,Best Practice Document,Basic,,,,,,
+Resource Type - upload,fileuploadResourceType,list,,,Bulkdownload Dataset file,Basic,,,,,,
+Resource Type - upload,fileuploadResourceType,list,,,Dataset,Basic,,,,,,
+Resource Type - upload,fileuploadResourceType,list,,,Guideline Document,Basic,,,,,,
+Resource Type - upload,fileuploadResourceType,list,,,Help Document,Basic,,,,,,
+Resource Type - upload,fileuploadResourceType,list,,,Infographic,Basic,,,,,,
+Resource Type - upload,fileuploadResourceType,list,,,Learning Material,Basic,,,,,,
+Resource Type - upload,fileuploadResourceType,list,,,License,Basic,,,,,,
+Resource Type - upload,fileuploadResourceType,list,,,Manual and Guideline Document,Basic,,,,,,
+Resource Type - upload,fileuploadResourceType,list,,,Memorandum of Understanding (MOU),Basic,,,,,,
+Resource Type - upload,fileuploadResourceType,list,,,Metadata,Basic,,,,,,
+Resource Type - upload,fileuploadResourceType,list,,,Methodology Documents,Basic,,,,,,
+Resource Type - upload,fileuploadResourceType,list,,,Mobile app,Basic,,,,,,
+Resource Type - upload,fileuploadResourceType,list,,,News Release or Announcement,Basic,,,,,,
+Resource Type - upload,fileuploadResourceType,list,,,Other,Basic,,,,,,
+Resource Type - upload,fileuploadResourceType,list,,,Presentation,Basic,,,,,,
+Resource Type - upload,fileuploadResourceType,list,,,Preview file,Basic,,,,,,
+Resource Type - upload,fileuploadResourceType,list,,,Query Tool,Basic,,,,,,
+Resource Type - upload,fileuploadResourceType,list,,,Survey,Basic,,,,,,
+Resource Type - upload,fileuploadResourceType,list,,,Terms of Reference,Basic,,,,,,
+File Title,fileuploadTitle,text,,,,Basic,,,,,,
+Description of file,fileurlBody,text,,,,Basic,,,,,,
+Format,fileurlDocumentType,list,,,APF,Basic,,,,,,
+Format,fileurlDocumentType,list,,,CSV,Basic,,,,,,
+Format,fileurlDocumentType,list,,,CSV ZIP,Basic,,,,,,
+Format,fileurlDocumentType,list,,,DOC,Basic,,,,,,
+Format,fileurlDocumentType,list,,,Excel,Basic,,,,,,
+Format,fileurlDocumentType,list,,,Excel Zip,Basic,,,,,,
+Format,fileurlDocumentType,list,,,GDB,Basic,,,,,,
+Format,fileurlDocumentType,list,,,GeoJSON,Basic,,,,,,
+Format,fileurlDocumentType,list,,,GeoTiff,Basic,,,,,,
+Format,fileurlDocumentType,list,,,GIF,Basic,,,,,,
+Format,fileurlDocumentType,list,,,HTML,Basic,,,,,,
+Format,fileurlDocumentType,list,,,JPEG,Basic,,,,,,
+Format,fileurlDocumentType,list,,,JSON,Basic,,,,,,
+Format,fileurlDocumentType,list,,,KML,Basic,,,,,,
+Format,fileurlDocumentType,list,,,Other,Basic,,,,,,
+Format,fileurlDocumentType,list,,,PDF,Basic,,,,,,
+Format,fileurlDocumentType,list,,,PNG,Basic,,,,,,
+Format,fileurlDocumentType,list,,,PPT,Basic,,,,,,
+Format,fileurlDocumentType,list,,,Python,Basic,,,,,,
+Format,fileurlDocumentType,list,,,R,Basic,,,,,,
+Format,fileurlDocumentType,list,,,RASTER,Basic,,,,,,
+Format,fileurlDocumentType,list,,,SHP,Basic,,,,,,
+Format,fileurlDocumentType,list,,,SPSS,Basic,,,,,,
+Format,fileurlDocumentType,list,,,Stata,Basic,,,,,,
+Format,fileurlDocumentType,list,,,TAB,Basic,,,,,,
+Format,fileurlDocumentType,list,,,Tiff,Basic,,,,,,
+Format,fileurlDocumentType,list,,,VECTOR,Basic,,,,,,
+Format,fileurlDocumentType,list,,,WCS,Basic,,,,,,
+Format,fileurlDocumentType,list,,,WFS,Basic,,,,,,
+Format,fileurlDocumentType,list,,,WIS,Basic,,,,,,
+Format,fileurlDocumentType,list,,,WMS,Basic,,,,,,
+Format,fileurlDocumentType,list,,,WMTS,Basic,,,,,,
+Format,fileurlDocumentType,list,,,WPS,Basic,,,,,,
+Format,fileurlDocumentType,list,,,XML,Basic,,,,,,
+Resource type,fileurlResourceType,list,,,API,Basic,field_resources,,,,,621
+Resource type,fileurlResourceType,list,,,Landing page,Basic,field_resources,,,,,1007
+Resource type,fileurlResourceType,list,,,Dataset,Basic,field_resources,,,,,443
+Resource type,fileurlResourceType,list,,,Code,Basic,field_resources,,,,,446
+Resource type,fileurlResourceType,list,,,Data Visualization,Basic,field_resources,,,,,984
+Resource type,fileurlResourceType,list,,,Documentation,Basic,field_resources,,,,,985
+Resource type,fileurlResourceType,list,,,Download,Basic,field_resources,,,,,986
+Resource type,fileurlResourceType,list,,,License,Basic,field_resources,,,,,451
+Resource type,fileurlResourceType,list,,,Map View,Basic,field_resources,,,,,917
+Resource type,fileurlResourceType,list,,,Memorandum of Understanding (MOU),Basic,field_resources,,,,,453
+Resource type,fileurlResourceType,list,,,Metadata,Basic,field_resources,,,,,454
+Resource type,fileurlResourceType,list,,,Mobile app,Basic,field_resources,,,,,641
+Resource type,fileurlResourceType,list,,,Other,Basic,field_resources,,,,,636
+Resource type,fileurlResourceType,list,,,Query Tool,Basic,field_resources,,,,,631
+Resource type,fileurlResourceType,list,,,Related Material,Basic,field_resources,,,,,983
+Resource type,fileurlResourceType,list,,,Terms of Reference,Basic,field_resources,,,,,566
+Resource type,fileurlResourceType,list,,,Resource Type not specified,Basic,field_resources,,,,,877
+Last Revision of File URL,fileurlRevision,date,,,,Basic,,,,,,
+File Title,fileurlTitle,text,,,,Basic,,,,,,
+Funding Abbreviation,fundingAbbr,,,,,Microdata,,Funding Abbreviation,,,,
+Funding Name,fundingName,text,,1000,,Microdata,field_wbddh_funding_name,Funding Name,,funding_agency,codebook_stdydscr_citation_prodstmt_fundag,
+Funding Role,fundingRole,,,,,Microdata,,Funding Role,,,,
+Region,geographicalCoverage,display,multiselect,,Africa,Basic,,Geographic Coverage,coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,
+Region,geographicalCoverage,display,multiselect,,East Asia and Pacific,Basic,,Geographic Coverage,coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,
+Region,geographicalCoverage,display,multiselect,,Europe and Central Asia,Basic,,Geographic Coverage,coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,
+Region,geographicalCoverage,display,multiselect,,Latin America and Caribbean,Basic,,Geographic Coverage,coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,
+Region,geographicalCoverage,display,multiselect,,Middle East and North Africa,Basic,,Geographic Coverage,coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,
+Region,geographicalCoverage,display,multiselect,,South Asia,Basic,,Geographic Coverage,coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,
+Region,geographicalCoverage,display,multiselect,,Region not specified,Basic,,Geographic Coverage,coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,
+Country,geographicalCoverage,lookup,multiselect,,Albania,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,36
+Country,geographicalCoverage,lookup,multiselect,,American Samoa,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,38
+Country,geographicalCoverage,lookup,multiselect,,Bangladesh,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,52
+Country,geographicalCoverage,lookup,multiselect,,British Virgin Islands,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,273
+Country,geographicalCoverage,lookup,multiselect,,Lebanon,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,157
+Country,geographicalCoverage,lookup,multiselect,,Middle East and North Africa,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,
+Country,geographicalCoverage,lookup,multiselect,,Namibia,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,188
+Country,geographicalCoverage,lookup,multiselect,,United States,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,267
+Country,geographicalCoverage,lookup,multiselect,,Afghanistan,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,35
+Country,geographicalCoverage,lookup,multiselect,,Andorra,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,39
+Country,geographicalCoverage,lookup,multiselect,,Australia,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,47
+Country,geographicalCoverage,lookup,multiselect,,Canada,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,73
+Country,geographicalCoverage,lookup,multiselect,,Kuwait,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,153
+Country,geographicalCoverage,lookup,multiselect,,Mozambique,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,186
+Country,geographicalCoverage,lookup,multiselect,,South Asia,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,843
+Country,geographicalCoverage,lookup,multiselect,,"Venezuela, RB",Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,271
+Country,geographicalCoverage,lookup,multiselect,,Armenia,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,45
+Country,geographicalCoverage,lookup,multiselect,,Bermuda,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,58
+Country,geographicalCoverage,lookup,multiselect,,Bhutan,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,59
+Country,geographicalCoverage,lookup,multiselect,,Brunei Darussalam,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,66
+Country,geographicalCoverage,lookup,multiselect,,Europe and Central Asia,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,
+Country,geographicalCoverage,lookup,multiselect,,Jordan,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,146
+Country,geographicalCoverage,lookup,multiselect,,Niger,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,196
+Country,geographicalCoverage,lookup,multiselect,,Uruguay,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,268
+Country,geographicalCoverage,lookup,multiselect,,Austria,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,48
+Country,geographicalCoverage,lookup,multiselect,,Cambodia,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,71
+Country,geographicalCoverage,lookup,multiselect,,India,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,135
+Country,geographicalCoverage,lookup,multiselect,,Israel,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,141
+Country,geographicalCoverage,lookup,multiselect,,Nigeria,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,197
+Country,geographicalCoverage,lookup,multiselect,,North America,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,844
+Country,geographicalCoverage,lookup,multiselect,,Trinidad and Tobago,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,257
+Country,geographicalCoverage,lookup,multiselect,,Azerbaijan,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,49
+Country,geographicalCoverage,lookup,multiselect,,China,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,78
+Country,geographicalCoverage,lookup,multiselect,,Latin America and Caribbean,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,
+Country,geographicalCoverage,lookup,multiselect,,Libya,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,160
+Country,geographicalCoverage,lookup,multiselect,,Pakistan,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,203
+Country,geographicalCoverage,lookup,multiselect,,Reunion,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,215
+Country,geographicalCoverage,lookup,multiselect,,Turks and Caicos Islands,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,261
+Country,geographicalCoverage,lookup,multiselect,,Belarus,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,54
+Country,geographicalCoverage,lookup,multiselect,,Fiji,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,106
+Country,geographicalCoverage,lookup,multiselect,,Honduras,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,131
+Country,geographicalCoverage,lookup,multiselect,,Malta,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,171
+Country,geographicalCoverage,lookup,multiselect,,Mauritius,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,175
+Country,geographicalCoverage,lookup,multiselect,,Nepal,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,190
+Country,geographicalCoverage,lookup,multiselect,,Sub-Saharan Africa,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,840
+Country,geographicalCoverage,lookup,multiselect,,Belgium,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,55
+Country,geographicalCoverage,lookup,multiselect,,East Asia and Pacific,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,
+Country,geographicalCoverage,lookup,multiselect,,French Polynesia,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,110
+Country,geographicalCoverage,lookup,multiselect,,Jamaica,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,143
+Country,geographicalCoverage,lookup,multiselect,,Maldives,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,169
+Country,geographicalCoverage,lookup,multiselect,,Mauritania,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,174
+Country,geographicalCoverage,lookup,multiselect,,Qatar,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,214
+Country,geographicalCoverage,lookup,multiselect,,Bosnia and Herzegovina,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,61
+Country,geographicalCoverage,lookup,multiselect,,Guam,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,122
+Country,geographicalCoverage,lookup,multiselect,,Liberia,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,159
+Country,geographicalCoverage,lookup,multiselect,,Martinique,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,173
+Country,geographicalCoverage,lookup,multiselect,,Oman,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,202
+Country,geographicalCoverage,lookup,multiselect,,Region/Country not specified,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,874
+Country,geographicalCoverage,lookup,multiselect,,Sri Lanka,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,240
+Country,geographicalCoverage,lookup,multiselect,,Bulgaria,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,67
+Country,geographicalCoverage,lookup,multiselect,,"Hong Kong SAR, China",Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,132
+Country,geographicalCoverage,lookup,multiselect,,Lesotho,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,158
+Country,geographicalCoverage,lookup,multiselect,,Mexico,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,177
+Country,geographicalCoverage,lookup,multiselect,,Morocco,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,185
+Country,geographicalCoverage,lookup,multiselect,,Channel Islands,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,82
+Country,geographicalCoverage,lookup,multiselect,,Haiti,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,128
+Country,geographicalCoverage,lookup,multiselect,,Indonesia,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,136
+Country,geographicalCoverage,lookup,multiselect,,Iraq,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,138
+Country,geographicalCoverage,lookup,multiselect,,Madagascar,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,166
+Country,geographicalCoverage,lookup,multiselect,,Croatia,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,89
+Country,geographicalCoverage,lookup,multiselect,,Guyana,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,127
+Country,geographicalCoverage,lookup,multiselect,,"Iran, Islamic Rep.",Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,137
+Country,geographicalCoverage,lookup,multiselect,,Japan,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,144
+Country,geographicalCoverage,lookup,multiselect,,Malawi,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,167
+Country,geographicalCoverage,lookup,multiselect,,Algeria,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,37
+Country,geographicalCoverage,lookup,multiselect,,Cyprus,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,91
+Country,geographicalCoverage,lookup,multiselect,,Grenada,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,120
+Country,geographicalCoverage,lookup,multiselect,,Kiribati,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,149
+Country,geographicalCoverage,lookup,multiselect,,Mali,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,170
+Country,geographicalCoverage,lookup,multiselect,,Bahrain,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,51
+Country,geographicalCoverage,lookup,multiselect,,Czech Republic,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,92
+Country,geographicalCoverage,lookup,multiselect,,Guatemala,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,123
+Country,geographicalCoverage,lookup,multiselect,,"Korea, Dem. People's Rep.",Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,
+Country,geographicalCoverage,lookup,multiselect,,Rwanda,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,218
+Country,geographicalCoverage,lookup,multiselect,,Denmark,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,93
+Country,geographicalCoverage,lookup,multiselect,,"Egypt, Arab Rep.",Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,98
+Country,geographicalCoverage,lookup,multiselect,,"Korea, Rep.",Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,151
+Country,geographicalCoverage,lookup,multiselect,,Montserrat,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,184
+Country,geographicalCoverage,lookup,multiselect,,São Tomé and Principe,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,226
+Country,geographicalCoverage,lookup,multiselect,,Djibouti,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,94
+Country,geographicalCoverage,lookup,multiselect,,Estonia,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,102
+Country,geographicalCoverage,lookup,multiselect,,Lao PDR,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,155
+Country,geographicalCoverage,lookup,multiselect,,Tanzania,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,251
+Country,geographicalCoverage,lookup,multiselect,,Virgin Islands (U.S.),Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,870
+Country,geographicalCoverage,lookup,multiselect,,Faroe Islands,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,105
+Country,geographicalCoverage,lookup,multiselect,,"Macao SAR, China",Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,164
+Country,geographicalCoverage,lookup,multiselect,,Netherlands Antilles,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,192
+Country,geographicalCoverage,lookup,multiselect,,Saudi Arabia,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,227
+Country,geographicalCoverage,lookup,multiselect,,Swaziland,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,245
+Country,geographicalCoverage,lookup,multiselect,,Finland,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,107
+Country,geographicalCoverage,lookup,multiselect,,Malaysia,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,168
+Country,geographicalCoverage,lookup,multiselect,,Sint Maarten (Dutch part),Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,868
+Country,geographicalCoverage,lookup,multiselect,,Syrian Arab Republic,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,248
+Country,geographicalCoverage,lookup,multiselect,,Togo,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,254
+Country,geographicalCoverage,lookup,multiselect,,France,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,108
+Country,geographicalCoverage,lookup,multiselect,,Marshall Islands,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,172
+Country,geographicalCoverage,lookup,multiselect,,St. Kitts and Nevis,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,220
+Country,geographicalCoverage,lookup,multiselect,,Uganda,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,263
+Country,geographicalCoverage,lookup,multiselect,,West Bank and Gaza,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,276
+Country,geographicalCoverage,lookup,multiselect,,Georgia,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,114
+Country,geographicalCoverage,lookup,multiselect,,"Micronesia, Fed. Sts.",Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,178
+Country,geographicalCoverage,lookup,multiselect,,St. Lucia,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,221
+Country,geographicalCoverage,lookup,multiselect,,United Arab Emirates,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,265
+Country,geographicalCoverage,lookup,multiselect,,Zambia,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,279
+Country,geographicalCoverage,lookup,multiselect,,Germany,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,115
+Country,geographicalCoverage,lookup,multiselect,,Mongolia,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,182
+Country,geographicalCoverage,lookup,multiselect,,St. Vincent and the Grenadines,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,223
+Country,geographicalCoverage,lookup,multiselect,,Sudan,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,242
+Country,geographicalCoverage,lookup,multiselect,,Tunisia,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,258
+Country,geographicalCoverage,lookup,multiselect,,Gibraltar,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,117
+Country,geographicalCoverage,lookup,multiselect,,Myanmar,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,187
+Country,geographicalCoverage,lookup,multiselect,,South Sudan,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,34
+Country,geographicalCoverage,lookup,multiselect,,Suriname,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,243
+Country,geographicalCoverage,lookup,multiselect,,"Yemen, Rep.",Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,278
+Country,geographicalCoverage,lookup,multiselect,,Greece,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,118
+Country,geographicalCoverage,lookup,multiselect,,Nauru,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,189
+Country,geographicalCoverage,lookup,multiselect,,Puerto Rico,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,213
+Country,geographicalCoverage,lookup,multiselect,,Seychelles,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,230
+Country,geographicalCoverage,lookup,multiselect,,Greenland,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,119
+Country,geographicalCoverage,lookup,multiselect,,New Caledonia,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,193
+Country,geographicalCoverage,lookup,multiselect,,Peru,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,208
+Country,geographicalCoverage,lookup,multiselect,,Senegal,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,228
+Country,geographicalCoverage,lookup,multiselect,,Hungary,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,133
+Country,geographicalCoverage,lookup,multiselect,,New Zealand,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,194
+Country,geographicalCoverage,lookup,multiselect,,Nicaragua,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,195
+Country,geographicalCoverage,lookup,multiselect,,Sierra Leone,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,231
+Country,geographicalCoverage,lookup,multiselect,,Iceland,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,134
+Country,geographicalCoverage,lookup,multiselect,,Northern Mariana Islands,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,200
+Country,geographicalCoverage,lookup,multiselect,,Panama,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,205
+Country,geographicalCoverage,lookup,multiselect,,Somalia,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,236
+Country,geographicalCoverage,lookup,multiselect,,Ireland,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,139
+Country,geographicalCoverage,lookup,multiselect,,Palau,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,204
+Country,geographicalCoverage,lookup,multiselect,,Paraguay,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,207
+Country,geographicalCoverage,lookup,multiselect,,South Africa,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,237
+Country,geographicalCoverage,lookup,multiselect,,Barbados,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,53
+Country,geographicalCoverage,lookup,multiselect,,Isle of Man,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,140
+Country,geographicalCoverage,lookup,multiselect,,Kenya,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,148
+Country,geographicalCoverage,lookup,multiselect,,Papua New Guinea,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,206
+Country,geographicalCoverage,lookup,multiselect,,Belize,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,56
+Country,geographicalCoverage,lookup,multiselect,,Guinea-Bissau,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,126
+Country,geographicalCoverage,lookup,multiselect,,Italy,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,142
+Country,geographicalCoverage,lookup,multiselect,,Philippines,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,209
+Country,geographicalCoverage,lookup,multiselect,,Bolivia,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,60
+Country,geographicalCoverage,lookup,multiselect,,Burkina Faso,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,68
+Country,geographicalCoverage,lookup,multiselect,,Kazakhstan,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,147
+Country,geographicalCoverage,lookup,multiselect,,Samoa,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,224
+Country,geographicalCoverage,lookup,multiselect,,Botswana,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,62
+Country,geographicalCoverage,lookup,multiselect,,Brazil,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,64
+Country,geographicalCoverage,lookup,multiselect,,Kosovo,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,152
+Country,geographicalCoverage,lookup,multiselect,,Singapore,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,232
+Country,geographicalCoverage,lookup,multiselect,,"Bahamas, The",Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,50
+Country,geographicalCoverage,lookup,multiselect,,Burundi,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,69
+Country,geographicalCoverage,lookup,multiselect,,Kyrgyz Republic,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,154
+Country,geographicalCoverage,lookup,multiselect,,Solomon Islands,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,235
+Country,geographicalCoverage,lookup,multiselect,,Aruba,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,46
+Country,geographicalCoverage,lookup,multiselect,,Cabo Verde,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,70
+Country,geographicalCoverage,lookup,multiselect,,Latvia,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,156
+Country,geographicalCoverage,lookup,multiselect,,"Taiwan, China",Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,249
+Country,geographicalCoverage,lookup,multiselect,,Cameroon,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,72
+Country,geographicalCoverage,lookup,multiselect,,Liechtenstein,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,161
+Country,geographicalCoverage,lookup,multiselect,,St. Martin (French part),Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,869
+Country,geographicalCoverage,lookup,multiselect,,Thailand,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,252
+Country,geographicalCoverage,lookup,multiselect,,Antigua and Barbuda,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,43
+Country,geographicalCoverage,lookup,multiselect,,Benin,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,57
+Country,geographicalCoverage,lookup,multiselect,,Lithuania,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,162
+Country,geographicalCoverage,lookup,multiselect,,Timor-Leste,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,253
+Country,geographicalCoverage,lookup,multiselect,,Angola,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,40
+Country,geographicalCoverage,lookup,multiselect,,Argentina,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,44
+Country,geographicalCoverage,lookup,multiselect,,Luxembourg,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,163
+Country,geographicalCoverage,lookup,multiselect,,Tonga,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,256
+Country,geographicalCoverage,lookup,multiselect,,Cayman Islands,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,74
+Country,geographicalCoverage,lookup,multiselect,,Central African Republic,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,75
+Country,geographicalCoverage,lookup,multiselect,,"Macedonia, FYR",Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,165
+Country,geographicalCoverage,lookup,multiselect,,Tuvalu,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,262
+Country,geographicalCoverage,lookup,multiselect,,Chad,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,76
+Country,geographicalCoverage,lookup,multiselect,,Chile,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,77
+Country,geographicalCoverage,lookup,multiselect,,Moldova,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,180
+Country,geographicalCoverage,lookup,multiselect,,Vanuatu,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,270
+Country,geographicalCoverage,lookup,multiselect,,Dominican Republic,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,96
+Country,geographicalCoverage,lookup,multiselect,,Gabon,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,112
+Country,geographicalCoverage,lookup,multiselect,,Monaco,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,181
+Country,geographicalCoverage,lookup,multiselect,,Vietnam,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,272
+Country,geographicalCoverage,lookup,multiselect,,Ecuador,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,97
+Country,geographicalCoverage,lookup,multiselect,,Ethiopia,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,103
+Country,geographicalCoverage,lookup,multiselect,,Montenegro,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,183
+Country,geographicalCoverage,lookup,multiselect,,El Salvador,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,99
+Country,geographicalCoverage,lookup,multiselect,,"Gambia, The",Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,113
+Country,geographicalCoverage,lookup,multiselect,,Netherlands,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,191
+Country,geographicalCoverage,lookup,multiselect,,Dominica,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,95
+Country,geographicalCoverage,lookup,multiselect,,Ghana,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,116
+Country,geographicalCoverage,lookup,multiselect,,Norway,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,201
+Country,geographicalCoverage,lookup,multiselect,,Curaçao,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,33
+Country,geographicalCoverage,lookup,multiselect,,Guinea,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,125
+Country,geographicalCoverage,lookup,multiselect,,Poland,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,211
+Country,geographicalCoverage,lookup,multiselect,,Colombia,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,81
+Country,geographicalCoverage,lookup,multiselect,,Eritrea,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,101
+Country,geographicalCoverage,lookup,multiselect,,Portugal,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,212
+Country,geographicalCoverage,lookup,multiselect,,Costa Rica,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,87
+Country,geographicalCoverage,lookup,multiselect,,Equatorial Guinea,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,100
+Country,geographicalCoverage,lookup,multiselect,,Romania,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,216
+Country,geographicalCoverage,lookup,multiselect,,Comoros,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,83
+Country,geographicalCoverage,lookup,multiselect,,Cuba,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,90
+Country,geographicalCoverage,lookup,multiselect,,Russian Federation,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,217
+Country,geographicalCoverage,lookup,multiselect,,"Congo, Dem. Rep.",Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,84
+Country,geographicalCoverage,lookup,multiselect,,San Marino,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,225
+Country,geographicalCoverage,lookup,multiselect,,"Congo, Rep.",Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,85
+Country,geographicalCoverage,lookup,multiselect,,Serbia,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,229
+Country,geographicalCoverage,lookup,multiselect,,Côte d'Ivoire,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,
+Country,geographicalCoverage,lookup,multiselect,,Slovak Republic,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,233
+Country,geographicalCoverage,lookup,multiselect,,Slovenia,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,234
+Country,geographicalCoverage,lookup,multiselect,,Zimbabwe,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,280
+Country,geographicalCoverage,lookup,multiselect,,Spain,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,239
+Country,geographicalCoverage,lookup,multiselect,,Sweden,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,246
+Country,geographicalCoverage,lookup,multiselect,,Switzerland,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,247
+Country,geographicalCoverage,lookup,multiselect,,Tajikistan,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,250
+Country,geographicalCoverage,lookup,multiselect,,Turkey,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,259
+Country,geographicalCoverage,lookup,multiselect,,Turkmenistan,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,260
+Country,geographicalCoverage,lookup,multiselect,,Ukraine,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,264
+Country,geographicalCoverage,lookup,multiselect,,United Kingdom,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,266
+Country,geographicalCoverage,lookup,multiselect,,Uzbekistan,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,269
+Country,geographicalCoverage,lookup,multiselect,,World,Basic,field_wbddh_country,"Geographic Coverage, Country",coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation,848
+Global Practices,globalPractice,lookup,multiselect,,Agriculture,Basic,field_wbddh_gps_ccsas,,,,,423
+Global Practices,globalPractice,lookup,multiselect,,Climate Change,Basic,field_wbddh_gps_ccsas,,,,,424
+Global Practices,globalPractice,lookup,multiselect,,Education,Basic,field_wbddh_gps_ccsas,,,,,420
+Global Practices,globalPractice,lookup,multiselect,,Energy & Extractives,Basic,field_wbddh_gps_ccsas,,,,,
+Global Practices,globalPractice,lookup,multiselect,,Environment & Natural Resources,Basic,field_wbddh_gps_ccsas,,,,,
+Global Practices,globalPractice,lookup,multiselect,,Finance & Markets,Basic,field_wbddh_gps_ccsas,,,,,
+Global Practices,globalPractice,lookup,multiselect,,"Fragility, Conflict & Violence",Basic,field_wbddh_gps_ccsas,,,,,
+Global Practices,globalPractice,lookup,multiselect,,Gender,Basic,field_wbddh_gps_ccsas,,,,,432
+Global Practices,globalPractice,lookup,multiselect,,Governance,Basic,field_wbddh_gps_ccsas,,,,,416
+Global Practices,globalPractice,lookup,multiselect,,"Health, Nutrition & Population",Basic,field_wbddh_gps_ccsas,,,,,
+Global Practices,globalPractice,lookup,multiselect,,Jobs,Basic,field_wbddh_gps_ccsas,,,,,433
+Global Practices,globalPractice,lookup,multiselect,,Macroeconomics & Fiscal Management,Basic,field_wbddh_gps_ccsas,,,,,
+Global Practices,globalPractice,lookup,multiselect,,Poverty & Equity,Basic,field_wbddh_gps_ccsas,,,,,
+Global Practices,globalPractice,lookup,multiselect,,Public-Private Partnerships,Basic,field_wbddh_gps_ccsas,,,,,427
+Global Practices,globalPractice,lookup,multiselect,,Social Protection & Labor,Basic,field_wbddh_gps_ccsas,,,,,
+Global Practices,globalPractice,lookup,multiselect,,"Social, Urban, Rural & Resilience",Basic,field_wbddh_gps_ccsas,,,,,
+Global Practices,globalPractice,lookup,multiselect,,Trade & Competitiveness,Basic,field_wbddh_gps_ccsas,,,,,
+Global Practices,globalPractice,lookup,multiselect,,Transport & ICT,Basic,field_wbddh_gps_ccsas,,,,,
+Global Practices,globalPractice,lookup,multiselect,,Water,Basic,field_wbddh_gps_ccsas,,,,,430
+Grant Number,grantNumber,text,,,,Microdata,,,,,,
+Kind of Data,kindData,list,,80,Administrative records data,Microdata,field_wbddh_kind_of_data,Kind of Data,overview,kind of data,codeBook/stdyDscr/stdyInfo/sumDscr/dataKind,857
+Kind of Data,kindData,list,,80,Aggregate data,Microdata,field_wbddh_kind_of_data,Kind of Data,overview,kind of data,codeBook/stdyDscr/stdyInfo/sumDscr/dataKind,858
+Kind of Data,kindData,list,,80,Census/enumeration data,Microdata,field_wbddh_kind_of_data,Kind of Data,overview,kind of data,codeBook/stdyDscr/stdyInfo/sumDscr/dataKind,856
+Kind of Data,kindData,list,,80,Clinical data,Microdata,field_wbddh_kind_of_data,Kind of Data,overview,kind of data,codeBook/stdyDscr/stdyInfo/sumDscr/dataKind,867
+Kind of Data,kindData,list,,80,Event/transaction data,Microdata,field_wbddh_kind_of_data,Kind of Data,overview,kind of data,codeBook/stdyDscr/stdyInfo/sumDscr/dataKind,859
+Kind of Data,kindData,list,,80,Geospatial data,Microdata,field_wbddh_kind_of_data,Kind of Data,overview,kind of data,codeBook/stdyDscr/stdyInfo/sumDscr/dataKind,864
+Kind of Data,kindData,list,,80,Observation data/ratings,Microdata,field_wbddh_kind_of_data,Kind of Data,overview,kind of data,codeBook/stdyDscr/stdyInfo/sumDscr/dataKind,860
+Kind of Data,kindData,list,,80,Process-produced data,Microdata,field_wbddh_kind_of_data,Kind of Data,overview,kind of data,codeBook/stdyDscr/stdyInfo/sumDscr/dataKind,861
+Kind of Data,kindData,list,,80,Sample survey data,Microdata,field_wbddh_kind_of_data,Kind of Data,overview,kind of data,codeBook/stdyDscr/stdyInfo/sumDscr/dataKind,855
+Kind of Data,kindData,list,,80,Time budget diaries,Microdata,field_wbddh_kind_of_data,Kind of Data,overview,kind of data,codeBook/stdyDscr/stdyInfo/sumDscr/dataKind,862
+Kind of Data,kindData,list,,80,Time series data,Microdata,field_wbddh_kind_of_data,Kind of Data,overview,kind of data,codeBook/stdyDscr/stdyInfo/sumDscr/dataKind,863
+Languages Supported,language,list,multiselect,40,Arabic,Basic,field_wbddh_languages_supported,,,,,339
+Languages Supported,language,list,multiselect,40,Abkhaz,Basic,field_wbddh_languages_supported,,,,,1011
+Languages Supported,language,list,multiselect,40,Afar,Basic,field_wbddh_languages_supported,,,,,1012
+Languages Supported,language,list,multiselect,40,Afrikaans,Basic,field_wbddh_languages_supported,,,,,1013
+Languages Supported,language,list,multiselect,40,Akan,Basic,field_wbddh_languages_supported,,,,,1014
+Languages Supported,language,list,multiselect,40,Amharic,Basic,field_wbddh_languages_supported,,,,,1016
+Languages Supported,language,list,multiselect,40,Aragonese,Basic,field_wbddh_languages_supported,,,,,1017
+Languages Supported,language,list,multiselect,40,Armenian,Basic,field_wbddh_languages_supported,,,,,1018
+Languages Supported,language,list,multiselect,40,Assamese,Basic,field_wbddh_languages_supported,,,,,1019
+Languages Supported,language,list,multiselect,40,Avaric,Basic,field_wbddh_languages_supported,,,,,1020
+Languages Supported,language,list,multiselect,40,Avestan,Basic,field_wbddh_languages_supported,,,,,1021
+Languages Supported,language,list,multiselect,40,Aymara,Basic,field_wbddh_languages_supported,,,,,1022
+Languages Supported,language,list,multiselect,40,Azerbaijani,Basic,field_wbddh_languages_supported,,,,,1023
+Languages Supported,language,list,multiselect,40,Bahasa Indonesia (Indonesian),Basic,field_wbddh_languages_supported,,,,,345
+Languages Supported,language,list,multiselect,40,Bambara,Basic,field_wbddh_languages_supported,,,,,1024
+Languages Supported,language,list,multiselect,40,Bashkir,Basic,field_wbddh_languages_supported,,,,,1025
+Languages Supported,language,list,multiselect,40,Basque,Basic,field_wbddh_languages_supported,,,,,1026
+Languages Supported,language,list,multiselect,40,Belarusian,Basic,field_wbddh_languages_supported,,,,,1027
+Languages Supported,language,list,multiselect,40,Bengali,Basic,field_wbddh_languages_supported,,,,,1028
+Languages Supported,language,list,multiselect,40,Bihari,Basic,field_wbddh_languages_supported,,,,,1029
+Languages Supported,language,list,multiselect,40,Bislama,Basic,field_wbddh_languages_supported,,,,,1030
+Languages Supported,language,list,multiselect,40,Bosnian,Basic,field_wbddh_languages_supported,,,,,1031
+Languages Supported,language,list,multiselect,40,Breton,Basic,field_wbddh_languages_supported,,,,,1032
+Languages Supported,language,list,multiselect,40,Bulgarian,Basic,field_wbddh_languages_supported,,,,,340
+Languages Supported,language,list,multiselect,40,Burmese,Basic,field_wbddh_languages_supported,,,,,1033
+Languages Supported,language,list,multiselect,40,Catalan,Basic,field_wbddh_languages_supported,,,,,1034
+Languages Supported,language,list,multiselect,40,Chamorro,Basic,field_wbddh_languages_supported,,,,,1035
+Languages Supported,language,list,multiselect,40,Chechen,Basic,field_wbddh_languages_supported,,,,,1036
+Languages Supported,language,list,multiselect,40,Chichewa,Basic,field_wbddh_languages_supported,,,,,1037
+Languages Supported,language,list,multiselect,40,Chinese,Basic,field_wbddh_languages_supported,,,,,342
+Languages Supported,language,list,multiselect,40,Church Slavic,Basic,field_wbddh_languages_supported,,,,,1038
+Languages Supported,language,list,multiselect,40,Chuvash,Basic,field_wbddh_languages_supported,,,,,1039
+Languages Supported,language,list,multiselect,40,Cornish,Basic,field_wbddh_languages_supported,,,,,1040
+Languages Supported,language,list,multiselect,40,Corsican,Basic,field_wbddh_languages_supported,,,,,1041
+Languages Supported,language,list,multiselect,40,Cree,Basic,field_wbddh_languages_supported,,,,,1042
+Languages Supported,language,list,multiselect,40,Croatian,Basic,field_wbddh_languages_supported,,,,,1043
+Languages Supported,language,list,multiselect,40,Czech,Basic,field_wbddh_languages_supported,,,,,1044
+Languages Supported,language,list,multiselect,40,Danish,Basic,field_wbddh_languages_supported,,,,,1045
+Languages Supported,language,list,multiselect,40,Divehi,Basic,field_wbddh_languages_supported,,,,,1046
+Languages Supported,language,list,multiselect,40,Dutch,Basic,field_wbddh_languages_supported,,,,,865
+Languages Supported,language,list,multiselect,40,Dzongkha,Basic,field_wbddh_languages_supported,,,,,1047
+Languages Supported,language,list,multiselect,40,English,Basic,field_wbddh_languages_supported,,,,,337
+Languages Supported,language,list,multiselect,40,Esperanto,Basic,field_wbddh_languages_supported,,,,,1048
+Languages Supported,language,list,multiselect,40,Estonian,Basic,field_wbddh_languages_supported,,,,,1049
+Languages Supported,language,list,multiselect,40,Ewe,Basic,field_wbddh_languages_supported,,,,,1050
+Languages Supported,language,list,multiselect,40,Faroese,Basic,field_wbddh_languages_supported,,,,,1051
+Languages Supported,language,list,multiselect,40,Fijian,Basic,field_wbddh_languages_supported,,,,,1052
+Languages Supported,language,list,multiselect,40,Finnish,Basic,field_wbddh_languages_supported,,,,,1053
+Languages Supported,language,list,multiselect,40,French,Basic,field_wbddh_languages_supported,,,,,343
+Languages Supported,language,list,multiselect,40,Fulah,Basic,field_wbddh_languages_supported,,,,,1054
+Languages Supported,language,list,multiselect,40,Galician,Basic,field_wbddh_languages_supported,,,,,1055
+Languages Supported,language,list,multiselect,40,Ganda,Basic,field_wbddh_languages_supported,,,,,1056
+Languages Supported,language,list,multiselect,40,Georgian,Basic,field_wbddh_languages_supported,,,,,1057
+Languages Supported,language,list,multiselect,40,German,Basic,field_wbddh_languages_supported,,,,,866
+Languages Supported,language,list,multiselect,40,Greek,Basic,field_wbddh_languages_supported,,,,,1058
+Languages Supported,language,list,multiselect,40,Guarani,Basic,field_wbddh_languages_supported,,,,,1059
+Languages Supported,language,list,multiselect,40,Gujarati,Basic,field_wbddh_languages_supported,,,,,1060
+Languages Supported,language,list,multiselect,40,Haitian,Basic,field_wbddh_languages_supported,,,,,1061
+Languages Supported,language,list,multiselect,40,Hausa,Basic,field_wbddh_languages_supported,,,,,1062
+Languages Supported,language,list,multiselect,40,Hebrew,Basic,field_wbddh_languages_supported,,,,,1063
+Languages Supported,language,list,multiselect,40,Herero,Basic,field_wbddh_languages_supported,,,,,1064
+Languages Supported,language,list,multiselect,40,Hindi,Basic,field_wbddh_languages_supported,,,,,344
+Languages Supported,language,list,multiselect,40,Hiri Motu,Basic,field_wbddh_languages_supported,,,,,1065
+Languages Supported,language,list,multiselect,40,Hungarian,Basic,field_wbddh_languages_supported,,,,,1066
+Languages Supported,language,list,multiselect,40,Icelandic,Basic,field_wbddh_languages_supported,,,,,1067
+Languages Supported,language,list,multiselect,40,Ido,Basic,field_wbddh_languages_supported,,,,,1068
+Languages Supported,language,list,multiselect,40,Igbo,Basic,field_wbddh_languages_supported,,,,,1069
+Languages Supported,language,list,multiselect,40,Interlingua,Basic,field_wbddh_languages_supported,,,,,1071
+Languages Supported,language,list,multiselect,40,Interlingue,Basic,field_wbddh_languages_supported,,,,,1072
+Languages Supported,language,list,multiselect,40,Inukitut,Basic,field_wbddh_languages_supported,,,,,1073
+Languages Supported,language,list,multiselect,40,Inupiaq,Basic,field_wbddh_languages_supported,,,,,1074
+Languages Supported,language,list,multiselect,40,Irish,Basic,field_wbddh_languages_supported,,,,,1075
+Languages Supported,language,list,multiselect,40,Italian,Basic,field_wbddh_languages_supported,,,,,1076
+Languages Supported,language,list,multiselect,40,Japanese,Basic,field_wbddh_languages_supported,,,,,346
+Languages Supported,language,list,multiselect,40,Javanese,Basic,field_wbddh_languages_supported,,,,,1077
+Languages Supported,language,list,multiselect,40,Kalaallisut,Basic,field_wbddh_languages_supported,,,,,1078
+Languages Supported,language,list,multiselect,40,Kannada,Basic,field_wbddh_languages_supported,,,,,1079
+Languages Supported,language,list,multiselect,40,Kanuri,Basic,field_wbddh_languages_supported,,,,,1080
+Languages Supported,language,list,multiselect,40,Kashmiri,Basic,field_wbddh_languages_supported,,,,,1081
+Languages Supported,language,list,multiselect,40,Kazakh,Basic,field_wbddh_languages_supported,,,,,1082
+Languages Supported,language,list,multiselect,40,Khmer(Cambodian),Basic,field_wbddh_languages_supported,,,,,341
+Languages Supported,language,list,multiselect,40,Kikuyu,Basic,field_wbddh_languages_supported,,,,,1084
+Languages Supported,language,list,multiselect,40,Kinyarwanda,Basic,field_wbddh_languages_supported,,,,,1085
+Languages Supported,language,list,multiselect,40,Kirundi,Basic,field_wbddh_languages_supported,,,,,1086
+Languages Supported,language,list,multiselect,40,Komi,Basic,field_wbddh_languages_supported,,,,,1087
+Languages Supported,language,list,multiselect,40,Kongo,Basic,field_wbddh_languages_supported,,,,,1088
+Languages Supported,language,list,multiselect,40,Korean,Basic,field_wbddh_languages_supported,,,,,1089
+Languages Supported,language,list,multiselect,40,Kuanyama,Basic,field_wbddh_languages_supported,,,,,1090
+Languages Supported,language,list,multiselect,40,Kurdish,Basic,field_wbddh_languages_supported,,,,,1091
+Languages Supported,language,list,multiselect,40,Kyrgyz,Basic,field_wbddh_languages_supported,,,,,1092
+Languages Supported,language,list,multiselect,40,Ladin,Basic,field_wbddh_languages_supported,,,,,1093
+Languages Supported,language,list,multiselect,40,Lao,Basic,field_wbddh_languages_supported,,,,,1094
+Languages Supported,language,list,multiselect,40,Latin,Basic,field_wbddh_languages_supported,,,,,1095
+Languages Supported,language,list,multiselect,40,Latvian,Basic,field_wbddh_languages_supported,,,,,1096
+Languages Supported,language,list,multiselect,40,Limburgan,Basic,field_wbddh_languages_supported,,,,,1097
+Languages Supported,language,list,multiselect,40,Lingala,Basic,field_wbddh_languages_supported,,,,,1098
+Languages Supported,language,list,multiselect,40,Lithuanian,Basic,field_wbddh_languages_supported,,,,,1099
+Languages Supported,language,list,multiselect,40,Luba-Katanga,Basic,field_wbddh_languages_supported,,,,,1100
+Languages Supported,language,list,multiselect,40,Luxembourgish,Basic,field_wbddh_languages_supported,,,,,1101
+Languages Supported,language,list,multiselect,40,Macedonian,Basic,field_wbddh_languages_supported,,,,,347
+Languages Supported,language,list,multiselect,40,Malagasy,Basic,field_wbddh_languages_supported,,,,,1102
+Languages Supported,language,list,multiselect,40,Malay,Basic,field_wbddh_languages_supported,,,,,1103
+Languages Supported,language,list,multiselect,40,Malayalam,Basic,field_wbddh_languages_supported,,,,,1104
+Languages Supported,language,list,multiselect,40,Maltese,Basic,field_wbddh_languages_supported,,,,,1105
+Languages Supported,language,list,multiselect,40,Manx,Basic,field_wbddh_languages_supported,,,,,1106
+Languages Supported,language,list,multiselect,40,Maori,Basic,field_wbddh_languages_supported,,,,,1107
+Languages Supported,language,list,multiselect,40,Marathi,Basic,field_wbddh_languages_supported,,,,,1108
+Languages Supported,language,list,multiselect,40,Marshallese,Basic,field_wbddh_languages_supported,,,,,1109
+Languages Supported,language,list,multiselect,40,Mongolian,Basic,field_wbddh_languages_supported,,,,,348
+Languages Supported,language,list,multiselect,40,Nauru,Basic,field_wbddh_languages_supported,,,,,1110
+Languages Supported,language,list,multiselect,40,Navajo,Basic,field_wbddh_languages_supported,,,,,1111
+Languages Supported,language,list,multiselect,40,Ndonga,Basic,field_wbddh_languages_supported,,,,,1112
+Languages Supported,language,list,multiselect,40,Nepali,Basic,field_wbddh_languages_supported,,,,,1113
+Languages Supported,language,list,multiselect,40,Northern Ndebele,Basic,field_wbddh_languages_supported,,,,,1114
+Languages Supported,language,list,multiselect,40,Northern Sami,Basic,field_wbddh_languages_supported,,,,,1115
+Languages Supported,language,list,multiselect,40,Norwegian,Basic,field_wbddh_languages_supported,,,,,1116
+Languages Supported,language,list,multiselect,40,Norwegian Bokmal,Basic,field_wbddh_languages_supported,,,,,1117
+Languages Supported,language,list,multiselect,40,Norwegian Nynorsk,Basic,field_wbddh_languages_supported,,,,,1118
+Languages Supported,language,list,multiselect,40,Nuosu,Basic,field_wbddh_languages_supported,,,,,1119
+Languages Supported,language,list,multiselect,40,Occitan,Basic,field_wbddh_languages_supported,,,,,1120
+Languages Supported,language,list,multiselect,40,Ojibwa,Basic,field_wbddh_languages_supported,,,,,1121
+Languages Supported,language,list,multiselect,40,Oriya,Basic,field_wbddh_languages_supported,,,,,1122
+Languages Supported,language,list,multiselect,40,Oromo,Basic,field_wbddh_languages_supported,,,,,1123
+Languages Supported,language,list,multiselect,40,Ossetian,Basic,field_wbddh_languages_supported,,,,,1124
+Languages Supported,language,list,multiselect,40,Pali,Basic,field_wbddh_languages_supported,,,,,1125
+Languages Supported,language,list,multiselect,40,Panjabi,Basic,field_wbddh_languages_supported,,,,,1126
+Languages Supported,language,list,multiselect,40,Persian,Basic,field_wbddh_languages_supported,,,,,1127
+Languages Supported,language,list,multiselect,40,Polish,Basic,field_wbddh_languages_supported,,,,,349
+Languages Supported,language,list,multiselect,40,Portuguese,Basic,field_wbddh_languages_supported,,,,,350
+Languages Supported,language,list,multiselect,40,Pushto,Basic,field_wbddh_languages_supported,,,,,1128
+Languages Supported,language,list,multiselect,40,Quechua,Basic,field_wbddh_languages_supported,,,,,1129
+Languages Supported,language,list,multiselect,40,Romanian,Basic,field_wbddh_languages_supported,,,,,351
+Languages Supported,language,list,multiselect,40,Romansh,Basic,field_wbddh_languages_supported,,,,,1130
+Languages Supported,language,list,multiselect,40,Russian,Basic,field_wbddh_languages_supported,,,,,352
+Languages Supported,language,list,multiselect,40,Samoan,Basic,field_wbddh_languages_supported,,,,,1131
+Languages Supported,language,list,multiselect,40,Sango,Basic,field_wbddh_languages_supported,,,,,1132
+Languages Supported,language,list,multiselect,40,Sanskrit,Basic,field_wbddh_languages_supported,,,,,1133
+Languages Supported,language,list,multiselect,40,Sardinian,Basic,field_wbddh_languages_supported,,,,,1134
+Languages Supported,language,list,multiselect,40,Serbian,Basic,field_wbddh_languages_supported,,,,,1135
+Languages Supported,language,list,multiselect,40,Shona,Basic,field_wbddh_languages_supported,,,,,1136
+Languages Supported,language,list,multiselect,40,Shqip(Albanian),Basic,field_wbddh_languages_supported,,,,,338
+Languages Supported,language,list,multiselect,40,Sichuan Yi,Basic,field_wbddh_languages_supported,,,,,1137
+Languages Supported,language,list,multiselect,40,Sindhi,Basic,field_wbddh_languages_supported,,,,,1138
+Languages Supported,language,list,multiselect,40,Sinhala,Basic,field_wbddh_languages_supported,,,,,1139
+Languages Supported,language,list,multiselect,40,Slovak,Basic,field_wbddh_languages_supported,,,,,1140
+Languages Supported,language,list,multiselect,40,Slovene,Basic,field_wbddh_languages_supported,,,,,1141
+Languages Supported,language,list,multiselect,40,Somali,Basic,field_wbddh_languages_supported,,,,,1142
+Languages Supported,language,list,multiselect,40,Southern Ndebele,Basic,field_wbddh_languages_supported,,,,,1143
+Languages Supported,language,list,multiselect,40,Southern Sotho,Basic,field_wbddh_languages_supported,,,,,1144
+Languages Supported,language,list,multiselect,40,Spanish,Basic,field_wbddh_languages_supported,,,,,353
+Languages Supported,language,list,multiselect,40,Sundanese,Basic,field_wbddh_languages_supported,,,,,1145
+Languages Supported,language,list,multiselect,40,Swahili,Basic,field_wbddh_languages_supported,,,,,1146
+Languages Supported,language,list,multiselect,40,Swati,Basic,field_wbddh_languages_supported,,,,,1147
+Languages Supported,language,list,multiselect,40,Swedish,Basic,field_wbddh_languages_supported,,,,,1148
+Languages Supported,language,list,multiselect,40,Tagalog,Basic,field_wbddh_languages_supported,,,,,1149
+Languages Supported,language,list,multiselect,40,Tahitian,Basic,field_wbddh_languages_supported,,,,,1150
+Languages Supported,language,list,multiselect,40,Tajik,Basic,field_wbddh_languages_supported,,,,,1151
+Languages Supported,language,list,multiselect,40,Tamil,Basic,field_wbddh_languages_supported,,,,,1152
+Languages Supported,language,list,multiselect,40,Tatar,Basic,field_wbddh_languages_supported,,,,,1153
+Languages Supported,language,list,multiselect,40,Telugu,Basic,field_wbddh_languages_supported,,,,,1154
+Languages Supported,language,list,multiselect,40,Thai,Basic,field_wbddh_languages_supported,,,,,354
+Languages Supported,language,list,multiselect,40,Tibetan,Basic,field_wbddh_languages_supported,,,,,1155
+Languages Supported,language,list,multiselect,40,Tigrinya,Basic,field_wbddh_languages_supported,,,,,1156
+Languages Supported,language,list,multiselect,40,Tonga (Tonga Islands),Basic,field_wbddh_languages_supported,,,,,1157
+Languages Supported,language,list,multiselect,40,Tsonga,Basic,field_wbddh_languages_supported,,,,,1158
+Languages Supported,language,list,multiselect,40,Tswana,Basic,field_wbddh_languages_supported,,,,,1159
+Languages Supported,language,list,multiselect,40,Turkish,Basic,field_wbddh_languages_supported,,,,,355
+Languages Supported,language,list,multiselect,40,Turkmen,Basic,field_wbddh_languages_supported,,,,,1160
+Languages Supported,language,list,multiselect,40,Twi,Basic,field_wbddh_languages_supported,,,,,1161
+Languages Supported,language,list,multiselect,40,Ukrainian,Basic,field_wbddh_languages_supported,,,,,356
+Languages Supported,language,list,multiselect,40,Urdu,Basic,field_wbddh_languages_supported,,,,,1162
+Languages Supported,language,list,multiselect,40,Uyghur,Basic,field_wbddh_languages_supported,,,,,1163
+Languages Supported,language,list,multiselect,40,Uzbek,Basic,field_wbddh_languages_supported,,,,,1164
+Languages Supported,language,list,multiselect,40,Venda,Basic,field_wbddh_languages_supported,,,,,1165
+Languages Supported,language,list,multiselect,40,Vietnamese,Basic,field_wbddh_languages_supported,,,,,357
+Languages Supported,language,list,multiselect,40,Volapuk,Basic,field_wbddh_languages_supported,,,,,1166
+Languages Supported,language,list,multiselect,40,Walloon,Basic,field_wbddh_languages_supported,,,,,1167
+Languages Supported,language,list,multiselect,40,Welsh,Basic,field_wbddh_languages_supported,,,,,1168
+Languages Supported,language,list,multiselect,40,Western Frisian,Basic,field_wbddh_languages_supported,,,,,1169
+Languages Supported,language,list,multiselect,40,Wolof,Basic,field_wbddh_languages_supported,,,,,1170
+Languages Supported,language,list,multiselect,40,Xhosa,Basic,field_wbddh_languages_supported,,,,,1171
+Languages Supported,language,list,multiselect,40,Yiddish,Basic,field_wbddh_languages_supported,,,,,1172
+Languages Supported,language,list,multiselect,40,Yoruba,Basic,field_wbddh_languages_supported,,,,,1173
+Languages Supported,language,list,multiselect,40,Zhuang,Basic,field_wbddh_languages_supported,,,,,1174
+Languages Supported,language,list,multiselect,40,Zulu,Basic,field_wbddh_languages_supported,,,,,1175
+Languages Supported,language,list,multiselect,40,Language not specified,Basic,field_wbddh_languages_supported,,,,,873
+Type of License,license,text,,255,,Basic,field_wbddh_license,,,,,
+Limitations and exceptions,limitExcept,text,,,,Microdata,field_wbddh_limitations_geo,,,,,
+Lineage (O),lineage,text,,,,Microdata,field_wbddh_lineage,,,,,
+Link to an API,linkApi,url,,,,Basic,,,,,,
+Link to a File,linkremoteFile,url,,,,Basic,,,,,,
+Link to a URL,linkUrl,url,,,,Basic,,,,,,
+URL Description,linkurlBody,text,,,,Basic,,,,,,
+Resource Type - link,linkurlResourceType,list,,,.Code,Basic,,,,,,
+Resource Type - link,linkurlResourceType,list,,,Best Practice Document,Basic,,,,,,
+Resource Type - link,linkurlResourceType,list,,,Bulkdownload Dataset file,Basic,,,,,,
+Resource Type - link,linkurlResourceType,list,,,Dataset,Basic,,,,,,
+Resource Type - link,linkurlResourceType,list,,,Guideline Document,Basic,,,,,,
+Resource Type - link,linkurlResourceType,list,,,Help Document,Basic,,,,,,
+Resource Type - link,linkurlResourceType,list,,,Infographic,Basic,,,,,,
+Resource Type - link,linkurlResourceType,list,,,Learning Material,Basic,,,,,,
+Resource Type - link,linkurlResourceType,list,,,License,Basic,,,,,,
+Resource Type - link,linkurlResourceType,list,,,Manual and Guideline Document,Basic,,,,,,
+Resource Type - link,linkurlResourceType,list,,,Memorandum of Understanding (MOU),Basic,,,,,,
+Resource Type - link,linkurlResourceType,list,,,Metadata,Basic,,,,,,
+Resource Type - link,linkurlResourceType,list,,,Methodology Documents,Basic,,,,,,
+Resource Type - link,linkurlResourceType,list,,,Mobile app,Basic,,,,,,
+Resource Type - link,linkurlResourceType,list,,,News Release or Announcement,Basic,,,,,,
+Resource Type - link,linkurlResourceType,list,,,Other,Basic,,,,,,
+Resource Type - link,linkurlResourceType,list,,,Presentation,Basic,,,,,,
+Resource Type - link,linkurlResourceType,list,,,Preview file,Basic,,,,,,
+Resource Type - link,linkurlResourceType,list,,,Query Tool,Basic,,,,,,
+Resource Type - link,linkurlResourceType,list,,,Survey,Basic,,,,,,
+Resource Type - link,linkurlResourceType,list,,,Terms of Reference,Basic,,,,,,
+Maintenance,maintenance,list,,40,Annually,Microdata,field_wbddh_maintenance,,,,,
+Maintenance,maintenance,list,,40,As needed,Microdata,field_wbddh_maintenance,,,,,
+Maintenance,maintenance,list,,40,Biannually,Microdata,field_wbddh_maintenance,,,,,
+Maintenance,maintenance,list,,40,Continually,Microdata,field_wbddh_maintenance,,,,,
+Maintenance,maintenance,list,,40,Daily,Microdata,field_wbddh_maintenance,,,,,
+Maintenance,maintenance,list,,40,Fortnightly,Microdata,field_wbddh_maintenance,,,,,
+Maintenance,maintenance,list,,40,Irregular,Microdata,field_wbddh_maintenance,,,,,
+Maintenance,maintenance,list,,40,Monthly,Microdata,field_wbddh_maintenance,,,,,
+Maintenance,maintenance,list,,40,None planned,Microdata,field_wbddh_maintenance,,,,,
+Maintenance,maintenance,list,,40,Quarterly,Microdata,field_wbddh_maintenance,,,,,
+Maintenance,maintenance,list,,40,Unknown,Microdata,field_wbddh_maintenance,,,,,
+Maintenance,maintenance,list,,40,Weekly,Microdata,field_wbddh_maintenance,,,,,
+Reference ID,md_referenceID,,,,,Microdata,field_wbddh_reference_id,,identification,id number,codeBook/stdyDscr/citation/titlStmt/IDNo,
+Metadata Character Set,metadataCharSet,text,,,,Microdata,field_wbddh_charset,Metadata Character Set,,,,
+Metadata file identifier (O),metadataFileID,text,,,,Microdata,field_wbddh_file_identifier,Metadata file,,,,
+Metadata Produced By - Affiliation,metadataProdAff,text,,,,Microdata,,Metadata Produced By - Affiliation,,,,
+Metadata Produced By - Abbreviation,metadataProdContact,text,,,,Microdata,,Metadata Produced By - Abbreviation,,,,
+Metadata Produced By - Name,metadataProdName,text,,,,Microdata,,Metadata Produced By - Name,,,,
+Metadata Produced By - Role,metadataProdRole,text,,,,Microdata,,Metadata Produced By - Role,,,,
+Metadata standard name (O),metadataStandName,text,,,,Microdata,field_wbddh_standard_name,Metadata standard,,,,
+Mode of Data Collection,modeDataColl,list,multiselect,80,Computer Assisted Personal Interview,Microdata,field_wbddh_mode_data_collection,,data collection,mode of data collection,codeBook/stdyDscr/method/dataColl/collMode,476
+Mode of Data Collection,modeDataColl,list,multiselect,80,Computer Assisted Telephone Interview,Microdata,field_wbddh_mode_data_collection,,data collection,mode of data collection,codeBook/stdyDscr/method/dataColl/collMode,477
+Mode of Data Collection,modeDataColl,list,multiselect,80,Face-to-face,Microdata,field_wbddh_mode_data_collection,,data collection,mode of data collection,codeBook/stdyDscr/method/dataColl/collMode,478
+Mode of Data Collection,modeDataColl,list,multiselect,80,Focus Group,Microdata,field_wbddh_mode_data_collection,,data collection,mode of data collection,codeBook/stdyDscr/method/dataColl/collMode,480
+Mode of Data Collection,modeDataColl,list,multiselect,80,Internet,Microdata,field_wbddh_mode_data_collection,,data collection,mode of data collection,codeBook/stdyDscr/method/dataColl/collMode,481
+Mode of Data Collection,modeDataColl,list,multiselect,80,Mail Questionnaire,Microdata,field_wbddh_mode_data_collection,,data collection,mode of data collection,codeBook/stdyDscr/method/dataColl/collMode,479
+Mode of Data Collection,modeDataColl,list,multiselect,80,Other,Microdata,field_wbddh_mode_data_collection,,data collection,mode of data collection,codeBook/stdyDscr/method/dataColl/collMode,482
+Last Updated,modified,,,,,Basic,wbddh_date_modified,,,,,
+Data Collector(s) Name,nameDataColl,text,multiselect,,,Microdata,field_wbddh_data_collector,"Data Collector (s) Name, Abbreviation, Affiliation",data collection,data collectors,codeBook/stdyDscr/method/dataColl/dataCollector,
+Notes on Data Collection,notesDataColl,text,,,,Microdata,field_wbddh_note_data_collection,,data collection,notes on data collection,codeBook/stdyDscr/method/dataColl/collSitu,
+Other Acknowledgments Abbreviation,otherAck,text,,1000,,Microdata,,Other Acknowledgments Abbreviation,,,,
+Other Acknowledgments Name,otherAckName,text,,1000,,Microdata,,Other Acknowledgments Name,producers and sponsors,other acknowledgements,codeBook/stdyDscr/citation/rspStmt/othId,
+Other Acknowledgments Role,otherAckRole,text,,1000,,Microdata,,Other Acknowledgments Role,,,,
+Other Forms of Data Appraisal,otherDataAppraisail,text,,,,Microdata,field_wbddh_other_forms_of_data,,data appraisal,other forms of data appraisal,codeBook/stdyDscr/method/anlyInfo/dataAppr,
+Other Processing,otherProcess,text,,,,Microdata,field_wbddh_other_processing,Other Processing,data processing,other processing,codeBook/stdyDscr/method/notes,
+Other Producer(s) Affiliation,otherProdAff,,,,,Microdata,,Other Producer(s) Affiliation,,,,
+Other Producer(s) Name,otherProdName,text,,1000,,Microdata,,"Other Producer(s) Name, Affiliation, Role",,,,
+Other Producer(s) Role,otherProdRole,,,,,Microdata,,Other Producer(s) Role,,,,
+Parent Catalog ID,parentCatalogID,lookup,,40,,Basic,field_wbddh_parent_catalog_id,Reference ID,,,,
+Primary Investigator Affiliation,primaryInvAff,,,,,Microdata,,Primary Investigator Affiliation,,,,
+Primary Investigator Name,primaryInvName,text,,500,,Microdata,field_wbddh_primary_investigator,"Primary Investigator(s) Name, Affiliation",producers and sponsors,primary investigator,codeBook/stdyDscr/citation/rspStmt/AuthEnty,
+WB Project ID,projectID,lookup,,20,,Basic,field_wbddh_project_id,,,,,
+Publisher,publisher,text,,500,,Basic,field_wbddh_publisher_name,,producers and sponsors,Producers,codeBook/stdyDscr/citation/prodStmt/producer,
+Publication Place,pubPlace,text,,500,,Microdata,field_wbddh_publication_place,,,,,
+Questionnaires,questionnaire,text,,,,Microdata,field_wbddh_questionnaires,,data collection,questionnaires,codeBook/stdyDscr/method/dataColl/resInstru,
+Published On,releaseDate,,,,,Basic,,,,,,
+Response Rates,responseRate,text,,,,Microdata,field_wbbdh_response_rates,,sampling,response rate,codeBook/stdyDscr/method/anlyInfo/respRate,
+,RUID,,,,,Basic,,,,,,
+Sampling Procedure,sampProc,text,,,,Microdata,field_wbddh_sampling_procedure,,sampling,sampling procedure,codeBook/stdyDscr/method/dataColl/sampProc,
+Keywords,searchTags,text,,,,Basic,,,,,,
+Series Information,seriesInfo,text,,,,Microdata,field_wbddh_series_information,Series Information,,series information,codeBook/stdyDscr/citation/serStmt/serInfo,
+Source Type: What is the source of the data?,source,list,multiselect,40,Academia,Basic,field_wbddh_source,,data collection,data sources,codeBook/stdyDscr/method/dataColl/sources/dataSrc,
+Source Type: What is the source of the data?,source,list,multiselect,40,Civil Society,Basic,field_wbddh_source,,data collection,data sources,codeBook/stdyDscr/method/dataColl/sources/dataSrc,
+Source Type: What is the source of the data?,source,list,multiselect,40,Government Agency,Basic,field_wbddh_source,,data collection,data sources,codeBook/stdyDscr/method/dataColl/sources/dataSrc,
+Source Type: What is the source of the data?,source,list,multiselect,40,Other International Organization,Basic,field_wbddh_source,,data collection,data sources,codeBook/stdyDscr/method/dataColl/sources/dataSrc,
+Source Type: What is the source of the data?,source,list,multiselect,40,Private Firms,Basic,field_wbddh_source,,data collection,data sources,codeBook/stdyDscr/method/dataColl/sources/dataSrc,
+Source Type: What is the source of the data?,source,list,multiselect,40,Research and think tanks,Basic,field_wbddh_source,,data collection,data sources,codeBook/stdyDscr/method/dataColl/sources/dataSrc,
+Source Type: What is the source of the data?,source,list,multiselect,40,World Bank Group,Basic,field_wbddh_source,,data collection,data sources,codeBook/stdyDscr/method/dataColl/sources/dataSrc,
+Source,sourceDescription,text,,,,Basic,,,,,,
+Date Range - From Date,startDate,date,multiselect,11,,Microdata,field_wbddh_start_date,,data collection,collection_dates,codeBook/stdyDscr/stdyInfo/sumDscr/collDate,
+Status,status,list,,40,Complete,Microdata,status,,,,,393
+Status,status,list,,40,Obsolete,Microdata,status,,,,,403
+Status,status,list,,40,Ongoing,Microdata,status,,,,,390
+Status,status,list,,40,Planned,Microdata,status,,,,,397
+Status,status,list,,40,Required,Microdata,status,,,,,398
+Status,status,list,,40,Under Development,Microdata,status,,,,,391
+Study Type,studyType,list,,100,"1-2-3 Survey, phase 1",Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,"1-2-3 Survey, phase 2",Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,"1-2-3 Survey, phase 3",Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,"Administrative Records, Education",Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,"Administrative Records, Health",Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,"Administrative Records, Other",Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,Agricultural Census,Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,Agricultural Survey,Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,Child Labor Survey,Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,Comprehensive Food Security and Vulnerability Analysis,Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,Core Welfare Indicators Questionnaire,Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,Demographic and Health Survey,Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,"Demographic and Health Survey, Interim",Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,"Demographic and Health Survey, Round 1",Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,"Demographic and Health Survey, Round 2",Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,"Demographic and Health Survey, Round 3",Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,"Demographic and Health Survey, Round 4",Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,"Demographic and Health Survey, Round 5",Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,"Demographic and Health Survey, Special",Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,Enterprise Census,Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,Enterprise Survey,Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,Impact evaluation,Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,Income/Expenditure/Household Survey,Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,Independent Performance Evaluation,Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,Informal Sector Survey,Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,Integrated Survey (non-LSMS),Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,Labor Force Survey,Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,Living Standards Measurement Study,Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,Macroeconomic indicators,Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,Multiple Indicator Cluster Survey - Round 1,Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,Multiple Indicator Cluster Survey - Round 2,Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,Multiple Indicator Cluster Survey - Round 3,Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,Multiple Indicator Cluster Survey - Round 4,Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,Opinion survey,Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,Other Household Health Survey,Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,Other Household Survey,Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,Population and Housing Census,Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,Price Survey,Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,Priority Survey [hh/ps],Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,Public Expenditure Tracking Survey (PETS),Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,Quantitative Service Delivery Survey/Service Delivery Indicators,Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,"Sample Frame, Enterprises",Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,"Sample Frame, Households",Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,Service Provision Assessments,Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,Socio-Economic/Monitoring Survey,Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,Statistical Info. & Monitoring Prog,Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,World Fertility Survey,Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Study Type,studyType,list,,100,World Health Survey,Microdata,field_wbddh_study_type,Study Type,identification,study type,codeBook/stdyDscr/citation/serStmt/serName,
+Is this dataset a subscription?,subscription,radio,,,No,Basic,field_wbddh_subscription,,,,,
+Is this dataset a subscription?,subscription,radio,,,Yes,Basic,field_wbddh_subscription,,,,,
+Subtitle,subtitle,text,,2000,,Microdata,field_wbddh_subtitle,Subtitle,identification,subtitle,codeBook/stdyDscr/citation/titlStmt/subTitl,
+Supervision,supervision,text,,,,Microdata,field_wbddh_supervision,Supervision,data collection,supervision,codeBook/stdyDscr/method/dataColl/actMin,
+Terms of use,termsofUse,list,,,Data from External Repositories,Basic,group_terms_of_use,,,,,438
+Terms of use,termsofUse,list,,,Direct Access,Basic,group_terms_of_use,,,,,435
+Terms of use,termsofUse,list,,,Enclave,Basic,group_terms_of_use,,,,,440
+Terms of use,termsofUse,list,,,Esri Credits,Basic,group_terms_of_use,,,,,442
+Terms of use,termsofUse,list,,,Licensed Data Files,Basic,group_terms_of_use,,,,,437
+Terms of use,termsofUse,list,,,No Access,Basic,group_terms_of_use,,,,,439
+Terms of use,termsofUse,list,,,Open Data Access,Basic,group_terms_of_use,,,,,434
+Terms of use,termsofUse,list,,,Public Use,Basic,group_terms_of_use,,,,,436
+Terms of use,termsofUse,list,,,Restricted Data,Basic,group_terms_of_use,,,,,441
+Terms of use,termsofUse,list,,,Terms of Use Not Specified,Basic,group_terms_of_use,,,,,876
+Time Period Cycle,timeperiodCycle,,,,,Basic,,,,,,
+Time Period End Date,timeperiodEnddate,,,,,Basic,,,,,,
+Time Periods,timePeriods,date,,,,Microdata,field_wbddh_time_periods,Cycle,data collection,time periods,,
+Time Period Start Date,timeperiodStartdate,,,,,Basic,,,,,,
+Title,title,text,,150-255,,Basic,title,,identification,title,codeBook/stdyDscr/citation/titlStmt/titl,
+Topics,topic,lookup,multiselect,,Agriculture and Food Security,Basic,field_topic,,scope,topic,codeBook/stdyDscr/stdyInfo/subject/topcClas,
+Topics,topic,lookup,multiselect,,Climate Change,Basic,field_topic,,scope,topic,codeBook/stdyDscr/stdyInfo/subject/topcClas,
+Topics,topic,lookup,multiselect,,Economic Growth,Basic,field_topic,,scope,topic,codeBook/stdyDscr/stdyInfo/subject/topcClas,
+Topics,topic,lookup,multiselect,,Education,Basic,field_topic,,scope,topic,codeBook/stdyDscr/stdyInfo/subject/topcClas,
+Topics,topic,lookup,multiselect,,Energy and Extractives,Basic,field_topic,,scope,topic,codeBook/stdyDscr/stdyInfo/subject/topcClas,
+Topics,topic,lookup,multiselect,,Environment and Natural Resources,Basic,field_topic,,scope,topic,codeBook/stdyDscr/stdyInfo/subject/topcClas,
+Topics,topic,lookup,multiselect,,Financial Sector Development,Basic,field_topic,,scope,topic,codeBook/stdyDscr/stdyInfo/subject/topcClas,
+Topics,topic,lookup,multiselect,,"Fragility, Conflict and Violence",Basic,field_topic,,scope,topic,codeBook/stdyDscr/stdyInfo/subject/topcClas,
+Topics,topic,lookup,multiselect,,Gender,Basic,field_topic,,scope,topic,codeBook/stdyDscr/stdyInfo/subject/topcClas,
+Topics,topic,lookup,multiselect,,"Health, Nutrition and Population",Basic,field_topic,,scope,topic,codeBook/stdyDscr/stdyInfo/subject/topcClas,
+Topics,topic,lookup,multiselect,,Information and Communication Technologies,Basic,field_topic,,scope,topic,codeBook/stdyDscr/stdyInfo/subject/topcClas,
+Topics,topic,lookup,multiselect,,Jobs,Basic,field_topic,,scope,topic,codeBook/stdyDscr/stdyInfo/subject/topcClas,
+Topics,topic,lookup,multiselect,,Macroeconomic and Structural Policies,Basic,field_topic,,scope,topic,codeBook/stdyDscr/stdyInfo/subject/topcClas,
+Topics,topic,lookup,multiselect,,Macroeconomic Vulnerability and Debt,Basic,field_topic,,scope,topic,codeBook/stdyDscr/stdyInfo/subject/topcClas,
+Topics,topic,lookup,multiselect,,Poverty,Basic,field_topic,,scope,topic,codeBook/stdyDscr/stdyInfo/subject/topcClas,
+Topics,topic,lookup,multiselect,,Private Sector Development,Basic,field_topic,,scope,topic,codeBook/stdyDscr/stdyInfo/subject/topcClas,
+Topics,topic,lookup,multiselect,,Public-Private Partnerships,Basic,field_topic,,scope,topic,codeBook/stdyDscr/stdyInfo/subject/topcClas,
+Topics,topic,lookup,multiselect,,Public Sector Management,Basic,field_topic,,scope,topic,codeBook/stdyDscr/stdyInfo/subject/topcClas,
+Topics,topic,lookup,multiselect,,Social Development,Basic,field_topic,,scope,topic,codeBook/stdyDscr/stdyInfo/subject/topcClas,
+Topics,topic,lookup,multiselect,,Social Protection and Labor,Basic,field_topic,,scope,topic,codeBook/stdyDscr/stdyInfo/subject/topcClas,
+Topics,topic,lookup,multiselect,,Trade,Basic,field_topic,,scope,topic,codeBook/stdyDscr/stdyInfo/subject/topcClas,
+Topics,topic,lookup,multiselect,,Transport,Basic,field_topic,,scope,topic,codeBook/stdyDscr/stdyInfo/subject/topcClas,
+Topics,topic,lookup,multiselect,,Urban Development,Basic,field_topic,,scope,topic,codeBook/stdyDscr/stdyInfo/subject/topcClas,
+Topics,topic,lookup,multiselect,,Water,Basic,field_topic,,scope,topic,codeBook/stdyDscr/stdyInfo/subject/topcClas,
+Translated Title,transTitle,text,,255,,Basic,field_wbddh_dstranslated_title,,identification,translated title,codeBook/stdyDscr/citation/titlStmt/parTitl,
+Are you the TTL responsible for this dataset?,ttl,radio,,,No,Basic,field_wbddh_responsible,,,,,
+Are you the TTL responsible for this dataset?,ttl,radio,,,Yes,Basic,field_wbddh_responsible,,,,,
+TTL Email,ttlEmail,lookup,,255,,Basic,,,,,,
+TTL Name,ttlName,lookup,,255,,Basic,,,,,,
+TTL Title,ttlTitle,lookup,,255,,Basic,,,,,,
+TTL Unit,ttlUnit,display,,,,Basic,,,,,,
+TTL Name(s) TTL UPI,ttlUPI,lookup,,,,Basic,field_wbddh_ttl_upi,,,,,
+,UID,,,,,Basic,,,,,,
+Unit of Analysis,unitAnalysis,text,,140,,Microdata,field_wbddh_unit_of_analysis,Unit of Analysis,overview,unit of analysis,codeBook/stdyDscr/stdyInfo/sumDscr/anlyUnit,
+Universe,universe,text,,500,,Microdata,field_wbddh_universe,Universe,coverage,universe,codeBook/stdyDscr/stdyInfo/sumDscr/universe,
+Upload a File,upload,upload,multiselect,,,Basic,,,,,,
+Email,uploaderEmail,lookup,,255,,Basic,field_wbddh_uploader,,,,,
+Name,uploaderName,lookup,,,,Basic,field_wbddh_uploader,,,,,
+Title,uploaderTitle,lookup,,,,Basic,field_wbddh_uploader,,,,,
+Unit,uploaderUnit,lookup,,,,Basic,field_wbddh_uploader,,,,,
+UPI,uploaderUPI,lookup,,15,,Basic,field_wbddh_uploader,,,,,
+Version Description,verDescript,text,,1000,,Microdata,field_wbddh_version_description,,version,version,codeBook/stdyDscr/citation/verStmt/version,
+Version Notes,verNotes,text,,1000,,Microdata,field_wbddh_version_notes,,version,version_notes,codeBook/stdyDscr/citation/verStmt/notes,
+Version Production Date,verProdDate,date,,20,,Microdata,field_wbddh_version_date,,version,version_date,codeBook/stdyDscr/citation/verStmt/version/@date,
+Weighting,weighting,text,,,,Microdata,field_wbddh_weighting,,sampling,weighting,codeBook/stdyDscr/method/dataColl/weight,
+Harvest Source,harvest_source,list,,,Finances,Basic,field_ddh_harvest_src,,,,,1189
+Harvest Source,harvest_source,list,,,Energy Info,Basic,field_ddh_harvest_src,,,,,1188
+Harvest Source,harvest_source,list,,,Microdata,Basic,field_ddh_harvest_src,,,,,1190
+,econCoverage,,,,,,,,,,,

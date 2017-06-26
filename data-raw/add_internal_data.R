@@ -19,6 +19,8 @@ taxonomy <- readr::read_csv('./data-raw/taxonomy_cache.csv')
 fields <- ddhconnect::get_fields() %>%
   filter(data_type == 'microdata') %>%
   rename(ddh_machine_name = machine_name)
+# TO BE REMOVED
+fields$ddh_machine_name[fields$ddh_machine_name == "field__wbddh_depositor_notes"] <- "field_wbddh_depositor_notes"
 
 # Clean lookup table ------------------------------------------------------
 
