@@ -5,7 +5,10 @@
 \title{format_md_metadata}
 \usage{
 format_md_metadata(metadata_in, date_fields = c("field_wbddh_modified_date",
-  "field_wbddh_release_date"))
+  "field_wbddh_release_date"), text_fields = c("body",
+  "field_wbddh_citation_text", "field_wbddh_disclaimer",
+  "field_wbddh_questionnaires", "field_wbddh_sampling_procedure",
+  "field_wbddh_series_information", "field_wbddh_supervision"))
 }
 \arguments{
 \item{metadata_in}{list: flattened list of metadata}
