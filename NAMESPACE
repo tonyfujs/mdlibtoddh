@@ -2,6 +2,7 @@
 
 export(add_constant_metadata)
 export(add_data_classification)
+export(add_link_to_resources)
 export(extract_md_metadata)
 export(flatten_md_metadata)
 export(format_md_metadata)
