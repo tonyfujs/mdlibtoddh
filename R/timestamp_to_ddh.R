@@ -12,7 +12,8 @@
 timestamp_to_ddhdate <- function(time_stamp, origin = "1970-01-01") {
 
   # CHECK inputs
-  assertthat::is.number(time_stamp)
+  if (!is.numeric(time_stamp)) {time_stamp <- as.numeric(time_stamp)}
+  assertthat::assert_that(!is.na(time_stamp), msg = "Please ensure that time_stamp has a valid value")
 
   out <- vector(mode = 'character', length = 6)
   names(out) <- c('year', 'month', 'day', 'hour', 'minute', 'ampm')
