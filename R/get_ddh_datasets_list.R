@@ -1,6 +1,7 @@
 #' get_ddh_datasets_list
 #'
 #' Return the full list of microdata datasets in DDH with the following information: node IDs, UUIDs, reference IDs (microdata), data classification, date of last update.
+#' @param root_url character: API root URL
 #'
 #' @return data.frame
 #' @export

@@ -4,7 +4,10 @@
 \alias{get_ddh_datasets_list}
 \title{get_ddh_datasets_list}
 \usage{
-get_ddh_datasets_list()
+get_ddh_datasets_list(root_url)
+}
+\arguments{
+\item{root_url}{character: API root URL}
 }
 \value{
 data.frame
