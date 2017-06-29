@@ -11,25 +11,73 @@
 
 create_json_dataset <- function(metadata_list, json_template = mdlibtoddh::json_template_dataset) {
 
+  json_template$title <- jsonlite::unbox(metadata_list$title) # title
   json_template$body$und$value <- metadata_list$body # body
   json_template$field_contact_email$und$value <- metadata_list$field_contact_email # email
-  json_template$field_wbddh_acronym$und$value <- metadata_list$field_wbddh_acronym # acronym
-  json_template$field_wbddh_data_type$und$tid <- metadata_list$field_wbddh_data_type # data type
-  json_template$field_wbddh_disclaimer$und$value <- metadata_list$field_wbddh_disclaimer # disclaimer
+  json_template$field_topic$und$tid <- jsonlite::unbox(metadata_list$field_topic) # topic
+  json_template$field_wbddh_dataclass$und$tid <- jsonlite::unbox(metadata_list$field_wbddh_data_class) # data classification
+  json_template$field_wbddh_produced_by$und$value <- metadata_list$field_wbddh_produced_by
+  json_template$field_wbddh_data_collector$und$value <- jsonlite::unbox(metadata_list$field_wbddh_data_collector)
+  json_template$field_wbddh_data_type$und$tid <- jsonlite::unbox(metadata_list$field_wbddh_data_type) # data type
+  json_template$field_wbddh_disclaimer$und$value <- jsonlite::unbox(metadata_list$field_wbddh_disclaimer) # disclaimer
+  json_template$field_wbddh_kind_of_data$und$tid <- jsonlite::unbox(metadata_list$field_wbddh_kind_of_data) # kind of data
+  json_template$field_wbddh_languages_supported$und$tid <- jsonlite::unbox(metadata_list$field_wbddh_languages_supported) # language
+  json_template$field_wbddh_mode_data_collection$und$tid <- jsonlite::unbox(metadata_list$field_wbddh_mode_data_collection) # mode data collection
+  json_template$field_wbddh_primary_investigator$und$value <- jsonlite::unbox(metadata_list$field_wbddh_primary_investigator) # Primary investig
+  json_template$field_wbddh_study_type$und$value <- jsonlite::unbox(metadata_list$field_wbddh_study_type) # study type
+  json_template$field_wbddh_unit_of_analysis$und$value <- jsonlite::unbox(metadata_list$field_wbddh_unit_of_analysis)
+  json_template$field_wbddh_wbddh_universe$und$value <- jsonlite::unbox(metadata_list$field_wbddh_wbddh_universe) # universe
+  json_template$field_wbddh_acronym$und$value <- jsonlite::unbox(metadata_list$field_wbddh_acronym) # acronym
+  json_template$field_wbddh_country$und$tid <- jsonlite::unbox(metadata_list$field_wbddh_country)
+  json_template$field_wbddh_search_tags$und$value <- jsonlite::unbox(metadata_list$field_wbddh_search_tags)
+  # release date
+  json_template$field_wbddh_release_date$und$value$year <- metadata_list$field_wbddh_release_date[['year']]
+  json_template$field_wbddh_release_date$und$value$month <- metadata_list$field_wbddh_release_date[['month']]
+  json_template$field_wbddh_release_date$und$value$day <- metadata_list$field_wbddh_release_date[['day']]
+  json_template$field_wbddh_release_date$und$value$hour <- metadata_list$field_wbddh_release_date[['hour']]
+  json_template$field_wbddh_release_date$und$value$minute <- metadata_list$field_wbddh_release_date[['minute']]
+  json_template$field_wbddh_release_date$und$value$ampm <- metadata_list$field_wbddh_release_date[['ampm']]
+  # modified date
+  json_template$field_wbddh_modified_date$und$value$year <- metadata_list$field_wbddh_modified_date[['year']]
+  json_template$field_wbddh_modified_date$und$value$month <- metadata_list$field_wbddh_modified_date[['month']]
+  json_template$field_wbddh_modified_date$und$value$day <- metadata_list$field_wbddh_modified_date[['day']]
+  json_template$field_wbddh_modified_date$und$value$hour <- metadata_list$field_wbddh_modified_date[['hour']]
+  json_template$field_wbddh_modified_date$und$value$minute <- metadata_list$field_wbddh_modified_date[['minute']]
+  json_template$field_wbddh_modified_date$und$value$ampm <- metadata_list$field_wbddh_modified_date[['ampm']]
+
+  json_template$field_wbddh_sampling_procedure$und$value <- jsonlite::unbox(metadata_list$field_wbddh_sampling_procedure)
+  json_template$field_wbddh_deviations_sample <- metadata_list$field_wbddh_deviations_sample
+  json_template$field_wbddh_questionnaires$und$value <- jsonlite::unbox(metadata_list$field_wbddh_questionnaires)
+  json_template$field_wbddh_citation_text$und$value <- jsonlite::unbox(metadata_list$field_wbddh_citation_text)
+  json_template$field_ddh_harvest_src$und$tid <- jsonlite::unbox(metadata_list$field_ddh_harvest_src)
+  json_template$field_ddh_harvest_sys_id$und$value <- jsonlite::unbox(metadata_list$field_ddh_harvest_sys_id)
+  json_template$field_exception_s_$und$tid <- jsonlite::unbox(metadata_list$field_exception_s_)
+  json_template$field_wbddh_version_description$und$value <- metadata_list$field_wbddh_version_description # version
+
+  # To DOUBLE CHECK
   json_template$field_wbddh_end_date <- metadata_list$field_wbddh_end_date # end date
-  # toJSON(json_template['field_wbddh_end_date'])
-  json_template$field_wbddh_kind_of_data$und$tid <- metadata_list$field_wbddh_kind_of_data # kind of data
-  # toJSON(json_template['field_wbddh_kind_of_data'])
-  json_template$field_wbddh_languages_supported$und$tid <- metadata_list$field_wbddh_languages_supported # language
-  json_template$field_wbddh_mode_data_collection$und$tid <- metadata_list$field_wbddh_mode_data_collection # mode data collection
   json_template$field_wbddh_other_processing$und$value <- metadata_list$field_wbddh_other_processing # other processing
-  json_template$field_wbddh_primary_investigator$und$value <- metadata_list$field_wbddh_primary_investigator # Primary investigator
   json_template$field_wbddh_publisher_name <- metadata_list$field_wbddh_publisher_name # publisher name
-  json_template$field_wbddh_study_type$und$value <- metadata_list$field_wbddh_study_type # study type
-  json_template$field_wbddh_wbddh_universe <- metadata_list$field_wbddh_wbddh_universe # universe
-  json_template$field_wbddh_version_description <- metadata_list$field_wbddh_version_description # version
   json_template$field_wbddh_weighting <- metadata_list$field_wbddh_weighting # weighting
-  json_template$title <- metadata_list$title # title
+  # # TO CHECK
+  # json_template$field_wbddh_series_information <- metadata_list$field_wbddh_series_information
+  # json_template$field_wbddh_subtitle <- metadata_list$field_wbddh_subtitle
+  # json_template$field_wbddh_supervision <- metadata_list$field_wbddh_supervision
+  # json_template$field_exception_s_ <- metadata_list$field_exception_s_
+  # json_template$field_wbddh_terms_of_use$und$tid <- metadata_list$field_wbddh_terms_of_use
+  # json_template$field_wbddh_disclosure_risk <- metadata_list$field_wbddh_disclosure_risk
+  # json_template$field_wbddh_economy_coverage <- metadata_list$field_wbddh_economy_coverage
+  # json_template$field_wbddh_estimate_sampling <- metadata_list$field_wbddh_estimate_sampling
+  # json_template$field_wbddh_response_rates <- metadata_list$field_wbddh_response_rates
+  # json_template$field_wbddh_update_frequency$und$value <- metadata_list$field_wbddh_update_frequency
+  # json_template$field_wbddh_ds_embargo_date$und$value <- metadata_list$field_wbddh_ds_embargo_date
+  # json_template$field_wbddh_ds_source$und$value <- metadata_list$field_wbddh_ds_source
+  # json_template$field_wbddh_dsttl_upi$und$value <- metadata_list$field_wbddh_dsttl_upi
+  # json_template$field_ddh_external_contact_email$und$value <- metadata_list$field_ddh_external_contact_email
+  # json_template$field_wbddh_embargo$und$value <- metadata_list$field_wbddh_embargo
+  # json_template$field_wbddh_organization$und$value <- metadata_list$field_wbddh_organization
+  # json_template$field_wbddh_statistical_concept$und$value <- metadata_list$field_wbddh_statistical_concept
+  # json_template$field_wbddh_aggregation_method$und$value <- metadata_list$field_wbddh_aggregation_method
 
   return(jsonlite::toJSON(json_template, pretty = TRUE))
 }
