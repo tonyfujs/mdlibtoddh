@@ -52,14 +52,22 @@ format_text <- function(text) {
   return(text)
 }
 
+# extract_field_wbddh_reference_id
 extract_field_wbddh_reference_id <- function(x) {
   x[["field_wbddh_reference_id"]]$und[[1]]$value
 }
+extract_field_wbddh_reference_id_safe <- purrr::possibly(extract_field_wbddh_reference_id, otherwise = '')
+extract_field_wbddh_reference_id <- function(x) {
+  temp <- extract_field_wbddh_reference_id_safe(x)
+  if(is.null(temp)) {return("")} else {return(temp)}
+}
 
-extract_field_wbddh_reference_id <- purrr::possibly(extract_field_wbddh_reference_id, otherwise = '')
-
+# extract_field_wbddh_data_class
 extract_field_wbddh_data_class <- function(x) {
   x[["field_wbddh_data_class"]]$und[[1]]$tid
 }
-
-extract_field_wbddh_data_class <- purrr::possibly(extract_field_wbddh_data_class, otherwise = '')
+extract_field_wbddh_data_class_safe <- purrr::possibly(extract_field_wbddh_data_class, otherwise = '')
+extract_field_wbddh_data_class <- function(x) {
+  temp <- extract_field_wbddh_data_class_safe(x)
+  if(is.null(temp)) {return("")} else {return(temp)}
+}
