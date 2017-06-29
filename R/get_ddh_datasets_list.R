@@ -6,13 +6,15 @@
 #' @export
 #'
 
-get_ddh_datasets_list <- function ()
+get_ddh_datasets_list <- function (root_url)
 {
   limit <- 500
   dtype <- 294
 
+  url
   # Get count of datasets
-  count_url <- paste0("https://ddh.worldbank.org/search-service/search_api/datasets?limit=1&fields=[nid,uuid]&filter[status]=1&filter[field_wbddh_data_type]=",
+  count_url <- paste0(root_url,
+                      "/search-service/search_api/datasets?limit=1&fields=[nid,uuid]&filter[status]=1&filter[field_wbddh_data_type]=",
                       dtype)
   count <- httr::GET(url = count_url, httr::add_headers(.headers = c(charset = "utf-8")),
                      httr::accept_json())
@@ -29,7 +31,8 @@ get_ddh_datasets_list <- function ()
   updated <- vector(mode = "list", length = iterations)
   for (i in 1:iterations) {
     temp_offset <- (i - 1) * 500
-    temp_url <- paste0("https://ddh.worldbank.org/search-service/search_api/datasets?limit=500&fields=[nid,uuid,field_wbddh_reference_id,field_wbddh_data_class,field_wbddh_modified_date,]&filter[status]=1&filter[field_wbddh_data_type]=",
+    temp_url <- paste0(root_url,
+                       "/search-service/search_api/datasets?limit=500&fields=[nid,uuid,field_wbddh_reference_id,field_wbddh_data_class,field_wbddh_modified_date,]&filter[status]=1&filter[field_wbddh_data_type]=",
                        dtype, "&offset=", temp_offset)
     temp_resp <- httr::GET(url = temp_url, httr::add_headers(.headers = c(charset = "utf-8")),
                            httr::accept_json())
