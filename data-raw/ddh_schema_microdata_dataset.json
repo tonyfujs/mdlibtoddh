@@ -10,13 +10,21 @@
 			"value": ""
 		}]
 	},
-	"field_topic": [],
+	"field_topic": {
+		"und": {
+			"tid": ""
+		}
+	},
 	"field_wbddh_data_class": {
 		"und": {
 			"tid": ""
 		}
 	},
-	"field_wbddh_produced_by": [],
+	"field_wbddh_produced_by": {
+		"und": {
+			"value": ""
+		}
+	},
 	"field_wbddh_data_collector": [],
 	"field_wbddh_collaborator_upi": [],
 	"field_wbddh_data_type": {
