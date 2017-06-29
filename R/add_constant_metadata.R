@@ -18,6 +18,7 @@ add_constant_metadata <- function(metadata_list) {
   metadata_list$field_wbddh_data_type <- 'Microdata'
   metadata_list$field_contact_email <- 'microdata@worldbank.org'
   metadata_list$field_ddh_harvest_src <- "Microdata"
+  metadata_list$field_topic <- '936'
 
   return(metadata_list)
 }
