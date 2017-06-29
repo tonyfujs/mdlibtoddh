@@ -7,12 +7,11 @@
 #' @export
 #'
 
-get_ddh_datasets_list <- function (root_url)
+get_ddh_datasets_list <- function(root_url)
 {
   limit <- 500
   dtype <- 294
 
-  url
   # Get count of datasets
   count_url <- paste0(root_url,
                       "/search-service/search_api/datasets?limit=1&fields=[nid,uuid]&filter[status]=1&filter[field_wbddh_data_type]=",
@@ -42,8 +41,8 @@ get_ddh_datasets_list <- function (root_url)
     temp_resp <- temp_resp$result
     temp_nids <- names(temp_resp)
     temp_uuids <- purrr::map_chr(temp_resp, 'uuid')
-    temp_refids <- purrr::map_chr(temp_resp, function(x) x[['field_wbddh_reference_id']][[1]][[1]][[1]])
-    temp_dataclass <- purrr::map_chr(temp_resp, function(x) x[['field_wbddh_data_class']][[1]][[1]][[1]])
+    temp_refids <- purrr::map_chr(temp_resp, extract_field_wbddh_reference_id)
+    temp_dataclass <- purrr::map_chr(temp_resp, extract_field_wbddh_data_class)
     temp_updated <- purrr::map_chr(temp_resp, function(x) {
       date <- x[['field_wbddh_modified_date']][['und']][[1]][['value']]
       if(is.null(date)) {return("1970-01-01 00:01:01")} else {return(date)}
