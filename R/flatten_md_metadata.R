@@ -12,6 +12,7 @@ flatten_md_metadata <- function(metadata_in,
                                 multiple_fields = c("field_wbddh_primary_investigator",
                                                     "field_wbddh_authority_name",
                                                     "field_wbddh_publisher_name"),
+                                email_fields = c("field_contact_email"),
                                 name_fields = c('field_wbddh_country',
                                                 'field_wbddh_region',
                                                 'field_wbddh_data_collector')) {
@@ -25,6 +26,13 @@ flatten_md_metadata <- function(metadata_in,
 
   metadata_in[multiple_fields] <- purrr::map(metadata_in[multiple_fields], function(x) {
     paste(purrr::map(x, extract_from_list, keys = c('name', 'affiliation')), collapse = '; ')
+  })
+
+  # Handle variables pulling for multiples JSON keys
+  email_fields <- email_fields[email_fields %in% names(metadata_in)]
+
+  metadata_in[email_fields] <- purrr::map(metadata_in[email_fields], function(x) {
+    paste(purrr::map(x, extract_from_list, keys = c('email')), collapse = '; ')
   })
 
   # Handle extraction of value that follow "name" keys
