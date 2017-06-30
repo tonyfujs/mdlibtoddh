@@ -15,6 +15,11 @@
 			"tid": ""
 		}
 	},
+	"field_wbddh_reference_id": {
+		"und": [{
+			"value": ""
+		}]
+	},
 	"field_wbddh_data_class": {
 		"und": {
 			"tid": ""
@@ -41,19 +46,19 @@
 	"field_wbddh_economy_coverage": [],
 	"field_wbddh_estimate_sampling": [],
 	"field_wbddh_kind_of_data": {
-		"und": [{
+		"und": {
 			"tid": ""
-		}]
+		}
 	},
 	"field_wbddh_languages_supported": {
-		"und": [{
+		"und": {
 			"tid": ""
-		}]
+		}
 	},
 	"field_wbddh_mode_data_collection": {
-		"und": [{
+		"und": {
 			"tid": ""
-		}]
+		}
 	},
 	"field_wbddh_no_of_economies": [],
 	"field_wbddh_primary_investigator": {
@@ -63,14 +68,14 @@
 	},
 	"field_wbddh_response_rates": [],
 	"field_wbddh_study_type": {
-		"und": [{
+		"und": {
 			"value": ""
-		}]
+		}
 	},
 	"field_wbddh_terms_of_use": {
-		"und": [{
+		"und": {
 			"tid": ""
-		}]
+		}
 	},
 	"field_wbddh_unit_of_analysis": {
 		"und": [{
@@ -86,9 +91,9 @@
 		}]
 	},
 	"field_wbddh_country": {
-		"und": [{
+		"und": {
 			"tid": ""
-		}]
+		}
 	},
 	"field_wbddh_ds_embargo_date": [],
 	"field_wbddh_ds_source": [],

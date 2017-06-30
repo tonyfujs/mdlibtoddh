@@ -59,10 +59,10 @@ studyType,identification,study type,codeBook/stdyDscr/citation/serStmt/serName
 subscription,,,
 subtitle,identification,subtitle,codeBook/stdyDscr/citation/titlStmt/subTitl
 supervision,data collection,supervision,codeBook/stdyDscr/method/dataColl/actMin
-termsofUse,,,
+termsofUse,,,access_type
 timePeriods,data collection,time periods,
 title,identification,title,codeBook/stdyDscr/citation/titlStmt/titl
-topic,scope,topic,codeBook/stdyDscr/stdyInfo/subject/topcClas
+topic,scope,topic,
 transTitle,identification,translated title,codeBook/stdyDscr/citation/titlStmt/parTitl
 ttlUPI,,,
 UID,,,
@@ -76,3 +76,4 @@ weighting,sampling,weighting,codeBook/stdyDscr/method/dataColl/weight
 ,data collection,frequency,codeBook/stdyDscr/method/dataColl/frequenc
 ,coverage,geographic unit,codeBook/stdyDscr/stdyInfo/sumDscr/geogUnit
 ,scope,scope description,codeBook/stdyDscr/stdyInfo/notes
+,,,codeBook/stdyDscr/stdyInfo/subject/topcClas
