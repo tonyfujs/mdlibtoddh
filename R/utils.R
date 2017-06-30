@@ -71,3 +71,5 @@ extract_field_wbddh_data_class <- function(x) {
   temp <- extract_field_wbddh_data_class_safe(x)
   if(is.null(temp)) {return("")} else {return(temp)}
 }
+
+safe_unbox <- purrr::possibly(jsonlite::unbox, otherwise = '')
