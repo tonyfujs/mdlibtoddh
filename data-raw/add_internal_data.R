@@ -12,9 +12,9 @@ lookup <- googlesheets::gs_read(ddh_master_key)
 mdlib_api_mapping <- readr::read_csv('./data-raw/ddh_microdata_mapping.csv') %>%
   filter(!is.na(ddh_fields))
 
-# taxonomy <- ddhconnect::get_lovs()%>%
-#   rename(ddh_machine_name = machine_name, field_lovs = list_value_name)
-taxonomy <- readr::read_csv('./data-raw/taxonomy_cache.csv')
+taxonomy <- ddhconnect::get_lovs(root_url = ddhconnect:::stg_root_url)%>%
+  rename(ddh_machine_name = machine_name, field_lovs = list_value_name)
+#taxonomy <- readr::read_csv('./data-raw/taxonomy_cache.csv')
 
 fields <- ddhconnect::get_fields() %>%
   filter(data_type == 'microdata') %>%
@@ -38,14 +38,22 @@ lookup <- lookup %>% filter(!field_key == 'granularity')
 
 # Format taxonomy
 vocab_names <- sort(unique(taxonomy$vocabulary_name))
-vocab_names <- vocab_names[vocab_names %in% unique(lookup$field_label)]
+vocab_names <- vocab_names[vocab_names %in% unique(lookup$pretty_name)]
 taxonomy <- taxonomy %>%
   filter(vocabulary_name %in% vocab_names) %>%
-  rename(field_label = vocabulary_name, field_lovs = list_value_name) %>%
-  left_join(lookup[, c('field_label', 'ddh_machine_name')]) %>%
-  select(-field_label) %>%
+  rename(pretty_name = vocabulary_name) %>%
+  left_join(lookup[, c('pretty_name', 'ddh_machine_name')]) %>%
+  select(-pretty_name) %>%
   filter(!is.na(ddh_machine_name)) %>%
   distinct()
+
+# Temporary: TO BE REMOVED ONCE THE ENCODING ISSUES ARE RESOLVED
+taxonomy$field_lovs[taxonomy$field_lovs == 'Côte d&#039;Ivoire'] <- "Côte d'Ivoire"
+taxonomy$field_lovs[taxonomy$field_lovs == 'Europe &amp; Central Asia'] <- "Europe and Central Asia"
+taxonomy$field_lovs[taxonomy$field_lovs == 'East Asia &amp; Pacific'] <- "East Asia and Pacific"
+taxonomy$field_lovs[taxonomy$field_lovs == 'Korea, Dem. People&#039;s Rep.'] <- "Korea, Dem. People's Rep."
+taxonomy$field_lovs[taxonomy$field_lovs == 'Latin America &amp; Caribbean'] <- "Latin America and Caribbean"
+taxonomy$field_lovs[taxonomy$field_lovs == 'Middle East &amp; North Africa'] <- "Middle East and North Africa"
 
 # join taxonomy
 lookup <- lookup %>%
@@ -62,10 +70,11 @@ names(md_placeholder) <- machine_names
 # Generate a lkup table to map Microdata values to DDH LOVs ---------------
 
 field_to_machine <- create_lkup_vector(lookup, vector_keys = 'field_key', vector_values = 'ddh_machine_name')
+field_to_machine_no_na <- field_to_machine[!is.na(field_to_machine)]
 my_sheets <- readxl::excel_sheets('./data-raw/control_vocab_mapping.xlsx')
 md_ddh_lovs <- purrr::map_df(my_sheets, function(x) {
   temp <- readxl::read_excel('./data-raw/control_vocab_mapping.xlsx', sheet = x)
-  temp$ddh_machine_name <- field_to_machine[x]
+  temp$ddh_machine_name <- field_to_machine_no_na[x]
   return(temp)
 })
 
@@ -86,7 +95,8 @@ names(md_ddh_lovs) <- md_ddh_names
 
 ddh_tid_lovs <- lookup %>%
   select(ddh_machine_name, field_lovs, tid) %>%
-  filter(!is.na(tid))
+  filter(!is.na(tid),
+         ddh_machine_name != 'field_topic')
 
 ddh_tid_names <- sort(unique(ddh_tid_lovs$ddh_machine_name))
 ddh_tid_lovs <- purrr::map(ddh_tid_names, function(x){
@@ -102,6 +112,7 @@ ddh_tid_lovs <- ddh_tid_lovs[purrr::map_int(ddh_tid_lovs, length) > 0]
 
 json_template_dataset <- fromJSON('./data-raw/ddh_schema_microdata_dataset.json')
 json_template_resource <- fromJSON('./data-raw/ddh_schema_microdata_resource.json')
+json_template_attach <- fromJSON('./data-raw/ddh_schema_microdata_resource_attach.json')
 
 # Save lookup table -------------------------------------------------------
 
@@ -112,6 +123,7 @@ devtools::use_data(lookup,
                    ddh_tid_lovs,
                    json_template_dataset,
                    json_template_resource,
+                   json_template_attach,
                    overwrite = TRUE)
 
 
