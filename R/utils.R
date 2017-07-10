@@ -73,3 +73,6 @@ extract_field_wbddh_data_class <- function(x) {
 }
 
 safe_unbox <- purrr::possibly(jsonlite::unbox, otherwise = '')
+safe_assign <- function(x) {if (length(x) > 0) {x} else {""}}
+
+is.error <- function(x) inherits(x, "try-error")
