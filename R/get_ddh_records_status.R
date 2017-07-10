@@ -4,15 +4,16 @@
 #'
 #' @param mdlib_token character: Microdatalib API authentication token
 #' @param root_url character: API root URL
+#' @param credentials list: object returned by the get_credentials() function
 #'
 #' @return data frame
 #' @export
 #'
 
-get_ddh_records_status <- function(mdlib_token, root_url = ddhconnect:::production_root_url) {
+get_ddh_records_status <- function(mdlib_token, root_url = ddhconnect:::production_root_url, credentials) {
 
   # ddh
-  ddh_list <- get_ddh_datasets_list(root_url = root_url)
+  ddh_list <- get_ddh_datasets_list(root_url = root_url, credentials = credentials)
   ddh_list$updated <- as.numeric(lubridate::ymd_hms(ddh_list$updated))
   names(ddh_list) <- c('ddh_nids', 'md_internal_id', 'md_refids', 'ddh_dataclass', 'ddh_updated')
   ddh_list$ddh <- 'ddh'

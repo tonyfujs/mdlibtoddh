@@ -4,10 +4,12 @@
 \alias{get_ddh_datasets_list}
 \title{get_ddh_datasets_list}
 \usage{
-get_ddh_datasets_list(root_url)
+get_ddh_datasets_list(root_url, credentials)
 }
 \arguments{
 \item{root_url}{character: API root URL}
+
+\item{credentials}{list: object returned by the get_credentials() function}
 }
 \value{
 data.frame

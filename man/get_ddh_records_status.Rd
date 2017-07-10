@@ -5,12 +5,14 @@
 \title{get_ddh_records_status}
 \usage{
 get_ddh_records_status(mdlib_token,
-  root_url = ddhconnect:::production_root_url)
+  root_url = ddhconnect:::production_root_url, credentials)
 }
 \arguments{
 \item{mdlib_token}{character: Microdatalib API authentication token}
 
 \item{root_url}{character: API root URL}
+
+\item{credentials}{list: object returned by the get_credentials() function}
 }
 \value{
 data frame

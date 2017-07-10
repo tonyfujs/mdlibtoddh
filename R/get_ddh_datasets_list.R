@@ -2,21 +2,27 @@
 #'
 #' Return the full list of microdata datasets in DDH with the following information: node IDs, UUIDs, reference IDs (microdata), data classification, date of last update.
 #' @param root_url character: API root URL
+#' @param credentials list: object returned by the get_credentials() function
 #'
 #' @return data.frame
 #' @export
 #'
 
-get_ddh_datasets_list <- function(root_url)
+get_ddh_datasets_list <- function(root_url, credentials)
 {
   limit <- 500
   dtype <- 294
+
+  cookie <- credentials$cookie
+  token <- credentials$token
 
   # Get count of datasets
   count_url <- paste0(root_url,
                       "/search-service/search_api/datasets?limit=1&fields=[nid,uuid]&filter[status]=1&filter[field_wbddh_data_type]=",
                       dtype)
-  count <- httr::GET(url = count_url, httr::add_headers(.headers = c(charset = "utf-8")),
+  count <- httr::GET(url = count_url, httr::add_headers(.headers = c(charset = "utf-8"),
+                                                        Cookie = cookie,
+                                                        `X-CSRF-Token` = token),
                      httr::accept_json())
   httr::warn_for_status(count)
   count <- httr::content(count)
@@ -34,7 +40,9 @@ get_ddh_datasets_list <- function(root_url)
     temp_url <- paste0(root_url,
                        "/search-service/search_api/datasets?limit=500&fields=[nid,uuid,field_wbddh_reference_id,field_wbddh_data_class,field_wbddh_modified_date,]&filter[status]=1&filter[field_wbddh_data_type]=",
                        dtype, "&offset=", temp_offset)
-    temp_resp <- httr::GET(url = temp_url, httr::add_headers(.headers = c(charset = "utf-8")),
+    temp_resp <- httr::GET(url = temp_url, httr::add_headers(.headers = c(charset = "utf-8"),
+                                                             Cookie = cookie,
+                                                             `X-CSRF-Token` = token),
                            httr::accept_json())
     httr::warn_for_status(temp_resp)
     temp_resp <- httr::content(temp_resp)
