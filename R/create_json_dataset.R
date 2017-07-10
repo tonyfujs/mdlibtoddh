@@ -13,12 +13,12 @@ create_json_dataset <- function(metadata_list, json_template = mdlibtoddh::json_
 
 
   json_template$title <- safe_unbox(metadata_list$title) # title
-  json_template$body$und$value <- metadata_list$body # body
-  json_template$field_contact_email$und$value <- metadata_list$field_contact_email # email
+  json_template$body$und$value <- if (length(metadata_list$body) > 0) {metadata_list$body} else {metadata_list$title} # body
+  json_template$field_contact_email$und$value <- safe_assign(metadata_list$field_contact_email) # email
   json_template$field_topic$und$tid <- safe_unbox(metadata_list$field_topic) # topic
   json_template$field_wbddh_reference_id$und$value <- safe_unbox(metadata_list$field_wbddh_reference_id) # reference ID
   json_template$field_wbddh_data_class$und$tid <- safe_unbox(metadata_list$field_wbddh_data_class) # data classification
-  json_template$field_wbddh_produced_by$und$value <- metadata_list$field_wbddh_produced_by
+  json_template$field_wbddh_produced_by$und$value <- safe_assign(metadata_list$field_wbddh_produced_by)
   json_template$field_wbddh_data_collector$und$value <- safe_unbox(metadata_list$field_wbddh_data_collector)
   json_template$field_wbddh_data_type$und$tid <- safe_unbox(metadata_list$field_wbddh_data_type) # data type
   json_template$field_wbddh_disclaimer$und$value <- safe_unbox(metadata_list$field_wbddh_disclaimer) # disclaimer
@@ -49,19 +49,19 @@ create_json_dataset <- function(metadata_list, json_template = mdlibtoddh::json_
   json_template$field_wbddh_modified_date$und$value$ampm <- metadata_list$field_wbddh_modified_date[['ampm']]
 
   json_template$field_wbddh_sampling_procedure$und$value <- safe_unbox(metadata_list$field_wbddh_sampling_procedure)
-  json_template$field_wbddh_deviations_sample <- metadata_list$field_wbddh_deviations_sample
+  json_template$field_wbddh_deviations_sample <- safe_assign(metadata_list$field_wbddh_deviations_sample)
   json_template$field_wbddh_questionnaires$und$value <- safe_unbox(metadata_list$field_wbddh_questionnaires)
   json_template$field_wbddh_citation_text$und$value <- safe_unbox(metadata_list$field_wbddh_citation_text)
   json_template$field_ddh_harvest_src$und$tid <- safe_unbox(metadata_list$field_ddh_harvest_src)
   json_template$field_ddh_harvest_sys_id$und$value <- safe_unbox(metadata_list$field_ddh_harvest_sys_id)
   json_template$field_exception_s_$und$tid <- safe_unbox(metadata_list$field_exception_s_)
-  json_template$field_wbddh_version_description$und$value <- metadata_list$field_wbddh_version_description # version
+  json_template$field_wbddh_version_description$und$value <- safe_assign(metadata_list$field_wbddh_version_description) # version
 
   # To DOUBLE CHECK
-  json_template$field_wbddh_end_date <- metadata_list$field_wbddh_end_date # end date
-  json_template$field_wbddh_other_processing$und$value <- metadata_list$field_wbddh_other_processing # other processing
-  json_template$field_wbddh_publisher_name <- metadata_list$field_wbddh_publisher_name # publisher name
-  json_template$field_wbddh_weighting <- metadata_list$field_wbddh_weighting # weighting
+  json_template$field_wbddh_end_date <- safe_assign(metadata_list$field_wbddh_end_date) # end date
+  json_template$field_wbddh_other_processing$und$value <- safe_assign(metadata_list$field_wbddh_other_processing) # other processing
+  json_template$field_wbddh_publisher_name <- safe_assign(metadata_list$field_wbddh_publisher_name) # publisher name
+  json_template$field_wbddh_weighting <- safe_assign(metadata_list$field_wbddh_weighting) # weighting
   # # TO CHECK
   # json_template$field_wbddh_series_information <- metadata_list$field_wbddh_series_information
   # json_template$field_wbddh_subtitle <- metadata_list$field_wbddh_subtitle
@@ -84,6 +84,7 @@ create_json_dataset <- function(metadata_list, json_template = mdlibtoddh::json_
 
   # remove empty elements
   to_keep <- names(metadata_list[!purrr::map_int(metadata_list, length) == 0])
+  to_keep <- unique(c(to_keep, "body"))
   json_template <- json_template[names(json_template) %in% to_keep]
 
   # Add required dataset elements
