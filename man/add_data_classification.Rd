@@ -9,9 +9,9 @@ add_data_classification(metadata_list, md_internal_id, master)
 \arguments{
 \item{metadata_list}{list: Flattened list of metadata from the Microdata API}
 
-\item{master}{data.frame: Output of mdlibtoddh::get_ddh_records_status()}
+\item{md_internal_id}{character: Microdata internal ID}
 
-\item{refid}{character: Microdata internal ID}
+\item{master}{data.frame: Output of mdlibtoddh::get_ddh_records_status()}
 }
 \value{
 list

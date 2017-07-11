@@ -1,7 +1,7 @@
 #' add_data_classification
 #'
 #' @param metadata_list list: Flattened list of metadata from the Microdata API
-#' @param refid character: Microdata internal ID
+#' @param md_internal_id character: Microdata internal ID
 #' @param master data.frame: Output of mdlibtoddh::get_ddh_records_status()
 #'
 #' @return list
