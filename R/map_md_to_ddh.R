@@ -2,7 +2,7 @@
 #'
 #' Map response from Microdata to DDH variables and LOVs
 #'
-#' @param metadata_list list: List of Microdata metadata
+#' @param metadata_list list: List of Microdata metadata (output from get_md_metadata())
 #'
 #' @return list
 #' @export
