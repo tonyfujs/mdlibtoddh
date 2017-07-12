@@ -78,5 +78,5 @@ safe_assign <- function(x) {if (length(x) > 0) {x} else {""}}
 is.error <- function(x) inherits(x, "try-error")
 
 already_exists <- function(id, existing_ids) {
-  !id %in% existing_ids
+  id %in% existing_ids
 }
