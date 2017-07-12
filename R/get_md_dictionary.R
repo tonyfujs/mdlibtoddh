@@ -12,12 +12,16 @@
 
 get_md_dictionary <- function(id, token, limit = 10000) {
   path <- paste0('index.php/api/v2/metadata/list_variables/', id, '/', limit)
-  out <- mdlibconnect::connect_mdlib(path = path, token = token)
-  out <- out$content$items
-  out <- unlist(out)
-  out <- unique(out)
-  out <- stringr::str_trim(out)
-  out <- paste(out, collapse = ';')
+  out <- tryCatch(
+    {
+      out <- mdlibconnect::connect_mdlib(path = path, token = token)
+      out <- out$content$items
+      out <- unlist(out)
+      out <- unique(out)
+      out <- stringr::str_trim(out)
+      out <- paste(out, collapse = ';')
+    },
+    error = function(e) {""})
 
   return(out)
 }
