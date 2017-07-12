@@ -7,7 +7,7 @@
 #' @param token character: Microdata API authentication token
 #' @param ... ...: Extra paramter to be passed to add_search_tags (See get_md_dictionary() limit parameter)
 #'
-#' @return
+#' @return character
 #' @export
 #'
 

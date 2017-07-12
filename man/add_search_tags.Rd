@@ -15,6 +15,9 @@ add_search_tags(metadata_list, id, token, ...)
 
 \item{...}{...: Extra paramter to be passed to add_search_tags (See get_md_dictionary() limit parameter)}
 }
+\value{
+character
+}
 \description{
 Add search tags to the list of variable to be added to DDH
 }
