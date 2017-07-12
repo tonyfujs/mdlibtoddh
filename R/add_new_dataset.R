@@ -3,7 +3,6 @@
 #' Add a full microdata record to DDH (metadata + resources)
 #'
 #' @param md_internal_id character: Microdata internal ID of the dataset to be added
-#' @param existing_md_ids character: List of Microdata IDs already present in DDH
 #' @param md_token character: Microdata API authentication token
 #' @param ddh_credentials list: DDH API authentication token and cookie
 #' @param master dataframe: Master lookup table
@@ -13,7 +12,7 @@
 #' @export
 #'
 
-add_new_dataset <- function(md_internal_id, existing_md_ids, md_token, ddh_credentials, master, root_url) {
+add_new_dataset <- function(md_internal_id, md_token, ddh_credentials, master, root_url) {
 
   # STEP 1: Get raw values from microdata API
   survey_mtdt <- get_md_metadata(id = md_internal_id, token = md_token)

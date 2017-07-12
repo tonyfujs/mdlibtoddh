@@ -4,13 +4,10 @@
 \alias{add_new_dataset}
 \title{add_new_dataset()}
 \usage{
-add_new_dataset(md_internal_id, existing_md_ids, md_token, ddh_credentials,
-  master, root_url)
+add_new_dataset(md_internal_id, md_token, ddh_credentials, master, root_url)
 }
 \arguments{
 \item{md_internal_id}{character: Microdata internal ID of the dataset to be added}
-
-\item{existing_md_ids}{character: List of Microdata IDs already present in DDH}
 
 \item{md_token}{character: Microdata API authentication token}
 
