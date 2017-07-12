@@ -3,6 +3,7 @@
 export(add_constant_metadata)
 export(add_data_classification)
 export(add_link_to_resources)
+export(add_search_tags)
 export(attach_resource_to_dataset)
 export(create_json_attach)
 export(create_json_dataset)
