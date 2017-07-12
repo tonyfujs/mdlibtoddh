@@ -1,6 +1,29 @@
 library(dplyr)
 library(jsonlite)
 
+root_url <- ddhconnect:::stg_root_url
+
+
+# CHECK ASSUMPTIONS -------------------------------------------------------
+
+# taxonomy_stg <- ddhconnect::get_lovs(root_url = ddhconnect:::stg_root_url)%>%
+#   rename(ddh_machine_name = machine_name, field_lovs = list_value_name)
+# names(taxonomy_stg) <- paste0('stg_', names(taxonomy_stg))
+# taxonomy_prod <- ddhconnect::get_lovs(root_url = ddhconnect:::production_root_url)%>%
+#   rename(ddh_machine_name = machine_name, field_lovs = list_value_name)
+# names(taxonomy_prod) <- paste0('prod_', names(taxonomy_prod))
+#
+# diff_taxonomy <- full_join(taxonomy_prod, taxonomy_stg, by = c("prod_ddh_machine_name"="stg_ddh_machine_name",
+#                                                                "prod_field_lovs"="stg_field_lovs"))
+# diff_taxonomy <- diff_taxonomy %>%
+#   mutate(
+#     same_vocabulary_name = prod_vocabulary_name == stg_vocabulary_name,
+#     same_tid = prod_tid == stg_tid
+#   ) %>%
+#   select(prod_ddh_machine_name, prod_vocabulary_name, stg_vocabulary_name, prod_field_lovs, prod_tid, stg_tid, same_vocabulary_name, same_tid)
+#
+# readr::write_csv(diff_taxonomy, path = 'diff_taxonomy.csv', na = '')
+
 # STEP 1: Get data --------------------------------------------------------
 
 # Matadata master
@@ -12,11 +35,11 @@ lookup <- googlesheets::gs_read(ddh_master_key)
 mdlib_api_mapping <- readr::read_csv('./data-raw/ddh_microdata_mapping.csv') %>%
   filter(!is.na(ddh_fields))
 
-taxonomy <- ddhconnect::get_lovs(root_url = ddhconnect:::stg_root_url)%>%
+taxonomy <- ddhconnect::get_lovs(root_url = root_url)%>%
   rename(ddh_machine_name = machine_name, field_lovs = list_value_name)
 #taxonomy <- readr::read_csv('./data-raw/taxonomy_cache.csv')
 
-fields <- ddhconnect::get_fields() %>%
+fields <- ddhconnect::get_fields(root_url = root_url) %>%
   filter(data_type == 'microdata') %>%
   rename(ddh_machine_name = machine_name)
 # TO BE REMOVED
@@ -59,9 +82,16 @@ taxonomy$field_lovs[taxonomy$field_lovs == 'Middle East &amp; North Africa'] <- 
 lookup <- lookup %>%
   dplyr::left_join(taxonomy, by = c('ddh_machine_name', 'field_lovs'))
 
+# CHECK matching tid issues
+
+check_tids <- lookup %>%
+  filter(ddh_machine_name %in% unique(taxonomy$ddh_machine_name)) %>%
+  filter(!is.na(field_lovs) & is.na(tid))
+
+check_tids
+
 # Generate microdata placeholder for DDH
 machine_names <- unique(fields$ddh_machine_name)
-machine_names <- c(machine_names, 'field_wbddh_reference_id')
 machine_names <- sort(machine_names)
 md_placeholder <- vector(mode = 'list', length = length(machine_names))
 names(md_placeholder) <- machine_names
