@@ -16,7 +16,7 @@ get_md_dictionary <- function(id, token, limit = 10000) {
   out <- out$content$items
   out <- unlist(out)
   out <- unique(out)
-  out <- stringr::trim(out)
+  out <- stringr::str_trim(out)
   out <- paste(out, collapse = ';')
 
   return(out)
