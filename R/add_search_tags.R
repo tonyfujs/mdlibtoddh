@@ -22,5 +22,7 @@ add_search_tags <- function(metadata_list, id, token, ...) {
   out <- paste(keywords, dico, sep = ';')
   out <- stringr::str_replace(out, pattern = '^;', replacement = '')
 
-  return(out)
+  metadata_list$field_wbddh_search_tags <- out
+
+  return(metadata_list)
 }
