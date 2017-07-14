@@ -62,8 +62,11 @@ flatten_md_metadata <- function(metadata_list,
     metadata_list[[field]] <- metadata_list[[field]][[1]]$date
   }
 
+  # Handle field_wbddh_access_authority
+  metadata_list$field_wbddh_access_authority <- paste(unlist(metadata_list$field_wbddh_access_authority), collapse = ', ')
+
   # CHECK: List has been correctly flattened
-  assertthat::validate_that(all(purrr::map_int(metadata_list, purrr::depth) == 1),
+  assertthat::assert_that(all(purrr::map_int(metadata_list, purrr::depth) == 1),
                             msg = "Some elements of the list have not been flattened correctly")
 
   return(metadata_list)
