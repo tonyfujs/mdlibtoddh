@@ -19,7 +19,7 @@ embargoDate,,,
 embargoNotes,,,
 endDate,data collection,collection_dates,codeBook/stdyDscr/stdyInfo/sumDscr/collDate
 estSampleError,data appraisal,estimates of sampling error,codeBook/stdyDscr/method/anlyInfo/EstSmpErr
-fundingName,,funding_agency,codebook/stdydscr/citation/prodstmt/fundag
+fundingName,,funding_agency,codeBook/stdyDscr/citation/prodStmt/fundAg
 geographicalCoverage,coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation
 globalPractice,,,
 granularity,coverage,geographic coverage,codeBook/stdyDscr/stdyInfo/sumDscr/geogCover
