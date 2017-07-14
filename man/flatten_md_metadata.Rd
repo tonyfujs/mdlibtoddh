@@ -4,7 +4,7 @@
 \alias{flatten_md_metadata}
 \title{flatten_md_metadata}
 \usage{
-flatten_md_metadata(metadata_in,
+flatten_md_metadata(metadata_list,
   multiple_fields = c("field_wbddh_primary_investigator",
   "field_wbddh_authority_name", "field_wbddh_publisher_name"),
   email_fields = c("field_contact_email"),
@@ -12,7 +12,13 @@ flatten_md_metadata(metadata_in,
   "field_wbddh_data_collector"))
 }
 \arguments{
-\item{metadata_in}{list: Output of mdlibtoddh::extract_md_metadata}
+\item{metadata_list}{list: Output of mdlibtoddh::extract_md_metadata}
+
+\item{multiple_fields}{character: JSON array fields in Microdata}
+
+\item{email_fields}{character: email fiels}
+
+\item{name_fields}{character: Name fields}
 }
 \value{
 list
