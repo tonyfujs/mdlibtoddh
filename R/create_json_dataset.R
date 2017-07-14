@@ -33,6 +33,24 @@ create_json_dataset <- function(metadata_list, json_template = mdlibtoddh::json_
   json_template$field_wbddh_acronym$und$value <- safe_unbox(metadata_list$field_wbddh_acronym) # acronym
   json_template$field_wbddh_country$und$tid <- safe_unbox(metadata_list$field_wbddh_country)
   json_template$field_wbddh_search_tags$und$value <- safe_unbox(metadata_list$field_wbddh_search_tags)
+  json_template$field_wbddh_copyright$und$value <- safe_unbox(metadata_list$field_wbddh_copyright)
+  json_template$field_wbddh_access_authority$und$value <- safe_unbox(metadata_list$field_wbddh_access_authority)
+  json_template$field_wbddh_data_editing$und$value <- safe_unbox(metadata_list$field_wbddh_data_editing)
+  json_template$field_wbddh_funding_name$und$value <- safe_unbox(metadata_list$field_wbddh_funding_name)
+  json_template$field_wbddh_subtitle$und$value <- safe_unbox(metadata_list$field_wbddh_subtitle)
+  json_template$field_wbddh_version_notes$und$value <- safe_unbox(metadata_list$field_wbddh_version_notes)
+  json_template$field_wbddh_response_rates$und$value <- safe_unbox(metadata_list$field_wbddh_response_rates)
+  json_template$field_wbddh_estimate_sampling$und$value <- safe_unbox(metadata_list$field_wbddh_estimate_sampling)
+
+
+  # # version date
+  # json_template$field_wbddh_version_date$und$value$year <- metadata_list$field_wbddh_version_date[['year']]
+  # json_template$field_wbddh_version_date$und$value$month <- metadata_list$field_wbddh_version_date[['month']]
+  # json_template$field_wbddh_version_date$und$value$day <- metadata_list$field_wbddh_version_date[['day']]
+  # json_template$field_wbddh_version_date$und$value$hour <- metadata_list$field_wbddh_version_date[['hour']]
+  # json_template$field_wbddh_version_date$und$value$minute <- metadata_list$field_wbddh_version_date[['minute']]
+  # json_template$field_wbddh_version_date$und$value$ampm <- metadata_list$field_wbddh_version_date[['ampm']]
+
   # release date
   json_template$field_wbddh_release_date$und$value$year <- metadata_list$field_wbddh_release_date[['year']]
   json_template$field_wbddh_release_date$und$value$month <- metadata_list$field_wbddh_release_date[['month']]
@@ -64,14 +82,11 @@ create_json_dataset <- function(metadata_list, json_template = mdlibtoddh::json_
   json_template$field_wbddh_weighting <- safe_assign(metadata_list$field_wbddh_weighting) # weighting
   # # TO CHECK
   # json_template$field_wbddh_series_information <- metadata_list$field_wbddh_series_information
-  # json_template$field_wbddh_subtitle <- metadata_list$field_wbddh_subtitle
   # json_template$field_wbddh_supervision <- metadata_list$field_wbddh_supervision
   # json_template$field_exception_s_ <- metadata_list$field_exception_s_
   # json_template$field_wbddh_terms_of_use$und$tid <- metadata_list$field_wbddh_terms_of_use
   # json_template$field_wbddh_disclosure_risk <- metadata_list$field_wbddh_disclosure_risk
   # json_template$field_wbddh_economy_coverage <- metadata_list$field_wbddh_economy_coverage
-  # json_template$field_wbddh_estimate_sampling <- metadata_list$field_wbddh_estimate_sampling
-  # json_template$field_wbddh_response_rates <- metadata_list$field_wbddh_response_rates
   # json_template$field_wbddh_update_frequency$und$value <- metadata_list$field_wbddh_update_frequency
   # json_template$field_wbddh_ds_embargo_date$und$value <- metadata_list$field_wbddh_ds_embargo_date
   # json_template$field_wbddh_ds_source$und$value <- metadata_list$field_wbddh_ds_source
