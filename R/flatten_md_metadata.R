@@ -14,14 +14,15 @@
 flatten_md_metadata <- function(metadata_list,
                                 multiple_fields = c("field_wbddh_primary_investigator",
                                                     "field_wbddh_authority_name",
-                                                    "field_wbddh_publisher_name"),
+                                                    "field_wbddh_publisher_name",
+                                                    "field_wbddh_other_acknowledgment"),
                                 email_fields = c("field_contact_email"),
                                 name_fields = c('field_wbddh_country',
                                                 'field_wbddh_region',
                                                 'field_wbddh_data_collector')) {
 
   # Handle shallow indexes
-  shallow <- purrr::map_int(metadata_list, purrr::depth) == 2
+  shallow <- purrr::map_int(metadata_list, purrr::vec_depth) == 2
   metadata_list[shallow] <- purrr::flatten(metadata_list[shallow])
 
   # Handle variables pulling for multiples JSON keys
@@ -70,7 +71,7 @@ flatten_md_metadata <- function(metadata_list,
   metadata_list$field_wbddh_funding_name <- paste(metadata_list$field_wbddh_funding_name, collapse = '; ')
 
   # CHECK: List has been correctly flattened
-  assertthat::assert_that(all(purrr::map_int(metadata_list, purrr::depth) == 1),
+  assertthat::assert_that(all(purrr::map_int(metadata_list, purrr::vec_depth) == 1),
                             msg = "Some elements of the list have not been flattened correctly")
 
   return(metadata_list)
