@@ -76,3 +76,4 @@ weighting,sampling,weighting,codeBook/stdyDscr/method/dataColl/weight
 ,coverage,geographic unit,codeBook/stdyDscr/stdyInfo/sumDscr/geogUnit
 ,scope,scope description,codeBook/stdyDscr/stdyInfo/notes
 ,,,codeBook/stdyDscr/stdyInfo/subject/topcClas
+harvest_source_id,,,id
