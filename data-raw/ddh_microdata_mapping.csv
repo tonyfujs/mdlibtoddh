@@ -14,7 +14,6 @@ dataType,,,
 devSampleDesign,sampling,deviations from sample design,codeBook/stdyDscr/method/dataColl/deviat
 disclaimer,disclaimer and copyright,disclaimer,codeBook/stdyDscr/dataAccs/useStmt/disclaimer
 disclosureRisk,,,
-econCoverage,,,
 embargoDate,,,
 embargoNotes,,,
 endDate,data collection,collection_dates,codeBook/stdyDscr/stdyInfo/sumDscr/collDate
@@ -22,7 +21,6 @@ estSampleError,data appraisal,estimates of sampling error,codeBook/stdyDscr/meth
 fundingName,,funding_agency,codeBook/stdyDscr/citation/prodStmt/fundAg
 geographicalCoverage,coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation
 globalPractice,,,
-granularity,coverage,geographic coverage,codeBook/stdyDscr/stdyInfo/sumDscr/geogCover
 kindData,overview,kind of data,codeBook/stdyDscr/stdyInfo/sumDscr/dataKind
 language,,,
 license,,,

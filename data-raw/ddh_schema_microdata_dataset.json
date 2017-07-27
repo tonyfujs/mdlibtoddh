@@ -177,38 +177,17 @@
 	},
 	"field_wbddh_version_date": {
 		"und": [{
-			"value": {
-				"day": "",
-				"month": "",
-				"year": "",
-				"hour": "",
-				"minute": "",
-				"ampm": ""
-			}
+			"value": ""
 		}]
 	},
 	"field_wbddh_release_date": {
 		"und": [{
-			"value": {
-				"day": "",
-				"month": "",
-				"year": "",
-				"hour": "",
-				"minute": "",
-				"ampm": ""
-			}
+			"value": ""
 		}]
 	},
 	"field_wbddh_modified_date": {
 		"und": [{
-			"value": {
-				"day": "",
-				"month": "",
-				"year": "",
-				"hour": "",
-				"minute": "",
-				"ampm": ""
-			}
+			"value": ""
 		}]
 	},
 	"field_wbddh_sampling_procedure": {
