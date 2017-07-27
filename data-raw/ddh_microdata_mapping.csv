@@ -1,4 +1,5 @@
 ddh_fields,microdatalib_section,microdatalib_field,json_fields
+accessAuthAff,data access,access authority,codeBook/stdyDscr/dataAccs/useStmt/contact
 accessAuthName,data access,access authority,codeBook/stdyDscr/dataAccs/useStmt/contact
 acronym,identification,abbreviation,codeBook/stdyDscr/citation/titlStmt/altTitl
 body,overview,abstract,codeBook/stdyDscr/stdyInfo/abstract
@@ -10,19 +11,16 @@ dataClassification,,,
 dataEdit,data processing,data entry and editing,codeBook/stdyDscr/method/dataColl/cleanOps
 dataNotes,,,
 dataType,,,
-startDate,data collection,collection_dates,codeBook/stdyDscr/stdyInfo/sumDscr/collDate
-endDate,data collection,collection_dates,codeBook/stdyDscr/stdyInfo/sumDscr/collDate
 devSampleDesign,sampling,deviations from sample design,codeBook/stdyDscr/method/dataColl/deviat
 disclaimer,disclaimer and copyright,disclaimer,codeBook/stdyDscr/dataAccs/useStmt/disclaimer
 disclosureRisk,,,
-econCoverage,,,
 embargoDate,,,
 embargoNotes,,,
+endDate,data collection,collection_dates,codeBook/stdyDscr/stdyInfo/sumDscr/collDate
 estSampleError,data appraisal,estimates of sampling error,codeBook/stdyDscr/method/anlyInfo/EstSmpErr
-fundingName,,funding_agency,codebook/stdydscr/citation/prodstmt/fundag
+fundingName,,funding_agency,codeBook/stdyDscr/citation/prodStmt/fundAg
 geographicalCoverage,coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation
 globalPractice,,,
-granularity,coverage,geographic coverage,codeBook/stdyDscr/stdyInfo/sumDscr/geogCover
 kindData,overview,kind of data,codeBook/stdyDscr/stdyInfo/sumDscr/dataKind
 language,,,
 license,,,
@@ -54,6 +52,7 @@ sampProc,sampling,sampling procedure,codeBook/stdyDscr/method/dataColl/sampProc
 searchTags,,,
 seriesInfo,,series information,codeBook/stdyDscr/citation/serStmt/serInfo
 source,data collection,data sources,codeBook/stdyDscr/method/dataColl/sources/dataSrc
+startDate,data collection,collection_dates,codeBook/stdyDscr/stdyInfo/sumDscr/collDate
 status,,,
 studyType,identification,study type,codeBook/stdyDscr/citation/serStmt/serName
 subscription,,,

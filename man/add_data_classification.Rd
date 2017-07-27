@@ -4,12 +4,12 @@
 \alias{add_data_classification}
 \title{add_data_classification}
 \usage{
-add_data_classification(metadata_list, refid, master)
+add_data_classification(metadata_list, md_internal_id, master)
 }
 \arguments{
 \item{metadata_list}{list: Flattened list of metadata from the Microdata API}
 
-\item{refid}{character: Microdata reference ID (common to Internal and External Microdata records)}
+\item{md_internal_id}{character: Microdata internal ID}
 
 \item{master}{data.frame: Output of mdlibtoddh::get_ddh_records_status()}
 }

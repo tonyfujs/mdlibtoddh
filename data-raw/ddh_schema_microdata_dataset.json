@@ -1,5 +1,6 @@
 {
 	"title": "",
+	"status": "",
 	"body": {
 		"und": [{
 			"value": ""
@@ -42,9 +43,21 @@
 			"value": ""
 		}
 	},
-	"field_wbddh_disclosure_risk": [],
-	"field_wbddh_economy_coverage": [],
-	"field_wbddh_estimate_sampling": [],
+	"field_wbddh_disclosure_risk": {
+		"und": {
+			"value": ""
+		}
+	},
+	"field_wbddh_economy_coverage": {
+		"und": {
+			"value": ""
+		}
+	},
+	"field_wbddh_estimate_sampling": {
+		"und": {
+			"value": ""
+		}
+	},
 	"field_wbddh_kind_of_data": {
 		"und": {
 			"tid": ""
@@ -60,13 +73,16 @@
 			"tid": ""
 		}
 	},
-	"field_wbddh_no_of_economies": [],
+	"field_wbddh_no_of_economies": {
+		"und": {
+			"value": ""
+		}
+	},
 	"field_wbddh_primary_investigator": {
 		"und": [{
 			"value": ""
 		}]
 	},
-	"field_wbddh_response_rates": [],
 	"field_wbddh_study_type": {
 		"und": {
 			"value": ""
@@ -77,14 +93,66 @@
 			"tid": ""
 		}
 	},
+	"field_wbddh_access_authority": {
+		"und": [{
+			"value": ""
+		}]
+	},
+	"field_wbddh_data_editing": {
+		"und": [{
+			"value": ""
+		}]
+	},
+	"field_wbddh_funding_name": {
+		"und": [{
+			"value": ""
+		}]
+	},
+	"field_wbddh_copyright": {
+		"und": [{
+			"value": ""
+		}]
+	},
+	"field_wbddh_response_rates": {
+		"und": [{
+			"value": ""
+		}]
+	},
+	"field_wbddh_version_description": {
+		"und": [{
+			"value": ""
+		}]
+	},
+	"field_wbddh_version_notes": {
+		"und": [{
+			"value": ""
+		}]
+	},
+	"field_wbddh_subtitle": {
+		"und": [{
+			"value": ""
+		}]
+	},
 	"field_wbddh_unit_of_analysis": {
 		"und": [{
 			"value": ""
 		}]
 	},
-	"field_wbddh_universe": [],
-	"field_wbddh_update_frequency": [],
-	"field_wbddh_weighting": [],
+	"field_wbddh_universe": {
+		"und": {
+			"value": ""
+		}
+	},
+	"field_wbddh_update_frequency": {
+		"und": {
+			"value": ""
+		}
+	},
+	"field_wbddh_weighting": {
+		"und": [{
+			"value": ""
+		}]
+	},
 	"field_wbddh_acronym": {
 		"und": [{
 			"value": ""
@@ -96,35 +164,30 @@
 		}
 	},
 	"field_wbddh_ds_embargo_date": [],
-	"field_wbddh_ds_source": [],
+	"field_wbddh_ds_source": {
+		"und": [{
+			"value": ""
+		}]
+	},
 	"field_wbddh_dsttl_upi": [],
 	"field_wbddh_search_tags": {
 		"und": [{
 			"value": ""
 		}]
 	},
+	"field_wbddh_version_date": {
+		"und": [{
+			"value": ""
+		}]
+	},
 	"field_wbddh_release_date": {
 		"und": [{
-			"value": {
-				"day": "",
-				"month": "",
-				"year": "",
-				"hour": "",
-				"minute": "",
-				"ampm": ""
-			}
+			"value": ""
 		}]
 	},
 	"field_wbddh_modified_date": {
 		"und": [{
-			"value": {
-				"day": "",
-				"month": "",
-				"year": "",
-				"hour": "",
-				"minute": "",
-				"ampm": ""
-			}
+			"value": ""
 		}]
 	},
 	"field_wbddh_sampling_procedure": {
@@ -132,7 +195,11 @@
 			"value": ""
 		}]
 	},
-	"field_wbddh_deviations_sample": [],
+	"field_wbddh_deviations_sample": {
+		"und": [{
+			"value": ""
+		}]
+	},
 	"field_wbddh_questionnaires": {
 		"und": [{
 			"value": ""
