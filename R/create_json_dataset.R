@@ -44,27 +44,14 @@ create_json_dataset <- function(metadata_list, json_template = mdlibtoddh::json_
 
 
   # # version date
-  # json_template$field_wbddh_version_date$und$value$year <- metadata_list$field_wbddh_version_date[['year']]
-  # json_template$field_wbddh_version_date$und$value$month <- metadata_list$field_wbddh_version_date[['month']]
-  # json_template$field_wbddh_version_date$und$value$day <- metadata_list$field_wbddh_version_date[['day']]
-  # json_template$field_wbddh_version_date$und$value$hour <- metadata_list$field_wbddh_version_date[['hour']]
-  # json_template$field_wbddh_version_date$und$value$minute <- metadata_list$field_wbddh_version_date[['minute']]
-  # json_template$field_wbddh_version_date$und$value$ampm <- metadata_list$field_wbddh_version_date[['ampm']]
+  # json_template$field_wbddh_version_date$und$value <- safe_unbox(metadata_list$field_wbddh_version_date)
 
   # release date
-  json_template$field_wbddh_release_date$und$value$year <- metadata_list$field_wbddh_release_date[['year']]
-  json_template$field_wbddh_release_date$und$value$month <- metadata_list$field_wbddh_release_date[['month']]
-  json_template$field_wbddh_release_date$und$value$day <- metadata_list$field_wbddh_release_date[['day']]
-  json_template$field_wbddh_release_date$und$value$hour <- metadata_list$field_wbddh_release_date[['hour']]
-  json_template$field_wbddh_release_date$und$value$minute <- metadata_list$field_wbddh_release_date[['minute']]
-  json_template$field_wbddh_release_date$und$value$ampm <- metadata_list$field_wbddh_release_date[['ampm']]
+  json_template$field_wbddh_release_date$und$value <- safe_unbox(metadata_list$field_wbddh_release_date)
+
   # modified date
-  json_template$field_wbddh_modified_date$und$value$year <- metadata_list$field_wbddh_modified_date[['year']]
-  json_template$field_wbddh_modified_date$und$value$month <- metadata_list$field_wbddh_modified_date[['month']]
-  json_template$field_wbddh_modified_date$und$value$day <- metadata_list$field_wbddh_modified_date[['day']]
-  json_template$field_wbddh_modified_date$und$value$hour <- metadata_list$field_wbddh_modified_date[['hour']]
-  json_template$field_wbddh_modified_date$und$value$minute <- metadata_list$field_wbddh_modified_date[['minute']]
-  json_template$field_wbddh_modified_date$und$value$ampm <- metadata_list$field_wbddh_modified_date[['ampm']]
+  json_template$field_wbddh_modified_date$und$value <- safe_unbox(metadata_list$field_wbddh_modified_date)
+
 
   json_template$field_wbddh_sampling_procedure$und$value <- safe_unbox(metadata_list$field_wbddh_sampling_procedure)
   json_template$field_wbddh_deviations_sample <- safe_assign(metadata_list$field_wbddh_deviations_sample)

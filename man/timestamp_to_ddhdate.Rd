@@ -12,7 +12,7 @@ timestamp_to_ddhdate(time_stamp, origin = "1970-01-01")
 \item{origin}{character the date of origin}
 }
 \value{
-named vector
+character vector
 }
 \description{
 timestamp_to_ddhdate
