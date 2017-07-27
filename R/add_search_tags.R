@@ -17,7 +17,7 @@ add_search_tags <- function(metadata_list, id, token, ...) {
   keywords <- stringr::str_replace_all(keywords, pattern = ' +', replacement = ' ')
   keywords <- stringr::str_replace_all(keywords, pattern = ', ?', replacement = ';')
   # Get codebook words
-  dico <- get_md_dictionary(id = id, token = token, limit = limit)
+  dico <- get_md_dictionary(id = id, token = token, ...)
   # Combine
   out <- paste(keywords, dico, sep = ';')
   out <- stringr::str_replace(out, pattern = '^;|;$', replacement = '')

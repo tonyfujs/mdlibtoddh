@@ -14,6 +14,8 @@ Imports: assertthat,
     httr,
     mdlibconnect,
     purrr,
-    dplyr
+    dplyr,
+    jsonlite,
+    stringr
 RoxygenNote: 6.0.1
 Depends: R (>= 2.10)

@@ -12,6 +12,10 @@ format_md_metadata(metadata_in, date_fields = c("field_wbddh_modified_date",
 }
 \arguments{
 \item{metadata_in}{list: flattened list of metadata}
+
+\item{date_fields}{character: variables to be processed as dates}
+
+\item{text_fields}{character: variables to be processed as text}
 }
 \value{
 list
