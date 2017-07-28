@@ -215,8 +215,16 @@
 		}]
 	},
 	"field_wbddh_aggregation_method": [],
-	"field_ddh_harvest_src": [],
-	"field_ddh_harvest_sys_id": [],
+	"field_ddh_harvest_src": {
+		"und": {
+			"tid": ""
+		}
+	},
+	"field_ddh_harvest_sys_id": {
+		"und": [{
+			"value": ""
+		}]
+	},
 	"field_exception_s_": []
 }
 
