@@ -77,7 +77,6 @@ fields_remove <-
     "field_wbddh_next_expected_update",
     "field_wbddh_no_of_economies",
     "field_wbddh_organization",
-    "field_wbddh_other_acknowledgment",
     "field_wbddh_other_producer",
     "field_wbddh_produced_by",
     "field_wbddh_related_indicators",
