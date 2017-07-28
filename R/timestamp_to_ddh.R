@@ -3,7 +3,7 @@
 #' @param time_stamp numeric: A linux time stamp
 #' @param origin character the date of origin
 #'
-#' @return named vector
+#' @return character vector
 #' @export
 #'
 #' @examples
@@ -15,16 +15,8 @@ timestamp_to_ddhdate <- function(time_stamp, origin = "1970-01-01") {
   if (!is.numeric(time_stamp)) {time_stamp <- as.numeric(time_stamp)}
   assertthat::assert_that(!is.na(time_stamp), msg = "Please ensure that time_stamp has a valid value")
 
-  out <- vector(mode = 'character', length = 6)
-  names(out) <- c('year', 'month', 'day', 'hour', 'minute', 'ampm')
+  date <- as.POSIXct(time_stamp, origin = origin, format = "%Y-%m-%d")
+  date <- strftime(date, format = "%Y-%m-%d")
 
-  date <- as.POSIXct(time_stamp, origin = origin)
-  out['year'] <- lubridate::year(date)
-  out['month'] <- lubridate::month(date)
-  out['day'] <- lubridate::day(date)
-  out['hour'] <- lubridate::hour(date)
-  out['minute'] <- lubridate::minute(date)
-  out['ampm'] <- if (lubridate::am(date)) {'am'} else {'pm'}
-
-  return(out)
+  return(date)
 }

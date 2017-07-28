@@ -61,7 +61,6 @@ fields_machine_names <- sort(unique(fields$ddh_machine_name))
 fields_remove <-
   c(
     "field_ddh_external_contact_email",
-    "field_ddh_harvest_sys_id",
     "field_format",
     "field_granularity_list",
     "field_tags",
@@ -82,7 +81,6 @@ fields_remove <-
     "field_wbddh_other_producer",
     "field_wbddh_produced_by",
     "field_wbddh_related_indicators",
-    "field_wbddh_resource_type", # Should be kept
     "field_wbddh_search_tags",
     "field_wbddh_series_code",
     "field_wbddh_subscription_date",

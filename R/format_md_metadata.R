@@ -3,6 +3,8 @@
 #' Format specific variable to fit Microdata or DDH requirements
 #'
 #' @param metadata_in list: flattened list of metadata
+#' @param date_fields character: variables to be processed as dates
+#' @param text_fields character: variables to be processed as text
 #'
 #' @return list
 #' @export
