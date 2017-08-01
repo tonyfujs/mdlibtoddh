@@ -39,3 +39,20 @@ check_lkup_tid_list <- function(lookup, machine_name) {
 }
 
 check_lkup_tid_list <- purrr::safely(check_lkup_tid_list)
+
+check_fields_services <- function() {
+  # STG taxonomy
+  fields_stg <- ddhconnect::get_fields(root_url = ddhconnect:::production_root_url)
+  fields_stg <- fields_stg[fields_stg$data_type == 'microdata', ]
+  # PROD taxonomy
+  fields_prod <- ddhconnect::get_fields(root_url = ddhconnect:::stg_root_url)
+  fields_prod <- fields_prod[fields_prod$data_type == 'microdata', ]
+
+  # Compare STG & PROD
+  diff_fields_stg <- dplyr::anti_join(fields_stg, fields_prod,by = c("data_type", "node_type", "machine_name", "pretty_name"))
+  diff_fields_prod <- dplyr::anti_join(fields_prod, fields_stg, by = c("data_type", "node_type", "machine_name", "pretty_name"))
+  diff_fields <- dplyr::bind_rows(diff_fields_prod, diff_fields_stg)
+  diff_fields <- dplyr::distinct(diff_fields)
+
+  return(diff_fields)
+}
