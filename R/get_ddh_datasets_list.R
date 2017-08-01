@@ -27,6 +27,18 @@ get_ddh_datasets_list <- function(root_url, credentials)
   httr::warn_for_status(count)
   count <- httr::content(count)
   count <- as.numeric(count$count)
+  if (count == 0) {
+    nids <- NA
+    uuids <- NA
+    uuids <- NA
+    refids <- NA
+    dataclass <- NA
+    updated <- NA
+    out <- data.frame(nids, uuids, refids, dataclass, updated, stringsAsFactors = FALSE)
+
+    return(out)
+  }
+
   iterations <- ceiling(count/limit)
 
   # Retrieve data
