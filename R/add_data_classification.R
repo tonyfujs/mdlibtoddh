@@ -22,7 +22,7 @@ add_data_classification <- function(metadata_list, md_internal_id, master) {
     return(metadata_list)
   } else if (master == 'official') {
     metadata_list$field_wbddh_data_class <- '359'
-    metadata_list$field_exception_s_ <- '1194'
+    metadata_list$field_exception_s_ <- '1208'
     return(metadata_list)
   }
 
