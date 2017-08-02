@@ -12,7 +12,7 @@
 create_json_resource <- function(metadata_list, json_template = mdlibtoddh::json_template_resource) {
 
 
-  json_template$title <- safe_unbox("Related materials (Questionnaires, reports, tables and Data files)")
+  json_template$title <- safe_unbox("Related materials (Questionnaires, reports, tables, technical documents, and data files)")
   # json_template$body$und$value <- metadata_list$body # body
   json_template$field_wbddh_data_class$und$tid <- safe_unbox(metadata_list$field_wbddh_data_class) # data classification
   json_template$field_exception_s_$und$tid <- safe_unbox(metadata_list$field_exception_s_)

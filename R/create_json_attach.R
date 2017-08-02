@@ -15,7 +15,7 @@ create_json_attach <- function(resource_nid, json_template = mdlibtoddh::json_te
   #   paste0(value, ' (', key, ')')
   # })
 
-  temp <- paste0("Related materials (Questionnaires, reports, tables and Data files) (", resource_nid, ")")
+  temp <- paste0("Related materials (Questionnaires, reports, tables, technical documents, and data files) (", resource_nid, ")")
   json_template$field_resources$und$target_id <- temp
 
   return(jsonlite::toJSON(json_template, pretty = TRUE))
