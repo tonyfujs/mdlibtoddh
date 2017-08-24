@@ -24,14 +24,16 @@ add_new_dataset <- function(md_internal_id, md_token, ddh_credentials, master, r
   # STEP 1: Get raw values from microdata API
   survey_mtdt <- get_md_metadata(id = md_internal_id, token = md_token)
   # STEP 2: format raw metadata
-  temp <- map_md_to_ddh(survey_mtdt, lkup_tids)
+  # Add correct data classification information
+  temp <- add_data_classification(metadata_list = survey_mtdt,
+                                  md_internal_id,
+                                  master = master)
+  # Format list
+  temp <- map_md_to_ddh(temp, lkup_tids)
   # Add search_tags
   temp <- add_search_tags(metadata_list = temp, id = md_internal_id, token = md_token)
 
-  # Add correct data classification information
-  temp <- add_data_classification(metadata_list = temp,
-                                  md_internal_id,
-                                  master = master)
+
   # Add resource link
   temp <- add_link_to_resources(metadata_list = temp,
                                 md_internal_id = md_internal_id,

@@ -16,6 +16,7 @@ extract_md_metadata <- function(metadata_in,
                                 lookup = mdlibtoddh::lookup) {
 
   machine_names <- sort(names(metadata_out))
+  keep <- metadata_in[names(metadata_in) %in% machine_names]
 
   for (i in seq_along(machine_names)) {
     mdlib_json_key <- unique(lookup$mdlib_json_field[lookup$ddh_machine_name == machine_names[i]])
@@ -25,6 +26,7 @@ extract_md_metadata <- function(metadata_in,
   }
 
   metadata_out <- metadata_out[!purrr::map_lgl(metadata_out, is.null)]
+  metadata_out <- c(metadata_out, keep)
 
   return(metadata_out)
 }

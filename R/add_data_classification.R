@@ -17,12 +17,12 @@ add_data_classification <- function(metadata_list, md_internal_id, master) {
   assertthat::validate_that(master %in% c('public', 'official'))
   # Add correct data classification
   if (master == 'public') {
-    metadata_list$field_wbddh_data_class <- '358'
+    metadata_list$field_wbddh_data_class <- 'Public'
     metadata_list$field_exception_s_ <- ''
     return(metadata_list)
   } else if (master == 'official') {
-    metadata_list$field_wbddh_data_class <- '359'
-    metadata_list$field_exception_s_ <- '1208'
+    metadata_list$field_wbddh_data_class <- 'Official Use Only'
+    metadata_list$field_exception_s_ <- 'Client/Third Party Confidence'
     return(metadata_list)
   }
 
