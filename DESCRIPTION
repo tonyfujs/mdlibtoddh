@@ -16,6 +16,7 @@ Imports: assertthat,
     purrr,
     dplyr,
     jsonlite,
-    stringr
+    stringr,
+    ddhconnect
 RoxygenNote: 6.0.1
 Depends: R (>= 2.10)
