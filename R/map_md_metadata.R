@@ -1,12 +1,13 @@
 #' map_md_metadata
 #'
 #' @param metadata_list list: Named list containing all values extracted from the Microdata API response
+#' @param lkup_tids named vector
 #'
 #' @return list
 #' @export
 #'
 
-map_md_metadata <- function(metadata_list) {
+map_md_metadata <- function(metadata_list, lkup_tids) {
 
   survey_fields <- names(metadata_list)
   lkup_values <- mdlibtoddh::md_ddh_lovs
