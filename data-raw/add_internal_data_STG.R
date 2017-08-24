@@ -48,7 +48,6 @@ taxonomy_remove <-
     "field_wbddh_region",
     "field_wbddh_periodicity",
     "field_wbddh_api_format",
-    "field_wbddh_resource_type", # TO BE CHECKED AND ADDED BACK IF NEEDED
     "field_wbddh_update_frequency",
     "field_frequency",
     "status"
@@ -162,8 +161,7 @@ names(md_ddh_lovs) <- md_ddh_names
 
 ddh_tid_lovs <- lookup %>%
   select(ddh_machine_name, field_lovs, tid) %>%
-  filter(!is.na(tid),
-         ddh_machine_name != 'field_topic')
+  filter(!is.na(tid))
 
 ddh_tid_names <- sort(unique(ddh_tid_lovs$ddh_machine_name))
 ddh_tid_lovs <- purrr::map(ddh_tid_names, function(x){
@@ -172,33 +170,12 @@ ddh_tid_lovs <- purrr::map(ddh_tid_names, function(x){
   return(out)
 })
 names(ddh_tid_lovs) <- ddh_tid_names
-ddh_tid_lovs <- ddh_tid_lovs[purrr::map_int(ddh_tid_lovs, length) > 0]
+ddh_tid_lovs_STG <- ddh_tid_lovs[purrr::map_int(ddh_tid_lovs, length) > 0]
 
-
-# Add JSON templates ------------------------------------------------------
-
-json_template_dataset <- fromJSON('./data-raw/ddh_schema_microdata_dataset.json')
-json_template_resource <- fromJSON('./data-raw/ddh_schema_microdata_resource.json')
-json_template_attach <- fromJSON('./data-raw/ddh_schema_microdata_resource_attach.json')
 
 # Save lookup table -------------------------------------------------------
 
-lookup <- as.data.frame(lookup)
-devtools::use_data(lookup,
-                   md_placeholder,
-                   md_ddh_lovs,
-                   ddh_tid_lovs,
-                   json_template_dataset,
-                   json_template_resource,
-                   json_template_attach,
+devtools::use_data(ddh_tid_lovs_STG,
                    overwrite = TRUE)
 
-
-# # Temporary: TO BE REMOVED ONCE THE ENCODING ISSUES ARE RESOLVED
-# taxonomy$field_lovs[taxonomy$field_lovs == 'Côte d&#039;Ivoire'] <- "Côte d'Ivoire"
-# taxonomy$field_lovs[taxonomy$field_lovs == 'Europe &amp; Central Asia'] <- "Europe and Central Asia"
-# taxonomy$field_lovs[taxonomy$field_lovs == 'East Asia &amp; Pacific'] <- "East Asia and Pacific"
-# taxonomy$field_lovs[taxonomy$field_lovs == 'Korea, Dem. People&#039;s Rep.'] <- "Korea, Dem. People's Rep."
-# taxonomy$field_lovs[taxonomy$field_lovs == 'Latin America &amp; Caribbean'] <- "Latin America and Caribbean"
-# taxonomy$field_lovs[taxonomy$field_lovs == 'Middle East &amp; North Africa'] <- "Middle East and North Africa"
 
