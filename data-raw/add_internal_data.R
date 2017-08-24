@@ -48,7 +48,6 @@ taxonomy_remove <-
     "field_wbddh_region",
     "field_wbddh_periodicity",
     "field_wbddh_api_format",
-    "field_wbddh_resource_type", # TO BE CHECKED AND ADDED BACK IF NEEDED
     "field_wbddh_update_frequency",
     "field_frequency",
     "status"
@@ -162,8 +161,7 @@ names(md_ddh_lovs) <- md_ddh_names
 
 ddh_tid_lovs <- lookup %>%
   select(ddh_machine_name, field_lovs, tid) %>%
-  filter(!is.na(tid),
-         ddh_machine_name != 'field_topic')
+  filter(!is.na(tid))
 
 ddh_tid_names <- sort(unique(ddh_tid_lovs$ddh_machine_name))
 ddh_tid_lovs <- purrr::map(ddh_tid_names, function(x){

@@ -4,7 +4,7 @@ library(jsonlite)
 # CHECK consistency between STG & PROD taxonomy
 check_taxonomy_services()
 # Set roo URL
-root_url <- ddhconnect:::production_root_url
+root_url <- ddhconnect:::stg_root_url
 
 # STEP 1: Get data --------------------------------------------------------
 
