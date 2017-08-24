@@ -14,6 +14,13 @@
 
 add_new_dataset <- function(md_internal_id, md_token, ddh_credentials, master, root_url) {
 
+  # STEP 0: Adjust TIDs mapping depending on server
+  if (root_url == ddhconnect:::production_root_url) {
+    lkup_tids <- mdlibtoddh::ddh_tid_lovs
+  } else {
+    lkup_tids <- mdlibtoddh::ddh_tid_lovs_STG
+  }
+
   # STEP 1: Get raw values from microdata API
   survey_mtdt <- get_md_metadata(id = md_internal_id, token = md_token)
   # STEP 2: format raw metadata
