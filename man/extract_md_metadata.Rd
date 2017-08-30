@@ -20,6 +20,3 @@ list
 \description{
 Extract specific metadata from the Microdata API JSON response
 }
-\examples{
-
-}
