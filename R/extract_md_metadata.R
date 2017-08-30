@@ -9,8 +9,7 @@
 #' @return list
 #' @export
 #'
-#' @examples
-#'
+
 extract_md_metadata <- function(metadata_in,
                                 metadata_out = mdlibtoddh::md_placeholder,
                                 lookup = mdlibtoddh::lookup) {
@@ -22,7 +21,11 @@ extract_md_metadata <- function(metadata_in,
     mdlib_json_key <- unique(lookup$mdlib_json_field[lookup$ddh_machine_name == machine_names[i]])
     mdlib_json_key <- mdlib_json_key[!is.na(mdlib_json_key)]
     if (length(mdlib_json_key) == 0) {next}
-    metadata_out[[machine_names[i]]] <- metadata_in[[mdlib_json_key]]
+    metadata_out[[machine_names[i]]] <- if (is.null(metadata_in[[mdlib_json_key]]) & machine_names[i] %in% ddhconnect:::mandatory_text_fields) {
+      "Not specified"
+    } else {
+      metadata_in[[mdlib_json_key]]
+    }
   }
 
   metadata_out <- metadata_out[!purrr::map_lgl(metadata_out, is.null)]

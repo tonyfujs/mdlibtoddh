@@ -13,7 +13,7 @@ create_json_dataset <- function(metadata_list, json_template = mdlibtoddh::json_
 
 
   json_template$title <- safe_unbox(metadata_list$title) # title
-  json_template$body$und$value <- if (length(metadata_list$body) > 0) {metadata_list$body} else {metadata_list$title} # body
+  json_template$body$und$value <- metadata_list$body # body
   json_template$field_contact_email$und$value <- safe_assign(metadata_list$field_contact_email) # email
   json_template$field_topic$und$tid <- safe_unbox(metadata_list$field_topic) # topic
   json_template$field_wbddh_reference_id$und$value <- safe_unbox(metadata_list$field_wbddh_reference_id) # reference ID
@@ -86,7 +86,6 @@ create_json_dataset <- function(metadata_list, json_template = mdlibtoddh::json_
 
   # remove empty elements
   to_keep <- names(metadata_list[!purrr::map_int(metadata_list, length) == 0])
-  to_keep <- unique(c(to_keep, "body"))
   json_template <- json_template[names(json_template) %in% to_keep]
 
   # Add required dataset elements
