@@ -23,6 +23,7 @@ flatten_md_metadata <- function(metadata_list,
 
   # Handle shallow indexes
   shallow <- purrr::map_int(metadata_list, purrr::vec_depth) == 2
+  check_shallow(metadata_list[shallow])
   metadata_list[shallow] <- purrr::flatten(metadata_list[shallow])
 
   # Handle variables pulling for multiples JSON keys
@@ -76,4 +77,10 @@ flatten_md_metadata <- function(metadata_list,
 
   return(metadata_list)
 
+}
+
+
+check_shallow <- function(x) {
+  assertthat::assert_that(all(purrr::map_int(x, length) == 1),
+                          msg = 'Non expected input to flatten_md_metadata()')
 }

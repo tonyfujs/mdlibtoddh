@@ -3,8 +3,8 @@
 #' Extract specific metadata from the Microdata API JSON response
 #'
 #' @param metadata_in list: The output of mdlibconnect::get_survey_metadata
-#' @param metadata_out list: Package obeject: mdlibtoddh::md_placeholder
-#' @param lookup data.frame: Package obeject: mdlibtoddh::lookup
+#' @param metadata_out list: Package object: mdlibtoddh::md_placeholder
+#' @param lookup data.frame: Package object: mdlibtoddh::lookup
 #'
 #' @return list
 #' @export
