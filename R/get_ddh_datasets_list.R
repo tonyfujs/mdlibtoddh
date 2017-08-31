@@ -10,78 +10,29 @@
 
 get_ddh_datasets_list <- function(root_url, credentials)
 {
-  limit <- 500
-  dtype <- 294
+  resp <- ddhconnect::search_catalog(
+    fields = c(
+      'nid',
+      'field_wbddh_reference_id',
+      'field_wbddh_data_class',
+      'field_wbddh_modified_date',
+      'field_ddh_harvest_sys_id'
+    ),
+    filters = c(
+      'field_wbddh_data_type' = 294,
+      'type' = 'dataset'
+    ),
+    credentials = credentials,
+    root_url = root_url
+  )
 
-  cookie <- credentials$cookie
-  token <- credentials$token
+  ddh_nids <- purrr::map_chr(resp, 'nid')
+  md_refids <- purrr::map_chr(resp, function(x) x[["field_wbddh_reference_id"]][["und"]][[1]][["value"]])
+  ddh_dataclass <- purrr::map_chr(resp, function(x) x[["field_wbddh_data_class"]][["und"]][[1]][["tid"]])
+  ddh_updated <- purrr::map_chr(resp, function(x) x[["field_wbddh_modified_date"]][["und"]][[1]][["value"]])
+  md_internal_id <- purrr::map_chr(resp, function(x) x[["field_ddh_harvest_sys_id"]][["und"]][[1]][["value"]])
 
-  # Get count of datasets
-  count_url <- paste0(root_url,
-                      "/search-service/search_api/datasets?limit=1&fields=[nid,uuid]&filter[status]=1&filter[field_wbddh_data_type]=",
-                      dtype)
-  count <- httr::GET(url = count_url, httr::add_headers(.headers = c(charset = "utf-8"),
-                                                        Cookie = cookie,
-                                                        `X-CSRF-Token` = token),
-                     httr::accept_json())
-  httr::warn_for_status(count)
-  count <- httr::content(count)
-  count <- as.numeric(count$count)
-  if (count == 0) {
-    nids <- NA
-    uuids <- NA
-    uuids <- NA
-    refids <- NA
-    dataclass <- NA
-    updated <- NA
-    out <- data.frame(nids, uuids, refids, dataclass, updated, stringsAsFactors = FALSE)
-
-    return(out)
-  }
-
-  iterations <- ceiling(count/limit)
-
-  # Retrieve data
-  nids <- vector(mode = "list", length = iterations)
-  uuids <- vector(mode = "list", length = iterations)
-  refids <- vector(mode = "list", length = iterations)
-  dataclass <- vector(mode = "list", length = iterations)
-  updated <- vector(mode = "list", length = iterations)
-  for (i in 1:iterations) {
-    temp_offset <- (i - 1) * 500
-    temp_url <- paste0(root_url,
-                       "/search-service/search_api/datasets?limit=500&fields=[nid,uuid,field_wbddh_reference_id,field_wbddh_data_class,field_wbddh_modified_date,]&filter[status]=1&filter[field_wbddh_data_type]=",
-                       dtype, "&offset=", temp_offset)
-    temp_resp <- httr::GET(url = temp_url, httr::add_headers(.headers = c(charset = "utf-8"),
-                                                             Cookie = cookie,
-                                                             `X-CSRF-Token` = token),
-                           httr::accept_json())
-    httr::warn_for_status(temp_resp)
-    temp_resp <- httr::content(temp_resp)
-    temp_resp <- temp_resp$result
-    temp_nids <- names(temp_resp)
-    temp_uuids <- purrr::map_chr(temp_resp, 'uuid')
-    temp_refids <- purrr::map_chr(temp_resp, extract_field_wbddh_reference_id)
-    temp_dataclass <- purrr::map_chr(temp_resp, extract_field_wbddh_data_class)
-    temp_updated <- purrr::map_chr(temp_resp, function(x) {
-      date <- x[['field_wbddh_modified_date']][['und']][[1]][['value']]
-      if(is.null(date)) {return("1970-01-01 00:01:01")} else {return(date)}
-      })
-
-    nids[[i]] <- temp_nids
-    uuids[[i]] <- temp_uuids
-    refids[[i]] <- temp_refids
-    dataclass[[i]] <- temp_dataclass
-    updated[[i]] <- temp_updated
-  }
-
-  nids <- unlist(nids)
-  uuids <- unlist(uuids)
-  uuids <- as.numeric(uuids)
-  refids <- unlist(refids)
-  dataclass <- unlist(dataclass)
-  updated <- unlist(updated)
-  out <- data.frame(nids, uuids, refids, dataclass, updated, stringsAsFactors = FALSE)
+  out <- data.frame(ddh_nids, md_refids, md_internal_id, ddh_dataclass, ddh_updated, stringsAsFactors = FALSE)
 
   return(out)
 }
