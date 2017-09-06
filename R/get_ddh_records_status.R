@@ -38,10 +38,10 @@ get_ddh_records_status <- function(mdlib_token, root_url = ddhconnect:::producti
   full_list$status[!is.na(full_list$ddh_nids) & is.na(full_list$md_internal_id)] <- 'old'
 
   # Compare last updated dates
-  full_list$time_diff <- abs(full_list$md_internal_updated - full_list$ddh_updated)
+  full_list$time_diff <- abs(full_list$md_internal_updated - full_list$ddh_updated) - 14400
   full_list$sync_status <- NA
-  full_list$sync_status[full_list$status == 'current' & full_list$time_diff <= 86400] <- 'in sync'
-  full_list$sync_status[full_list$status == 'current' & full_list$time_diff > 86400] <- 'out of sync'
+  full_list$sync_status[full_list$status == 'current' & full_list$time_diff <= 3600] <- 'in sync'
+  full_list$sync_status[full_list$status == 'current' & full_list$time_diff > 3600] <- 'out of sync'
   full_list$time_diff <- NULL
 
   return(full_list)
