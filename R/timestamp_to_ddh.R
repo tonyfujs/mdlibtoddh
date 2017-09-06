@@ -15,8 +15,8 @@ timestamp_to_ddhdate <- function(time_stamp, origin = "1970-01-01") {
   if (!is.numeric(time_stamp)) {time_stamp <- as.numeric(time_stamp)}
   assertthat::assert_that(!is.na(time_stamp), msg = "Please ensure that time_stamp has a valid value")
 
-  date <- as.POSIXct(time_stamp, origin = origin)
-  date <- strftime(date, format = "%Y-%m-%d %H:%M:%S")
+  date <- as.POSIXct(time_stamp, origin = origin, tz = "GMT")
+  date <- strftime(date, format = "%Y-%m-%d %H:%M:%S", tz = "GMT")
 
   return(date)
 }
