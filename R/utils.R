@@ -29,8 +29,13 @@ create_lkup_vector <- function(lkup_table = mdlibtoddh::lookup,
 
 map_valid_lovs <- function(values, lkup_vector) {
   names(lkup_vector) <- tolower(names(lkup_vector))
-  out <- unname(lkup_vector[tolower(values)])
-  out[is.na(out)] <- values[is.na(out)]
+  # Deal with multiple values
+  values <- stringr::str_split(values, pattern = ';', simplify = FALSE)
+  values <- unlist(values)
+  values <- values[values != ""]
+  out <- purrr::map_chr(values, function(x) unname(lkup_vector[tolower(x)]))
+
+  out[is.na(out)] <- values[is.na(out)] # replace non-mapped values, by original values
   out <- unique(stringr::str_trim(out))
 
   assertthat::assert_that(are_valid_lovs(out, lkup_vector),
