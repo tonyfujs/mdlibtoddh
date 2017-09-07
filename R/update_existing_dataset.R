@@ -43,7 +43,7 @@ update_existing_dataset <- function(md_internal_id, md_token, ddh_credentials, m
   # STEP 4: Create resource
   # Create JSON resource
   nid_res <- ddhconnect::get_resource_nid(credentials = ddh_credentials,
-                                          nid = resp_dat$node_id,
+                                          nid = resp_dat$nid,
                                           root_url = root_url)
   json_res <- create_json_resource(temp)
   resp_res <- ddhconnect::update_dataset(credentials = ddh_credentials,
