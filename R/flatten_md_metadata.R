@@ -23,7 +23,8 @@ flatten_md_metadata <- function(metadata_list,
 
   # Handle shallow indexes
   shallow <- purrr::map_int(metadata_list, purrr::vec_depth) == 2
-  shallow <- shallow[!names(shallow) %in% c(multiple_fields, email_fields, name_fields)]
+  shallow <- shallow[shallow == TRUE]
+  shallow <- names(shallow)[!names(shallow) %in% c(multiple_fields, email_fields, name_fields)]
   check_shallow(metadata_list[shallow])
   metadata_list[shallow] <- purrr::flatten(metadata_list[shallow])
 
