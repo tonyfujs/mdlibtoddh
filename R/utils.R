@@ -38,8 +38,10 @@ map_valid_lovs <- function(values, lkup_vector) {
   out[is.na(out)] <- values[is.na(out)] # replace non-mapped values, by original values
   out <- unique(stringr::str_trim(out))
 
-  assertthat::assert_that(are_valid_lovs(out, lkup_vector),
-                          msg = "No valid mapping found in lkup_vector")
+  purrr::map(out, function(x) assertthat::assert_that(are_valid_lovs(x, lkup_vector),
+                                                      msg = "No valid mapping found in lkup_vector"))
+
+  out <- paste(out, collapse = ';')
 
   return(out)
 }
