@@ -39,7 +39,7 @@ map_valid_lovs <- function(values, lkup_vector) {
   out <- unique(stringr::str_trim(out))
 
   purrr::map(out, function(x) assertthat::assert_that(are_valid_lovs(x, lkup_vector),
-                                                      msg = "No valid mapping found in lkup_vector"))
+                                                      msg = paste0("No valid mapping found in lkup_vector for: ", x)))
 
   out <- paste(out, collapse = ';')
 
