@@ -31,7 +31,7 @@ create_json_dataset <- function(metadata_list, json_template = mdlibtoddh::json_
   json_template$field_wbddh_unit_of_analysis$und$value <- safe_unbox(metadata_list$field_wbddh_unit_of_analysis)
   json_template$field_wbddh_wbddh_universe$und$value <- safe_unbox(metadata_list$field_wbddh_wbddh_universe) # universe
   json_template$field_wbddh_acronym$und$value <- safe_unbox(metadata_list$field_wbddh_acronym) # acronym
-  json_template$field_wbddh_country$und$tid <- safe_unbox(metadata_list$field_wbddh_country)
+  json_template$field_wbddh_country$und <- unlist(stringr::str_split(metadata_list$field_wbddh_country, pattern = ';'))
   json_template$field_wbddh_search_tags$und$value <- safe_unbox(metadata_list$field_wbddh_search_tags)
   json_template$field_wbddh_copyright$und$value <- safe_unbox(metadata_list$field_wbddh_copyright)
   json_template$field_wbddh_access_authority$und$value <- safe_unbox(metadata_list$field_wbddh_access_authority)
