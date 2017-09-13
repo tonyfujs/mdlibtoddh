@@ -159,9 +159,7 @@
 		}]
 	},
 	"field_wbddh_country": {
-		"und": {
-			"tid": ""
-		}
+		"und": []
 	},
 	"field_wbddh_ds_embargo_date": [],
 	"field_wbddh_ds_source": {
