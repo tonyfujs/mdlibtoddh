@@ -43,6 +43,8 @@ flatten_md_metadata <- function(metadata_list,
   metadata_list[email_fields] <- purrr::map(metadata_list[email_fields], function(x) {
     out <- paste(purrr::map(x, extract_from_list, keys = c('email')), collapse = '; ')
     out <- stringr::str_replace_all(out, pattern = '^; ?|;$|; $', replacement = '')
+    out <- stringr::str_replace_all(out, pattern = ' ', replacement = '')
+    out <- stringr::str_replace_all(out, pattern = ';', replacement = '; ')
   })
 
   # Handle extraction of value that follow "name" keys
