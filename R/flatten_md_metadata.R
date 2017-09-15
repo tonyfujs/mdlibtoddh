@@ -44,6 +44,7 @@ flatten_md_metadata <- function(metadata_list,
     out <- paste(purrr::map(x, extract_from_list, keys = c('email')), collapse = '; ')
     out <- stringr::str_replace_all(out, pattern = '^; ?|;$|; $', replacement = '')
     out <- stringr::str_replace_all(out, pattern = ' ', replacement = '')
+    out <- stringr::str_trim(out, side = 'both') # Add str_trim to deal with non-standard space characters
     out <- stringr::str_replace_all(out, pattern = ';', replacement = '; ')
   })
 
