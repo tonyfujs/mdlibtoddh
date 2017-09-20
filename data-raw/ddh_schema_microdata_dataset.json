@@ -211,7 +211,9 @@
 		}]
 	},
 	"field_wbddh_embargo": {
-		"und": []
+		"und": [{
+			"value": ""
+		}]
 	},
 	"field_wbddh_organization": {
 		"und": [{
