@@ -12,9 +12,7 @@
 		}]
 	},
 	"field_topic": {
-		"und": {
-			"tid": ""
-		}
+		"und": []
 	},
 	"field_wbddh_reference_id": {
 		"und": [{
@@ -22,61 +20,59 @@
 		}]
 	},
 	"field_wbddh_data_class": {
-		"und": {
-			"tid": ""
-		}
+		"und": []
 	},
 	"field_wbddh_produced_by": {
-		"und": {
+		"und": [{
 			"value": ""
+		}]
+	},
+	"field_wbddh_data_collector": {
+		"und": [{
+			"value": ""
+		}]
+	},
+	"field_wbddh_collaborator_upi": {
+		"und": {
+			"autocomplete_hidden_value": ""
 		}
 	},
-	"field_wbddh_data_collector": [],
-	"field_wbddh_collaborator_upi": [],
 	"field_wbddh_data_type": {
-		"und": {
-			"tid": ""
-		}
+		"und": []
 	},
 	"field_wbddh_disclaimer": {
-		"und": {
+		""und": [{
 			"value": ""
-		}
+		}]
 	},
 	"field_wbddh_disclosure_risk": {
-		"und": {
+		"und": [{
 			"value": ""
-		}
+		}]
 	},
 	"field_wbddh_economy_coverage": {
-		"und": {
+		"und": [{
 			"value": ""
-		}
+		}]
 	},
 	"field_wbddh_estimate_sampling": {
-		"und": {
+		"und": [{
 			"value": ""
-		}
+		}]
 	},
 	"field_wbddh_kind_of_data": {
-		"und": {
-			"tid": ""
-		}
+		"und": []
 	},
 	"field_wbddh_languages_supported": {
-		"und": {
-			"tid": ""
-		}
+		"und": []
 	},
 	"field_wbddh_mode_data_collection": {
-		"und": {
-			"tid": ""
-		}
+		"und": []
 	},
 	"field_wbddh_no_of_economies": {
-		"und": {
+		"und": [{
 			"value": ""
-		}
+		}]
 	},
 	"field_wbddh_primary_investigator": {
 		"und": [{
@@ -84,14 +80,12 @@
 		}]
 	},
 	"field_wbddh_study_type": {
-		"und": {
+		"und": [{
 			"value": ""
-		}
+		}]
 	},
 	"field_wbddh_terms_of_use": {
-		"und": {
-			"tid": ""
-		}
+		"und": []
 	},
 	"field_wbddh_access_authority": {
 		"und": [{
@@ -139,14 +133,14 @@
 		}]
 	},
 	"field_wbddh_universe": {
-		"und": {
+		"und": [{
 			"value": ""
-		}
+		}]
 	},
 	"field_wbddh_update_frequency": {
-		"und": {
+		"und": [{
 			"value": ""
-		}
+		}]
 	},
 	"field_wbddh_weighting": {
 		"und": [{
@@ -161,13 +155,21 @@
 	"field_wbddh_country": {
 		"und": []
 	},
-	"field_wbddh_ds_embargo_date": [],
+	"field_wbddh_ds_embargo_date": {
+		"und": [{
+			"value": ""
+		}]
+	},
 	"field_wbddh_ds_source": {
 		"und": [{
 			"value": ""
 		}]
 	},
-	"field_wbddh_dsttl_upi": [],
+	"field_wbddh_dsttl_upi": {
+		"und": {
+			"autocomplete_hidden_value": ""
+		}
+	},
 	"field_wbddh_search_tags": {
 		"und": [{
 			"value": ""
@@ -203,27 +205,45 @@
 			"value": ""
 		}]
 	},
-	"field_ddh_external_contact_email": [],
-	"field_wbddh_embargo": [],
-	"field_wbddh_organization": [],
-	"field_wbddh_statistical_concept": [],
+	"field_ddh_external_contact_email": {
+		"und": [{
+			"value": ""
+		}]
+	},
+	"field_wbddh_embargo": {
+		"und": []
+	},
+	"field_wbddh_organization": {
+		"und": [{
+			"value": ""
+		}]
+	},
+	"field_wbddh_statistical_concept": {
+		"und": [{
+			"value": ""
+		}]
+	},
 	"field_wbddh_citation_text": {
 		"und": [{
 			"value": ""
 		}]
 	},
-	"field_wbddh_aggregation_method": [],
+	"field_wbddh_aggregation_method": {
+		"und": [{
+			"value": ""
+		}]
+	},
 	"field_ddh_harvest_src": {
-		"und": {
-			"tid": ""
-		}
+		"und": []
 	},
 	"field_ddh_harvest_sys_id": {
 		"und": [{
 			"value": ""
 		}]
 	},
-	"field_exception_s_": []
+	"field_exception_s_": {
+		"und": []
+	}
 }
 
 
