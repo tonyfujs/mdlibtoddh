@@ -27,10 +27,10 @@ get_ddh_datasets_list <- function(root_url, credentials)
   )
 
   ddh_nids <- purrr::map_chr(resp, 'nid')
-  md_refids <- purrr::map_chr(resp, function(x) x[["field_wbddh_reference_id"]][["und"]][[1]][["value"]])
-  ddh_dataclass <- purrr::map_chr(resp, function(x) x[["field_wbddh_data_class"]][["und"]][[1]][["tid"]])
-  ddh_updated <- purrr::map_chr(resp, function(x) x[["field_wbddh_modified_date"]][["und"]][[1]][["value"]])
-  md_internal_id <- purrr::map_chr(resp, function(x) x[["field_ddh_harvest_sys_id"]][["und"]][[1]][["value"]])
+  md_refids <- as.character(purrr::map(resp, function(x) x[["field_wbddh_reference_id"]][["und"]][[1]][["value"]]))
+  ddh_dataclass <- as.character(purrr::map(resp, function(x) x[["field_wbddh_data_class"]][["und"]][[1]][["tid"]]))
+  ddh_updated <- as.character(purrr::map(resp, function(x) x[["field_wbddh_modified_date"]][["und"]][[1]][["value"]]))
+  md_internal_id <- as.character(purrr::map(resp, function(x) x[["field_ddh_harvest_sys_id"]][["und"]][[1]][["value"]]))
 
   out <- data.frame(ddh_nids, md_refids, md_internal_id, ddh_dataclass, ddh_updated, stringsAsFactors = FALSE)
 
