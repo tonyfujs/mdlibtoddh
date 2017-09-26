@@ -41,7 +41,7 @@
 		"und": []
 	},
 	"field_wbddh_disclaimer": {
-		""und": [{
+		"und": [{
 			"value": ""
 		}]
 	},
@@ -75,6 +75,11 @@
 		}]
 	},
 	"field_wbddh_primary_investigator": {
+		"und": [{
+			"value": ""
+		}]
+	},
+	"field_wbddh_series_information": {
 		"und": [{
 			"value": ""
 		}]
