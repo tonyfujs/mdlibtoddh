@@ -26,7 +26,7 @@ get_ddh_datasets_list <- function(root_url, credentials)
     root_url = root_url
   )
 
-  ddh_nids <- purrr::map_chr(resp, 'nid')
+  ddh_nids <- as.character(purrr::map(resp, 'nid'))
   md_refids <- as.character(purrr::map(resp, function(x) x[["field_wbddh_reference_id"]][["und"]][[1]][["value"]]))
   ddh_dataclass <- as.character(purrr::map(resp, function(x) x[["field_wbddh_data_class"]][["und"]][[1]][["tid"]]))
   ddh_updated <- as.character(purrr::map(resp, function(x) x[["field_wbddh_modified_date"]][["und"]][[1]][["value"]]))
