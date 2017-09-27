@@ -5,7 +5,7 @@
 #' @param md_internal_id character: Microdata internal ID of the dataset to be added
 #' @param md_token character: Microdata API authentication token
 #' @param ddh_credentials list: DDH API authentication token and cookie
-#' @param master dataframe: Master lookup table
+#' @param master dataframe: Master lookup table, output of mdlibtoddh::get_ddh_records_status()
 #' @param root_url character: Root URL to use for the API (Staging or Production)
 #'
 #' @return character
@@ -58,9 +58,9 @@ add_new_dataset <- function(md_internal_id, md_token, ddh_credentials, master, r
 
   # STEP 5: Attach resource
   # Attach resource to dataset
-  json_attach <- create_json_attach(resource_nid = resp_res$nid)
+  json_attach <- create_json_attach(resource_nid = resp_res$node_id)
   resp_attach <- attach_resource_to_dataset(credentials = ddh_credentials,
-                                            dataset_nid = resp_dat$nid,
+                                            dataset_nid = resp_dat$node_id,
                                             body = json_attach,
                                             root_url = root_url)
 
