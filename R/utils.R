@@ -33,6 +33,7 @@ map_valid_lovs <- function(values, lkup_vector) {
   values <- stringr::str_split(values, pattern = ';', simplify = FALSE)
   values <- unlist(values)
   values <- values[values != ""]
+  values <- stringr::str_trim(values, side = 'both')
   out <- purrr::map_chr(values, function(x) unname(lkup_vector[tolower(x)]))
 
   out[is.na(out)] <- values[is.na(out)] # replace non-mapped values, by original values
