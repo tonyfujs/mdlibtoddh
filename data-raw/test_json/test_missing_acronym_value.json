@@ -1,0 +1,141 @@
+{
+  "title": "JSON TEST - Missing acronym value",
+  "body": {
+    "und": [
+      {
+        "value": "Djibouti - Etude sur l'Impact Socio-Economique du Khat a Djibouti 2010"
+      }
+    ]
+  },
+  "field_topic": {
+    "und": {
+      "tid": "936"
+    }
+  },
+  "field_wbddh_reference_id": {
+    "und": [
+      {
+        "value": "DJI_2010_KHAT_v01_M"
+      }
+    ]
+  },
+  "field_wbddh_data_class": {
+    "und": {
+      "tid": "359"
+    }
+  },
+  "field_wbddh_data_type": {
+    "und": {
+      "tid": "294"
+    }
+  },
+  "field_wbddh_disclaimer": {
+    "und": {
+      "value": "L'utilisateur des données reconnait que le producteur des données, le distributeur agréé, ainsi que les bailleurs de fonds ayant contribué au financement de la production de ces données, ne sont nullement responsables de l'utilisation qui sera faite de ces données, ni des interprétations et conclusions dérivées de leur analyse et utilisation."
+    }
+  },
+  "field_wbddh_kind_of_data": {
+    "und": {
+      "tid": "855"
+    }
+  },
+  "field_wbddh_languages_supported": {
+    "und": {
+      "tid": "337"
+    }
+  },
+  "field_wbddh_mode_data_collection": {
+    "und": {
+      "tid": "478"
+    }
+  },
+  "field_wbddh_primary_investigator": {
+    "und": [
+      {
+        "value": "Direction de la Statistique et des Etudes Démographiques - Ministère de l'Economie et des Finances"
+      }
+    ]
+  },
+  "field_wbddh_study_type": {
+    "und": {
+      "value": "Other Household Survey"
+    }
+  },
+  "field_wbddh_terms_of_use": {
+    "und": {
+      "tid": "437"
+    }
+  },
+  "field_wbddh_access_authority": {
+    "und": [
+      {
+        "value": ""
+      }
+    ]
+  },
+  "field_wbddh_funding_name": {
+    "und": [
+      {
+        "value": "Banque mondiale"
+      }
+    ]
+  },
+  "field_wbddh_acronym": {
+    "und": [
+      {
+        "value": ""
+      }
+    ]
+  },
+  "field_wbddh_country": {
+    "und": {
+      "tid": "94"
+    }
+  },
+  "field_wbddh_search_tags": {
+    "und": [
+      {
+        "value": "V1;region;F1;discrete;1;787;vald;0;invd;Djibouti;541;freq;2;Dikhil;47;3;Tadjourah;49;4;Ali Sabieh;50;5;Obock;6;Arta;character;other;V2;commune;contin;REAL;61;min;max;14.74;mean;19.569;stdev;numeric;V3;arrond;arrondissement;10;256;129;20;184;188;V4;quartier;Code quartier;22;6.971;4.482;V5;zd;7;9;N° ZD;151;44.734;43.193;V6;menage;11;N° menage;60;5.553;3.473;V7;rec;12;26;15;record;10100070210011;221010402100101;21195952444719.8;19406550655578;V8;num_ordre;27;V10;q02;57;(Q02):  Sexe;Masculin;644;Feminin;143;V11;q03;58;59;(Q03):  Age;19;88;46.224;12.785;V12;q04;(Q04):  Relation avec le chef du ménage;Chef du Ménage;Conjoint(e);Fils/Fille;Autre;NSP;V13;q05;(Q05):  Quelle est la situation matrimoniale de (prénom) ?;Célibataire;31;Marié Monogame;611;Marié Polygame;37;Veuf(ve);89;Divorcé(e);18;V14;q06;62;(Q06):  Quelle est la nationalité de (Prénom) ?;Djiboutien;750;Ethiopien;25;Somalien;Yemenite;Erythreen;V15;q07;63;(Q07):  Quelle est la langue maternelle de (Prénom) ?;Afar;163;Arabe;24;Somali;578;Amharique;V16;q08;64;(Q08):  Quel est le niveau d’instruction atteint  par (Prénom)?;Primaire- Francais;155;Moyen- Francais;160;Université - Francais;77;Primaire - Arabe;16;Moyen - Arabe;14;Université - Arabe;Aucun;361;V17;q09;65;67;(Q09):  Quelle est votre activité Professionnelle principale?;814;783;238.734;271.49;V18;q10;68;(Q10):  Exercez vous une activité secondaire ?;446;341;Oui;8;Non;438;Sysmiss;V19;q11;69;71;(Q11):  Quelle est votre activité Professionnelle secondaire ?;999;V20;q12;72;73;(Q12):  A quel âge avez-vous commencé à travailler pour un salaire ?;99;432;355;29.894;19.338;V21;q13;74;(Q13):  Dans quelle  intervalle se situe votre revenu mensuel ?;Moins de 50000;298;[50000 ; 80000[;153;[80000 ;120000[;83;[120000 ; 160000[;plus de 160000;ND;142;V22;q14_alimen;75;(Q14 A)  : Combien depensez vous en moyenne par mois pour l'Alimentation ?;173.997;339.29;V23;q14_hab;78;80;(Q14 B)  : Combien depensez vous en moyenne par mois pour l' Habillement ?;480.681;493.626;V24;q14_log;81;(Q14 C)  : Combien depensez vous en moyenne par mois pour le Logement, eau, électricité ?;305.521;442.57;V25;q14_ameubl;84;86;(Q14 D)  : Combien depensez vous en moyenne par mois pour l'Ameublement?;31.255;164.617;V26;q14_sant;87;(Q14 E)  : Combien depensez vous en moyenne par mois pour la Santé?;29.895;160.91;V27;q14_transp;90;92;(Q14 F)  : Combien depensez vous en moyenne par mois pour les Transports ?;29.511;152.923;V28;q14_loisir;93;95;(Q14 G)  : Combien depensez vous en moyenne par mois pour les Loisirs ?;28.008;160.947;V29;q14_ensei;96;98;(Q14 H)  : Combien depensez vous en moyenne par mois pour les Enseignement?;32.476;160.496;V30;q14_hotel;101;(Q14 I)  : Combien depensez vous en moyenne par mois pour les Hôtels, cafés, restaurants ?;28.635;164.691;V31;q14_teleco;102;104;(Q14 J)  : Combien depensez vous en moyenne par mois pour les Télécommunications ?;28.158;156.994;V32;q14_epargn;105;107;(Q14 K)  : Combien epargniez vous par mois ?;28.762;161.897;V33;q15;108;(Q15):  Est-ce que (Prénom) consomme du Khat ?;389;398;V34;q16;109;138;30;(Q16):  Si vous ne khattez pas ,  quelles sont les raisons ?;'est un drogue;2c'est un drogue;A CAUS DE L ECONOMIE;A CAUSE DE LA SANTE;AUCUN D'idee;AUCUN IDEE;AUCUN MOYEN;Aucun importance pour moi;Aucun moyen;BONNE IDEE;C EST BIEN POUR LA SANTE;C EST DROGUE;C EST DU DROGUE;C EST INTERDI A L ISLAM;C EST MAUVAIS;C EST MAUVAIS POUR LA SANTE;C EST MAUVAIS POUR LES FEMMES;C EST PAS BIEN;C EST PAS BIEN  POUR L ECONOMI;C EST PAS BIEN PARCE QU ON A P;C EST PAS BIEN POUR LA SANTE;C EST PAS BON;C EST PAS BON POUR LA FAMILLE;C EST PAS BON POUR LA SANTE;C EST PAS INTERESSANT;C EST PAS MON DOMAINE;C EST POUR LA SANTE;C EST UN DROGUE;C EST UN MAUVAIS CHOSE;C EST UN STUPEFIANT;C EST UNE DROGUE;C EST UNE PERTE DE TEMPS;C'EST UN DROGUE;C'EST UNE DROGUE;C'est mauvais pour la sante;C'est pas bon;C'est pas bon pour la santé;C'est un drogue;C'est une drog;C'est une drogue;C'est à cause de l'economie;CE N EST PAS BIEN DE KHATER;CEST UN DROGUE;COMME CA;CONTRE LA LOGIQUE DU KHAT;Cest interdit chez moi;Déja rien à manger;ELLE N AIME PAS;Elle n a pas le moyen;GASPILLAGE DE L ECONOMIE;IL EST TRES MAWAIS;IL ME LAISSE PAS DORMIR;IL SAIS PAS MAIS C'est un drog;IL SAIT PAS;Il me cause que des ennuies et;Il sait pas;J AI ARRETE LE KHATE;J AI PAS ASSEZ D ARGEN;J AI PAS ENVI;J AI PAS ENVIE;J AI PAS LE MOYEN;J AI PAS LE TEMPS;J AI PAS LE TEMPS POUR KHATER;J AIME PAS;J ELEVE MES ENFANTS;J'ai pas aimé;J'ai pas aimé de khater;J'ai pas le temps;JAMAIS ESSAYER DANS LA VIE;JAMAIS ESSAYER ET PAS SENTIMEN;JE FAISE QUE DU SPORTS;JE M INTERESSE PAS;JE MANGE MAIS J AI ARRETE;JE MANGE PAS;JE N AI PAS D ARGENT;JE N AIME PAS KHATER;JE NE PAS LE MOYEN;JE NE VOIS PAS L IMPORTANCE;JE PAS DE MOYEN;JE PAS ENVIE;JE PAS LE TEMPS;JE PAS MOYEN;JE SAI PAS;JE SAIS PAS;JE SUIS ANTI DROGUE;JE SUIS CHOMEUR;JE SUIS FATIGUE DE CE KHAT;JE SUIS MALADE;JE SUIS RELIGIEUX;JE SUIS TRES OCCUPE;JE SUIS TROP VIEUX ET MALADE;JE SUIS UN SPORTIF;JE SUIS UNE FEMME;JE SUIS UNE RELIGIEUSE ET CULT;JE SUIS VIEUX;JE TRAVAILLE;JE VEUX PAS;JELEVE MES ENFANTS;Je l'aime pas le khat;Je suis pas de gens a khatter;Je veux pas;L ECONOMIE NE PERTE PAS;LA RELIGION NE PERME PAS;LE KHAT C EST POUR LES ANIMAUX;LE KHAT ES TROP CHERS;LE KHAT NE PAS BIEN;LE SALAIRE NE SUFFIT MEME PAS;MANQUE DE MOYEN;MANQUE DES ESPRIT;MANQUE DES MOYENS;MANQUE MOYEN;MAUVAIS;MAUVAIS POUR LA SANTE;Ma santé me permet pas le khat;NIVEAU DE VIE NE ME PERMET PAS;NOTRE NIVEAU DE VIE NE PERMET;ON A PAS ASSEZ D ARGENT;PARCE QUE C EST UN STUPEFIANT;PARCE QUE C EST UNE DROGUE;PARCE QUE J AI LE MOYEN;PARCE QUE JE PAS LE MOYEN;PARCEQUE C'EST UN DROGUE;PAS BIEN;PAS BIEN POUR L ECONOMIE;PAS BIEN POUR L ECONOMIE SANTE;PAS BIEN POUR LA FAMILLE;PAS BIEN POUR LA SANTE;PAS BIEN POUR UN HOMME MARIE;PAS BIEN VRIAMEUR;PAS D ARGENT;PAS D INTERET MAUVAIS POUR LA;PAS DE MOYEN;PAS DE MOYEN ET A UN EFFET;PAS DE MOYEN NECESSAIRE POUR C;PAS DE REPONSE;PAS LE MOYEN;PAS LE TEMPS;PAS MOYEN;PAS RIEN;PERD D ECONOMIE;PERT DE L ARGENT;PERTE DE TEMPS;PERTE DU TEMPS;POUR  MOI c'est interdirte;POUR DE RAISON ECONOMIQUES;POUR DES RAISON ECONOMIQUE;POUR DES RAISON ECONOMIQUES;POUR DES RAISONS ECONOMIQUES;POUR DES RAISONS FINANCIERS;POUR DES RAISONS SANITAIRES;POUR L ECOMIE;POUR LA SANTE;POUR LES HOMMES;POUR UNE AUESTION DE PRICIPE;PROBLEME D ECONOMIE;PROBLEME DE SANTE ET REVENU;PROBLEME DES ENFANTS ET REVENU;PROBLEME ET DE REVENUS;Parce-que c'est pas bien;Pas le moyen;Pas moyen;Perte de temps;QUESTION DE SANTE ET ECONOMIE;Si on travaille pas;TROP OCCUPE AU TRAVAIL;TU NE SERAS PAS APTE;aucun moyen;aucun utilité;avant je khat,mai malg les ...;avant je khatai mais je arrete;c'es pas bien pour la santé;c'es trés dangereux pour la sn;c'est fait pour les hommes;c'est haram et c'est mauvais;c'est interdit par la religion;c'est mauvais;c'est mauvais pour la sante;c'est mauvais pour la santé;c'est pas bien;c'est pas bien pour l'econimie;c'est pas bien pour l'econom;c'est pas bien pour la sante;c'est pas bien pour la santé;c'est pas bien surtout pour la;c'est pas bon;c'est pas bon pour la santé;c'est pas bon pour moi;c'est pas gure;c'est pas interessent;c'est pas le sante;c'est pas mon gout;c'est pas une bonne chose;c'est pour la sante;c'est un  vieux;c'est un danger;c'est un drogue;c'est un probleme de sante;c'est une drog;c'est à cause de la sante;ca m'empêche de travailler;ca m'interese pas;ca sert à rien du tout;ce n'est pas bien pour persone;ce pas bien pour la personne;ce pas bon pour la santé;ce pas fait pour femme agée;ce pas fait pour moi le khat;e;il n'a jamais khatté;il ne sert à rien du tout;j'ai arreté;j'ai jamais manger;j'ai meme pas le temps;j'ai pas assez de moyen;j'ai pas assez des moyen pourd;j'ai pas le moyen;j'ai pas le temps;j'aime pas;j'aime pas khatté;j'aime pas le khat;j'arrete de khatté il y'a long;j'eleve mes enfants;j'élève mes enfants;je jamais goutter le khat;je jamais manger du khat;je khatte pas;je l'aime pas entendre;je m'interrse pas;je n'aime pas;je n'aime pas le khat;je n'aime pas moi;je ne jamais aimé le khat;je ne suis pas interesse;je ne suis pas mais de la fami;je pas de raison;je pas le moyen;je pas le moyen de vivre;je pas le temps;je prefere de vne pas khat;je remercie Dieu de ne pas m'a;je suis assez grande;je suis assez-grand pour faire;je suis de genre a brouter;je suis fatigue du khatte;je suis religieux;je suis trop vieille pour ca;je suis un chomeur;je suis un religieu pas le tem;je suis un religieux;je suis un vielle femme;je suis une femme;je suis une grande femme;je suis une grande femme malad;je suis une religieuse;je veux pas;je vois ses effets sur le gens;khaté a beaucoup de probleme;le khat affecte la population;le khat est un pert de temps;le niveau économique;le salaire ne suffit pas;maintenant j'ai arrete;manque de moyen;manque de moyens;moi je m'aime pas;moi je vends mais je mange pas;mon economie ne me permet pas;non ce ne pas mon genre;non je khattes pas;non, son gout me plait pas;notre avenir ns faiblesse;nous n'aimons pas le khat;parce que c'est une drog;parceque je pas de moyen;parceque je suis un grand;pas b1;pas bien;pas bien pour moi;pas bon exemple pour enfants;pas d'argent;pas le moyen;personnellement je pas les moy;perte d'econ;probleme de famille santé;probleme de santé et de revenu;sa me plait pas;trop vieille;V35;q17_amis;139;(Q17  A ) Pourquoi Khatter ?  :  Rencontrer des amis;365;214;V36;q17_famil;140;(Q17  B ) Pourquoi Khatter ?  :  Réunions familiales;175;190;V37;q17_mieux_;141;(Q17  C ) Pourquoi Khatter ?  :  Mieux travailler;209;156;V38;q17_etudes;(Q17  D ) Pourquoi Khatter ?  :  Faires des études;17;348;V39;q17_refle;(Q17  E ) Pourquoi Khatter ?  :  Réfléchir;158;207;V40;q17_travai;144;(Q17  F ) Pourquoi Khatter ?  :  Faire un travail manuel;114;251;V41;q17_prblem;145;(Q17  G ) Pourquoi Khatter ?  :  Résoudre un problème;157;208;V42;q17_plaisi;146;(Q17  H ) Pourquoi Khatter ?  :  Plaisirs charnels;288;V43;q17_ambian;147;(Q17  I ) Pourquoi Khatter ?  :  Ambiance du Mabraze;111;254;V44;q17_gout;148;(Q17  J ) Pourquoi Khatter ?  :  Gout agréable;V45;q17_relaxa;149;(Q17  K ) Pourquoi Khatter ?  :  Relaxation et détente;220;V46;q17_autres;150;(Q17  L ) Pourquoi Khatter ?  :  Autres à préciser;356;V47;q18;161;(Q18):  Autres raisons pour la consommation du Khat;AUCUN;OUBLIE DES;aucun raiso;V48;q19;162;(Q19):  A quel âge avez-vous commencé à khatter ?;363;424;23.284;6.684;V49;q20;164;165;(Q20):  Combien de jour(s) par mois  Khattez vous ?;16.207;10.199;V50;q21;166;167;(Q21):  Combien d’heures par jour khattez vous en moyenne ?;7.361;5.432;V51;q22;168;169;(Q22):  A quelle heure commencez vous la consommation du khat ?;13;41"
+      }
+    ]
+  },
+  "field_wbddh_release_date": {
+    "und": [
+      {
+        "value": "2011-09-29"
+      }
+    ]
+  },
+  "field_wbddh_modified_date": {
+    "und": [
+      {
+        "value": "2013-09-24"
+      }
+    ]
+  },
+  "field_wbddh_citation_text": {
+    "und": [
+      {
+        "value": "L'utilisation des données doit être mentionnée par l'inclusion d'une référence bibliographique contenant au minimum: - l'identification de l'enquêteur principal (agence ou personne ayant assuré la responsabiité de la production des données) - le titre exact de l'enquête (y compris le pays, l'année de l'enquête et l'abbréviation du titre de l'enquête lorsque disponible) - le numéro de référence de l'enquête tel qu'indiqué dans notre catalogue - la source et la date du téléchargement des fichiers de données pour les données obtenues en ligne Exemple: Direction de la Statistique et des Etudes Démographiques. Etude sur l'Impact Socio-Economique du Khat a Djibouti (KHAT) 2010 Ref. DJI_2010_KHAT_v01_M. Données téléchargées du site http://microdata.worldbank.org le [date]."
+      }
+    ]
+  },
+  "field_ddh_harvest_src": {
+    "und": {
+      "tid": "1016"
+    }
+  },
+  "field_ddh_harvest_sys_id": {
+    "und": [
+      {
+        "value": 77
+      }
+    ]
+  },
+  "field_exception_s_": {
+    "und": {
+      "tid": "1208"
+    }
+  },
+  "type": "dataset"
+} 

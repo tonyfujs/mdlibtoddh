@@ -1,0 +1,201 @@
+{
+  "title": "Nepal - Living Standards Survey 1995-1996",
+  "body": {
+    "und": [
+      {
+        "value": "The NLSS 1995/96 is basically limited to the living standards of households. The basic objectives of this survey was to provide information required for monitoring the progress in improving national living standards and to evaluate the impact of various government policies and program on living condition of the population. This survey captured comprehensive set of data on different aspects of households welfare like consumption, income, housing, labour markets, education, health etc."
+      }
+    ]
+  },
+  "field_contact_email": {
+    "und": [
+      {
+        "value": "lsms@worldbank.org; archive@cbs.gov.np; microdata.worldbank.org"
+      }
+    ]
+  },
+  "field_topic": {
+    "und": {
+      "tid": "936"
+    }
+  },
+  "field_wbddh_reference_id": {
+    "und": [
+      {
+        "value": "NPL_1995_LSS-I_v01_M"
+      }
+    ]
+  },
+  "field_wbddh_data_class": {
+    "und": {
+      "tid": "358"
+    }
+  },
+  "field_wbddh_data_collector": {
+    "und": {
+      "value": "Central Bureau of Statistics"
+    }
+  },
+  "field_wbddh_data_type": {
+    "und": {
+      "tid": "294"
+    }
+  },
+  "field_wbddh_disclaimer": {
+    "und": {
+      "value": "The Central Bureau of Statistics, Nepal bears no responsibility for any outcomes or for interpretations or inferences arising from the use of the dataset."
+    }
+  },
+  "field_wbddh_kind_of_data": {
+    "und": {
+      "tid": "855"
+    }
+  },
+  "field_wbddh_languages_supported": {
+    "und": {
+      "tid": "337"
+    }
+  },
+  "field_wbddh_mode_data_collection": {
+    "und": {
+      "tid": "478"
+    }
+  },
+  "field_wbddh_primary_investigator": {
+    "und": [
+      {
+        "value": "Central Bureau of Statistics (CBS) - National Planning Commission Secretariat"
+      }
+    ]
+  },
+  "field_wbddh_study_type": {
+    "und": {
+      "value": "Living Standards Measurement Study [hh/lsms]"
+    }
+  },
+  "field_wbddh_terms_of_use": {
+    "und": {
+      "tid": "438"
+    }
+  },
+  "field_wbddh_access_authority": {
+    "und": [
+      {
+        "value": "Director General, Central Bureau of Statistics, Nepal, uttammalla@cbs.gov.np, http://cbs.gov.np/?page_id=17"
+      }
+    ]
+  },
+  "field_wbddh_data_editing": {
+    "und": [
+      {
+        "value": "Data editing took place at a number of stages throughout the processing, including:\na) Office editing and coding\nb) During data entry\nc) Structure checking and completeness\nd) Secondary editing\ne) Structural checking of SPSS data files\n \nEach week, the data entry operator gives the supervisor two specific computer-generated documents for each \nhousehold in the previous week's ward:\n• a listing of errors in the data entered for the household;\n• a special listing of consistency checks."
+      }
+    ]
+  },
+  "field_wbddh_funding_name": {
+    "und": [
+      {
+        "value": "The World Bank Group"
+      }
+    ]
+  },
+  "field_wbddh_response_rates": {
+    "und": [
+      {
+        "value": "99.5 percent of households (3370 out of 3388)."
+      }
+    ]
+  },
+  "field_wbddh_subtitle": {
+    "und": [
+      {
+        "value": "First Round"
+      }
+    ]
+  },
+  "field_wbddh_unit_of_analysis": {
+    "und": [
+      {
+        "value": "- Household\n- Individual\n- Community"
+      }
+    ]
+  },
+  "field_wbddh_universe": {
+    "und": {
+      "value": [""]
+    }
+  },
+  "field_wbddh_weighting": ["The weights for the survey were derived taking into account the stratification of the sampling frame and the selection of wards within the strata. See \"Sampling Weights for the NLSS\" for a detailed discussion on the weights for the survey. Data file sample contains the NLSS weights."],
+  "field_wbddh_acronym": {
+    "und": [
+      {
+        "value": "NLSS-I 1995-96"
+      }
+    ]
+  },
+  "field_wbddh_country": {
+    "und": {
+      "tid": "190"
+    }
+  },
+  "field_wbddh_search_tags": {
+    "und": [
+      {
+        "value": "V1;WWWHH;F1;0;discrete;1;5;Household Identifier;REAL;101;27517;3370;vald;invd;min;max;numeric;other;V2;WWW;6;8;3;Primary Sampling Unit;275;12;freq;2;16;4;7;9;10;11;13;14;15;17;18;19;20;21;22;23;24;25;26;27;28;29;30;31;32;33;34;35;36;37;38;39;40;41;42;43;44;45;46;47;48;49;50;51;52;53;54;55;56;57;58;59;60;61;62;63;64;65;66;67;68;69;70;71;72;73;74;75;76;77;78;79;80;81;82;83;84;85;86;87;88;89;90;91;92;93;94;95;96;97;98;99;100;102;103;104;105;106;107;108;109;110;112;113;114;115;116;117;118;119;120;121;122;123;124;125;126;127;128;129;130;131;132;133;134;135;136;137;138;139;140;141;142;143;144;145;146;147;148;149;150;151;152;153;154;155;156;157;158;159;160;161;162;163;164;165;166;167;168;169;170;171;172;173;174;175;176;177;178;179;180;181;182;183;184;185;186;187;188;189;190;191;192;193;194;195;196;197;198;199;200;201;202;203;204;205;206;207;208;209;210;211;212;213;214;215;216;217;218;219;220;221;222;223;224;225;226;227;228;229;230;231;232;233;234;235;236;237;238;239;240;241;242;243;244;245;246;247;248;249;250;251;252;253;254;255;256;257;258;259;260;261;262;263;264;265;266;267;268;269;270;271;272;273;274;V3;HH;Household Number;V4;R1_V00_DINTD;S00_DINTDD Interview date DD;111;V5;R1_V00_DINTM;S00_DINTMM MM;339;508;276;334;382;438;306;V6;R1_V00_DINTY;S00_DINTYY YY;3093;277;V7;R1_V00_INTC;S00_INTC Interviewer code;1021;D021;D031;D081;D121;I001;I011;I012;I013;I021;I022;I023;I031;I032;I033;I041;I042;I043;I051;I052;I053;I061;I062;I063;I071;I072;I073;I081;I082;I083;I091;I092;I093;I101;I102;I103;I111;I112;I113;I121;I122;I123;I124;I151;S021;S031;character;V8;R1_V00_DFOU;S00_DFOU Dwelling found?;Yes;3208;No;V9;R1_V00_RELI;S00_RELI Religion of head;Hindu;2793;Buddhist;Muslim;Other;Sysmiss;V10;R1_V00_LANG;S00_LANG Language used;Nepali;2406;Maithili;281;Bhojpuri;Tamang;Newari;V11;R1_V00_ETHN;S00_ETHN Ethnicity;634;517;300;543;V12;R1_V00_INTP;S00_INTP Interpreter used;3207;404;2803;V13;R1_V00_OLDH;S00_OLDH This household replaces:;324;3046;V14;R1_V00_NEWH;S00_NEWH Will be replaced by:;297;3073;V15;R1_V00_REAS;S00_REAS Reason replaced;356;3014;Dwelling not found;Occupant not at home;Refusal;V16;R1_V00_DDE1D;S00_DDE1DD 1st Round date DD;V17;R1_V00_DDE1M;S00_DDE1MM MM;321;465;289;349;378;449;301;V18;R1_V00_DDE1Y;S00_DDE1YY YY;3063;307;V19;R1_V00_DEOP1;S00_DEOC Operator code;3368;D011;370;336;D041;D051;D061;285;D071;D072;287;D091;D101;D111;304;D151;V20;R1_V00_DSUPD;S00_DSUPDD Review date DD;3071;299;V21;R1_V00_DSUPM;S00_DSUPMM MM;293;408;341;400;V22;R1_V00_DSUPY;S00_DSUPYY YY;2773;298;V23;R1_V00_SUPC;S00_SUPC Supervisor code;2919;S011;419;S041;S051;S061;S071;S081;S091;S101;S111;S121;359;S151;V24;R1_V00_DCORD;S00_DCORDD Corrections date DD;2528;842;V25;R1_V00_DCORM;S00_DCORMM MM;2532;838;282;340;295;V26;R1_V00_DCORY;S00_DCORYY YY;2530;840;2234;296;V27;R1_V00_DEOP2;S00_DEOD Operator code;2521;V1686;F134;20160;V1687;V1688;1562;1457;337;1492;1443;369;1428;1549;1462;1356;415;1363;1327;462;1316;1458;310;V1689;r1_IDC;S01A_IDC ID CODE;3373;3299;3119;2837;2341;1709;1174;760;487;327;V1690;r1_name;S01A_01 Name;V1691;r1_sex;S01A_02 Sex;Male;10186;Female;9974;V1692;r1_relation;S01A_03 Relationship;Head;Wife or husband;2833;Son/daughter;9035;Grandchild;1854;Father or mother;658;Sister or brother;532;Niece or nephew;290;Son/daughters-in-law;1218;Brother/sister-in-law;Father/mother-in-law;Other family relative;Servant/servant's relative;Tenant/tenant's relative;Other person not related;V1693;r1_distrborn;S01A_04A District born in;Rural;Urban;447;468;423;329;525;363;421;303;474;292;1257;294;384;345;381;499;309;344;338;351;518;V1694;r1_urbrurborn;S01A_04B Urban/Rural born in;20155;3069;17086;V1695;r1_age;S01A_05 Age;498;516;565;388;674;571;613;551;563;573;401;459;495;501;365;557;315;471;317;463;352;342;481;319;429;395;358;V1696;r1_martstats;S01A_06 Marital status;14734;5426;Married;8566;Divorced;Separated;Widow/widower;974;Never married;5083;V1697;r1_spseinlist;S01A_07 Spouse in list?;11594;8224;V1698;r1_spouse_IDC;S01A_08 ID code of spouse;11936;2845;2955;792;626;V1699;r1_mnthathme;S01A_09 Months at home;466;392;17964;V1700;r1_membrorn;S01A_10 Member or not?;18855;1305;V43;F3;18963;V44;V45;1438;1369;305;1413;1344;1352;1459;407;1351;1291;1295;1250;443;1232;1377;V46;S01B_IDC ID CODE;3350;3136;2831;2667;2202;1605;1080;694;V47;r1_fathrlhm;S01B_01 Father living at home?;9465;3672;5826;V48;r1_father_ID;S01B_02 ID code of father;9464;9499;7487;549;851;V49;r1_fathrlit;S01B_03 Father literate?;2658;6841;V50;r1_fathrsch;S01B_04 Highest schooling;16305;None;1191;Less than Primary;434;Primary;Lower Secondary;Secondary;More"
+      }
+    ]
+  },
+  "field_wbddh_release_date": {
+    "und": [
+      {
+        "value": "2011-09-29 15:32:32"
+      }
+    ]
+  },
+  "field_wbddh_modified_date": {
+    "und": [
+      {
+        "value": "2013-09-24 18:43:17"
+      }
+    ]
+  },
+  "field_wbddh_sampling_procedure": {
+    "und": [
+      {
+        "value": "Sample Design Sample Frame: A complete list of all wards in the country, with a measure of size, was developed in order to select from it with Probability Proportional to Size (PPS) the sample of wards to be visited. The 1991 Population Census of Nepal was the best starting point for building such a sample frame. The Central Bureau of Statistics (CBS) constructed a data set with basic information from the census at the ward level. This data set was used as a sample frame to develop the NLSS sample. Sample Design: The sample size for the NLSS was set at 3,388 households. This sample was divided into four strata based on the geographic and ecological regions of the country: (i) mountains, (ii) urban Hills, (iii) rural Hills, and (iv) Terai. The sample size was designed to provide enough observations within each ecological stratum to ensure adequate statistical accuracy, as well as enough variation in key variables for policy analysis within each stratum, while respecting resource constraints and the need to balance sampling and non-sampling errors. A two-stage stratified sampling procedure was used to select the sample for the NLSS. The primary sampling unit (PSU) is the ward, the smallest administrative unit in the 1991 Population Census. In order to increase the variability of the sample, it was decided that a small number of households - twelve - would be interviewed in each ward. Thus, a total of275 wards was obtained. In the first stage of the sampling, wards were selected with probability proportional to size (PPS) from each of the four ecological strata, using the number of household in the ward as the measure of size. In order to give the sample an implicit stratification respecting the division of the country into Development Regions, the sample frame was sorted by ascending order of district codes, and these were numbered from East to West. The sample frame considered all the 75 districts in the country, and indeed 73 of them were represented in the sample. In the second stage of the sampling, a fixed number of households were chosen with equal probabilities from each selected PSU. The two-stage procedure just described has several advantages. It simplified the analysis by providing a self-weighted sample. It also reduced the travel time and cost, as 12 or 16 households are interviewed in each ward. In addition, as the number of households to be interviewed in each ward was known in advance, the procedure made it possible to plan an even workload across different survey teams."
+      }
+    ]
+  },
+  "field_wbddh_questionnaires": {
+    "und": [
+      {
+        "value": "A preliminary draft of the questionnaire was first prepared with several discussions held between the core staff and the consultant to the project. Several documents both received from the world bank as well as from countries that had already conducted such surveys in the past were referred during this process. Subsequently the questionnaire was translated into NepalI. After a suitable draft design of the questionnaire, a pre-test was conducted in five different places of the country. The places selected for the pre-test were Biratnagar, Rasuwa, Palpa, Nepalganj and Kathmandu Valley. The entire teams created for the pre-test were also represented by either a consultant or an expert from the bank. Feedback received from the field was utilized for necessary improvements in finalizing the seventy page questionnaire. The content of each questionnaire is as follows: HOUSEHOLD QUESTIONNAIRE Section 1. HOUSEHOLD INFORMATION This section served two main purposes: (i) identify every person who is a member of the household, and (ii) provide basic demographic data such as age, sex, and marital status of everyone presently living in the household. In addition, information collected also included data on all economic activities undertaken by household members and on unemployment. Section 2. HOUSING This section collected information on the type of dwelling occupied by the household, as well as on the household's expenditures on housing and amenities (rent, expenditure on water, garbage collection, electricity, etc.). Section 3. ACCESS TO FACILITIES This section collected information on the distance from the household's residence to various public facilities and services. Section 4. MIGRATION This section collected information from the household head on permanent migration for reasons of work or land availability. Section 5. FOOD EXPENSES AND HOME PRODUCTION This section collected information on all food expenditures of the household, as well as on consumption of food items that the household produced. Section 6. NON-FOOD EXPENDITURES AND INVENTORY OF DURABLE GOODS This section collected information on expenditure on non-food items (clothing, fuels, items for the house, etc.), as well as on the durable goods owned by the household. Section 7. EDUCATION This section collected information on literacy for all household members aged 5 years and above, on the level of education for those members who have attended school in the past, and on levelof education and expenditures on schooling for those currently attending an educational institution. Section 8. HEALTH This section collected information on illnesses, use of medical facilities, expenditure on health care, children's immunization, and diarrhea. Section 9. ANTHROPOMETRICS This section collected weight and height measurements for all children 3 years or under. Section 10. MARRIAGE AND MATERNITY HISTORY This section collected information on maternity history, pre/post-natal care, and knowledge/use of family planning methods. Section 11. WAGE EMPLOYMENT This section collected information on wage employment in agriculture and in non-agricultural activities, as well as on income earned through wage labor. Section 12. FARMING AND LIVESTOCK This section collected information on all agricultural activities -- land owned or operated, crops grown, use of crops, income from the sale of crops, ownership of livestock, and income from the sale of livestock. Section 13. NON-FARM ENTERPRISES/ACTIVITIES This section collected information on all non-agricultural enterprises and activities -- type of activity, revenue earned, expenditures, etc. Section 14. CREDIT AND SAVINGS This section collected information on loans made by the household to others, or loans taken from others by household members, as well as on land, property, or other fixed assets owned by the household. Section 15. REMITTANCES AND TRANSFERS This section collected information on remittances sent by members of the household to others and on transfers received by members of the household from others. Section 16. OTHER ASSETS AND INCOME This section collected information on income from all other sources not covered elsewhere in the questionnaire. Section 17. ADEQUACY OF CONSUMPTION This section collected information on whether the household perceives its level of consumption to be adequate or not. RURAL COMMUNITY QUESTIONNAIRE Section 1. POPULATION CHARACTERISTICS AND INFRASTRUCTURES This section collected information on the characteristics of the community, availability of electricity and its services and water supply and sewerage. Section 2. ACCESS TO FACILITIES Data on services and amenities, education status and health facilities was collected. Section 3. AGRICULTURE AND FORESTRY Information on the land situation, irrigation systems, crop cycles, wages paid to hired labor, rental rates for cattle and machinery and forestry use were asked in this section. Section 4. MIGRATION This section collected information on the main migratory movements in and out. Section 5. DEVELOPMENT PROGRAMS, USER GROUPS, etc. In this section, information on development programs, existence user groups, and the quality of life in the community was collected. Section 6. RURAL PRIMARY SCHOOL This section collected information on enrollment, infrastructure, and supplies. Section 7. RURAL HEALTH FACILITY This section collected information on health facilities, equipment and services available, and health personnel in the community. Section 8. MARKETS AND PRICES This section collected information on local shops, Haat Bazaar, agricultural inputs, sale of crops and the conversion of local units into standard units. URBAN COMMUNITY QUESTIONNAIRE Section 1. POPULATION CHARACTERISTICS AND INFRASTRUCTURE Information was collected on the characteristics of the community, availability of electricity, water supply and sewerage system in the ward. Section 2. ACCESS TO FACILITIES This section collected information on the distance from the community to the various places and public facilities and services. Section 3. MARKETS AND PRICES This section collected information on the availability and prices of different goods. Section 4. QUALITY OF LIFE Here the notion of the quality of life in the community was explored."
+      }
+    ]
+  },
+  "field_wbddh_citation_text": {
+    "und": [
+      {
+        "value": "Use of the dataset must be acknowledged using a citation which would include: - the Identification of the Primary Investigator - the title of the survey (including country, acronym and year of implementation) - the survey reference number - the source and date of download Example: Central Bureau of Statistics (CBS), Nepal. Nepal Living Standards Survey 1995/96. Ref. NPL_1995_LSS-I_v01_M. Dataset downloaded from [source] on [date]."
+      }
+    ]
+  },
+  "field_ddh_harvest_src": {
+    "und": {
+      "tid": "1016"
+    }
+  },
+  "field_ddh_harvest_sys_id": {
+    "und": [
+      {
+        "value": 347
+      }
+    ]
+  },
+  "field_wbddh_other_processing": {
+    "und": {
+      "value": ["A distinctive feature of the NLSS is the use of personal computers for data entry in the field. Instead of sending the completed questionnaires back to the central office for data entry, the data collected in the ward were entered while the team was still in the field. For this purpose, each team was provided with a computer, a printer, and a power system for data entry, in addition to scales and meters to measure children. A data entry program developed specifically for the survey was installed on each computer. The data entry program let the data operator and the supervisor know if there were mistakes or missing data in the interview, and checked whether information from one part of the interview matched information from other parts. When problems or errors were found, the interviewers returned to the households to correct the information. This process of entering, checking, and correcting the data in the field helped to ensure that the information collected was accurate. It also reduced the time lag between data collection and data analysis; diskettes containing the complete data for each ward were sent back to the central office as soon as work in the ward was completed, and the data were available for analysis shortly after the completion of the collection phase. \n \nData Entry\nData entry involves keying in information from the questionnaires and then running a series of programs to check the information. These programs detect errors or inconsistencies in the data. All data are stored internally in the team's computer. In addition, the data entry operator makes backup copies of all data files on diskettes. The data entry operator is also responsible for maintaining the personal computer, printer, and the power equipment, as well as for storing the diskettes, printouts, and questionnaires properly."]
+    }
+  },
+  "type": "dataset"
+} 

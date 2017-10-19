@@ -1,0 +1,207 @@
+{
+  "title": "TEST - DATE FORMAT",
+  "body": {
+    "und": [
+      {
+        "value": "The HSES 2010 is a nationally representa­tive survey, which aims to evalu­ate and monitor the income and expenditure of households, update the basket and weights for consumer price index, and offer inputs to the national accounts. The HSES is a survey regularly conducted by the NSO and covers a 12-month period for analysis."
+      }
+    ]
+  },
+  "field_contact_email": {
+    "und": [
+      {
+        "value": "tserenkhand@nso.mn"
+      }
+    ]
+  },
+  "field_topic": {
+    "und": {
+      "tid": "936"
+    }
+  },
+  "field_wbddh_reference_id": {
+    "und": [
+      {
+        "value": "MNG_2010_HSES_v01_M"
+      }
+    ]
+  },
+  "field_wbddh_data_class": {
+    "und": {
+      "tid": "359"
+    }
+  },
+  "field_wbddh_data_collector": {
+    "und": {
+      "value": "National Statistical Office"
+    }
+  },
+  "field_wbddh_data_type": {
+    "und": {
+      "tid": "294"
+    }
+  },
+  "field_wbddh_disclaimer": {
+    "und": {
+      "value": "The user of the data acknowledges that the original collector of the data, the authorized distributor of the data, and the relevant funding agency bear no responsibility for use of the data or for interpretations or inferences based upon such uses."
+    }
+  },
+  "field_wbddh_kind_of_data": {
+    "und": {
+      "tid": "855"
+    }
+  },
+  "field_wbddh_languages_supported": {
+    "und": {
+      "tid": "337"
+    }
+  },
+  "field_wbddh_mode_data_collection": {
+    "und": {
+      "tid": "478"
+    }
+  },
+  "field_wbddh_primary_investigator": {
+    "und": [
+      {
+        "value": "National Statistical Office of Mongolia - NSO"
+      }
+    ]
+  },
+  "field_wbddh_study_type": {
+    "und": {
+      "value": "Socio-Economic/Monitoring Survey [hh/sems]"
+    }
+  },
+  "field_wbddh_terms_of_use": {
+    "und": {
+      "tid": "436"
+    }
+  },
+  "field_wbddh_access_authority": {
+    "und": [
+      {
+        "value": ", National Statistical Office of Mongolia"
+      }
+    ]
+  },
+  "field_wbddh_data_editing": {
+    "und": [
+      {
+        "value": "All procedures were streamlined and centralized, which is likely to have had a positive impact on the quality of the infor­mation. On the other hand, three different rounds of consistency checks were applied to the data: first during the data entry process, then during the compilation of the raw data files and finally during the preparation of this report. In all cases it was possible to compare these listings against the actual questionnaires filled out by the households (and at least during the first round of checks, some households were visited again) and the data were amended whenever a mistake was found.Databases for the HSES 2007/08 have been unified and data error checking was made (by using STATA program) in cooperation with working group."
+      }
+    ]
+  },
+  "field_wbddh_funding_name": {
+    "und": [
+      {
+        "value": "World bank"
+      }
+    ]
+  },
+  "field_wbddh_copyright": {
+    "und": [
+      {
+        "value": "National Statistical Office of Mongolia and World bank"
+      }
+    ]
+  },
+  "field_wbddh_version_notes": {
+    "und": [
+      {
+        "value": "The HSES was conceived as an improved version of the Household Income and Expenditure Survey (HIES) because several modules from a typical Liv­ing Standards Measurement Survey were merged to the previous HIES."
+      }
+    ]
+  },
+  "field_wbddh_unit_of_analysis": {
+    "und": [
+      {
+        "value": "Mongolia is divided into 21 aimags. Ulaanbaatar is the capital city and is subdivided into 9 districts, 121 khoroos and 1,035 khesegs. Each kheseg has approximately 200 households. The rest of the country is divided into soums and bags. One of the soums in each aimag is normatively considered as the aimag center, while the others are regarded as the rural area."
+      }
+    ]
+  },
+  "field_wbddh_universe": {
+    "und": {
+      "value": [""]
+    }
+  },
+  "field_wbddh_acronym": {
+    "und": [
+      {
+        "value": "SES 2010"
+      }
+    ]
+  },
+  "field_wbddh_country": {
+    "und": {
+      "tid": "182"
+    }
+  },
+  "field_wbddh_search_tags": {
+    "und": [
+      {
+        "value": "V1;identif;F1;0;contin;1;5;group(identif);REAL;11198;vald;invd;min;max;numeric;other;V2;q0008;discrete;6;7;2;8 Nb of hh members;16;957;freq;1516;3;2395;4;2955;1831;920;368;8;153;9;60;10;31;11;13;14;V3;hh_no;HH_NO;1107;1090;1087;1082;1080;1084;1053;1020;526;491;600;12;530;448;V4;v1_dd;Visit 1 DD;V5;v1_mm;Visit 1 MM;930;949;939;935;928;911;947;V6;v1_yy;15;Visit 1 YY;20;269;10918;V7;v1_res;Visit 1 Result;COMPLETE;5581;PARTIALLY COMPLETED;5224;NO RESPONDENT IN THE HOUSEHOLD;65;HOUSEHOLD TEMPERARILY NOT PRESENT;143;POSTPONED;137;REFUSED;HOUSEHOLD NOT FOUND;48;V8;v2_dd;17;18;Visit 2 DD;6915;4283;V9;v2_mm;19;Visit 2 MM;6910;4288;591;575;582;581;579;572;563;561;569;574;Sysmiss;V10;v2_yy;21;22;Visit 2 YY;6909;4289;266;6638;V11;v2_res;23;Visit 2 Result;1328;5255;27;V12;v3_dd;24;25;Visit 3 DD;6881;4317;V13;v3_mm;26;Visit 3 MM;6879;4319;590;585;566;564;560;571;578;V14;v3_yy;28;29;Visit 3 YY;6612;V15;v3_res;30;Visit 3 Result;1606;4986;113;134;38;V16;v4_dd;32;Visit 4 DD;6657;4541;V17;v4_mm;33;34;Visit 4 MM;6655;4543;608;539;552;544;559;550;551;520;540;V18;v4_yy;35;36;Visit 4 YY;6320;69;V19;v4_res;37;Visit 4 Result;6931;4267;6694;234;V20;q0507;0507 Has produced animal products past 12m?;4204;6994;YES;4062;NO;142;V21;q0515;39;0515 Agricultural land in past 12 m?;1054;10144;V22;q0516;40;45;0516 What is total amount owned the past 12M;999000;V23;q0517;46;0517 Has vegetables, fruits in pas 12M;835;219;V24;q0501;47;05-01 Raised or Owned Herding,poultry or any animal?;V25;q0518;53;0518 What is total amount agricultural land HH members past;500000;10363;V26;q0601;54;0601. Are there household enterprises?;1862;9336;V27;q0602;55;0602. How many enterprises?;1680;175;V28;q0707;56;07-07 :Has any member received money or goods;7004;4194;V29;cluster2;57;Cluster Cover Form 2;1248;V30;visitor;61;62;Number of visitors Cover Form 2;99;V31;ndays;63;Number of days Cover Form 2;270;V32;q0801;66;0801. Number of dwellings;9674;1409;106;V33;q0802;67;0802. Is main dwelling?;10393;805;V34;q0803;68;0803. Type of Dwellings;GER;5183;BUILDING;1051;DETACHED HOUSE;2644;APARTMENT;2117;STUDENT'S DORMITORY;WORKER'S DORMITORY;85;OTHER DORMITORY ACCOMODATION;NON-LIVING QUARTERS;OTHER;V35;q0804;0804. Number of rooms in the dwelling;5987;5211;2424;2320;929;230;44;V36;q0805;70;0805. Main material of the walls;BRICKS;1650;CEMENT;1476;WOOD;2591;STONE;59;211;V37;q0806;71;0806. Main material of the roof;METAL;2101;ASPHALT ROOF SHINGLES;2660;TILE;717;509;V38;q0807;72;0807. Main material of the floor;4343;1345;EARTH;126;173;V39;q0808;73;75;0808. Living area;500;V40;q0809;76;78;0809. Total useful area;V41;q0810;79;80;0810. What is the total area occupies;11170;V42;q0811;81;0811. Number of walls in the ger;6015;1325;3049;678;112;V43;q0812;82;0812. Covering of the ceiling;SINGLE;1375;DOUBLE;3808;V44;q0813;83;0813. Covering of the frame;1381;3802;V45;q0814;84;0814. Main material of the floor;2638;2341;204;V46;q0815;86;0815. How old is this dwelling;343;456;382;449;356;238;247;750;127;275;210;149;331;123;108;756;151;167;100;111;262;131;95;93;441;97;41;227;42;43;58;49;50;128;51;52;64;***Undefined Label;2180;V47;q0816;87;88;0816. How long have you been living;815;798;658;712;543;371;188;974;176;373;265;186;129;709;146;110;208;360;191;91;V48;q0817;89;0817. Type of ownership;STATE;237;ORGANIZATION'S;PRIVATE;10786;V49;q0818;90;0818. How was acquired;412;RENTING;INHERITED;1521;GIFT;795;BUILT BY  OURSELVES;4034;PURCHASED;3139;PRIVATIZED;728;299;V50;q0819;0819. Did you borrow any money to acquire;8200;2998;729;7471"
+      }
+    ]
+  },
+  "field_wbddh_version_date": {
+    "und": [
+      {
+        "value": ""
+      }
+    ]
+  },
+  "field_wbddh_release_date": {
+    "und": [
+      {
+        "value": "2014-05-22"
+      }
+    ]
+  },
+  "field_wbddh_modified_date": {
+    "und": [
+      {
+        "value": "2016-11-16"
+      }
+    ]
+  },
+  "field_wbddh_sampling_procedure": {
+    "und": [
+      {
+        "value": "The 2010 HSES used the sampling frame which was devel­oped by the NSO based on 2005 population figures obtained from local registration offices. This updated sampling frame was of great importance because the spatial dis­tribution of the population had changed dramati­cally over the last years and any frame based on the Census 2000 would not be relevant anymore. The design of the survey recognizes three ex­plicit strata: Ulaanbaatar, aimag centers, and soum centers and the countryside. In addition, the sample was implicitly allocated by districts and khoroos in Ulaanbaatar, and by aimags in rural areas. Each aimag center was an explicit sub-stratum. The selection strategy was different in each stratum: a two-stage process in urban areas and a three-stage process in rural areas. In Ulaanbaatar, 360 khesegs were initially selected, from each of which 10 households were chosen. In aimag centers, 12 or 24 bags were initially selected, and then 10 house­holds from each bag. In rural areas, first 52 soums, then 12 bags in each soum and fi­nally 8 households in each bag were selected. All 1,248 primary sampling units or clusters (units, bags or soums) were selected with a probability proportional to their sizes and were randomly allocated into twelve months of survey fieldwork. The use of this sampling procedure means that households living in different areas of the coun­try have been selected with different probabilities. Therefore, in order to obtain representative sta­tistics for each stratum and for the coun­try as a whole, it was necessary to use sampling weights. The weight which was assigned to each household corresponds to the inverse of the selection probability and takes the sampling strategy into account. The sample of 11,232 households was allocated as follows: 3,600 in Ulaanbaatar, 2,640 in aimag centers and 4,992 in rural areas and soum centers. However, the actual sample size used for this analysis is slightly smaller: 3,572 households in Ulaanbaatar; 2,639 in aimag centers; and 4,987 in rural areas and small towns. The difference is explained by 60 households, for which complete information was unavailable and were thus, excluded."
+      }
+    ]
+  },
+  "field_wbddh_questionnaires": {
+    "und": [
+      {
+        "value": "The questionnaire of HSES 2007/08 contains 15 major mod­ules: basic socio-economic information about the members of the household, education, health, re­productive health, migration, employment, wage jobs, job search, agriculture and herding, non-farm family businesses, other income, savings and loans, housing and energy, durable goods, non­food expenditures and food consumption. Also contains 4 additional modules: purchases of food during the past month for urban households (by recall ), consumption of food and other frequenty purchased commodities for urban households (from diary), purchases of food during the part month for rural households, consumption of food during the past 7 days (by recall ) for rural households."
+      }
+    ]
+  },
+  "field_wbddh_citation_text": {
+    "und": [
+      {
+        "value": "The use of this dataset must be acknowledged using a citation which would include: - the identification of the Primary Investigator (including country name) - the full title of the survey and its acronym (when available), and the year(s) of implementation - the survey reference number - the source and date of download (for datasets disseminated online) Example: National Statistical Office of Mongolia. Mongolia Household Socio-Economic Survey (SES) 2010 Ref. MNG_2010_HSES_v01_M. Dataset downloaded from [URL] on [date]."
+      }
+    ]
+  },
+  "field_ddh_harvest_src": {
+    "und": {
+      "tid": "1016"
+    }
+  },
+  "field_ddh_harvest_sys_id": {
+    "und": [
+      {
+        "value": 6008
+      }
+    ]
+  },
+  "field_exception_s_": {
+    "und": {
+      "tid": "1208"
+    }
+  },
+  "type": "dataset"
+}

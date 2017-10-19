@@ -1,0 +1,234 @@
+{
+  "title": "JSON TEST - bad email",
+  "body": {
+    "und": [
+      {
+        "value": "The Facility Assessment was conducted in the scope of the Global Fund Five-Year Evaluation. Within the framework of the Global Fund Five-Year Evaluation, the purpose of the Facility Assessment is to provide information about outputs of Global Fund funding in terms of availability and quality of services. Specifically, its purpose is to provide cross-sectional data from public and private sector facilities on equipment, supplies, drugs, services, guidelines, and staffing relevant to HIV/AIDS, malaria, and TB, and, to a limited extent, maternal and child health. In addition, information on drug inventories in stand-alone pharmacies is also obtained"
+      }
+    ]
+  },
+  "field_contact_email": {
+    "und": [
+      {
+        "value": "ehnri@ethionet.et ehnri@ethionet.et"
+      }
+    ]
+  },
+  "field_topic": {
+    "und": {
+      "tid": "936"
+    }
+  },
+  "field_wbddh_reference_id": {
+    "und": [
+      {
+        "value": "ETH_2008_EGFHIE_v01_M"
+      }
+    ]
+  },
+  "field_wbddh_data_class": {
+    "und": {
+      "tid": "359"
+    }
+  },
+  "field_wbddh_data_collector": {
+    "und": {
+      "value": "EHNRI interviewers"
+    }
+  },
+  "field_wbddh_data_type": {
+    "und": {
+      "tid": "294"
+    }
+  },
+  "field_wbddh_disclaimer": {
+    "und": {
+      "value": "The user of the data acknowledges that the original collector of the data, the authorized distributor of the data, and the relevant funding agency bear no responsibility for use of the data or for interpretation or inferences based upon such uses."
+    }
+  },
+  "field_wbddh_kind_of_data": {
+    "und": {
+      "tid": "855"
+    }
+  },
+  "field_wbddh_languages_supported": {
+    "und": {
+      "tid": "337"
+    }
+  },
+  "field_wbddh_mode_data_collection": {
+    "und": {
+      "tid": "478"
+    }
+  },
+  "field_wbddh_primary_investigator": {
+    "und": [
+      {
+        "value": "Ethiopian Health and Nutrition Research Center (EHNRI); ; "
+      }
+    ]
+  },
+  "field_wbddh_study_type": {
+    "und": {
+      "value": "Service Provision Assessments [hh/spa]"
+    }
+  },
+  "field_wbddh_terms_of_use": {
+    "und": {
+      "tid": "439"
+    }
+  },
+  "field_wbddh_access_authority": {
+    "und": [
+      {
+        "value": "Ethiopian Health and Nutrition Research Institute (EHNRI), The Global Fund, wilson.lo@theglobalfund.org"
+      }
+    ]
+  },
+  "field_wbddh_data_editing": {
+    "und": [
+      {
+        "value": "Data entry was done with Epi-Info and external consultant (SERPRO) assisted in the tabulations using CSPro that facilitated draft report preparation according to the recommended report template from Macro international."
+      }
+    ]
+  },
+  "field_wbddh_funding_name": {
+    "und": [
+      {
+        "value": "Global Fund to fight AIDS, Tuberculosis and Malaria (GFATM)"
+      }
+    ]
+  },
+  "field_wbddh_copyright": {
+    "und": [
+      {
+        "value": "2009, Ethiopian Health and Nutrition Research Center (EHNRI)"
+      }
+    ]
+  },
+  "field_wbddh_response_rates": {
+    "und": [
+      {
+        "value": "98% of selected facilities interviewed were completed interviews"
+      }
+    ]
+  },
+  "field_wbddh_version_description": {
+    "und": [
+      {
+        "value": "v1.0 Edited recoded data  (recode date 09-29-2008)"
+      }
+    ]
+  },
+  "field_wbddh_version_notes": {
+    "und": [
+      {
+        "value": "v 1.0 \n-First recode version used in the Nairobi workshop\nv 1.1: \n-Dropped names of the facilities\n- Modified the access authority\n-Added an access authority to authorize access to data files"
+      }
+    ]
+  },
+  "field_wbddh_subtitle": {
+    "und": [
+      {
+        "value": "District Facility Assessment"
+      }
+    ]
+  },
+  "field_wbddh_unit_of_analysis": {
+    "und": [
+      {
+        "value": "- Hospitals\n- Health centers"
+      }
+    ]
+  },
+  "field_wbddh_universe": {
+    "und": {
+      "value": [""]
+    }
+  },
+  "field_wbddh_weighting": ["not applicable"],
+  "field_wbddh_acronym": {
+    "und": [
+      {
+        "value": "EGFHIE 2008"
+      }
+    ]
+  },
+  "field_wbddh_country": {
+    "und": {
+      "tid": "103"
+    }
+  },
+  "field_wbddh_search_tags": {
+    "und": [
+      {
+        "value": "V1;QCOUNTRY;wgt;F1;0;discrete;1;Country Code;REAL;8;vald;invd;3;Ethiopia;numeric;other;V2;QID;contin;2;9;Facility Id;V3;Q003;74;77;4;District;1001;8999;3001;Adigrat;3002;Gulo meheda;3003;Saesi tsadama;3004;Hawzen;3005;Ganta afeshum;3006;Axum;3007;Adwa;3008;Mereblehe;3009;Tahtay maychew;3010;Laelay mychew;3011;Maychew;3012;Ambalage;3013;Rayana azebo;3014;Ofla;3015;Endamehoni;3016;Shire endeselasie;3017;Tahtay koraro;3018;Medebay zana;3019;Laelay adeyabo;3020;Asegede tsembela;3021;Dubti;3022;Elidar;3023;Asayita;3024;Chefra;3025;Mile;3026;Debre markos;3027;Gozamin;3028;Baso liben;3029;Awabel;3030;Debre eliyas;3031;Dessie;3032;Kalu;3033;Tehuledere;3034;Dessie zuria;3035;Kuta ber;3036;Debre berhan;3037;Basona werena;3038;Mojana wodera;3039;Ankober;3040;Angolelana tera;3041;Debre tabor;3042;Fogera;3043;Farta;3044;Ebenat;3045;Lay gayent;3046;Sekota;3047;Sekota zuria;3048;Zequala;3049;Gazgibila;3050;Haber gele;3051;Fiche;3052;Yayu gulele;3053;Degem;3054;Girar jarso;3055;Kuyu;3056;Goba;3057;Dinsho;3058;Sinana;3059;Goba zuria;3060;Goro;3061;Shashemene;3062;Shashemene zuria;3063;Shala;3064;Arsi negele;3065;Kofele;3066;Nekemte;3067;Gutu gida;3068;Diga;3069;Sasiga;3070;Wayu tuka;3071;Chiro;3072;Chiro zuria;3073;Gemechis;3074;Tulo;3075;Doba;3076;Bule hora;3077;Dugda dawa;3078;Gelana;3079;Abaya;3080;Kercha;3081;Metu;3082;Metu zuria;3083;Bilo nopa;3084;Ale;3085;Halu;3086;Jijiga;3087;Babile;3088;Gursum;3089;Kebri beyah;3090;Awbare;3091;Asosa;3092;Bambasi;3093;Menge;3094;Homosha;3095;Kurmuk;3096;Debub ari (jinka);3097;Hamer;3098;Semen ari;3099;Selamago;3100;Bena tsemay;3101;Butajira;3102;Sodo;3103;Mareko;3104;Meskan;3105;Kokir gedebano;3106;3107;Sodo zuria;3108;Damot weyde;3109;Damot gale;3110;Boloso sore;3111;Arbaminch;3112;Arba minch zuria;3113;Merab abaya;3114;Chencha;3115;Dita;3116;Dale;3117;Shebedino;3118;Aleta wendo;3119;Wenesho;3120;Loko abaya;3121;Gambella;3122;Gambella zuria;3123;Abobo;3124;Gog;3125;Itang;3126;Harer;3127;Dire dawa;3128;Addis ababa;3999;Missing;{\\rtf1\\ansi\\ansicpg1252\\deff0{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}\n{\\colortbl ;\\red0\\green0\\blue255;}\n\\viewkind4\\uc1\\pard\\cf1\\lang1033\\fs16 %getvarlabel%\n\\par\n\\par }\n\n<p><span style=\"font-size:8pt;color:#0000ff;\">%getvarlabel%&#160;<\/span><\/p>\n<p>&#160;<\/p>;V4;Q004;78;80;Region;%getvarlabel%;301;809;Tigray;302;Afar;303;Amhara;304;Oromiya;305;Somali;306;Benshangul gumuz;307;Snnpr;308;309;Harari;310;311;Diredawa;V5;Q005;81;83;Code of Facility;999;V6;QURBAN;84;Urban Rural;RESIDENCE;Urban;Rural;V7;Q006;85;86;Type of Facility;96;Third level (tertiary) hospital;Second level referral hospital;First level hospital;Urban health center;5;Rural health center;6;Clinic;7;Health post;Dispensary;Second (higher) level pharmacy;10;First (lower) level pharmacy;11;Drug store;Other;V8;Q007;87;88;Managing Authority;Managing Authority(Country specific);Government facility-public;Government facility not public (military, etc);Ngo/(faith-based);Ngo/other;Community;Private (for profit);Parastatal;V9;Q008_D;89;90;Date - Day;Date;99;V10;Q008_M;91;92;Date Month;January;February;March;April;May;June;July;August;September;October;November;12;December;V11;Q008_Y;93;Date Year;V12;Q009;97;Interviewer Code;Interviewer code;V13;Q010;100;Result Code;Completed;Respondent not available;Refused;Partially completed;V14;Q011;101;103;Monitor/Supervisor;V15;Q012;104;106;Waypoint Name;V16;Q013;107;112;Altitude;999999;V17;Q014_A;113;Latitude N/S;Latitude;North;South;V18;Q014_B;114;115;Degrees;V19;Q014_C;116;120;Degrees Decim.;99999;V20;Q015_A;121;Longitude E/W;East;West;V21;Q015_B;122;124;V22;Q015_C;125;129;V23;QVERDATE;130;137;Recode Version Date;V24;F2;Country code;V25;Facility id;V26;Q101_H;Hour begining;enregistrement automatiquement par le PDA;ensemble des formations sanitaires;I;ENREGISTRER L'HEURE AU DÉBUT DE L'INTERVIEW;variable qualitative;V27;Q101_M;13;Minutes begining;ENREGISTRER L'HEURE AU DÉBUT DE L'INTERVIEW \t\nEN UTILISANT LE SYSTÈME DES 24 HEURES.l'heure a été recupéré par le PDA;V28;Q102;14;Land line telephone;Does the facility have a functioning land line telephone?;Yes;No;{\\rtf1\\ansi\\ansicpg1252\\deff0{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}\n{\\colortbl ;\\red0\\green0\\blue0;\\red0\\green0\\blue255;}\n\\viewkind4\\uc1\\pard\\cf1\\lang1033\\fs16 Does the facility have a functioning land line telephone?\\cf2\n\\par }\n\n<p><span style=\"font-size:8pt;color:#000000;\">Does the facility have a functioning land line telephone?&#160;<\/span><\/p>;V29;Q103;15;Celular phones;Does the facility have functioning celular telephones (either private or supported by the facility)?;{\\rtf1\\ansi\\ansicpg1252\\deff0{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}\n{\\colortbl ;\\red0\\green0\\blue0;}\n\\viewkind4\\uc1\\pard\\cf1\\lang1033\\fs16 Does the facility have functioning celular telephones (either private or supported by the facility)?\n\\par }\n\n<p><span style=\"font-size:8pt;color:#000000;\">Does the facility have functioning celular telephones (either private or supported by the facility)?&#160;<\/span><\/p>;V30;Q104;16;Short-wave radio;Does the facility have a functioning short-wave radio for radio calls?;{\\rtf1\\ansi\\ansicpg1252\\deff0{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}\n{\\colortbl ;\\red0\\green0\\blue0;}\n\\viewkind4\\uc1\\pard\\cf1\\lang1033\\fs16 Does the facility have a functioning short-wave radio for radio calls?\n\\par }\n\n<p><span style=\"font-size:8pt;color:#000000;\">Does the facility have a functioning short-wave radio for radio calls?&#160;<\/span><\/p>;V31;Q105;17;Phone withitn 15 minutes;Is there a phone or shortwave radio within less than 15 minutes walking distance from the facility that staff can use in an emergency?;IF YES, ASK: Is that phone or shorwave radio available at all times services are offerred?;Yes, available at all times;Yes, not available at all times;No, none within 15 minutes;{\\rtf1\\ansi\\ansicpg1252\\deff0{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}\n{\\colortbl ;\\red0\\green0\\blue0;\\red0\\green0\\blue255;}\n\\viewkind4\\uc1\\pard\\cf1\\lang1033\\fs16 Is there a phone or shortwave radio within less than 15 minutes walking distance from the facility that staff can use in an emergency?\n\\par \\cf2 IF YES, ASK:\\cf1  Is that phone or shorwave radio available at all times services are offerred?\n\\par }\n\n<p><span style=\"font-size:8pt;color:#000000;\">Is there a phone or shortwave radio within less than 15 minutes walking distance from the facility that staff can use in an emergency?&#160;<\/span><\/p>\n<p><span style=\"font-size:8pt;color:#0000ff;\">IF YES, ASK:<span style=\"color:#000000;\"> Is that phone or shorwave radio available at all times services are offerred?&#160;<\/span><\/span><\/p>;V32;Q106;18;Computer;Does this facility have a computer?;IF YES, ASK: Is the computer functioning today?;Yes, functioning;Yes, not functioning;{\\rtf1\\ansi\\ansicpg1252\\deff0{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}\n{\\colortbl ;\\red0\\green0\\blue0;\\red0\\green0\\blue255;}\n\\viewkind4\\uc1\\pard\\cf1\\lang1033\\fs16 Does this facility have a computer?\n\\par \\cf2 IF YES, ASK:\\cf1  Is the computer functioning today?\n\\par }\n\n<p><span style=\"font-size:8pt;color:#000000;\">Does this facility have a computer?&#160;<\/span><\/p>\n<p><span style=\"font-size:8pt;color:#0000ff;\">IF YES, ASK:<span style=\"color:#000000;\"> Is the computer functioning today?&#160;<\/span><\/span><\/p>;V33;Q107;19;Internet access;Is there access to email/internet within the facility?;{\\rtf1\\ansi\\ansicpg1252\\deff0{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}\n{\\colortbl ;\\red0\\green0\\blue0;}\n\\viewkind4\\uc1\\pard\\cf1\\lang1033\\fs16 Is there access to email/internet within the facility?\n\\par }\n\n<p><span style=\"font-size:8pt;color:#000000;\">Is there access to email/internet within the facility?&#160;<\/span><\/p>;V34;Q108;20;Central supply of electricity;Is this facility connected to the central supply (national or local) electricity grid?;{\\rtf1\\ansi\\ansicpg1252\\deff0{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}\n{\\colortbl ;\\red0\\green0\\blue0;}\n\\viewkind4\\uc1\\pard\\cf1\\lang1033\\fs16 Is this facility connected to the central supply (national or local) electricity grid?\n\\par }\n\n<p><span style=\"font-size:8pt;color:#000000;\">Is this facility connected to the central supply (national or local) electricity grid?&#160;<\/span><\/p>;V35;Q109;21;Other source of electricity;Does the facility have other sources of electricity like generator or solar supply?;Generator;Solar supply;None;Inverter;Other source;{\\rtf1\\ansi\\ansicpg1252\\deff0{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}\n{\\colortbl ;\\red0\\green0\\blue0;}\n\\viewkind4\\uc1\\pard\\cf1\\lang1033\\fs16 Does the facility have other sources of electricity like generator or solar supply?\n\\par }\n\n<p><span style=\"font-size:8pt;color:#000000;\">Does the facility have other sources of electricity like generator or solar supply?&#160;<\/span><\/p>;V36;Q110;22;Functional generator;Is the generator functional?;IF YES, ASK: Is gthere fuel today?;Yes, functional with fuel;Yes, functional, no fuel;Not functional;Dont know;{\\rtf1\\ansi\\ansicpg1252\\deff0{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}\n{\\colortbl ;\\red0\\green0\\blue0;\\red0\\green0\\blue255;}\n\\viewkind4\\uc1\\pard\\cf1\\lang1033\\fs16 Is the generator functional?\n\\par \\cf2 IF YES, ASK:\\cf1  Is gthere fuel today?\n\\par }\n\n<p><span style=\"font-size:8pt;color:#000000;\">Is the generator functional?&#160;<\/span><\/p>\n<p><span style=\"font-size:8pt;color:#0000ff;\">IF YES, ASK:<span style=\"color:#000000;\"> Is gthere fuel today?&#160;<\/span><\/span><\/p>;V37;Q111;23;Continous power;During the past week was electric power continously available in this facility at the times the facility was open for services?;{\\rtf1\\ansi\\ansicpg1252\\deff0{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}\n{\\colortbl ;\\red0\\green0\\blue0;}\n\\viewkind4\\uc1\\pard\\cf1\\lang1033\\fs16 During the past week was electric power continously available in this facility at the times the facility was open for services?\n\\par }\n\n<p><span style=\"font-size:8pt;color:#000000;\">During the past week was electric power continously available in this facility at the times the facility was open for services?&#160;<\/span><\/p>;V38;Q112;24;25;Most common source of water;What is the most commonly used source of water for hand washing for the facility at this time?;No water source;Piped into facility;Piped onto facility grounds;Public taps, standpipe;Tubewell/borehole;Protected dug well;Unprotected dug well;Protected spring;Unprotected spring;Rainwater;Bottled water;Cart w/small tank/drum;Tanker truck;Surface water;98;{\\rtf1\\ansi\\ansicpg1252\\deff0{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}\n{\\colortbl ;\\red0\\green0\\blue0;}\n\\viewkind4\\uc1\\pard\\cf1\\lang1033\\fs16 What is the \\b most commonly used\\b0  source of water for hand washing for the facility \\b at this time?\\b0\n\\par }\n\n<p><span style=\"font-size:8pt;color:#000000;\">What is the <span style=\"font-weight:bold;\">most commonly used<\/span> source of water for hand washing for the facility <span style=\"font-weight:bold;\">at this time?&#160;<\/span><\/span><\/p>;V39;Q113;26;Water outlet within 500 mts;Is a water outlet from this source available within 500 meters of the facility?;{\\rtf1\\ansi\\ansicpg1252\\deff0{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}\n{\\colortbl ;\\red0\\green0\\blue0;}\n\\viewkind4\\uc1\\pard\\cf1\\lang1033\\fs16 Is a water outlet from this source available within 500 meters of the facility?\n\\par }\n\n<p><span style=\"font-size:8pt;color:#000000;\">Is a water outlet from this source available within 500 meters of the facility?&#160;<\/span><\/p>;V40;Q115;27;Provide inpatient care;Does this facility routinely provide inpatient care?;{\\rtf1\\ansi\\ansicpg1252\\deff0{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}\n{\\colortbl ;\\red0\\green0\\blue0;}\n\\viewkind4\\uc1\\pard\\cf1\\lang1033\\fs16 Does this facility routinely provide inpatient care?\n\\par }\n\n<p><span style=\"font-size:8pt;color:#000000;\">Does this facility routinely provide inpatient care?&#160;<\/span><\/p>;V41;Q116;28;Beds for routine care;Does this facility have beds for routine care?;{\\rtf1\\ansi\\ansicpg1252\\deff0{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}\n{\\colortbl ;\\red0\\green0\\blue0;}\n\\viewkind4\\uc1\\pard\\cf1\\lang1033\\fs16 Does this facility have beds for routine care?\n\\par }\n\n<p><span style=\"font-size:8pt;color:#000000;\">Does this facility have beds for routine care?&#160;<\/span><\/p>;V42;Q116_NUM;29;32;Number of beds;9999;V43;Q117;33;36;Number of in-patients;During the last month how many in-patients were admitted in this facility?;{\\rtf1\\ansi\\ansicpg1252\\deff0{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}\n{\\colortbl ;\\red0\\green0\\blue0;}\n\\viewkind4\\uc1\\pard\\cf1\\lang1033\\fs16 During %LastMonth% how many in-patients were admitted in this facility?\n\\par }\n\n<p><span style=\"font-size:8pt;color:#000000;\">During %LastMonth% how many in-patients were admitted in this facility?&#160;<\/span><\/p>;V44;Q118;37;Beds for overnight observation;bed for overnight observation;V45;Q118_NUM;38;41;number of beds;V46;Q119;42;Exclusive delivery beds;delivery beds;V47;Q119_NUM;43;46;Number;number of delivery beds;V48;Q120;47;50;Number of deliveries;During last month how many deliveries took place in this facility?;{\\rtf1\\ansi\\ansicpg1252\\deff0{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}\n{\\colortbl ;\\red0\\green0\\blue0;}\n\\viewkind4\\uc1\\pard\\cf1\\lang1033\\fs16 During %LastMonth% how many deliveries took place in this facility?\n\\par }\n\n<p><span style=\"font-size:8pt;color:#000000;\">During %LastMonth% how many deliveries took place in this facility?&#160;<\/span><\/p>;V49;Q121;51;Maternity beds;number of maternity beds;V50;Q121_NUM;52;55"
+      }
+    ]
+  },
+  "field_wbddh_version_date": {
+    "und": [
+      {
+        "value": ""
+      }
+    ]
+  },
+  "field_wbddh_release_date": {
+    "und": [
+      {
+        "value": "2011-09-29"
+      }
+    ]
+  },
+  "field_wbddh_modified_date": {
+    "und": [
+      {
+        "value": "2013-09-24"
+      }
+    ]
+  },
+  "field_wbddh_sampling_procedure": {
+    "und": [
+      {
+        "value": "- Sample size: 157 govemnment health facilities that involved 123 health centers and 34 hospitals - Selection process: District hospitals offering ART services - Stages of sample selection: purposeful - Omissions: Clinics and health posts that did not offer ART services. - Levels of representation: Only representative of selected facilities, no further inference - Strategy for absent responders: Repeated visits to facilities were made to capture complete information."
+      }
+    ]
+  },
+  "field_wbddh_questionnaires": {
+    "und": [
+      {
+        "value": "Structured questionnaires based on the Service Provision Assessment and Service Availability Mapping instruments with some modifications and additions. Questions are organized into the following categories: - Overview of the facility - Available services - Equipment - Infection control - Work force - Training guidelines - Drugs and commodities - Laboratory"
+      }
+    ]
+  },
+  "field_wbddh_citation_text": {
+    "und": [
+      {
+        "value": "Use of the dataset must be acknowledged using a citation which would include: - the Identification of the Primary Investigator - the title of the survey (including acronym and year of implementation) - the survey reference number - the source and date of download Example: Ethiopian Health and Nutruition Reseach Institute (EHNRI). Ethiopia Global Fund Health Impact Evaluation 2008. Dataset downloaded from [website/source] on [date]."
+      }
+    ]
+  },
+  "field_ddh_harvest_src": {
+    "und": {
+      "tid": "1016"
+    }
+  },
+  "field_ddh_harvest_sys_id": {
+    "und": [
+      {
+        "value": 165
+      }
+    ]
+  },
+  "field_exception_s_": {
+    "und": {
+      "tid": "1208"
+    }
+  },
+  "field_wbddh_other_processing": {
+    "und": {
+      "value": ["Data were checked for its completeness and consistency at field level on daily basis and further refinments were made during data entry and tabulation at the Institute(EHNRI)."]
+    }
+  },
+  "type": "dataset"
+} 
