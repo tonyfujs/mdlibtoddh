@@ -1,0 +1,75 @@
+{
+    "codeBook/stdyDscr/citation/titlStmt/titl": [
+        "Population Census 1999"
+    ],
+    "codeBook/stdyDscr/citation/titlStmt/altTitl": [
+        "PHC 1999"
+    ],
+    "codeBook/stdyDscr/citation/titlStmt/IDNo": [
+        "BLR_1999_PHC_v01_M"
+    ],
+    "codeBook/stdyDscr/citation/rspStmt/AuthEnty": [
+        {
+            "name": "Ministry of Statistics and Analysis",
+            "affiliation": null
+        }
+    ],
+    "codeBook/stdyDscr/citation/prodStmt/software": [
+        "Metadata Editor"
+    ],
+    "codeBook/stdyDscr/citation/prodStmt/software/@version": "1.2",
+    "codeBook/stdyDscr/citation/prodStmt/software/@date": "2011-01-07",
+    "codeBook/stdyDscr/citation/distStmt/distrbtr": [
+        "Ministry of Statistics and Analysis Partizansky avenue, 12 Minsk 220070 Belarus Tel +375 017 249-42-78 Fax +375 017 249-22-04 Email minstat@mail.belpak.by Web http://www.belstat.gov.by/"
+    ],
+    "codeBook/stdyDscr/citation/distStmt/contact": [
+        {
+            "name": "National Statistical Committee of the Republic of Belarus",
+            "affiliation": null,
+            "email": "belstat@mail.belpak.by",
+            "uri": "http://www.belstat.gov.by/"
+        }
+    ],
+    "codeBook/stdyDscr/citation/distStmt/depositr": [
+        "IPUMS International Minnesota Population Center University of Minnesota 50 Willey Hall 225 19th Avenue South Minneapolis MN 55455 United States Tel 612-624-5818 Fax 612-626-8375 Email ipums@pop.umn.edu Web http://www.ipums.org/international"
+    ],
+    "codeBook/stdyDscr/citation/serStmt/@URI": "IHSN-112-1999-001",
+    "codeBook/stdyDscr/citation/serStmt/serName": [
+        "Population and Housing Census [hh/popcen]"
+    ],
+    "codeBook/stdyDscr/stdyInfo/sumDscr/collDate": [
+        {
+            "date": "1999-02-16",
+            "event": "start",
+            "cycle": null
+        },
+        {
+            "date": "1999-02-23",
+            "event": "end",
+            "cycle": null
+        }
+    ],
+    "codeBook/stdyDscr/stdyInfo/sumDscr/nation": [
+        {
+            "name": "Belarus",
+            "abbreviation": "BLR"
+        }
+    ],
+    "codeBook/stdyDscr/stdyInfo/sumDscr/geogCover": [
+        "National"
+    ],
+    "codeBook/stdyDscr/stdyInfo/sumDscr/dataKind": [
+        "Census/enumeration data [cen]"
+    ],
+    "codeBook/stdyDscr/stdyInfo/notes": [
+        "The scope of Belarus PHC 1999 includes:\n- Demography\n- Housing\n- Education\n- Economic activity\n- Fertility"
+    ],
+    "codeBook/stdyDscr/method/dataColl/sampProc": [
+        "No sampling - whole universe covered",
+        "990706 Individuals",
+        "385508 Households"
+    ],
+    "codeBook/stdyDscr/method/dataColl/collMode": [
+        "Face-to-face"
+    ]
+}

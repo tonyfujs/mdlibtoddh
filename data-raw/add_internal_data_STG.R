@@ -6,6 +6,7 @@ check_taxonomy_services()
 # Set roo URL
 root_url <- ddhconnect:::stg_root_url
 
+
 # STEP 1: Get data --------------------------------------------------------
 
 # Matadata master

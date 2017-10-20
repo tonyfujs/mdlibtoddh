@@ -63,6 +63,11 @@
 	"field_wbddh_kind_of_data": {
 		"und": []
 	},
+	"field_license_wbddh": {
+		"und": {
+			"tid": ""
+		}
+	},
 	"field_wbddh_languages_supported": {
 		"und": []
 	},
