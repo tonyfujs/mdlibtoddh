@@ -23,7 +23,7 @@ geographicalCoverage,coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation
 globalPractice,,,
 kindData,overview,kind of data,codeBook/stdyDscr/stdyInfo/sumDscr/dataKind
 language,,,
-license,,,
+license,,,access_type
 limitExcept,,,
 lineage,,,
 maintenance,,,

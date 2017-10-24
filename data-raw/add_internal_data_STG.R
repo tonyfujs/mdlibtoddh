@@ -51,13 +51,14 @@ taxonomy_remove <-
     "field_wbddh_api_format",
     "field_wbddh_update_frequency",
     "field_frequency",
-    "status"
+    "status",
+    "field_granularity_list"
   )
 taxonomy_machine_names <- taxonomy_machine_names[!taxonomy_machine_names %in% taxonomy_remove]
 assertthat::assert_that(length(taxonomy_machine_names[!taxonomy_machine_names %in% lookup_machine_names]) == 0,
                         msg = 'Incomplete list of taxonomy variables')
 # fields and lookup
-fields_machine_names <- sort(unique(fields$ddh_machine_name))
+fields_machine_names <- sort(unique(c(fields$ddh_machine_name), "field_license_wbddh"))) # TEMPORARY FIX (not returned by field service)
 fields_remove <-
   c(
     "field_ddh_external_contact_email",
