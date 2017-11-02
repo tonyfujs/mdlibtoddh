@@ -24,7 +24,7 @@ update_existing_dataset <- function(md_internal_id, md_token, ddh_credentials, m
   survey_mtdt <- get_md_metadata(id = md_internal_id, token = md_token)
 
   # Add correct data classification information
-  temp <- add_data_classification(metadata_list = temp,
+  temp <- add_data_classification(metadata_list = survey_mtdt,
                                   md_internal_id,
                                   master = master)
   # STEP 2: format raw metadata
