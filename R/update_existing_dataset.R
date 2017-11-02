@@ -28,7 +28,7 @@ update_existing_dataset <- function(md_internal_id, md_token, ddh_credentials, m
                                   md_internal_id,
                                   master = master)
   # STEP 2: format raw metadata
-  temp <- map_md_to_ddh(survey_mtdt, lkup_tids)
+  temp <- map_md_to_ddh(temp, lkup_tids)
 
 
   # Add resource link
