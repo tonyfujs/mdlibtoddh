@@ -8,9 +8,10 @@
 
 get_md_public_datasets_list <- function(token) {
   resp <- mdlibconnect::get_public_survey_list(token = token)
-  md_external_refid <- purrr::map_chr(resp, 'surveyid')
+  md_external_refid <- purrr::map_chr(resp, "surveyid")
+  md_external_changed <- purrr::map_chr(resp, "changed")
 
-  out <- data.frame(md_external_refid, stringsAsFactors = FALSE)
+  out <- data.frame(md_external_refid, md_external_changed, stringsAsFactors = FALSE)
 
   return(out)
 }
