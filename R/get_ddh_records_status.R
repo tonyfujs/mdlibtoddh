@@ -50,6 +50,9 @@ get_ddh_records_status <- function(mdlib_token, root_url = ddhconnect:::producti
   full_list$sync_status[full_list$data_classification == 'public' & full_list$ddh_dataclass != "358"] <- 'out of sync'
   full_list$sync_status[full_list$data_classification == 'official' & full_list$ddh_dataclass != "359"] <- 'out of sync'
 
+  # Identify change of versions
+  full_list$sync_status[full_list$md_refids != full_list$md_internal_refid] <- 'out of sync'
+
   return(full_list)
 }
 
