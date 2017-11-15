@@ -13,6 +13,7 @@ create_json_dataset <- function(metadata_list, json_template = mdlibtoddh::json_
 
 
   json_template$title <- safe_unbox(metadata_list$title) # title
+  json_template$workflow_status <- safe_unbox(metadata_list$workflow_status) # workflow_status
   json_template$body$und$value <- metadata_list$body # body
   json_template$field_license_wbddh$und$tid <- safe_unbox(metadata_list$field_license_wbddh) # license
   json_template$field_contact_email$und$value <- safe_assign(metadata_list$field_contact_email) # email
