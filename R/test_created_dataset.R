@@ -62,7 +62,7 @@ test_created_dataset <- function(nid, metadata_list, credentials, root_url = pro
   safe_assert(node_metadata$field_wbddh_citation_text$und[[1]]$value, metadata_list$field_wbddh_citation_text)
   safe_assert(node_metadata$field_ddh_harvest_src$und[[1]]$tid, metadata_list$field_ddh_harvest_src)
   safe_assert(node_metadata$field_ddh_harvest_sys_id$und[[1]]$value, metadata_list$field_ddh_harvest_sys_id)
-  safe_assert(node_metadata$field_exception_s_$und[[1]]$tid[[1]], metadata_list$field_exception_s_)
+  safe_assert(node_metadata$field_exception_s_$und[[1]]$tid, metadata_list$field_exception_s_)
   safe_assert(node_metadata$field_wbddh_version_description$und[[1]]$value, metadata_list$field_wbddh_version_description) # version
 
   safe_assert(node_metadata$field_wbddh_end_date$und[[1]]$value, metadata_list$field_wbddh_end_date) # end date
