@@ -46,7 +46,7 @@ add_new_dataset <- function(md_internal_id, md_token, ddh_credentials, master, r
   resp_dat <- ddhconnect::create_dataset(credentials = ddh_credentials,
                                          body = json_dat,
                                          root_url = root_url)
-  # test_created_dataset(nid = resp_dat$node_id, metadata_list = temp, credentials = ddh_credentials, root_url = root_url)
+  test_created_dataset(nid = resp_dat$nid, metadata_list = temp, credentials = ddh_credentials, root_url = root_url)
 
 
   # STEP 4: Create resource

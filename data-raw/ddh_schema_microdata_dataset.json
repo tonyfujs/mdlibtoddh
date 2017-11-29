@@ -253,6 +253,11 @@
 	},
 	"field_exception_s_": {
 		"und": []
+	},
+	"field_wbddh_other_processing": {
+		"und": [{
+			"value": ""
+		}]
 	}
 }
 
