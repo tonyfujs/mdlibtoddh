@@ -46,8 +46,8 @@ add_new_dataset <- function(md_internal_id, md_token, ddh_credentials, master, r
   resp_dat <- ddhconnect::create_dataset(credentials = ddh_credentials,
                                          body = json_dat,
                                          root_url = root_url)
-  test_created_dataset(nid = resp_dat$node_id, metadata_list = temp, credentials = ddh_credentials, root_url = root_url)
-  
+  # test_created_dataset(nid = resp_dat$node_id, metadata_list = temp, credentials = ddh_credentials, root_url = root_url)
+
 
   # STEP 4: Create resource
   # Create JSON resource
@@ -58,9 +58,9 @@ add_new_dataset <- function(md_internal_id, md_token, ddh_credentials, master, r
 
   # STEP 5: Attach resource
   # Attach resource to dataset
-  json_attach <- create_json_attach(resource_nid = resp_res$node_id)
+  json_attach <- create_json_attach(resource_nid = resp_res$nid)
   resp_attach <- attach_resource_to_dataset(credentials = ddh_credentials,
-                                            dataset_nid = resp_dat$node_id,
+                                            dataset_nid = resp_dat$nid,
                                             body = json_attach,
                                             root_url = root_url)
 
