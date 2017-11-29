@@ -22,7 +22,7 @@ add_data_classification <- function(metadata_list, md_internal_id, master) {
     return(metadata_list)
   } else if (master == 'official') {
     metadata_list$field_wbddh_data_class <- 'Official Use Only'
-    metadata_list$field_exception_s_ <- 'Client/Third Party Confidence'
+    metadata_list$field_exception_s_ <- '7. Member Countries/Third Party Confidence'
     return(metadata_list)
   }
 

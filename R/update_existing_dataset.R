@@ -14,22 +14,28 @@
 
 update_existing_dataset <- function(md_internal_id, md_token, ddh_credentials, master, root_url) {
 
+  if (root_url == ddhconnect:::production_root_url) {
+    lkup_tids <- mdlibtoddh::ddh_tid_lovs
+  } else {
+    lkup_tids <- mdlibtoddh::ddh_tid_lovs_STG
+  }
+
   # STEP 1: Get raw values from microdata API
   survey_mtdt <- get_md_metadata(id = md_internal_id, token = md_token)
-  # STEP 2: format raw metadata
-  temp <- map_md_to_ddh(survey_mtdt)
 
   # Add correct data classification information
-  temp <- add_data_classification(metadata_list = temp,
+  temp <- add_data_classification(metadata_list = survey_mtdt,
                                   md_internal_id,
                                   master = master)
+  # STEP 2: format raw metadata
+  temp <- map_md_to_ddh(temp, lkup_tids)
+
+
   # Add resource link
   temp <- add_link_to_resources(metadata_list = temp,
                                 md_internal_id = md_internal_id,
                                 master = master)
 
-  # TEMPORARY: REMOVE VERSION DATE
-  temp$field_wbddh_version_date <- NULL
   # STEP 3: Create dataset
   # Create JSON dataset
   json_dat <- create_json_dataset(temp)
