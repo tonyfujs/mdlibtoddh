@@ -11,7 +11,7 @@
 
 create_json_dataset <- function(metadata_list, json_template = mdlibtoddh::json_template_dataset) {
   
-  json_template <- jsonlite::fromJSON("C:/Users/wb523589/Programs/mdlibtoddh/data-raw/ddh_schema_microdata_dataset.json")
+  json_template <- jsonlite::fromJSON("./data-raw/ddh_schema_microdata_dataset.json")
   for (field_name in names(json_template)) {
     print(field_name)
     if (is.character(json_template[[field_name]])) {
