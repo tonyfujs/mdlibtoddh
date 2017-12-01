@@ -12,7 +12,6 @@
 create_json_dataset <- function(metadata_list, json_template = mdlibtoddh::json_template_dataset) {
 
   for (field_name in names(json_template)) {
-    print(field_name)
     # for title and status
     if (is.character(json_template[[field_name]])) {
       json_template[[field_name]] <- safe_unbox(safe_assign(metadata_list[[field_name]]))
