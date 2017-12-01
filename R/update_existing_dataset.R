@@ -4,7 +4,7 @@
 #'
 #' @param md_internal_id character: Microdata internal ID of the dataset to be added
 #' @param md_token character: Microdata API authentication token
-#' @param ddh_credentials list: DDH API authentication token and cookie
+#' @param credentials list: DDH API authentication token and cookie
 #' @param master dataframe: Master lookup table
 #' @param root_url character: Root URL to use for the API (Staging or Production)
 #'
@@ -12,7 +12,8 @@
 #' @export
 #'
 
-update_existing_dataset <- function(md_internal_id, md_token, ddh_credentials, master, root_url) {
+update_existing_dataset <- function(md_internal_id, md_token, credentials = list(cookie = dkanr::get_cookie(), token = dkanr::get_token()),
+                                    master, root_url = dkanr::get_url()) {
 
   if (root_url == ddhconnect:::production_root_url) {
     lkup_tids <- mdlibtoddh::ddh_tid_lovs
@@ -41,18 +42,18 @@ update_existing_dataset <- function(md_internal_id, md_token, ddh_credentials, m
   json_dat <- create_json_dataset(temp)
   # Push dataset to DDH
   node_id <- master$ddh_nids[master$md_internal_id == md_internal_id]
-  resp_dat <- ddhconnect::update_dataset(credentials = ddh_credentials,
+  resp_dat <- ddhconnect::update_dataset(credentials = credentials,
                                          nid = node_id,
                                          body = json_dat,
                                          root_url = root_url)
 
   # STEP 4: Create resource
   # Create JSON resource
-  nid_res <- ddhconnect::get_resource_nid(credentials = ddh_credentials,
+  nid_res <- ddhconnect::get_resource_nid(credentials = credentials,
                                           nid = resp_dat$nid,
                                           root_url = root_url)
   json_res <- create_json_resource(temp)
-  resp_res <- ddhconnect::update_dataset(credentials = ddh_credentials,
+  resp_res <- ddhconnect::update_dataset(credentials = credentials,
                                          nid = nid_res,
                                          body = json_res,
                                          root_url = root_url)

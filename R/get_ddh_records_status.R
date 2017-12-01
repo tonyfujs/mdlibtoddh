@@ -10,7 +10,8 @@
 #' @export
 #'
 
-get_ddh_records_status <- function(mdlib_token, root_url = ddhconnect:::production_root_url, credentials) {
+get_ddh_records_status <- function(mdlib_token, root_url = dkanr::get_url(),
+                                   credentials = list(cookie = dkanr::get_cookie(), token = dkanr::get_token())) {
 
   # ddh
   ddh_list <- get_ddh_datasets_list(root_url = root_url, credentials = credentials)

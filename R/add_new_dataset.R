@@ -4,7 +4,7 @@
 #'
 #' @param md_internal_id character: Microdata internal ID of the dataset to be added
 #' @param md_token character: Microdata API authentication token
-#' @param ddh_credentials list: DDH API authentication token and cookie
+#' @param credentials list: DDH API authentication token and cookie
 #' @param master dataframe: Master lookup table, output of mdlibtoddh::get_ddh_records_status()
 #' @param root_url character: Root URL to use for the API (Staging or Production)
 #'
@@ -12,7 +12,8 @@
 #' @export
 #'
 
-add_new_dataset <- function(md_internal_id, md_token, ddh_credentials, master, root_url) {
+add_new_dataset <- function(md_internal_id, md_token, credentials = list(cookie = dkanr::get_cookie(), token = dkanr::get_token()),
+                            master, root_url = dkanr::get_url()) {
 
   # STEP 0: Adjust TIDs mapping depending on server
   if (root_url == ddhconnect:::production_root_url) {
@@ -43,23 +44,23 @@ add_new_dataset <- function(md_internal_id, md_token, ddh_credentials, master, r
   # Create JSON dataset
   json_dat <- create_json_dataset(temp)
   # Push dataset to DDH
-  resp_dat <- ddhconnect::create_dataset(credentials = ddh_credentials,
+  resp_dat <- ddhconnect::create_dataset(credentials = credentials,
                                          body = json_dat,
                                          root_url = root_url)
-  test_created_dataset(nid = resp_dat$nid, metadata_list = temp, credentials = ddh_credentials, root_url = root_url)
+  test_created_dataset(nid = resp_dat$nid, metadata_list = temp, credentials = credentials, root_url = root_url)
 
 
   # STEP 4: Create resource
   # Create JSON resource
   json_res <- create_json_resource(temp)
-  resp_res <- ddhconnect::create_resource(credentials = ddh_credentials,
+  resp_res <- ddhconnect::create_resource(credentials = credentials,
                                           body = json_res,
                                           root_url = root_url)
 
   # STEP 5: Attach resource
   # Attach resource to dataset
   json_attach <- create_json_attach(resource_nid = resp_res$nid)
-  resp_attach <- attach_resource_to_dataset(credentials = ddh_credentials,
+  resp_attach <- attach_resource_to_dataset(credentials = credentials,
                                             dataset_nid = resp_dat$nid,
                                             body = json_attach,
                                             root_url = root_url)

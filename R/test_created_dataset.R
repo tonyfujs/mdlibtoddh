@@ -11,7 +11,8 @@
 #' @export
 #'
 
-test_created_dataset <- function(nid, metadata_list, credentials, root_url = production_root_url) {
+test_created_dataset <- function(nid, metadata_list, credentials = list(cookie = dkanr::get_cookie(), token = dkanr::get_token()),
+                                 root_url = dkanr::get_url()) {
 
   node_metadata = ddhconnect::get_metadata(nid, credentials, root_url)
 
