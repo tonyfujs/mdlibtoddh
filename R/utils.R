@@ -60,6 +60,17 @@ format_text <- function(text) {
   return(text)
 }
 
+clean_date <- function(dt) {
+  if(is_year(dt)) {
+    dt <- paste(dt, "01", "01", sep="-")
+  }
+  return(dt)
+}
+
+is_year <- function(dt) {
+  return(!is.null(dt) && !is.na(as.numeric(dt)) && as.numeric(dt) >= 1900 && as.numeric(dt) <= 2100)
+}
+
 # extract_field_wbddh_reference_id
 extract_field_wbddh_reference_id <- function(x) {
   x[["field_wbddh_reference_id"]]$und[[1]]$value
@@ -83,12 +94,23 @@ extract_field_wbddh_data_class <- function(x) {
 safe_unbox <- purrr::possibly(jsonlite::unbox, otherwise = '')
 safe_assign <- function(x) {if (length(x) > 0) {x} else {""}}
 
-safe_assert <- function(file_value, orig_value) {
-  assertthat::assert_that((is.empty(file_value) && is.empty(orig_value)) || (gsub("[\n]", "", file_value) == gsub("[\n]", "", orig_value)))
+is.same <- function(file_value, orig_value, field_name) {
+  (is.empty(file_value) && is.empty(orig_value)) || (gsub("[\n]", "", file_value) == gsub("[\n]", "", orig_value))
 }
 
 is.empty <- function(s) {
   is.null(s) || s == ""
+}
+
+assertthat::on_failure(is.same) <- function(call, env) {
+  paste0(deparse(call$field_name), ": The updated value is not equal to the passed value.")
+}
+
+safe_see_if <- function(file_value, orig_value, field_name) {
+  assert_result <- assertthat::see_if(is.same(file_value, orig_value, field_name))
+  if(!assert_result){
+    warning(attr(assert_result, "msg"))
+  }
 }
 
 is.error <- function(x) inherits(x, "try-error")
