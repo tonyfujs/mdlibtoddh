@@ -4,16 +4,18 @@
 \alias{add_new_dataset}
 \title{add_new_dataset()}
 \usage{
-add_new_dataset(md_internal_id, md_token, ddh_credentials, master, root_url)
+add_new_dataset(md_internal_id, md_token, credentials = list(cookie =
+  dkanr::get_cookie(), token = dkanr::get_token()), master,
+  root_url = dkanr::get_url())
 }
 \arguments{
 \item{md_internal_id}{character: Microdata internal ID of the dataset to be added}
 
 \item{md_token}{character: Microdata API authentication token}
 
-\item{ddh_credentials}{list: DDH API authentication token and cookie}
+\item{credentials}{list: DDH API authentication token and cookie}
 
-\item{master}{dataframe: Master lookup table}
+\item{master}{dataframe: Master lookup table, output of mdlibtoddh::get_ddh_records_status()}
 
 \item{root_url}{character: Root URL to use for the API (Staging or Production)}
 }

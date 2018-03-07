@@ -4,15 +4,16 @@
 \alias{update_existing_dataset}
 \title{update_existing_dataset()}
 \usage{
-update_existing_dataset(md_internal_id, md_token, ddh_credentials, master,
-  root_url)
+update_existing_dataset(md_internal_id, md_token, credentials = list(cookie =
+  dkanr::get_cookie(), token = dkanr::get_token()), master,
+  root_url = dkanr::get_url())
 }
 \arguments{
 \item{md_internal_id}{character: Microdata internal ID of the dataset to be added}
 
 \item{md_token}{character: Microdata API authentication token}
 
-\item{ddh_credentials}{list: DDH API authentication token and cookie}
+\item{credentials}{list: DDH API authentication token and cookie}
 
 \item{master}{dataframe: Master lookup table}
 

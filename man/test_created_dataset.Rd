@@ -4,8 +4,9 @@
 \alias{test_created_dataset}
 \title{test_created_dataset}
 \usage{
-test_created_dataset(nid, metadata_list, credentials,
-  root_url = production_root_url)
+test_created_dataset(nid, metadata_list, credentials = list(cookie =
+  dkanr::get_cookie(), token = dkanr::get_token()),
+  root_url = dkanr::get_url())
 }
 \arguments{
 \item{nid}{character: The dataset node id}
