@@ -68,7 +68,7 @@ clean_date <- function(dt) {
 }
 
 is_year <- function(dt) {
-  return(!is.null(dt) && !is.na(as.numeric(dt)) && as.numeric(dt) >= 1900 && as.numeric(dt) <= 2100)
+  return(suppressWarnings(!is.null(dt) && !is.na(as.numeric(dt)) && as.numeric(dt) >= 1900 && as.numeric(dt) <= 2100))
 }
 
 # extract_field_wbddh_reference_id
