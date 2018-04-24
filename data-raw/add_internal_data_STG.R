@@ -51,13 +51,14 @@ taxonomy_remove <-
     "field_wbddh_api_format",
     "field_wbddh_update_frequency",
     "field_frequency",
-    "status"
+    "status",
+    "field_granularity_list"
   )
 taxonomy_machine_names <- taxonomy_machine_names[!taxonomy_machine_names %in% taxonomy_remove]
 assertthat::assert_that(length(taxonomy_machine_names[!taxonomy_machine_names %in% lookup_machine_names]) == 0,
                         msg = 'Incomplete list of taxonomy variables')
 # fields and lookup
-fields_machine_names <- sort(unique(fields$ddh_machine_name))
+fields_machine_names <- sort(unique(c(fields$ddh_machine_name), "field_license_wbddh")) # TEMPORARY FIX (not returned by field service)
 fields_remove <-
   c(
     "field_ddh_external_contact_email",
@@ -135,7 +136,7 @@ names(md_placeholder) <- machine_names
 
 # STEP 5: Generate a lkup table to map Microdata values to DDH LOVs -------
 
-field_to_machine <- create_lkup_vector(lookup, vector_keys = 'field_key', vector_values = 'ddh_machine_name')
+field_to_machine <- mdlibtoddh:::create_lkup_vector(lookup, vector_keys = 'field_key', vector_values = 'ddh_machine_name')
 assertthat::assert_that(sum(is.na(field_to_machine)) == 0,
                         msg = 'Incomplete field_key to machine_name mapping')
 field_to_machine_no_na <- field_to_machine[!is.na(field_to_machine)]
@@ -153,7 +154,7 @@ md_ddh_lovs <- md_ddh_lovs %>%
 md_ddh_names <- sort(unique(md_ddh_lovs$ddh_machine_name))
 md_ddh_lovs <- purrr::map(md_ddh_names, function(x){
   temp <- md_ddh_lovs[md_ddh_lovs$ddh_machine_name == x, ]
-  out <- create_lkup_vector(temp, vector_keys = 'microdata_category' , vector_values = 'field_lovs')
+  out <- mdlibtoddh:::create_lkup_vector(temp, vector_keys = 'microdata_category' , vector_values = 'field_lovs')
   return(out)
 })
 names(md_ddh_lovs) <- md_ddh_names
@@ -167,7 +168,7 @@ ddh_tid_lovs <- lookup %>%
 ddh_tid_names <- sort(unique(ddh_tid_lovs$ddh_machine_name))
 ddh_tid_lovs <- purrr::map(ddh_tid_names, function(x){
   temp <- ddh_tid_lovs[ddh_tid_lovs$ddh_machine_name == x, ]
-  out <- create_lkup_vector(temp, vector_keys = 'field_lovs' , vector_values = 'tid')
+  out <- mdlibtoddh:::create_lkup_vector(temp, vector_keys = 'field_lovs' , vector_values = 'tid')
   return(out)
 })
 names(ddh_tid_lovs) <- ddh_tid_names

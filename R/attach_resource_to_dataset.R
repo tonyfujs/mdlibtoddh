@@ -10,7 +10,8 @@
 #' @export
 #'
 
-attach_resource_to_dataset <- function(credentials, body, root_url, dataset_nid) {
+attach_resource_to_dataset <- function(credentials = list(cookie = dkanr::get_cookie(), token = dkanr::get_token()),
+                                       body, root_url = dkanr::get_url(), dataset_nid) {
 
   ddhconnect::update_dataset(credentials = credentials,
                              nid = dataset_nid,

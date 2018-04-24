@@ -26,6 +26,7 @@ format_md_metadata <- function(metadata_in,
 
   # Format date fields
   metadata_in[date_fields] <- purrr::map(metadata_in[date_fields], timestamp_to_ddhdate)
+  metadata_in[['field_wbddh_version_date']] <- clean_date(metadata_in[['field_wbddh_version_date']])
 
   # Format text fields
   is.notnull = function(x)!is.null(x)

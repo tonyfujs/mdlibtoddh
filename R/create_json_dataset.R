@@ -10,13 +10,12 @@
 #'
 
 create_json_dataset <- function(metadata_list, json_template = mdlibtoddh::json_template_dataset) {
-  
-  json_template <- jsonlite::fromJSON("C:/Users/wb523589/Programs/mdlibtoddh/data-raw/ddh_schema_microdata_dataset.json")
+
   for (field_name in names(json_template)) {
-    print(field_name)
+    # for title and status
     if (is.character(json_template[[field_name]])) {
       json_template[[field_name]] <- safe_unbox(safe_assign(metadata_list[[field_name]]))
-    } 
+    }
     else if(is.null(names(json_template[[field_name]]$und))) {
       json_template[[field_name]]$und <- unlist(stringr::str_split(metadata_list[[field_name]], pattern = ';'))
     }

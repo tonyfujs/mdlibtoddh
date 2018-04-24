@@ -23,11 +23,11 @@ geographicalCoverage,coverage,country,codeBook/stdyDscr/stdyInfo/sumDscr/nation
 globalPractice,,,
 kindData,overview,kind of data,codeBook/stdyDscr/stdyInfo/sumDscr/dataKind
 language,,,
-license,,,
+license,,,access_type
 limitExcept,,,
 lineage,,,
 maintenance,,,
-md_referenceID,identification,id number,codeBook/stdyDscr/citation/titlStmt/IDNo
+md_referenceID,identification,id number,surveyid
 metadataCharSet,,,
 metadataFileID,,,
 metadataProdName,,,

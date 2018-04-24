@@ -8,7 +8,8 @@
 #' @export
 #'
 
-get_ddh_datasets_list <- function(root_url, credentials)
+get_ddh_datasets_list <- function(root_url = dkanr::get_url(),
+                                  credentials = list(cookie = dkanr::get_cookie(), token = dkanr::get_token()))
 {
   resp <- ddhconnect::search_catalog(
     fields = c(

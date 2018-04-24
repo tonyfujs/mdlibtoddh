@@ -1,6 +1,7 @@
 {
 	"title": "",
 	"status": "",
+	"workflow_status": "",
 	"body": {
 		"und": [{
 			"value": ""
@@ -64,9 +65,7 @@
 		"und": []
 	},
 	"field_license_wbddh": {
-		"und": {
-			"tid": ""
-		}
+		"und": []
 	},
 	"field_wbddh_languages_supported": {
 		"und": []
@@ -255,6 +254,11 @@
 	},
 	"field_exception_s_": {
 		"und": []
+	},
+	"field_wbddh_other_processing": {
+		"und": [{
+			"value": ""
+		}]
 	}
 }
 
