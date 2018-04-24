@@ -28,7 +28,7 @@ extract_md_metadata <- function(metadata_in,
       metadata_out[[machine_names[i]]] <- metadata_in[[mdlib_json_key]]
     }
 
-    if (machine_names[i] %in% ddhconnect:::date_fields) {
+    if (machine_names[i] %in% mdlibtoddh:::microdata_date_fields) {
       metadata_out[[machine_names[i]]] <- expand_date(metadata_out[[machine_names[i]]])
     }
   }
