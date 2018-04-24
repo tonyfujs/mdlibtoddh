@@ -92,3 +92,18 @@ is.error <- function(x) inherits(x, "try-error")
 already_exists <- function(id, existing_ids) {
   id %in% existing_ids
 }
+
+# expand the date value to yyyy-mm-dd format if the date field does not have a date or month value
+expand_date <- function(date_value) {
+  date_split <- unlist(strsplit(date_value, "-"))
+  if (length(date_split) == 1) {
+    expand_date_value <- paste(date_value, "01", "01", sep = "-")
+  }
+  else if (length(date_split) == 2) {
+    expand_date_value <- paste(date_value, "01", sep = "-")
+  }
+  else {
+    expand_date_value <- date_value
+  }
+  return(expand_date_value)
+}
