@@ -192,6 +192,10 @@ devtools::use_data(lookup,
                    json_template_attach,
                    overwrite = TRUE)
 
+microdata_date_fields <- readLines("data-raw/microdata_date_fields.txt")
+devtools::use_data(microdata_date_fields,
+                   overwrite = TRUE,
+                   internal = TRUE)
 
 # # Temporary: TO BE REMOVED ONCE THE ENCODING ISSUES ARE RESOLVED
 # taxonomy$field_lovs[taxonomy$field_lovs == 'Côte d&#039;Ivoire'] <- "Côte d'Ivoire"
