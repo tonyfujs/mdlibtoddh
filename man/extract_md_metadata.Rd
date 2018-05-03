@@ -10,9 +10,9 @@ extract_md_metadata(metadata_in, metadata_out = mdlibtoddh::md_placeholder,
 \arguments{
 \item{metadata_in}{list: The output of mdlibconnect::get_survey_metadata}
 
-\item{metadata_out}{list: Package obeject: mdlibtoddh::md_placeholder}
+\item{metadata_out}{list: Package object: mdlibtoddh::md_placeholder}
 
-\item{lookup}{data.frame: Package obeject: mdlibtoddh::lookup}
+\item{lookup}{data.frame: Package object: mdlibtoddh::lookup}
 }
 \value{
 list
