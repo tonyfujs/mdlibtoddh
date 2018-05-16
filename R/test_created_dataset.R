@@ -14,7 +14,7 @@
 test_created_dataset <- function(nid, metadata_list, credentials = list(cookie = dkanr::get_cookie(), token = dkanr::get_token()),
                                  root_url = dkanr::get_url()) {
 
-  node_metadata = ddhconnect::get_metadata(nid, credentials, root_url)
+  node_metadata = ddhconnect::get_metadata(nid, root_url, credentials)
 
   safe_see_if(node_metadata$title, metadata_list$title, "title") # title
   safe_see_if(node_metadata$body$und$value, metadata_list$body, "body") # body
