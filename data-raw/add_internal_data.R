@@ -1,20 +1,17 @@
 library(dplyr)
 library(jsonlite)
 
-# CHECK consistency between STG & PROD taxonomy
-check_taxonomy_services()
-# Set roo URL
+# Set root URL
 root_url <- ddhconnect:::production_root_url
 
 # STEP 1: Get data --------------------------------------------------------
 
-# Matadata master
-httr::set_config(httr::config(ssl_verifypeer = 0L))
-# googlesheets::gs_ls("ddh_metadata_master")
-ddh_master_key <- googlesheets::gs_title("ddh_metadata_master")
-lookup <- googlesheets::gs_read(ddh_master_key) %>%
-  filter(form %in% c('Microdata', 'Basic'))
+# read the basic fields and fields specific to microdata
+ddh_master_key <- readr::read_csv('./data-raw/ddh_metadata_master.csv')
+lookup <- ddh_master_key %>%
+          filter(form %in% c('Microdata', 'Basic'))
 
+# lookup to map DDH fields to equivalent microdata fields
 mdlib_api_mapping <- readr::read_csv('./data-raw/ddh_microdata_mapping.csv') %>%
   filter(!is.na(ddh_fields))
 
@@ -25,7 +22,7 @@ taxonomy <- ddhconnect::get_lovs(root_url = root_url)%>%
 fields <- ddhconnect::get_fields(root_url = root_url) %>%
   filter(data_type == 'microdata') %>%
   rename(ddh_machine_name = machine_name)
-# TO BE REMOVED
+# TODO: Report type to IT
 fields$ddh_machine_name[fields$ddh_machine_name == "field__wbddh_depositor_notes"] <- "field_wbddh_depositor_notes"
 
 
@@ -35,7 +32,7 @@ mdlib_field_keys <- sort(unique(mdlib_api_mapping$ddh_fields))
 lookup_field_keys <- sort(unique(lookup$field_key))
 assertthat::assert_that(all(mdlib_field_keys %in% lookup_field_keys),
                         msg = 'Incomplete mdlib to ddh field_key mapping')
-# Taxonomy & lookup
+# assert that all taxonomy fields except for the specified ones are present in the lookup
 taxonomy_machine_names <- sort(unique(taxonomy$ddh_machine_name))
 lookup_machine_names <- sort(unique(lookup$ddh_machine_name))
 taxonomy_remove <-
@@ -56,7 +53,7 @@ taxonomy_remove <-
 taxonomy_machine_names <- taxonomy_machine_names[!taxonomy_machine_names %in% taxonomy_remove]
 assertthat::assert_that(length(taxonomy_machine_names[!taxonomy_machine_names %in% lookup_machine_names]) == 0,
                         msg = 'Incomplete list of taxonomy variables')
-# fields and lookup
+# assert that all fields except for the specified ones are present in the lookup
 fields_machine_names <- sort(unique(c(fields$ddh_machine_name, "field_license_wbddh", "workflow_status"))) # TEMPORARY FIX (not returned by field service)
 fields_remove <-
   c(
@@ -102,7 +99,6 @@ lookup <- lookup %>%
          mdlib_json_field = json_fields)
 
 lookup$field_lovs[lookup$field_lovs == 'PeopleSoft'] <- NA
-lookup <- lookup %>% filter(!field_key == 'granularity')
 
 # CHECK that merge is complete
 mdlib_json <- sort(unique(mdlib_api_mapping$json_fields))
@@ -116,7 +112,7 @@ lookup <- taxonomy %>%
   filter(ddh_machine_name %in% taxonomy_machine_names) %>%
   dplyr::right_join(lookup, by = c('ddh_machine_name', 'field_lovs'))
 
-# CHECK matching tid issues
+# CHECK if all controlled vocabulary have a matching tid in lookup
 
 check_tids <- lookup %>%
   filter(ddh_machine_name %in% taxonomy_machine_names) %>%
@@ -135,10 +131,13 @@ names(md_placeholder) <- machine_names
 
 # STEP 5: Generate a lkup table to map Microdata values to DDH LOVs -------
 
+# map microdata field names to ddh field names
 field_to_machine <- mdlibtoddh:::create_lkup_vector(lookup, vector_keys = 'field_key', vector_values = 'ddh_machine_name')
 assertthat::assert_that(sum(is.na(field_to_machine)) == 0,
                         msg = 'Incomplete field_key to machine_name mapping')
 field_to_machine_no_na <- field_to_machine[!is.na(field_to_machine)]
+
+# map variations of a controlled vocabulary value to the controlled vocabulary value accepted by DDH
 my_sheets <- readxl::excel_sheets('./data-raw/control_vocab_mapping.xlsx')
 md_ddh_lovs <- purrr::map_df(my_sheets, function(x) {
   temp <- readxl::read_excel('./data-raw/control_vocab_mapping.xlsx', sheet = x)
@@ -196,12 +195,4 @@ microdata_date_fields <- readLines("data-raw/microdata_date_fields.txt")
 devtools::use_data(microdata_date_fields,
                    overwrite = TRUE,
                    internal = TRUE)
-
-# # Temporary: TO BE REMOVED ONCE THE ENCODING ISSUES ARE RESOLVED
-# taxonomy$field_lovs[taxonomy$field_lovs == 'Côte d&#039;Ivoire'] <- "Côte d'Ivoire"
-# taxonomy$field_lovs[taxonomy$field_lovs == 'Europe &amp; Central Asia'] <- "Europe and Central Asia"
-# taxonomy$field_lovs[taxonomy$field_lovs == 'East Asia &amp; Pacific'] <- "East Asia and Pacific"
-# taxonomy$field_lovs[taxonomy$field_lovs == 'Korea, Dem. People&#039;s Rep.'] <- "Korea, Dem. People's Rep."
-# taxonomy$field_lovs[taxonomy$field_lovs == 'Latin America &amp; Caribbean'] <- "Latin America and Caribbean"
-# taxonomy$field_lovs[taxonomy$field_lovs == 'Middle East &amp; North Africa'] <- "Middle East and North Africa"
 
