@@ -48,7 +48,10 @@ taxonomy_remove <-
     "field_wbddh_update_frequency",
     "field_frequency",
     "status",
-    "field_granularity_list"
+    "field_granularity_list",
+    "field_wbddh_kind_of_data",
+    "field_wbddh_mode_data_collection",
+    "field_wbddh_study_type"
   )
 taxonomy_machine_names <- taxonomy_machine_names[!taxonomy_machine_names %in% taxonomy_remove]
 assertthat::assert_that(length(taxonomy_machine_names[!taxonomy_machine_names %in% lookup_machine_names]) == 0,
@@ -145,6 +148,10 @@ md_ddh_lovs <- purrr::map_df(my_sheets, function(x) {
   return(temp)
 })
 
+md_ddh_lovs <- md_ddh_lovs[!names(md_ddh_lovs) %in%
+                             c("field_wbddh_kind_of_data",
+                               "field_wbddh_mode_data_collection",
+                               "field_wbddh_study_type")]
 md_ddh_lovs <- bind_rows(md_ddh_lovs)
 md_ddh_lovs <- md_ddh_lovs %>%
   select(-ddh_category_multiple, field_lovs = ddh_category)
