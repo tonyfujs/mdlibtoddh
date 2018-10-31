@@ -41,7 +41,7 @@ test_created_dataset <- function(nid, metadata_list, credentials = list(cookie =
   safe_see_if(node_metadata$field_wbddh_copyright$und[[1]]$value, metadata_list$field_wbddh_copyright, "field_wbddh_copyright")
   safe_see_if(node_metadata$field_wbddh_access_authority$und[[1]]$value, metadata_list$field_wbddh_access_authority, "field_wbddh_access_authority")
   safe_see_if(node_metadata$field_wbddh_data_editing$und[[1]]$value, metadata_list$field_wbddh_data_editing, "field_wbddh_data_editing")
-  safe_see_if(node_metadata$field_wbddh_funding_name$und[[1]]$value, metadata_list$field_wbddh_funding_name, "field_wbddh_fund[[1]]ing_name")
+  safe_see_if(node_metadata$field_wbddh_funding_name$und[[1]]$value, metadata_list$field_wbddh_funding_name, "field_wbddh_funding_name")
   safe_see_if(node_metadata$field_wbddh_version_notes$und[[1]]$value, metadata_list$field_wbddh_version_notes, "field_wbddh_version_notes")
   safe_see_if(node_metadata$field_wbddh_response_rates$und[[1]]$value, metadata_list$field_wbddh_response_rates, "field_wbddh_response_rates")
   safe_see_if(node_metadata$field_wbddh_estimate_sampling$und[[1]]$value, metadata_list$field_wbddh_estimate_sampling, "field_wbddh_estimate_sampling")
