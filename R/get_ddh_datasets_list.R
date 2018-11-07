@@ -17,7 +17,8 @@ get_ddh_datasets_list <- function(root_url = dkanr::get_url(),
       'field_wbddh_reference_id',
       'field_wbddh_data_class',
       'field_wbddh_modified_date',
-      'field_ddh_harvest_sys_id'
+      'field_ddh_harvest_sys_id',
+      'created'
     ),
     filters = c(
       'field_wbddh_data_type' = 294,
@@ -30,10 +31,11 @@ get_ddh_datasets_list <- function(root_url = dkanr::get_url(),
   ddh_nids <- as.character(purrr::map(resp, 'nid'))
   md_refids <- as.character(purrr::map(resp, function(x) x[["field_wbddh_reference_id"]][["und"]][[1]][["value"]]))
   ddh_dataclass <- as.character(purrr::map(resp, function(x) x[["field_wbddh_data_class"]][["und"]][[1]][["tid"]]))
+  ddh_created <- as.character(purrr::map(resp, "created"))
   ddh_updated <- as.character(purrr::map(resp, function(x) x[["field_wbddh_modified_date"]][["und"]][[1]][["value"]]))
   md_internal_id <- as.character(purrr::map(resp, function(x) x[["field_ddh_harvest_sys_id"]][["und"]][[1]][["value"]]))
 
-  out <- data.frame(ddh_nids, md_refids, md_internal_id, ddh_dataclass, ddh_updated, stringsAsFactors = FALSE)
+  out <- data.frame(ddh_nids, md_refids, md_internal_id, ddh_dataclass, ddh_updated, ddh_created, stringsAsFactors = FALSE)
 
   return(out)
 }
