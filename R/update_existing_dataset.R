@@ -54,11 +54,10 @@ update_existing_dataset <- function(md_internal_id, md_token, credentials = list
                                                credentials = credentials)
   nid_res <- ddhconnect::get_resource_nids(metadata_dataset)
   json_res <- create_json_resource(temp)
-  resp_res <- ddhconnect::update_dataset(credentials = credentials,
-                                         nid = nid_res,
-                                         body = json_res,
-                                         root_url = root_url)
-
+  resp_res <- ddhconnect::update_resource(credentials = credentials,
+                                          nid = nid_res,
+                                          body = json_res,
+                                          root_url = root_url)
 
   return(resp_dat$uri)
 }
