@@ -9,6 +9,7 @@
 #'
 
 add_link_to_resources <- function(metadata_list, md_internal_id, master) {
+
   refid <- master[['md_internal_refid']][master[['md_internal_id']] == md_internal_id]
   assertthat::assert_that(length(refid) == 1)
   master <- master[master$md_internal_id == md_internal_id, 'data_classification']
@@ -19,9 +20,6 @@ add_link_to_resources <- function(metadata_list, md_internal_id, master) {
 
   # Add correct data classification
   if (master == 'public') {
-    # url <- paste0('http://microdata.worldbank.org/index.php/catalog/study/', refid)
-
-
     md_datasets <- mdlibconnect::get_public_survey_list(dkanr::get_token())
 
     #iterate over md datasets and find the dataset id of with the refid of master
