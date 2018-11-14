@@ -29,7 +29,7 @@ add_link_to_resources <- function(metadata_list, md_internal_id, master) {
       md_external_id <- ifelse(md_datasets[[key]]$surveyid == refid, md_datasets[[key]]$id, next)
     }
 
-    url <- paste0('http://microdata.worldbank.org/index.php/catalog/study/', md_external_id)
+    url <- paste0('http://microdata.worldbank.org/index.php/catalog/', md_external_id)
 
     metadata_list$field_link_api <- url
     return(metadata_list)
