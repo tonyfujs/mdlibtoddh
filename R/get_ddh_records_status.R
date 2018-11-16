@@ -40,7 +40,6 @@ get_ddh_records_status <- function(mdlib_token, root_url = dkanr::get_url(),
 
   full_list <- dplyr::left_join(full_list, md_list_public, by = c('md_internal_refid' = 'md_external_refid'))
 
-
   # Identify Current / New / Old datasets based on timestamps
   full_list$time_diff <- abs(full_list$md_internal_updated - full_list$ddh_updated) - 14400
   full_list$sync_status <- NA
@@ -58,6 +57,7 @@ get_ddh_records_status <- function(mdlib_token, root_url = dkanr::get_url(),
   # Identify duplicates
   full_list$oldest_timestamp <- ave(full_list$ddh_created, full_list$md_internal_id, FUN = min)
   full_list$duplicate_status <- ifelse(full_list$ddh_created == full_list$oldest_timestamp, "original", "duplicate")
+  full_list$oldest_timestamp <- NULL
 
   return(full_list)
 }
