@@ -10,8 +10,7 @@
 
 add_link_to_resources <- function(metadata_list, md_internal_id, master) {
 
-  refid <- master[['md_internal_refid']][master[['md_internal_id']] == md_internal_id]
-  assertthat::assert_that(length(refid) == 1)
+  master_df <- master
   master <- master[master$md_internal_id == md_internal_id, 'data_classification']
   assertthat::assert_that(length(master) == 1)
 
@@ -20,22 +19,17 @@ add_link_to_resources <- function(metadata_list, md_internal_id, master) {
 
   # Add correct data classification
   if (master == 'public') {
-    md_datasets <- mdlibconnect::get_public_survey_list(dkanr::get_token())
-
-    #iterate over md datasets and find the dataset id of with the refid of master
-    for(key in 1:length(md_datasets)){
-      md_external_id <- ifelse(md_datasets[[key]]$surveyid == refid, md_datasets[[key]]$id, next)
-    }
-
+    md_external_id <- master_df$md_external_id[master_df$md_internal_id == md_internal_id]
     url <- paste0('http://microdata.worldbank.org/index.php/catalog/', md_external_id)
 
     metadata_list$field_link_api <- url
     return(metadata_list)
+
   } else if (master == 'official') {
     url <- paste0('http://microdatalib.worldbank.org/index.php/catalog/', md_internal_id)
 
     metadata_list$field_link_api <- url
     return(metadata_list)
-  }
 
+  }
 }
