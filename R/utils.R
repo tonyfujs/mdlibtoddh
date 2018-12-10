@@ -95,7 +95,8 @@ safe_unbox <- purrr::possibly(jsonlite::unbox, otherwise = '')
 safe_assign <- function(x) {if (length(x) > 0) {x} else {""}}
 
 is.same <- function(file_value, orig_value) {
-  is.empty(file_value) && is.empty(orig_value) || (gsub("[\n]", "", file_value) == gsub("[\n]", "", orig_value))
+  is.empty(file_value) && is.empty(orig_value) ||
+    is.character(file_value) && is.character(orig_value) && (gsub("[\n]", "", file_value) == gsub("[\n]", "", orig_value))
 }
 
 is.empty <- function(s) {

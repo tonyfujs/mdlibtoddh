@@ -68,7 +68,7 @@ test_created_dataset <- function(dataset_metadata, metadata_list,
     "field_wbddh_kind_of_data",
     "field_wbddh_languages_supported",
     "field_wbddh_mode_data_collection",
-    "field_wbddh_search_tags",
+    # "field_wbddh_search_tags",
     "field_wbddh_update_frequency"
   )
 
@@ -81,21 +81,37 @@ test_created_dataset <- function(dataset_metadata, metadata_list,
 
 # use unlist instead of indexing, $field_frequency doesn't have $tid but uses a tid structure
 check_lov <- function(dataset_metadata, input_metadata, machine_name, lovs) {
+
   if (!is_blank(dataset_metadata[[machine_name]])) {
     ddh_input <- unlist(c(dataset_metadata[[machine_name]]$und[[1]]$tid,
                           dataset_metadata[[machine_name]]$und[[1]]$value))
     ddh_value <- lovs$list_value_name[lovs$tid == ddh_input & lovs$machine_name == machine_name]
   } else {
-    ddh_value <- NULL
+    ddh_value <- ""
   }
-  safe_see_if(ddh_value, input_metadata[[machine_name]], machine_name)
+
+  if (!is_blank(input_metadata[[machine_name]])) {
+    input_value <- as.character(input_metadata[[machine_name]])
+  } else {
+    input_value <- ""
+  }
+
+  safe_see_if(ddh_value, input_value, machine_name)
 }
 
 check_value <- function(dataset_metadata, input_metadata, machine_name) {
+
   if (!is_blank(dataset_metadata[[machine_name]])) {
     ddh_value <- dataset_metadata[[machine_name]]$und[[1]]$value
   } else {
-    ddh_value <- NULL
+    ddh_value <- ""
   }
-  safe_see_if(ddh_value, input_metadata[[machine_name]], machine_name)
+
+  if (!is_blank(input_metadata[[machine_name]])) {
+    input_value <- as.character(input_metadata[[machine_name]])
+  } else {
+    input_value <- ""
+  }
+
+  safe_see_if(ddh_value, input_value, machine_name)
 }

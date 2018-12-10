@@ -29,7 +29,6 @@ update_existing_dataset <- function(md_internal_id, md_token, master,
   # STEP 2: format raw metadata
   temp <- map_md_to_ddh(temp)
   temp <- add_constant_metadata_dataset(temp)
-
   # Add resource link
   temp <- add_link_to_resources(metadata_list = temp,
                                 md_internal_id = md_internal_id,
@@ -71,6 +70,7 @@ update_existing_dataset <- function(md_internal_id, md_token, master,
                                           credentials = credentials)
   test_created_dataset(dataset_metadata = metadata_dataset,
                        metadata_list = temp_dataset,
+                       lovs = lovs,
                        root_url = root_url,
                        credentials = credentials)
 
