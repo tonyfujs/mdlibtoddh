@@ -5,8 +5,9 @@
 \title{attach_resource_to_dataset
 link resources to dataset}
 \usage{
-attach_resource_to_dataset(credentials = list(cookie = dkanr::get_cookie(),
-  token = dkanr::get_token()), body, root_url = dkanr::get_url(), dataset_nid)
+attach_resource_to_dataset(credentials = list(cookie =
+  dkanr::get_cookie(), token = dkanr::get_token()), body,
+  root_url = dkanr::get_url(), dataset_nid)
 }
 \arguments{
 \item{credentials}{list: object returned by the get_credentials() function}

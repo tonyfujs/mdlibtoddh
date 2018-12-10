@@ -4,12 +4,10 @@
 \alias{map_md_metadata}
 \title{map_md_metadata}
 \usage{
-map_md_metadata(metadata_list, lkup_tids)
+map_md_metadata(metadata_list)
 }
 \arguments{
 \item{metadata_list}{list: Named list containing all values extracted from the Microdata API response}
-
-\item{lkup_tids}{named vector}
 }
 \value{
 list

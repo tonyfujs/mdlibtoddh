@@ -4,7 +4,8 @@
 \alias{format_md_metadata}
 \title{format_md_metadata}
 \usage{
-format_md_metadata(metadata_in, date_fields = c("field_wbddh_modified_date",
+format_md_metadata(metadata_in,
+  date_fields = c("field_wbddh_modified_date",
   "field_wbddh_release_date"), text_fields = c("body",
   "field_wbddh_citation_text", "field_wbddh_disclaimer",
   "field_wbddh_questionnaires", "field_wbddh_sampling_procedure",

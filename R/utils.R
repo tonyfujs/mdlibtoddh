@@ -94,24 +94,22 @@ extract_field_wbddh_data_class <- function(x) {
 safe_unbox <- purrr::possibly(jsonlite::unbox, otherwise = '')
 safe_assign <- function(x) {if (length(x) > 0) {x} else {""}}
 
-is.same <- function(file_value, orig_value, field_name) {
-  is.empty(file_value) && is.empty(orig_value) ||
-  is.character(file_value) && is.character(orig_value) && (gsub("[\n]", "", file_value) == gsub("[\n]", "", orig_value))
-
+is.same <- function(file_value, orig_value) {
+  is.empty(file_value) && is.empty(orig_value) || (gsub("[\n]", "", file_value) == gsub("[\n]", "", orig_value))
 }
 
 is.empty <- function(s) {
   is.null(s) || s == ""
 }
 
-assertthat::on_failure(is.same) <- function(call, env) {
-  paste0(deparse(call$field_name), ": The updated value is not equal to the passed value.")
+is_blank <- function(input) {
+  return(gtools::invalid(input) || all(input == ""))
 }
 
 safe_see_if <- function(file_value, orig_value, field_name) {
-  assert_result <- assertthat::see_if(is.same(file_value, orig_value, field_name))
+  assert_result <- assertthat::see_if(is.same(file_value, orig_value))
   if(!assert_result){
-    warning(attr(assert_result, "msg"))
+    warning(paste0(field_name, ": The updated value is not equal to the passed value."))
   }
 }
 
@@ -134,4 +132,22 @@ expand_date <- function(date_value) {
     expand_date_value <- date_value
   }
   return(expand_date_value)
+}
+
+# subsets datasets fields
+filter_dataset_fields <- function(metadata_temp,
+                                  ddh_fields = ddhconnect::get_fields()) {
+  dataset_fields <- ddh_fields$machine_name[ddh_fields$node_type == "dataset"]
+  dataset_fields <- unique(dataset_fields)
+  metadata_temp <- metadata_temp[names(metadata_temp) %in% dataset_fields]
+  return(metadata_temp)
+}
+
+# subsets resource fields
+filter_resource_fields <- function(metadata_temp,
+                                   ddh_fields = ddhconnect::get_fields()) {
+  resource_fields <- ddh_fields$machine_name[ddh_fields$node_type == "resource"]
+  resource_fields <- unique(resource_fields)
+  metadata_temp <- metadata_temp[names(metadata_temp) %in% resource_fields]
+  return(metadata_temp)
 }

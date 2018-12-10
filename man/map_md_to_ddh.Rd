@@ -4,12 +4,10 @@
 \alias{map_md_to_ddh}
 \title{map_md_to_ddh}
 \usage{
-map_md_to_ddh(metadata_list, lkup_tids)
+map_md_to_ddh(metadata_list)
 }
 \arguments{
 \item{metadata_list}{list: List of Microdata metadata (output from get_md_metadata())}
-
-\item{lkup_tids}{named vector}
 }
 \value{
 list

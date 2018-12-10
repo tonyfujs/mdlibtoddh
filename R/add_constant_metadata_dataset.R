@@ -1,4 +1,4 @@
-#' add_constant_metadata
+#' add_constant_metadata_dataset
 #'
 #' Add metadata that have constant values across records (not pulled from Microdata API)
 #' Currently adds values for the following fields:
@@ -12,14 +12,13 @@
 #' @export
 #'
 
-add_constant_metadata <- function(metadata_list) {
+add_constant_metadata_dataset <- function(metadata_list) {
 
   metadata_list$field_wbddh_languages_supported <- 'English'
   metadata_list$field_wbddh_data_type <- 'Microdata'
   # metadata_list$field_contact_email <- 'microdata@worldbank.org'
   metadata_list$field_ddh_harvest_src <- "Microdata"
   metadata_list$field_topic <- 'Topic not specified'
-  metadata_list$field_wbddh_resource_type <- "Landing page"
   metadata_list$workflow_status <- "published"
 
   return(metadata_list)
