@@ -10,7 +10,7 @@ test_created_dataset(dataset_metadata, metadata_list,
   dkanr::get_token()))
 }
 \arguments{
-\item{dataset_metadata}{character: The dataset node id}
+\item{dataset_metadata}{character: The dataset metadata, returned from ddhconnect::get_metadata()}
 
 \item{metadata_list}{list: List of metatadata values}
 
