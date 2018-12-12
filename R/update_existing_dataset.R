@@ -60,7 +60,7 @@ update_existing_dataset <- function(md_internal_id, md_token, master,
                                               ddh_fields = ddh_fields,
                                               lovs = lovs,
                                               root_url = root_url)
-  metadata_dataset <- ddhconnect::get_metadata(nid = resp_dat$nid,
+  metadata_dataset <- ddhconnect::get_metadata(nid = node_id,
                                                root_url = root_url,
                                                credentials = credentials)
   nid_res <- unlist(ddhconnect::get_resource_nids(metadata_dataset))

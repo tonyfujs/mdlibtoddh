@@ -2,7 +2,7 @@
 #'
 #' Test the metadata values of the dataset tranferred to DDH
 #'
-#' @param dataset_metadata character: The dataset node id
+#' @param dataset_metadata character: The dataset metadata, returned from ddhconnect::get_metadata()
 #' @param metadata_list list: List of metatadata values
 #' @param lovs dataframe: lookup table of data catalog machine names and tids, return object of get_lovs()
 #' @param root_url character: API root URL
