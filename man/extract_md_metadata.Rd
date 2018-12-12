@@ -4,7 +4,8 @@
 \alias{extract_md_metadata}
 \title{extract_md_metadata}
 \usage{
-extract_md_metadata(metadata_in, metadata_out = mdlibtoddh::md_placeholder,
+extract_md_metadata(metadata_in,
+  metadata_out = mdlibtoddh::md_placeholder,
   lookup = mdlibtoddh::lookup)
 }
 \arguments{

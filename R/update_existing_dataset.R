@@ -12,14 +12,12 @@
 #' @export
 #'
 
-update_existing_dataset <- function(md_internal_id, md_token, credentials = list(cookie = dkanr::get_cookie(), token = dkanr::get_token()),
-                                    master, root_url = dkanr::get_url()) {
-
-  if (root_url == ddhconnect:::production_root_url) {
-    lkup_tids <- mdlibtoddh::ddh_tid_lovs
-  } else {
-    lkup_tids <- mdlibtoddh::ddh_tid_lovs_STG
-  }
+update_existing_dataset <- function(md_internal_id, md_token, master,
+                                    ddh_fields = ddhconnect::get_fields(),
+                                    lovs = ddhconnect::get_lovs(),
+                                    root_url = dkanr::get_url(),
+                                    credentials = list(cookie = dkanr::get_cookie(),
+                                                       token = dkanr::get_token())) {
 
   # STEP 1: Get raw values from microdata API
   survey_mtdt <- get_md_metadata(id = md_internal_id, token = md_token)
@@ -29,9 +27,8 @@ update_existing_dataset <- function(md_internal_id, md_token, credentials = list
                                   md_internal_id,
                                   master = master)
   # STEP 2: format raw metadata
-  temp <- map_md_to_ddh(temp, lkup_tids)
-
-
+  temp <- map_md_to_ddh(temp)
+  temp <- add_constant_metadata_dataset(temp)
   # Add resource link
   temp <- add_link_to_resources(metadata_list = temp,
                                 md_internal_id = md_internal_id,
@@ -39,25 +36,43 @@ update_existing_dataset <- function(md_internal_id, md_token, credentials = list
 
   # STEP 3: Create dataset
   # Create JSON dataset
-  json_dat <- create_json_dataset(temp)
+  # json_dat <- create_json_dataset(temp)
+  temp_dataset <- filter_dataset_fields(temp, ddh_fields)
+  json_dat <- ddhconnect::create_json_dataset(values = temp_dataset,
+                                              publication_status = "published",
+                                              ddh_fields = ddh_fields,
+                                              lovs = lovs,
+                                              root_url = root_url)
   # Push dataset to DDH
   node_id <- master$ddh_nids[master$md_internal_id == md_internal_id]
-  resp_dat <- ddhconnect::update_dataset(credentials = credentials,
-                                         nid = node_id,
+  resp_dat <- ddhconnect::update_dataset(nid = node_id,
                                          body = json_dat,
-                                         root_url = root_url)
+                                         root_url = root_url,
+                                         credentials = credentials)
 
   # STEP 4: Create resource
   # Create JSON resource
-  metadata_dataset <- ddhconnect::get_metadata(nid = resp_dat$nid,
+  # json_res <- create_json_resource(temp)
+  temp <- add_constant_metadata_resource(temp)
+  temp_resource <- filter_resource_fields(temp, ddh_fields)
+  json_res <- ddhconnect::create_json_resource(values = temp_resource,
+                                              publication_status = "published",
+                                              ddh_fields = ddh_fields,
+                                              lovs = lovs,
+                                              root_url = root_url)
+  metadata_dataset <- ddhconnect::get_metadata(nid = node_id,
                                                root_url = root_url,
                                                credentials = credentials)
-  nid_res <- ddhconnect::get_resource_nids(metadata_dataset)
-  json_res <- create_json_resource(temp)
-  resp_res <- ddhconnect::update_resource(credentials = credentials,
-                                          nid = nid_res,
+  nid_res <- unlist(ddhconnect::get_resource_nids(metadata_dataset))
+  resp_res <- ddhconnect::update_resource(nid = nid_res,
                                           body = json_res,
-                                          root_url = root_url)
+                                          root_url = root_url,
+                                          credentials = credentials)
+  test_created_dataset(dataset_metadata = metadata_dataset,
+                       metadata_list = temp_dataset,
+                       lovs = lovs,
+                       root_url = root_url,
+                       credentials = credentials)
 
   return(resp_dat$uri)
 }
