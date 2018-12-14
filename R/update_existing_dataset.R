@@ -57,6 +57,7 @@ update_existing_dataset <- function(md_internal_id, md_token, master,
   temp_resource <- filter_resource_fields(temp, ddh_fields)
   json_res <- ddhconnect::create_json_resource(values = temp_resource,
                                               publication_status = "published",
+                                              dataset_nid = resp_dat$nid,
                                               ddh_fields = ddh_fields,
                                               lovs = lovs,
                                               root_url = root_url)
