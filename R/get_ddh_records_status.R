@@ -36,8 +36,14 @@ get_ddh_records_status <- function(mdlib_token, root_url = dkanr::get_url(),
   full_list$status <- NA
   full_list$status[is.na(full_list$ddh_nids)] <- 'new'
   full_list$status[!is.na(full_list$ddh_nids) & !is.na(full_list$md_internal_updated)] <- 'current'
-  full_list$status[!is.na(full_list$ddh_nids) & is.na(full_list$md_internal_updated)] <- 'old'
-
+  # full_list$status[!is.na(full_list$ddh_nids) & is.na(full_list$md_internal_updated)] <- 'old'
+  #######
+  #HERE
+  ######
+  full_list$status[!is.na(full_list$ddh_nids) & (full_list$ddh_nids != "NULL") & is.na(full_list$md_internal_updated)] <- 'old'
+  
+  
+  
   full_list <- dplyr::left_join(full_list, md_list_public, by = c('md_internal_refid' = 'md_external_refid'))
 
   # Identify Current / New / Old datasets based on timestamps
