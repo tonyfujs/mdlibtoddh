@@ -48,8 +48,11 @@ taxonomy_remove <-
     "field_wbddh_update_frequency",
     "field_frequency",
     "status",
-    "field_granularity_list"
+    "field_granularity_list",
+    #TEMPORARY
+    "field_wbddh_working_unit_user"
   )
+
 taxonomy_machine_names <- taxonomy_machine_names[!taxonomy_machine_names %in% taxonomy_remove]
 assertthat::assert_that(length(taxonomy_machine_names[!taxonomy_machine_names %in% lookup_machine_names]) == 0,
                         msg = 'Incomplete list of taxonomy variables')
@@ -81,8 +84,23 @@ fields_remove <-
     "field_wbddh_series_code",
     "field_wbddh_subscription_date",
     "field_wbddh_type_of_license",
-    "field_wbddh_update_frequency"
+    "field_wbddh_update_frequency",
+    #TEMPORARY FIX
+    "field_best_bets",
+    "field_creator_name",
+    "field_date_of_creation",
+    "field_external_metadata",
+    "field_external_metadata",
+    "field_link_api",
+    "field_link_remote_file",
+    "field_preview_image",
+    "field_resource_weight",
+    "field_upload",
+    "field_wbddh_api_format",
+    "field_wbddh_statistical_concept",
+    "workflow_status"
   )
+
 fields_machine_names <- fields_machine_names[!fields_machine_names %in% fields_remove]
 assertthat::assert_that(length(fields_machine_names[!fields_machine_names %in% lookup_machine_names]) == 0,
                         msg = 'Incomplete list of taxonomy variables')
