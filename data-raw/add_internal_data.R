@@ -48,9 +48,7 @@ taxonomy_remove <-
     "field_wbddh_update_frequency",
     "field_frequency",
     "status",
-    "field_granularity_list",
-    #TEMPORARY
-    "field_wbddh_working_unit_user"
+    "field_granularity_list"
   )
 
 taxonomy_machine_names <- taxonomy_machine_names[!taxonomy_machine_names %in% taxonomy_remove]
@@ -84,21 +82,7 @@ fields_remove <-
     "field_wbddh_series_code",
     "field_wbddh_subscription_date",
     "field_wbddh_type_of_license",
-    "field_wbddh_update_frequency",
-    #TEMPORARY FIX
-    "field_best_bets",
-    "field_creator_name",
-    "field_date_of_creation",
-    "field_external_metadata",
-    "field_external_metadata",
-    "field_link_api",
-    "field_link_remote_file",
-    "field_preview_image",
-    "field_resource_weight",
-    "field_upload",
-    "field_wbddh_api_format",
-    "field_wbddh_statistical_concept",
-    "workflow_status"
+    "field_wbddh_update_frequency"
   )
 
 fields_machine_names <- fields_machine_names[!fields_machine_names %in% fields_remove]
@@ -213,4 +197,3 @@ microdata_date_fields <- readLines("data-raw/microdata_date_fields.txt")
 devtools::use_data(microdata_date_fields,
                    overwrite = TRUE,
                    internal = TRUE)
-
