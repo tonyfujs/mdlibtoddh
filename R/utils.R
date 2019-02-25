@@ -152,3 +152,15 @@ filter_resource_fields <- function(metadata_temp,
   metadata_temp <- metadata_temp[names(metadata_temp) %in% resource_fields]
   return(metadata_temp)
 }
+
+#makesure resource is Microdata Query Tool
+resource_check <- function(nid_list){
+  nids <- unique(nid_list)
+  for(i in 1:length(nid_list)){
+    nid <- nids[[i]]
+    resource_meta <- get_metadata(nid)
+    if((resource_meta$field_wbddh_resource_type$und[[1]]$tid == 1192) & (resource_meta$title == "Related materials (Questionnaires, reports, tables, technical documents, and data files)")){
+      return(nid)
+    }
+  }
+}
