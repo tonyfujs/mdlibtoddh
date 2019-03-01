@@ -67,7 +67,7 @@ update_existing_dataset <- function(md_internal_id, md_token, master,
   nid_res <- unlist(ddhconnect::get_resource_nids(metadata_dataset))
   
   #makesure resource is Microdata Query Tool
-  if(length(resource_nid) > 1){
+  if(length(nid_res) > 1){
     nid_res <- resource_check(as.list(nid_res))
   }
   
