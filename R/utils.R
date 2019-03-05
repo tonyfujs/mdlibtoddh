@@ -153,13 +153,15 @@ filter_resource_fields <- function(metadata_temp,
   return(metadata_temp)
 }
 
-#makesure resource is Microdata Query Tool
-resource_check <- function(nid_list){
+#makesure resource is Microdata Landing Page
+resource_check <- function(nid_list,
+                           resource_type = resource_meta$field_wbddh_resource_type$und[[1]]$tid,
+                           resource_title = resource_meta$title) {
   nids <- unique(nid_list)
-  for(i in 1:length(nid_list)){
+  for(i in seq_along(nids)){
     nid <- nids[[i]]
     resource_meta <- get_metadata(nid)
-    if((resource_meta$field_wbddh_resource_type$und[[1]]$tid == 1192) & (resource_meta$title == "Related materials (Questionnaires, reports, tables, technical documents, and data files)")){
+    if((resource_type == 1192) & (resource_title == "Related materials (Questionnaires, reports, tables, technical documents, and data files)")){
       return(nid)
     }
   }
