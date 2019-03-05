@@ -20,6 +20,7 @@ add_constant_metadata_dataset <- function(metadata_list) {
   metadata_list$field_ddh_harvest_src <- "Microdata"
   metadata_list$field_topic <- 'Topic not specified'
   metadata_list$field_wbddh_responsible <- "No"
+  metadata_list$field_wbddh_economy_coverage <- 'Economy Coverage not specified'
 
   return(metadata_list)
 }
