@@ -153,7 +153,7 @@ filter_resource_fields <- function(metadata_temp,
   return(metadata_temp)
 }
 
-#makesure resource is Microdata Landing Page
+#Makesure resource is Microdata Landing Page
 resource_check <- function(nid_list,
                            resource_type = resource_meta$field_wbddh_resource_type$und[[1]]$tid,
                            resource_title = resource_meta$title) {
