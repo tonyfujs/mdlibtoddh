@@ -154,10 +154,10 @@ filter_resource_fields <- function(metadata_temp,
 }
 
 #Makesure resource is Microdata Landing Page
-resource_check <- function(nid_list,
+resource_check <- function(nids,
                            resource_type = resource_meta$field_wbddh_resource_type$und[[1]]$tid,
                            resource_title = resource_meta$title) {
-  nids <- unique(nid_list)
+  nids <- unique(nids)
   for(i in seq_along(nids)){
     nid <- nids[[i]]
     resource_meta <- get_metadata(nid)
