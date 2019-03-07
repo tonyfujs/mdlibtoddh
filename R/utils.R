@@ -152,3 +152,17 @@ filter_resource_fields <- function(metadata_temp,
   metadata_temp <- metadata_temp[names(metadata_temp) %in% resource_fields]
   return(metadata_temp)
 }
+
+#Makesure resource is Microdata Landing Page
+resource_check <- function(nids,
+                           resource_type = resource_meta$field_wbddh_resource_type$und[[1]]$tid,
+                           resource_title = resource_meta$title) {
+  nids <- unique(nids)
+  for(i in seq_along(nids)){
+    nid <- nids[[i]]
+    resource_meta <- get_metadata(nid)
+    if((resource_type == 1192) & (resource_title == "Related materials (Questionnaires, reports, tables, technical documents, and data files)")){
+      return(nid)
+    }
+  }
+}

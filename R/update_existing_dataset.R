@@ -65,6 +65,12 @@ update_existing_dataset <- function(md_internal_id, md_token, master,
                                                root_url = root_url,
                                                credentials = credentials)
   nid_res <- unlist(ddhconnect::get_resource_nids(metadata_dataset))
+  
+  #Makesure resource is Microdata Landing Page
+  if(length(nid_res) > 1){
+    nid_res <- resource_check(as.list(nid_res))
+  }
+  
   resp_res <- ddhconnect::update_resource(nid = nid_res,
                                           body = json_res,
                                           root_url = root_url,
