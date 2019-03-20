@@ -162,8 +162,6 @@ md_ddh_lovs <- purrr::map_df(my_sheets, function(x) {
 })
 
 md_ddh_lovs <- bind_rows(md_ddh_lovs)
-# md_ddh_lovs <- md_ddh_lovs %>%
-#   select(-ddh_category_multiple, field_lovs = ddh_category)
 
 md_ddh_names <- sort(unique(md_ddh_lovs$ddh_machine_name))
 md_ddh_lovs <- purrr::map(md_ddh_names, function(x){
