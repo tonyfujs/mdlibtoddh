@@ -162,13 +162,13 @@ md_ddh_lovs <- purrr::map_df(my_sheets, function(x) {
 })
 
 md_ddh_lovs <- bind_rows(md_ddh_lovs)
-md_ddh_lovs <- md_ddh_lovs %>%
-  select(-ddh_category_multiple, field_lovs = ddh_category)
+# md_ddh_lovs <- md_ddh_lovs %>%
+#   select(-ddh_category_multiple, field_lovs = ddh_category)
 
 md_ddh_names <- sort(unique(md_ddh_lovs$ddh_machine_name))
 md_ddh_lovs <- purrr::map(md_ddh_names, function(x){
   temp <- md_ddh_lovs[md_ddh_lovs$ddh_machine_name == x, ]
-  out <- mdlibtoddh:::create_lkup_vector(temp, vector_keys = 'microdata_category' , vector_values = 'field_lovs')
+  out <- mdlibtoddh:::create_lkup_vector(temp, vector_keys = 'microdata_category' , vector_values = 'ddh_category')
   return(out)
 })
 names(md_ddh_lovs) <- md_ddh_names
