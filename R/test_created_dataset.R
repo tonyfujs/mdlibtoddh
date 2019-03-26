@@ -46,7 +46,9 @@ test_created_dataset <- function(dataset_metadata, metadata_list,
     "field_wbddh_supervision",
     "field_wbddh_unit_of_analysis",
     "field_wbddh_universe",
-    "field_wbddh_version_description"
+    "field_wbddh_version_description",
+    "field_wbddh_kind_of_data",
+    "field_wbddh_mode_data_collection"
   )
 
   sapply(machine_names_value, check_value,
@@ -65,8 +67,6 @@ test_created_dataset <- function(dataset_metadata, metadata_list,
     "field_wbddh_economy_coverage",
     "field_wbddh_data_class",
     "field_wbddh_data_type",
-    "field_wbddh_kind_of_data",
-    "field_wbddh_mode_data_collection",
     "field_wbddh_languages_supported",
     # "field_wbddh_search_tags",
     "field_wbddh_update_frequency"
