@@ -28,7 +28,14 @@ add_new_dataset <- function(md_internal_id, md_token, master,
                                   master = master)
   # Format list
   temp <- map_md_to_ddh(temp)
+  
+  # Check if Microdata API returned enough information
+  if(is.null(temp$title) & is.null(temp$body)){
+    return("Microdata API didn't return Title or Description")
+  }
+  
   temp <- add_constant_metadata_dataset(temp)
+  
   # Add search_tags
   temp <- add_search_tags(metadata_list = temp,
                           id = md_internal_id,
@@ -46,6 +53,7 @@ add_new_dataset <- function(md_internal_id, md_token, master,
                                               ddh_fields = ddh_fields,
                                               lovs = lovs,
                                               root_url = root_url)
+
   # Push dataset to DDH
   resp_dat <- ddhconnect::create_dataset(body = json_dat,
                                          root_url = root_url,
