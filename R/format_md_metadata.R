@@ -30,7 +30,7 @@ format_md_metadata <- function(metadata_in,
 
   # Format text fields
   is.notnull = function(x)!is.null(x)
-  metadata_in[text_fields] <- purrr::map_if(metadata_in[text_fields], temp_fuc, format_text)
+  metadata_in[text_fields] <- purrr::map_if(metadata_in[text_fields], is.notnull, format_text)
 
   # Remove Null Values
   metadata_in[sapply(metadata_in, is.null)] <- NULL
