@@ -20,7 +20,6 @@ test_created_dataset <- function(dataset_metadata, metadata_list,
 
   safe_see_if(dataset_metadata$workbench_moderation$current$published, "1", "status")
   safe_see_if(dataset_metadata$title, metadata_list$title, "title")
-  safe_see_if(dataset_metadata$field_wbddh_dsttl_upi$und[[1]]$target_id, metadata_list$field_wbddh_dsttl_upi, "field_wbddh_dsttl_upi")
 
   machine_names_value <- c(
     "body",
@@ -68,7 +67,6 @@ test_created_dataset <- function(dataset_metadata, metadata_list,
     "field_wbddh_data_class",
     "field_wbddh_data_type",
     "field_wbddh_languages_supported",
-    # "field_wbddh_search_tags",
     "field_wbddh_update_frequency"
   )
 
