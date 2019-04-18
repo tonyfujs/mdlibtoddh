@@ -29,6 +29,7 @@ update_existing_dataset <- function(md_internal_id, md_token, master,
   # STEP 2: format raw metadata
   temp <- map_md_to_ddh(temp)
   temp <- add_constant_metadata_dataset(temp)
+
   # Add resource link
   temp <- add_link_to_resources(metadata_list = temp,
                                 md_internal_id = md_internal_id,
@@ -44,7 +45,9 @@ update_existing_dataset <- function(md_internal_id, md_token, master,
                                               lovs = lovs,
                                               root_url = root_url)
   # Push dataset to DDH
-  node_id <- master$ddh_nids[master$md_internal_id == md_internal_id]
+  # node_id <- master$ddh_nids[master$md_internal_id == md_internal_id]
+  # For STG
+  node_id <- master$ddh_nids[master$md_internal_id == md_internal_id][1]
   resp_dat <- ddhconnect::update_dataset(nid = node_id,
                                          body = json_dat,
                                          root_url = root_url,
@@ -65,12 +68,12 @@ update_existing_dataset <- function(md_internal_id, md_token, master,
                                                root_url = root_url,
                                                credentials = credentials)
   nid_res <- unlist(ddhconnect::get_resource_nids(metadata_dataset))
-  
+
   #Makesure resource is Microdata Landing Page
   if(length(nid_res) > 1){
     nid_res <- resource_check(as.list(nid_res))
   }
-  
+
   resp_res <- ddhconnect::update_resource(nid = nid_res,
                                           body = json_res,
                                           root_url = root_url,
