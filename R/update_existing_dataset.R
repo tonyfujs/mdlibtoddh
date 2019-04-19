@@ -45,9 +45,9 @@ update_existing_dataset <- function(md_internal_id, md_token, master,
                                               lovs = lovs,
                                               root_url = root_url)
   # Push dataset to DDH
-  # node_id <- master$ddh_nids[master$md_internal_id == md_internal_id]
+  node_id <- master$ddh_nids[master$md_internal_id == md_internal_id]
   # For STG
-  node_id <- master$ddh_nids[master$md_internal_id == md_internal_id][1]
+  # node_id <- master$ddh_nids[master$md_internal_id == md_internal_id][1]
   resp_dat <- ddhconnect::update_dataset(nid = node_id,
                                          body = json_dat,
                                          root_url = root_url,

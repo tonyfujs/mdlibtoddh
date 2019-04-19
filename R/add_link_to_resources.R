@@ -10,9 +10,9 @@
 
 add_link_to_resources <- function(metadata_list, md_internal_id, master) {
 
-  # data_class <- master[master$md_internal_id == md_internal_id, 'data_classification']
+  data_class <- master[master$md_internal_id == md_internal_id, 'data_classification']
   # For STG
-  data_class <- master[master$md_internal_id == md_internal_id,][1,'data_classification']
+  # data_class <- master[master$md_internal_id == md_internal_id,][1,'data_classification']
   assertthat::assert_that(length(data_class) == 1)
 
   # CHECK that input is correct
