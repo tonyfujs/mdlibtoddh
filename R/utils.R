@@ -213,7 +213,7 @@ pass_blank_values <- function(node_id, dataset_metadata, metadata_list, root_url
   # Filter out fields from DDH metadata
   dataset_metadata <- dataset_metadata[names(dataset_metadata) %in% machine_names_value]
 
-  # Filter out non-blank fields
+  # Create vector of outdated fields that are only present in DDH (i.e fields not present in Microdata anymore)
   to_pass <- c()
   for(i in seq_along(dataset_metadata)){
     if(!is_blank(dataset_metadata[i])){
@@ -223,13 +223,15 @@ pass_blank_values <- function(node_id, dataset_metadata, metadata_list, root_url
     }
   }
 
-  # Create JSON with blank values
-  json_blank <- ddhconnect::create_blank_json_body(values = to_pass,
-                                                   publication_status = "published",
-                                                   type = "dataset")
+  if(length(to_pass)>0){
+    # Create JSON with blank values
+    json_blank <- ddhconnect::create_blank_json_body(values = to_pass,
+                                                     publication_status = "published",
+                                                     type = "dataset")
 
-  # Update dataset with blank values
-  update_dataset(nid = node_id, body = json_blank,
-                 root_url = root_url,
-                 credentials = credentials)
+    # Update dataset with blank values
+    update_dataset(nid = node_id, body = json_blank,
+                   root_url = root_url,
+                   credentials = credentials)
+  }
 }
