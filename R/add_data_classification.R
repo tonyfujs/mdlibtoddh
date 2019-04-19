@@ -11,6 +11,8 @@
 add_data_classification <- function(metadata_list, md_internal_id, master) {
 
   master <- master[master$md_internal_id == md_internal_id, 'data_classification']
+  # # For STG
+  # master <- master[master$md_internal_id == md_internal_id,][1,'data_classification']
   assertthat::assert_that(length(master) == 1)
 
   # CHECK that input is correct
