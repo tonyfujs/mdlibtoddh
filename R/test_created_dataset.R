@@ -47,7 +47,16 @@ test_created_dataset <- function(dataset_metadata, metadata_list,
     "field_wbddh_universe",
     "field_wbddh_version_description",
     "field_wbddh_kind_of_data",
-    "field_wbddh_mode_data_collection"
+    "field_wbddh_mode_data_collection",
+    "field_wbddh_authority_name",
+    "field_wbddh_data_editing",
+    "field_wbddh_dstranslated_title",
+    "field_wbddh_note_data_collection",
+    "field_wbddh_other_acknowledgment",
+    "field_wbddh_other_forms_of_data",
+    "field_wbddh_other_processing",
+    "field_wbddh_aggregation_method",
+    "field_wbddh_version_notes"
   )
 
   sapply(machine_names_value, check_value,
