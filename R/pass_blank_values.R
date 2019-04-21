@@ -86,7 +86,7 @@ pass_blank_values <- function(node_id, dataset_metadata, metadata_list, root_url
                                                      type = "dataset")
 
     # Update dataset with blank values
-    update_dataset(nid = node_id, body = json_blank,
+    ddhconnect::update_dataset(nid = node_id, body = json_blank,
                    root_url = root_url,
                    credentials = credentials)
   }
