@@ -3,9 +3,10 @@
 #' Pass blank values for values which are not present in updated version of dataset
 #'
 #' @param node_id character: DDH node ID of the dataset to be updated
-#' @param credentials list: DDH API authentication token and cookie
-#' @param master dataframe: Master lookup table
+#' @param dataset_metadata character: The dataset metadata, returned from ddhconnect::get_metadata()
+#' @param metadata_list list: List of metatadata values
 #' @param root_url character: Root URL to use for the API (Staging or Production)
+#' @param credentials list: DDH API authentication token and cookie
 #'
 #' @return list
 

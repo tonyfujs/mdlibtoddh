@@ -6,6 +6,8 @@
 #' @param md_token character: Microdata API authentication token
 #' @param credentials list: DDH API authentication token and cookie
 #' @param master dataframe: Master lookup table
+#' @param ddh_fields dataframe: table of all the data catalog fields by node type
+#' @param lovs dataframe: lookup table of the data catalog tids and values
 #' @param root_url character: Root URL to use for the API (Staging or Production)
 #'
 #' @return character

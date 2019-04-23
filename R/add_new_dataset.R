@@ -6,6 +6,8 @@
 #' @param md_token character: Microdata API authentication token
 #' @param credentials list: DDH API authentication token and cookie
 #' @param master dataframe: Master lookup table, output of mdlibtoddh::get_ddh_records_status()
+#' @param ddh_fields dataframe: table of all the data catalog fields by node type
+#' @param lovs dataframe: lookup table of the data catalog tids and values
 #' @param root_url character: Root URL to use for the API (Staging or Production)
 #'
 #' @return character
@@ -28,14 +30,14 @@ add_new_dataset <- function(md_internal_id, md_token, master,
                                   master = master)
   # Format list
   temp <- map_md_to_ddh(temp)
-  
+
   # Check if Microdata API returned enough information
   if(is.null(temp$title) & is.null(temp$body)){
     return("Microdata API didn't return Title or Description")
   }
-  
+
   temp <- add_constant_metadata_dataset(temp)
-  
+
   # Add search_tags
   temp <- add_search_tags(metadata_list = temp,
                           id = md_internal_id,

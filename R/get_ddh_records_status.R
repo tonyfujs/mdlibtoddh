@@ -54,7 +54,7 @@ get_ddh_records_status <- function(mdlib_token, root_url = dkanr::get_url(),
   full_list$sync_status[full_list$md_refids != full_list$md_internal_refid] <- 'out of sync'
 
   # Identify duplicates
-  full_list$oldest_timestamp <- ave(full_list$ddh_created, full_list$md_internal_id, FUN = min)
+  full_list$oldest_timestamp <- stats::ave(full_list$ddh_created, full_list$md_internal_id, FUN = min)
   full_list$duplicate_status <- ifelse(full_list$ddh_created == full_list$oldest_timestamp, "original", "duplicate")
   full_list$oldest_timestamp <- NULL
 

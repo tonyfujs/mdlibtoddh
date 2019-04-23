@@ -16,6 +16,10 @@ add_new_dataset(md_internal_id, md_token, master,
 
 \item{master}{dataframe: Master lookup table, output of mdlibtoddh::get_ddh_records_status()}
 
+\item{ddh_fields}{dataframe: table of all the data catalog fields by node type}
+
+\item{lovs}{dataframe: lookup table of the data catalog tids and values}
+
 \item{root_url}{character: Root URL to use for the API (Staging or Production)}
 
 \item{credentials}{list: DDH API authentication token and cookie}
