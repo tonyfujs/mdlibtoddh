@@ -10,11 +10,13 @@ pass_blank_values(node_id, dataset_metadata, metadata_list, root_url,
 \arguments{
 \item{node_id}{character: DDH node ID of the dataset to be updated}
 
+\item{dataset_metadata}{character: The dataset metadata, returned from ddhconnect::get_metadata()}
+
+\item{metadata_list}{list: List of metatadata values}
+
 \item{root_url}{character: Root URL to use for the API (Staging or Production)}
 
 \item{credentials}{list: DDH API authentication token and cookie}
-
-\item{master}{dataframe: Master lookup table}
 }
 \value{
 list
