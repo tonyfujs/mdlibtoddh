@@ -50,6 +50,11 @@ add_new_dataset <- function(md_internal_id, md_token, master,
   # STEP 3: Create dataset
   # Create JSON dataset
   temp_dataset <- filter_dataset_fields(temp, ddh_fields)
+
+  #Filter out blank values
+  non_blank     <- sapply(temp_dataset, function(x){!is_blank(x)})
+  temp_dataset  <- temp_dataset[non_blank]
+
   json_dat <- ddhconnect::create_json_dataset(values = temp_dataset,
                                               publication_status = "published",
                                               ddh_fields = ddh_fields,
