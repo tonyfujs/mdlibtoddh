@@ -25,7 +25,6 @@ test_created_dataset <- function(dataset_metadata, metadata_list,
   machine_names_value <- c(
     "body",
     "field_ddh_harvest_sys_id",
-    "field_license_wbddh",
     "field_wbddh_access_authority",
     "field_wbddh_acronym",
     "field_wbddh_citation_text",

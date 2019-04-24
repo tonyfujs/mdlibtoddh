@@ -15,7 +15,6 @@ pass_blank_values <- function(node_id, dataset_metadata, metadata_list, root_url
   # List of non-mandatory values to check
   machine_names <- c(
     "field_ddh_harvest_sys_id",
-    "field_license_wbddh",
     "field_wbddh_access_authority",
     "field_wbddh_acronym",
     "field_wbddh_citation_text",
