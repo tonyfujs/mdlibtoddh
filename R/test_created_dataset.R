@@ -23,6 +23,12 @@ test_created_dataset <- function(dataset_metadata, metadata_list,
 
   # List of non-mandatory values to check
   machine_names_value <- c(
+    "field_wbddh_modified_date",
+    "field_wbddh_reference_id",
+    "field_wbddh_release_date",
+    "field_contact_email",
+    "field_ddh_external_contact_email",
+    "field_wbddh_ds_source",
     "body",
     "field_ddh_harvest_sys_id",
     "field_wbddh_access_authority",

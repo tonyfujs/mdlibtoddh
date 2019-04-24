@@ -14,6 +14,10 @@ pass_blank_values <- function(node_id, dataset_metadata, metadata_list, root_url
 
   # List of non-mandatory values to check
   machine_names <- c(
+    "field_wbddh_reference_id",
+    "field_wbddh_ds_source",
+    "field_contact_email",
+    "field_ddh_external_contact_email",
     "field_ddh_harvest_sys_id",
     "field_wbddh_access_authority",
     "field_wbddh_acronym",
