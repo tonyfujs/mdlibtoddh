@@ -70,15 +70,13 @@ flatten_md_metadata <- function(metadata_list,
   }
 
   # Handle field_wbddh_access_authority
-  if(!is.null(metadata_list$field_wbddh_access_authority)){
-    metadata_list$field_wbddh_access_authority <- paste(unlist(metadata_list$field_wbddh_access_authority), collapse = ', ')
-  }
+  metadata_list$field_wbddh_access_authority <- paste(unlist(metadata_list$field_wbddh_access_authority), collapse = ', ')
+
 
   # Handle field_wbddh_funding_name
-  if(!is.null(metadata_list$field_wbddh_funding_name)){
-    metadata_list$field_wbddh_funding_name <- purrr::map_chr(metadata_list$field_wbddh_funding_name, 'agency')
-    metadata_list$field_wbddh_funding_name <- paste(metadata_list$field_wbddh_funding_name, collapse = '; ')
-  }
+  metadata_list$field_wbddh_funding_name <- purrr::map_chr(metadata_list$field_wbddh_funding_name, 'agency')
+  metadata_list$field_wbddh_funding_name <- paste(metadata_list$field_wbddh_funding_name, collapse = '; ')
+
   # CHECK: List has been correctly flattened
   assertthat::assert_that(all(purrr::map_int(metadata_list, purrr::vec_depth) == 1),
                             msg = "Some elements of the list have not been flattened correctly")
