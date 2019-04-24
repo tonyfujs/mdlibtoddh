@@ -60,32 +60,39 @@ update_existing_dataset <- function(md_internal_id, md_token, master,
                                          root_url = root_url,
                                          credentials = credentials)
 
-  # STEP 4: Create resource
-  # Create JSON resource
-  # json_res <- create_json_resource(temp)
-  temp <- add_constant_metadata_resource(temp)
-  temp_resource <- filter_resource_fields(temp, ddh_fields)
-  json_res <- ddhconnect::create_json_resource(values = temp_resource,
-                                              publication_status = "published",
-                                              dataset_nid = resp_dat$nid,
-                                              ddh_fields = ddh_fields,
-                                              lovs = lovs,
-                                              root_url = root_url)
-  metadata_dataset <- ddhconnect::get_metadata(nid = node_id,
-                                               root_url = root_url,
-                                               credentials = credentials)
-  nid_res <- unlist(ddhconnect::get_resource_nids(metadata_dataset))
+  tryCatch({
 
-  #Makesure resource is Microdata Landing Page
-  if(length(nid_res) > 1){
-    nid_res <- resource_check(as.list(nid_res))
-  }
+    # STEP 4: Create resource
+    # Create JSON resource
+    # json_res <- create_json_resource(temp)
+    temp <- add_constant_metadata_resource(temp)
+    temp_resource <- filter_resource_fields(temp, ddh_fields)
+    json_res <- ddhconnect::create_json_resource(values = temp_resource,
+                                                 publication_status = "published",
+                                                 dataset_nid = resp_dat$nid,
+                                                 ddh_fields = ddh_fields,
+                                                 lovs = lovs,
+                                                 root_url = root_url)
+    metadata_dataset <- ddhconnect::get_metadata(nid = node_id,
+                                                 root_url = root_url,
+                                                 credentials = credentials)
+    nid_res <- unlist(ddhconnect::get_resource_nids(metadata_dataset))
 
-  resp_res <- ddhconnect::update_resource(nid = nid_res,
-                                          body = json_res,
-                                          root_url = root_url,
-                                          credentials = credentials)
+    #Makesure resource is Microdata Landing Page
+    if(length(nid_res) > 1){
+      nid_res <- resource_check(as.list(nid_res))
+    }
 
+    resp_res <- ddhconnect::update_resource(nid = nid_res,
+                                            body = json_res,
+                                            root_url = root_url,
+                                            credentials = credentials)
+
+  }, error = function(e){
+
+    return(paste("Error:",e,"; with creating resources for", resp_dat))
+
+  })
 
   # Account for blank values
   metadata_dataset <- pass_blank_values(node_id = node_id,
