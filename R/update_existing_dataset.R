@@ -87,25 +87,27 @@ update_existing_dataset <- function(md_internal_id, md_token, master,
                                             root_url = root_url,
                                             credentials = credentials)
 
+
   }, error = function(e){
 
     return(paste("Error:",e,"; with creating resources for", resp_dat))
 
+  }, finally = {
+
+    # Account for blank values
+    metadata_dataset <- pass_blank_values(node_id = node_id,
+                                          dataset_metadata = metadata_dataset,
+                                          metadata_list = temp_dataset,
+                                          root_url = root_url,
+                                          credentials = credentials)
+
+    test_created_dataset(dataset_metadata = metadata_dataset,
+                         metadata_list = temp_dataset,
+                         lovs = lovs,
+                         root_url = root_url,
+                         credentials = credentials)
+
+    return(resp_dat$uri)
+
   })
-
-  # Account for blank values
-  metadata_dataset <- pass_blank_values(node_id = node_id,
-                    dataset_metadata = metadata_dataset,
-                    metadata_list = temp_dataset,
-                    root_url = root_url,
-                    credentials = credentials)
-
-  test_created_dataset(dataset_metadata = metadata_dataset,
-                       metadata_list = temp_dataset,
-                       lovs = lovs,
-                       root_url = root_url,
-                       credentials = credentials)
-
-
-  return(resp_dat$uri)
 }

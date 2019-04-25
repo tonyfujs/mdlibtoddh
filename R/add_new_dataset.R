@@ -88,16 +88,17 @@ add_new_dataset <- function(md_internal_id, md_token, master,
 
     return(paste("Error:",e,"; with creating resources for", resp_dat))
 
+  }, finally = {
+
+    metadata_dataset <- ddhconnect::get_metadata(nid = resp_dat$nid,
+                                                 root_url = root_url,
+                                                 credentials = credentials)
+    test_created_dataset(dataset_metadata = metadata_dataset,
+                         metadata_list = temp_dataset,
+                         lovs = lovs,
+                         root_url = root_url,
+                         credentials = credentials)
+
+    return(resp_dat$uri)
   })
-
-  metadata_dataset <- ddhconnect::get_metadata(nid = resp_dat$nid,
-                                               root_url = root_url,
-                                               credentials = credentials)
-  test_created_dataset(dataset_metadata = metadata_dataset,
-                       metadata_list = temp_dataset,
-                       lovs = lovs,
-                       root_url = root_url,
-                       credentials = credentials)
-
-  return(resp_dat$uri)
 }
