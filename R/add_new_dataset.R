@@ -93,11 +93,13 @@ add_new_dataset <- function(md_internal_id, md_token, master,
                          root_url = root_url,
                          credentials = credentials)
 
-    return(resp_dat$uri)
+    return(cat(resp_dat$uri))
 
   }, error = function(e){
 
-    return(paste("Error:",e,"; with creating resources for", resp_dat$uri))
+    message <- paste("Error:",e,"; with creating resources for", resp_dat$uri)
+
+    return(cat(message))
 
     })
 }
