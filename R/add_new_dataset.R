@@ -97,7 +97,7 @@ add_new_dataset <- function(md_internal_id, md_token, master,
 
   }, error = function(e){
 
-    return(paste("Error:",e,"; with creating resources for", resp_dat))
+    return(paste("Error:",e,"; with creating resources for", resp_dat$uri))
 
     })
 }
