@@ -39,11 +39,11 @@ update_existing_dataset <- function(md_internal_id, md_token, master,
 
   # STEP 3: Create dataset
   # Create JSON dataset
-  # json_dat <- create_json_dataset(temp)
   temp_dataset <- filter_dataset_fields(temp, ddh_fields)
 
   #Filter out blank values
-  non_blank     <- sapply(temp_dataset, function(x){!is_blank(x)})
+  # non_blank     <- sapply(temp_dataset, function(x){!is_blank(x)})
+  non_blank     <- vapply(temp_dataset, function(x){!is_blank(x)})
   temp_dataset  <- temp_dataset[non_blank]
 
   json_dat <- ddhconnect::create_json_dataset(values = temp_dataset,
@@ -53,8 +53,8 @@ update_existing_dataset <- function(md_internal_id, md_token, master,
                                               root_url = root_url)
   # Push dataset to DDH
   node_id <- master$ddh_nids[master$md_internal_id == md_internal_id]
+
   # For STG
-  # node_id <- master$ddh_nids[master$md_internal_id == md_internal_id][1]
   resp_dat <- ddhconnect::update_dataset(nid = node_id,
                                          body = json_dat,
                                          root_url = root_url,
@@ -64,7 +64,6 @@ update_existing_dataset <- function(md_internal_id, md_token, master,
 
     # STEP 4: Create resource
     # Create JSON resource
-    # json_res <- create_json_resource(temp)
     temp <- add_constant_metadata_resource(temp)
     temp_resource <- filter_resource_fields(temp, ddh_fields)
     json_res <- ddhconnect::create_json_resource(values = temp_resource,
