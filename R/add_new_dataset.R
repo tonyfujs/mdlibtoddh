@@ -84,12 +84,6 @@ add_new_dataset <- function(md_internal_id, md_token, master,
                                             body = json_res,
                                             root_url = root_url)
 
-  }, error = function(e){
-
-    return(paste("Error:",e,"; with creating resources for", resp_dat))
-
-  }, finally = {
-
     metadata_dataset <- ddhconnect::get_metadata(nid = resp_dat$nid,
                                                  root_url = root_url,
                                                  credentials = credentials)
@@ -100,5 +94,10 @@ add_new_dataset <- function(md_internal_id, md_token, master,
                          credentials = credentials)
 
     return(resp_dat$uri)
-  })
+
+  }, error = function(e){
+
+    return(paste("Error:",e,"; with creating resources for", resp_dat))
+
+    })
 }

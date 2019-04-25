@@ -61,7 +61,6 @@ update_existing_dataset <- function(md_internal_id, md_token, master,
                                          credentials = credentials)
 
   tryCatch({
-
     # STEP 4: Create resource
     # Create JSON resource
     temp <- add_constant_metadata_resource(temp)
@@ -87,13 +86,6 @@ update_existing_dataset <- function(md_internal_id, md_token, master,
                                             root_url = root_url,
                                             credentials = credentials)
 
-
-  }, error = function(e){
-
-    return(paste("Error:",e,"; with creating resources for", resp_dat))
-
-  }, finally = {
-
     # Account for blank values
     metadata_dataset <- pass_blank_values(node_id = node_id,
                                           dataset_metadata = metadata_dataset,
@@ -108,6 +100,10 @@ update_existing_dataset <- function(md_internal_id, md_token, master,
                          credentials = credentials)
 
     return(resp_dat$uri)
+
+  }, error = function(e){
+
+    return(paste("Error:",e,"; with creating resources for", resp_dat$uri))
 
   })
 }
