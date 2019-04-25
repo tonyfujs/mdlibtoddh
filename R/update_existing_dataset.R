@@ -42,8 +42,7 @@ update_existing_dataset <- function(md_internal_id, md_token, master,
   temp_dataset <- filter_dataset_fields(temp, ddh_fields)
 
   #Filter out blank values
-  # non_blank     <- sapply(temp_dataset, function(x){!is_blank(x)})
-  non_blank     <- vapply(temp_dataset, function(x){!is_blank(x)})
+  non_blank     <- sapply(temp_dataset, function(x){!is_blank(x)})
   temp_dataset  <- temp_dataset[non_blank]
 
   json_dat <- ddhconnect::create_json_dataset(values = temp_dataset,
@@ -65,6 +64,7 @@ update_existing_dataset <- function(md_internal_id, md_token, master,
     # Create JSON resource
     temp <- add_constant_metadata_resource(temp)
     temp_resource <- filter_resource_fields(temp, ddh_fields)
+
     json_res <- ddhconnect::create_json_resource(values = temp_resource,
                                                  publication_status = "published",
                                                  dataset_nid = resp_dat$nid,
