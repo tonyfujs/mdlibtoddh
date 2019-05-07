@@ -66,28 +66,40 @@ add_new_dataset <- function(md_internal_id, md_token, master,
                                          root_url = root_url,
                                          credentials = credentials)
 
-  # STEP 4: Create resource
-  # Create JSON resource
-  temp <- add_constant_metadata_resource(temp)
-  temp_resource <- filter_resource_fields(temp, ddh_fields)
-  json_res <- ddhconnect::create_json_resource(values = temp_resource,
-                                               publication_status = "published",
-                                               dataset_nid = resp_dat$nid,
-                                               ddh_fields = ddh_fields,
-                                               lovs = lovs,
-                                               root_url = root_url)
-  resp_res <- ddhconnect::create_resource(credentials = credentials,
-                                          body = json_res,
-                                          root_url = root_url)
 
-  metadata_dataset <- ddhconnect::get_metadata(nid = resp_dat$nid,
-                                               root_url = root_url,
-                                               credentials = credentials)
-  test_created_dataset(dataset_metadata = metadata_dataset,
-                       metadata_list = temp_dataset,
-                       lovs = lovs,
-                       root_url = root_url,
-                       credentials = credentials)
+  tryCatch({
 
-  return(resp_dat$uri)
+    # STEP 4: Create resource
+    # Create JSON resource
+    temp          <- add_constant_metadata_resource(temp)
+    temp_resource <- filter_resource_fields(temp, ddh_fields)
+
+    json_res      <- ddhconnect::create_json_resource(values = temp_resource,
+                                                 publication_status = "published",
+                                                 dataset_nid = resp_dat$nid,
+                                                 ddh_fields = ddh_fields,
+                                                 lovs = lovs,
+                                                 root_url = root_url)
+    resp_res <- ddhconnect::create_resource(credentials = credentials,
+                                            body = json_res,
+                                            root_url = root_url)
+
+    metadata_dataset <- ddhconnect::get_metadata(nid = resp_dat$nid,
+                                                 root_url = root_url,
+                                                 credentials = credentials)
+    test_created_dataset(dataset_metadata = metadata_dataset,
+                         metadata_list = temp_dataset,
+                         lovs = lovs,
+                         root_url = root_url,
+                         credentials = credentials)
+
+    return(resp_dat$uri)
+
+  }, error = function(e){
+
+    message <- paste("Error:",e,"; with creating resources for", resp_dat$uri)
+
+    return(message)
+
+    })
 }
