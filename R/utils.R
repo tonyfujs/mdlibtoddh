@@ -54,6 +54,7 @@ are_valid_lovs <- function(values, accepted_values) {
 
 format_text <- function(text) {
   text <- stringr::str_replace_all(text, pattern = "\r?\n|\r", replacement = ' ')
+  text <- stringr::str_replace_all(text, pattern = '>|<', replacement = ' ')
   text <- stringr::str_replace_all(text, pattern = ' +', replacement = ' ')
   text <- stringr::str_trim(text)
 
