@@ -51,7 +51,6 @@ responseRate,sampling,response rate,codeBook/stdyDscr/method/anlyInfo/respRate
 sampProc,sampling,sampling procedure,codeBook/stdyDscr/method/dataColl/sampProc
 searchTags,,,
 seriesInfo,,series information,codeBook/stdyDscr/citation/serStmt/serInfo
-source,data collection,data sources,codeBook/stdyDscr/method/dataColl/sources/dataSrc
 startDate,data collection,collection_dates,codeBook/stdyDscr/stdyInfo/sumDscr/collDate
 status,,,
 studyType,identification,study type,codeBook/stdyDscr/citation/serStmt/serName

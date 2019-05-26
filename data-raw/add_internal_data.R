@@ -49,7 +49,9 @@ taxonomy_remove <-
     "field_frequency",
     "status",
     "field_granularity_list",
-    "field_wbddh_working_unit_user"
+    "field_wbddh_working_unit_user",
+    "field_collection_field",
+    "field_wbddh_ds_source"
   )
 
 taxonomy_machine_names <- taxonomy_machine_names[!taxonomy_machine_names %in% taxonomy_remove]
