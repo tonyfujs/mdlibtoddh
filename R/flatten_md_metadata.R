@@ -13,7 +13,9 @@
 
 flatten_md_metadata <- function(metadata_list,
                                 multiple_fields = c("field_wbddh_primary_investigator",
-                                                    "field_wbddh_authority_name"),
+                                                    "field_wbddh_authority_name",
+                                                    "field_wbddh_publisher_name",
+                                                    "field_wbddh_other_acknowledgment"),
                                 email_fields = c("field_contact_email"),
                                 name_fields = c('field_wbddh_country',
                                                 'field_wbddh_region',
