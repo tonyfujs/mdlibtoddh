@@ -31,6 +31,6 @@ citationText,field_wbddh_citation_text,study_desc$data_access$dataset_use$cit_re
 primaryInvName,field_wbddh_primary_investigator,study_desc$authoring_entity
 fundingName,field_wbddh_funding_name,study_desc$production_statement$funding_agencies
 publisher,field_wbddh_publisher_name,doc_desc$producers
-otherAckName,NA,study_desc$oth_id$name
+otherAckName,NA,study_desc$oth_id
 md_referenceID,field_wbddh_reference_id,doc_desc$idno
 searchTags,NA,NA
