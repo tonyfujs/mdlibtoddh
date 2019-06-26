@@ -56,7 +56,7 @@ status,,,
 studyType,identification,study type,study_desc$series_statement$series_name
 subscription,,,
 subtitle,identification,subtitle,study_desc$title_statement$sub_title
-supervision,data collection,supervision,study_desc$method$data_collection$act_min
+supervision,data collection,supervision,survey_mtdt$study_desc$method$act_min
 termsofUse,,,data_access_type
 timePeriods,data collection,time periods,
 title,identification,title,study_desc$title_statement$title
@@ -64,7 +64,7 @@ topic,scope,topic,
 transTitle,identification,translated title,study_desc$title_statement$translated_title
 ttlUPI,,,
 UID,,,
-unitAnalysis,overview,unit of analysis,study_desc$method$data_collection$sample_frame$frame_unit$unit_type
+unitAnalysis,overview,unit of analysis,study_desc$method$data_collection$sampling_procedure$sample_frame$frame_unit$unit_type
 universe,coverage,universe,study_desc$study_info$universe
 verDescript,version,version,doc_desc$version_statement$version
 verNotes,version,version_notes,doc_desc$version_statement$version_notes

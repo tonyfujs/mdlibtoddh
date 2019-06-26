@@ -154,7 +154,7 @@ filter_resource_fields <- function(metadata_temp,
   return(metadata_temp)
 }
 
-#Makesure resource is Microdata Landing Page
+# Makesure resource is Microdata Landing Page
 resource_check <- function(nids,
                            resource_type = resource_meta$field_wbddh_resource_type$und[[1]]$tid,
                            resource_title = resource_meta$title) {
@@ -166,4 +166,30 @@ resource_check <- function(nids,
       return(nid)
     }
   }
+}
+
+
+# Maping Microdata JSON
+find_metadata_value <- function(microdata_json, metadata){
+
+  # Split JSON
+  microdata_json <- strsplit(microdata_json, "[$]")[[1]]
+
+  if(length(microdata_json) == 1){
+    output <- metadata[[microdata_json[1]]]
+  }
+  else if(length(microdata_json) == 2){
+    output <- metadata[[microdata_json[1]]][[microdata_json[2]]]
+  }
+  else if(length(microdata_json) == 3){
+    output <- metadata[[microdata_json[1]]][[microdata_json[2]]][[microdata_json[3]]]
+  }
+  else if(length(microdata_json) == 4){
+    output <- metadata[[microdata_json[1]]][[microdata_json[2]]][[microdata_json[3]]][[microdata_json[4]]]
+  }
+  else {
+    output <- metadata[[microdata_json[1]]][[microdata_json[2]]][[microdata_json[3]]][[microdata_json[4]]][[microdata_json[5]]][[microdata_json[6]]][[microdata_json[7]]]
+  }
+
+  return(output)
 }

@@ -22,10 +22,12 @@ extract_md_metadata <- function(metadata_in,
     mdlib_json_key <- mdlib_json_key[!is.na(mdlib_json_key)]
     if (length(mdlib_json_key) == 0) {next}
 
-    if (is.null(metadata_in[[mdlib_json_key]]) & machine_names[i] %in% ddhconnect:::mandatory_text_fields) {
+    metadata_value <- find_metadata_value(mdlib_json_key, metadata_in)
+
+    if (is.null(metadata_value) & machine_names[i] %in% ddhconnect:::mandatory_text_fields) {
       metadata_out[[machine_names[i]]] <- "Not specified"
     } else {
-      metadata_out[[machine_names[i]]] <- metadata_in[[mdlib_json_key]]
+      metadata_out[[machine_names[i]]] <- metadata_value
     }
 
     if (!is.null(metadata_out[[machine_names[i]]]) & machine_names[i] %in% mdlibtoddh:::microdata_date_fields) {
