@@ -188,7 +188,7 @@ find_metadata_value <- function(microdata_json, metadata){
     output <- metadata[[microdata_json[1]]][[microdata_json[2]]][[microdata_json[3]]][[microdata_json[4]]]
   }
   else {
-    output <- metadata[[microdata_json[1]]][[microdata_json[2]]][[microdata_json[3]]][[microdata_json[4]]][[microdata_json[5]]][[microdata_json[6]]][[microdata_json[7]]]
+    output <- metadata[[microdata_json[1]]][[microdata_json[2]]][[microdata_json[3]]][[microdata_json[4]]][[microdata_json[5]]][[microdata_json[6]]]
   }
 
   return(output)

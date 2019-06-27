@@ -114,7 +114,9 @@ lookup <- lookup %>%
   select(field_label:microdata_library,
          mdlib_section = microdatalib_section,
          mdlib_field = microdatalib_field,
-         mdlib_json_field = json_fields)
+         mdlib_json_field = json_fields,
+         is_array = is_array,
+         key = Key)
 
 lookup$field_lovs[lookup$field_lovs == 'PeopleSoft'] <- NA
 

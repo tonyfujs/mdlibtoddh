@@ -15,6 +15,12 @@ extract_md_metadata <- function(metadata_in,
                                 lookup = mdlibtoddh::lookup) {
 
   machine_names <- sort(names(metadata_out))
+
+  # Filter out machine names that aren't arrays from Microdata API
+  non_array_machine_names <- unique(lookup[lookup$is_array != TRUE, "ddh_machine_name"])
+  machine_names <- machine_names[machine_names %in% non_array_machine_names]
+
+
   keep <- metadata_in[names(metadata_in) %in% machine_names]
 
   for (i in seq_along(machine_names)) {
