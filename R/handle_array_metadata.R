@@ -27,16 +27,34 @@ handle_array_metadata <- function(metadata_in,
     
     metadata_value <- find_metadata_value(mdlib_json_key, metadata_in)
     
-    if (is.null(metadata_value) & machine_names[i] %in% ddhconnect:::mandatory_text_fields) {
+      if (is.null(metadata_value) & machine_names[i] %in% ddhconnect:::mandatory_text_fields) {
       metadata_out[[machine_names[i]]] <- "Not specified"
     } else if (!is.null(metadata_value)){
-      key <- unique(lookup$key[lookup$ddh_machine_name == machine_names[i]])[[1]]
       
-      metadata_value <- unlist(lapply(metadata_value, function(x){
-        x[[key]]
-      }))
-      
-      metadata_out[[machine_names[i]]] <- paste(metadata_value, collapse = ", ")
+      # Handle for single Key
+      if(is.na(unique(lookup$key_2[lookup$ddh_machine_name == machine_names[i]])[[1]])){
+        key <- unique(lookup$key_1[lookup$ddh_machine_name == machine_names[i]])[[1]]
+        
+        metadata_value <- unlist(lapply(metadata_value, function(x){
+          x[[key]]
+        }))
+        
+        metadata_value <- paste(metadata_value, collapse = ", ")
+        metadata_out[[machine_names[i]]] <- trimws(stringr::str_replace_all(metadata_value, pattern = '^; ?|;$|; $', replacement = ''))
+      } else {
+        
+        # Handle for multiple keys
+        keys <- unique(lookup[lookup$ddh_machine_name == machine_names[i], c("key_1", "key_2")])
+        keys <- keys[!is.na(keys)]
+        
+        metadata_value <- unlist(lapply(metadata_value, function(x)
+          {
+            quick_map(input = x, keys = keys)
+          }))
+        
+        metadata_value <- paste(metadata_value, collapse = ", ")
+        metadata_out[[machine_names[i]]] <- trimws(stringr::str_replace_all(metadata_value, pattern = '^; ?|;$|; $', replacement = ''))
+      }
     }
     
     if (!is.null(metadata_out[[machine_names[i]]]) & machine_names[i] %in% mdlibtoddh:::microdata_date_fields) {
@@ -45,3 +63,4 @@ handle_array_metadata <- function(metadata_in,
   }
   metadata_out <- metadata_out[!purrr::map_lgl(metadata_out, is.null)]
 }
+

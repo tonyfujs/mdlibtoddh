@@ -193,3 +193,11 @@ find_metadata_value <- function(microdata_json, metadata){
 
   return(output)
 }
+
+quick_map <- function(input, keys){
+  output <- unlist(lapply(keys, function(x){
+    input[[x]]
+  }))
+
+  return(paste(output, collapse = "; "))
+}

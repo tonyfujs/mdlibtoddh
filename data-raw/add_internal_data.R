@@ -116,7 +116,8 @@ lookup <- lookup %>%
          mdlib_field = microdatalib_field,
          mdlib_json_field = json_fields,
          is_array = is_array,
-         key = Key)
+         key_1 = Key_1,
+         key_2 = Key_2)
 
 lookup$field_lovs[lookup$field_lovs == 'PeopleSoft'] <- NA
 
