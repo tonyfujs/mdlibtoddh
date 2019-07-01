@@ -46,7 +46,16 @@ handle_array_metadata <- function(metadata_in,
           metadata_value <- stringr::str_replace_all(metadata_value, pattern = ' ', replacement = '')
           metadata_value <- stringr::str_trim(metadata_value, side = 'both')
           metadata_out[[machine_names[i]]] <- stringr::str_replace_all(metadata_value, pattern = ';', replacement = '; ')
-        } else{
+        }
+
+        else if(machine_names[i] == "field_wbddh_start_date"){
+          metadata_out[[machine_names[i]]]  <- expand_date(min(metadata_value))
+        }
+
+        else if(machine_names[i] == "field_wbddh_end_date"){
+          metadata_out[[machine_names[i]]]  <- expand_date(max(metadata_value))
+        }
+        else{
           metadata_value <- paste(metadata_value, collapse = ", ")
           metadata_out[[machine_names[i]]] <- trimws(stringr::str_replace_all(metadata_value, pattern = '^; ?|;$|; $', replacement = ''))
         }
