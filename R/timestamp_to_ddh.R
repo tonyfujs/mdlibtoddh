@@ -17,6 +17,6 @@ timestamp_to_ddhdate <- function(time_stamp, origin = "1970-01-01") {
 
   date <- as.POSIXct(time_stamp, origin = origin, tz = "")
   date <- strftime(date, format = "%Y-%m-%d %H:%M:%S", tz = "")
-  
+
   return(date)
 }
