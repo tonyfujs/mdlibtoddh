@@ -29,7 +29,8 @@ get_ddh_records_status <- function(mdlib_token, root_url = dkanr::get_url(),
   md_list$data_classification <- 'official'
   md_list$data_classification[md_list$md_internal_refid %in% md_list_public$md_external_refid] <- 'public'
 
-  # Format
+  # Format date
+  md_list$md_internal_updated <- as.numeric(lubridate::ymd_hms(md_list$md_internal_updated))
 
   # Combine datasets
   full_list <- dplyr::full_join(ddh_list, md_list, by = 'md_internal_id')
