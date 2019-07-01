@@ -29,7 +29,8 @@ handle_array_metadata <- function(metadata_in,
 
       if (is.null(metadata_value) & machine_names[i] %in% ddhconnect:::mandatory_text_fields) {
       metadata_out[[machine_names[i]]] <- "Not specified"
-    } else if (!is.null(metadata_value)){
+    }
+    else if (!is.null(metadata_value)){
 
       # Handle for single Key
       if(is.na(unique(lookup$key_2[lookup$ddh_machine_name == machine_names[i]])[[1]])){
@@ -74,10 +75,6 @@ handle_array_metadata <- function(metadata_in,
         metadata_value <- paste(metadata_value, collapse = ", ")
         metadata_out[[machine_names[i]]] <- trimws(stringr::str_replace_all(metadata_value, pattern = '^; ?|;$|; $', replacement = ''))
       }
-    }
-
-    if (!is.null(metadata_out[[machine_names[i]]]) & machine_names[i] %in% mdlibtoddh:::microdata_date_fields) {
-      metadata_out[[machine_names[i]]] <- expand_date(metadata_out[[machine_names[i]]])
     }
   }
   metadata_out <- metadata_out[!purrr::map_lgl(metadata_out, is.null)]
