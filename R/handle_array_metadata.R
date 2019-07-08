@@ -43,7 +43,7 @@ handle_array_metadata <- function(metadata_in,
         # Handle Email fields
         if(machine_names[i] == "field_contact_email"){
           metadata_value <- paste(metadata_value, collapse = "; ")
-          metadata_value <- stringr::str_replace_all(metadata_value, pattern = '^; ?|;$|;| $|\\n', replacement = '')
+          metadata_value <- stringr::str_replace_all(metadata_value, pattern = '^; ?|;$|\\n', replacement = '')
           metadata_value <- stringr::str_replace_all(metadata_value, pattern = ' ', replacement = '')
           metadata_value <- stringr::str_trim(metadata_value, side = 'both')
           metadata_out[[machine_names[i]]] <- stringr::str_replace_all(metadata_value, pattern = ';', replacement = '; ')
@@ -58,7 +58,7 @@ handle_array_metadata <- function(metadata_in,
         }
         else{
           metadata_value <- paste(metadata_value, collapse = ", ")
-          metadata_out[[machine_names[i]]] <- trimws(stringr::str_replace_all(metadata_value, pattern = '^; ?|;$|;| $|\\n', replacement = ''))
+          metadata_out[[machine_names[i]]] <- trimws(stringr::str_replace_all(metadata_value, pattern = '^; ?|;$|\\n', replacement = ''))
         }
 
       } else {
@@ -73,7 +73,7 @@ handle_array_metadata <- function(metadata_in,
           }))
 
         metadata_value <- paste(metadata_value, collapse = ", ")
-        metadata_out[[machine_names[i]]] <- trimws(stringr::str_replace_all(metadata_value, pattern = '^; ?|;$|;| $|\\n', replacement = ''))
+        metadata_out[[machine_names[i]]] <- trimws(stringr::str_replace_all(metadata_value, pattern = '^; ?|;$|\\n', replacement = ''))
       }
     }
   }
