@@ -35,18 +35,18 @@ get_ddh_records_status <- function(mdlib_token, root_url = dkanr::get_url(),
   # md_list$data_classification[md_list$md_internal_refid %in% md_list_public$md_external_refid] <- 'public'
 
   # Format date
-  md_list$md_internal_updated <- as.numeric(lubridate::ymd_hms(md_list$md_internal_updated))
+  md_list$md_updated <- as.numeric(lubridate::ymd_hms(md_list$md_updated))
 
   # Combine datasets
   full_list <- dplyr::full_join(ddh_list, md_list, by = 'md_internal_id')
   full_list$status <- NA
   full_list$status[is.na(full_list$ddh_nids)] <- 'new'
-  full_list$status[!is.na(full_list$ddh_nids) & !is.na(full_list$md_internal_updated)] <- 'current'
-  full_list$status[!is.na(full_list$ddh_nids) & is.na(full_list$md_internal_updated)] <- 'old'
+  full_list$status[!is.na(full_list$ddh_nids) & !is.na(full_list$md_updated)] <- 'current'
+  full_list$status[!is.na(full_list$ddh_nids) & is.na(full_list$md_updated)] <- 'old'
   full_list <- dplyr::left_join(full_list, md_list_public, by = c('md_internal_refid' = 'md_external_refid'))
 
   # Identify Current / New / Old datasets based on timestamps
-  full_list$time_diff <- abs(full_list$md_internal_updated - full_list$ddh_updated) - 14400
+  full_list$time_diff <- abs(full_list$md_updated - full_list$ddh_updated) - 14400
   full_list$sync_status <- NA
   full_list$sync_status[full_list$status == 'current' & full_list$time_diff <= 3600] <- 'in sync'
   full_list$sync_status[full_list$status == 'current' & full_list$time_diff > 3600] <- 'out of sync'
