@@ -32,7 +32,7 @@ extract_md_metadata <- function(metadata_in,
     }
 
     else if(!is.null(metadata_value)) {
-      metadata_out[[machine_names[i]]] <- metadata_value
+      metadata_out[[machine_names[i]]] <- trimws(stringr::str_replace_all(metadata_value, pattern = '^; ?|;$|;| $|\\n', replacement = ''))
     }
 
     if (!is.null(metadata_out[[machine_names[i]]]) & machine_names[i] %in% mdlibtoddh:::microdata_date_fields) {
