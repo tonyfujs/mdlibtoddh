@@ -18,16 +18,21 @@ get_ddh_records_status <- function(mdlib_token, root_url = dkanr::get_url(),
   ddh_list$ddh_updated <- as.numeric(lubridate::ymd_hms(ddh_list$ddh_updated))
   ddh_list$ddh <- 'ddh'
 
-  # mdlib
-  md_list <- get_md_datasets_list(token = Sys.getenv('mdlib_token'))
-  md_list$md_internal <- 'md_internal'
+  # TODO: REVERT BACK WHEN MICRODATA API IS FIXED
+  # TEMPORARY FIX
+  md_list <- get_md_public_datasets_list(token = Sys.getenv('mdlib_token'))
+  md_list$data_classification <- 'public'
 
-  # md external
-  md_list_public <- get_md_public_datasets_list(token = Sys.getenv('mdlib_token'))
+  # # mdlib
+  # md_list <- get_md_datasets_list(token = Sys.getenv('mdlib_token'))
+  # md_list$md_internal <- 'md_internal'
 
-  # Identidy Official / Public microdata records
-  md_list$data_classification <- 'official'
-  md_list$data_classification[md_list$md_internal_refid %in% md_list_public$md_external_refid] <- 'public'
+  # # md external
+  # md_list_public <- get_md_public_datasets_list(token = Sys.getenv('mdlib_token'))
+  #
+  # # Identidy Official / Public microdata records
+  # md_list$data_classification <- 'official'
+  # md_list$data_classification[md_list$md_internal_refid %in% md_list_public$md_external_refid] <- 'public'
 
   # Format date
   md_list$md_internal_updated <- as.numeric(lubridate::ymd_hms(md_list$md_internal_updated))
