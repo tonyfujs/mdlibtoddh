@@ -18,26 +18,18 @@ get_ddh_records_status <- function(mdlib_token, root_url = dkanr::get_url(),
   ddh_list$ddh_updated <- as.numeric(lubridate::ymd_hms(ddh_list$ddh_updated))
   ddh_list$ddh <- 'ddh'
 
-  # TODO: REVERT BACK WHEN MICRODATA API IS FIXED
-  # TEMPORARY FIX
-  md_list <- get_md_public_datasets_list(token = Sys.getenv('mdlib_token'))
-  md_list$data_classification <- 'public'
+  # mdlib
+  md_list <- get_md_datasets_list(token = Sys.getenv('mdlib_token'))
   md_list$md_internal_updated <- as.numeric(lubridate::ymd_hms(md_list$md_internal_updated))
-  # md_list$md_external_changed <- as.numeric(lubridate::ymd_hms(md_list$md_external_changed))
-
-  # # mdlib
-  # md_list <- get_md_datasets_list(token = Sys.getenv('mdlib_token'))
-  # md_list$md_internal <- 'md_internal'
+  md_list$md_internal <- 'md_internal'
 
   # # md external
-  # md_list_public <- get_md_public_datasets_list(token = Sys.getenv('mdlib_token'))
-  #
-  # # Identidy Official / Public microdata records
-  # md_list$data_classification <- 'official'
-  # md_list$data_classification[md_list$md_internal_refid %in% md_list_public$md_external_refid] <- 'public'
+  md_list <- get_md_public_datasets_list(token = Sys.getenv('mdlib_token'))
+  md_list$md_external_changed <- as.numeric(lubridate::ymd_hms(md_list$md_external_changed))
 
-  # Format date
-  # md_list$md_internal_updated <- as.numeric(lubridate::ymd_hms(md_list$md_internal_updated))
+  # Identidy Official / Public microdata records
+  md_list$data_classification <- 'official'
+  md_list$data_classification[md_list$md_internal_refid %in% md_list_public$md_external_refid] <- 'public'
 
   # Combine datasets
   full_list <- dplyr::full_join(ddh_list, md_list, by = 'md_internal_id')
@@ -45,8 +37,7 @@ get_ddh_records_status <- function(mdlib_token, root_url = dkanr::get_url(),
   full_list$status[is.na(full_list$ddh_nids)] <- 'new'
   full_list$status[!is.na(full_list$ddh_nids) & !is.na(full_list$md_internal_updated)] <- 'current'
   full_list$status[!is.na(full_list$ddh_nids) & is.na(full_list$md_internal_updated)] <- 'old'
-  # TODO: Have to revert back
-  # full_list <- dplyr::left_join(full_list, md_list_public, by = c('md_internal_refid' = 'md_external_refid'))
+  full_list <- dplyr::left_join(full_list, md_list_public, by = c('md_internal_refid' = 'md_external_refid'))
 
   # Identify Current / New / Old datasets based on timestamps
   full_list$time_diff <- abs(full_list$md_internal_updated - full_list$ddh_updated) - 14400
