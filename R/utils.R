@@ -65,6 +65,10 @@ clean_date <- function(dt) {
 
   dt <- gsub("T", " ", dt)
 
+  if(is_year(dt)) {
+    dt <- paste(dt, "01", "01", sep="-")
+  }
+
   if(nchar(dt) == 4){
     dt <- gsub("FY", "20", dt)
   }
