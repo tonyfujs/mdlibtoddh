@@ -62,6 +62,9 @@ format_text <- function(text) {
 }
 
 clean_date <- function(dt) {
+
+  dt <- gsub("T", " ", dt)
+
   if(nchar(dt) == 4){
     dt <- gsub("FY", "20", dt)
   }
@@ -71,8 +74,6 @@ clean_date <- function(dt) {
   if(suppressWarnings(is_year(dt))) {
     dt <- paste(dt, "01", "01", sep="-")
   }
-
-  dt <- gsub("T", " ", dt)
 
   return(dt)
 }
