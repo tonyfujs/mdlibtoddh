@@ -8,8 +8,9 @@
 
 get_md_datasets_list <- function(token) {
   resp <- mdlibconnect::get_survey_list(token = token)
-  md_internal_id <- purrr::map_chr(resp, 'id')
-  md_internal_refid <- purrr::map_chr(resp, "idno")
+
+  md_internal_id      <- purrr::map_chr(resp, 'id')
+  md_internal_refid   <- purrr::map_chr(resp, "idno")
   md_internal_updated <- as.numeric(purrr::map_chr(resp, 'changed'))
 
   # Clean date format

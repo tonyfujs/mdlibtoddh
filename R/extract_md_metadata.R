@@ -18,7 +18,7 @@ extract_md_metadata <- function(metadata_in,
 
   # Filter out machine names that aren't arrays from Microdata API
   non_array_machine_names <- unique(lookup[lookup$is_array == FALSE | is.na(lookup$is_array) == TRUE, "ddh_machine_name"])
-  machine_names <- machine_names[machine_names %in% non_array_machine_names]
+  machine_names           <- machine_names[machine_names %in% non_array_machine_names]
 
   for (i in seq_along(machine_names)) {
     mdlib_json_key <- unique(lookup$mdlib_json_field[lookup$ddh_machine_name == machine_names[i]])

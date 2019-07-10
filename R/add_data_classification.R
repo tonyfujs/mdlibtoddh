@@ -18,7 +18,6 @@ add_data_classification <- function(metadata_list, md_internal_id, master) {
   # Add correct data classification
   if (master == 'public') {
     metadata_list$field_wbddh_data_class <- 'Public'
-    # metadata_list$field_exception_s_ <- ''
     return(metadata_list)
   } else if (master == 'official') {
     metadata_list$field_wbddh_data_class <- 'Official Use Only'
