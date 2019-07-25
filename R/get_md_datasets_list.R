@@ -11,7 +11,7 @@ get_md_datasets_list <- function(token) {
 
   md_internal_id      <- purrr::map_chr(resp, 'id')
   md_internal_refid   <- purrr::map_chr(resp, "idno")
-  md_internal_updated <- as.numeric(purrr::map_chr(resp, 'changed'))
+  md_internal_updated <- purrr::map_chr(resp, 'changed')
 
   # Clean date format
   md_internal_updated <- purrr::map_chr(md_internal_updated, clean_date)
