@@ -24,8 +24,8 @@ get_ddh_records_status <- function(mdlib_token, root_url = dkanr::get_url(),
   md_list$md_internal <- 'md_internal'
 
   # # md external
-  md_list <- get_md_public_datasets_list(token = Sys.getenv('mdlib_token'))
-  md_list$md_external_changed <- as.numeric(lubridate::ymd_hms(md_list$md_external_changed))
+  md_list_public <- get_md_public_datasets_list(token = Sys.getenv('mdlib_token'))
+  md_list_public$md_external_changed <- as.numeric(lubridate::ymd_hms(md_list$md_external_changed))
 
   # Identidy Official / Public microdata records
   md_list$data_classification <- 'official'
