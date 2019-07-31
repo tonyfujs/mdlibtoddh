@@ -210,6 +210,10 @@ find_metadata_value <- function(microdata_json, metadata){
 }
 
 quick_map <- function(input, keys){
+
+  # Need to account for blank values
+  input <- input[!purrr::map_lgl(input, is_blank)]
+
   output <- unlist(lapply(keys, function(x){
     input[[x]]
   }))

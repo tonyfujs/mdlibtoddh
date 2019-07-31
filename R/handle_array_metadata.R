@@ -72,6 +72,9 @@ handle_array_metadata <- function(metadata_in,
             quick_map(input = x, keys = keys)
           }))
 
+        # Need to account for blank values
+        metadata_value <- metadata_value[!purrr::map_lgl(metadata_value, is_blank)]
+
         metadata_value <- paste(metadata_value, collapse = ", ")
         metadata_out[[machine_names[i]]] <- trimws(stringr::str_replace_all(metadata_value, pattern = '^; ?|;$|\\n', replacement = ''))
       }
