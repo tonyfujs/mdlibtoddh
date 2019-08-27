@@ -23,8 +23,8 @@ add_new_dataset <- function(md_internal_id, md_token, master,
 
   # STEP 1: Get raw values from microdata API
   survey_mtdt <- get_md_metadata(id = md_internal_id, token = md_token)
-  # STEP 2: format raw metadata
 
+  # STEP 2: format raw metadata
   # Format list
   temp <- map_md_to_ddh(survey_mtdt)
 
