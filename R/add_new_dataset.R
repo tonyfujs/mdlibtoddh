@@ -23,13 +23,15 @@ add_new_dataset <- function(md_internal_id, md_token, master,
 
   # STEP 1: Get raw values from microdata API
   survey_mtdt <- get_md_metadata(id = md_internal_id, token = md_token)
+
   # STEP 2: format raw metadata
+  # Format list
+  temp <- map_md_to_ddh(survey_mtdt)
+
   # Add correct data classification information
-  temp <- add_data_classification(metadata_list = survey_mtdt,
+  temp <- add_data_classification(metadata_list = temp,
                                   md_internal_id = md_internal_id,
                                   master = master)
-  # Format list
-  temp <- map_md_to_ddh(temp)
 
   # Check if Microdata API returned enough information
   if(is.null(temp$title) & is.null(temp$body)){

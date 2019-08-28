@@ -62,11 +62,26 @@ format_text <- function(text) {
 }
 
 clean_date <- function(dt) {
+
+  dt <- gsub("T", " ", dt)
+
   if(is_year(dt)) {
     dt <- paste(dt, "01", "01", sep="-")
   }
+
+  if(nchar(dt) == 4){
+    dt <- gsub("FY", "20", dt)
+  }
+  if(nchar(dt) == 6){
+    dt <- gsub("FY", "", dt)
+  }
+  if(suppressWarnings(is_year(dt))) {
+    dt <- paste(dt, "01", "01", sep="-")
+  }
+
   return(dt)
 }
+
 
 is_year <- function(dt) {
   return(suppressWarnings(!is.null(dt) && !is.na(as.numeric(dt)) && as.numeric(dt) >= 1900 && as.numeric(dt) <= 2100))
@@ -154,7 +169,7 @@ filter_resource_fields <- function(metadata_temp,
   return(metadata_temp)
 }
 
-#Makesure resource is Microdata Landing Page
+# Makesure resource is Microdata Landing Page
 resource_check <- function(nids,
                            resource_type = resource_meta$field_wbddh_resource_type$und[[1]]$tid,
                            resource_title = resource_meta$title) {
@@ -166,4 +181,42 @@ resource_check <- function(nids,
       return(nid)
     }
   }
+}
+
+
+# Maping Microdata JSON
+find_metadata_value <- function(microdata_json, metadata){
+
+  # Split JSON
+  microdata_json <- strsplit(microdata_json, "[$]")[[1]]
+
+  if(length(microdata_json) == 1){
+    output <- metadata[[microdata_json[1]]]
+  }
+  else if(length(microdata_json) == 2){
+    output <- metadata[[microdata_json[1]]][[microdata_json[2]]]
+  }
+  else if(length(microdata_json) == 3){
+    output <- metadata[[microdata_json[1]]][[microdata_json[2]]][[microdata_json[3]]]
+  }
+  else if(length(microdata_json) == 4){
+    output <- metadata[[microdata_json[1]]][[microdata_json[2]]][[microdata_json[3]]][[microdata_json[4]]]
+  }
+  else {
+    output <- metadata[[microdata_json[1]]][[microdata_json[2]]][[microdata_json[3]]][[microdata_json[4]]][[microdata_json[5]]][[microdata_json[6]]]
+  }
+
+  return(output)
+}
+
+quick_map <- function(input, keys){
+
+  # Need to account for blank values
+  input <- input[!purrr::map_lgl(input, is_blank)]
+
+  output <- unlist(lapply(keys, function(x){
+    input[[x]]
+  }))
+
+  return(paste(output, collapse = "; "))
 }

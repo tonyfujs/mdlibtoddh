@@ -22,11 +22,14 @@ format_md_metadata <- function(metadata_in,
                                                "field_wbddh_supervision")) {
 
   # Format title
-  metadata_in[['title']] <- paste(metadata_in[['field_wbddh_country']], metadata_in[['title']], sep = ' - ')
+  metadata_in[['title']]   <- paste(metadata_in[['field_wbddh_country']], metadata_in[['title']], sep = ' - ')
 
   # Format date fields
   metadata_in[date_fields] <- purrr::map(metadata_in[date_fields], timestamp_to_ddhdate)
-  metadata_in[['field_wbddh_version_date']] <- clean_date(metadata_in[['field_wbddh_version_date']])
+
+  if(!is.null(metadata_in[['field_wbddh_version_date']])){
+    metadata_in[['field_wbddh_version_date']] <- clean_date(metadata_in[['field_wbddh_version_date']])
+  }
 
   # Format text fields
   is.notnull = function(x)!is.null(x)
