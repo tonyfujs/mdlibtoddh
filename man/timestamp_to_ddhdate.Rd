@@ -17,6 +17,3 @@ character vector
 \description{
 timestamp_to_ddhdate
 }
-\examples{
-timestamp_to_ddhdate(time_stamp = 1497978729, origin = "1970-01-01")
-}

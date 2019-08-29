@@ -5,9 +5,6 @@
 #'
 #' @return character vector
 #' @export
-#'
-#' @examples
-#' timestamp_to_ddhdate(time_stamp = 1497978729, origin = "1970-01-01")
 
 timestamp_to_ddhdate <- function(time_stamp, origin = "1970-01-01") {
   date <- clean_date(time_stamp)
