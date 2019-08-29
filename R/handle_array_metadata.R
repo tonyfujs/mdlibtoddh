@@ -57,8 +57,11 @@ handle_array_metadata <- function(metadata_in,
           metadata_out[[machine_names[i]]]  <- expand_date(max(metadata_value))
         }
         else{
-          metadata_value <- paste(metadata_value, collapse = ", ")
-          metadata_out[[machine_names[i]]] <- trimws(stringr::str_replace_all(metadata_value, pattern = '^; ?|;$|\\n', replacement = ''))
+          #Account for blank
+          non_blanks      <-vapply(metadata_value, function(x){!is_blank(x)}, FUN.VALUE = FALSE)
+          metadata_value  <- paste( metadata_value[non_blanks], collapse = ", ")
+          metadata_value  <- stringr::str_replace_all(metadata_value, pattern = '\\n', replacement = ' ')
+          metadata_out[[machine_names[i]]] <- trimws(stringr::str_replace_all(metadata_value, pattern = '^; ?|;$', replacement = ''))
         }
 
       } else {
@@ -74,9 +77,9 @@ handle_array_metadata <- function(metadata_in,
 
         # Need to account for blank values
         metadata_value <- metadata_value[!purrr::map_lgl(metadata_value, is_blank)]
-
         metadata_value <- paste(metadata_value, collapse = ", ")
-        metadata_out[[machine_names[i]]] <- trimws(stringr::str_replace_all(metadata_value, pattern = '^; ?|;$|\\n', replacement = ''))
+        metadata_value  <- stringr::str_replace_all(metadata_value, pattern = '\\n', replacement = ' ')
+        metadata_out[[machine_names[i]]] <- trimws(stringr::str_replace_all(metadata_value, pattern = '^; ?|;$', replacement = ''))
       }
     }
   }

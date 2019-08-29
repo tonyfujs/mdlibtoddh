@@ -43,7 +43,6 @@ update_existing_dataset <- function(md_internal_id, md_token, master,
 
   #Filter out blank values
   non_blank     <- vapply(temp_dataset, function(x){!is_blank(x)}, FUN.VALUE = FALSE)
-
   temp_dataset  <- temp_dataset[non_blank]
 
   json_dat <- ddhconnect::create_json_dataset(values = temp_dataset,
