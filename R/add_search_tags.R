@@ -13,6 +13,7 @@
 
 add_search_tags <- function(metadata_list, id, token, ...) {
   # Get metadata keywords
+
   keywords <- unlist(metadata_list$`codeBook/stdyDscr/stdyInfo/subject/keyword`)
   keywords <- stringr::str_replace_all(keywords, pattern = ' +', replacement = ' ')
   keywords <- stringr::str_replace_all(keywords, pattern = ', ?', replacement = ';')
