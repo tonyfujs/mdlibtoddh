@@ -33,9 +33,9 @@ handle_array_metadata <- function(metadata_in,
     else if (!is.null(metadata_value)){
 
       # Handle for single Key
-      if(is.na(unique(lookup$key_2[lookup$ddh_machine_name == machine_names[i]])[[1]])){
+      if(is.na(lookup$key_2[which(lookup$ddh_machine_name == machine_names[i])])){
 
-        key <- unique(lookup$key_1[lookup$ddh_machine_name == machine_names[i]])[[1]]
+        key <- unique(lookup$key_1[which(lookup$ddh_machine_name == machine_names[i])])
         metadata_value <- unlist(lapply(metadata_value, function(x){
           x[[key]]
         }))
@@ -55,6 +55,14 @@ handle_array_metadata <- function(metadata_in,
 
         else if(machine_names[i] == "field_wbddh_end_date"){
           metadata_out[[machine_names[i]]]  <- expand_date(max(metadata_value))
+        }
+        # Handle search tags
+        else if(machine_names[i] == "field_wbddh_search_tags"){
+          metadata_value <- paste(metadata_value, collapse = ";")
+          metadata_value <- stringr::str_replace_all(metadata_value, pattern = ' +', replacement = ' ')
+          metadata_value <- stringr::str_replace_all(metadata_value, pattern = ', ?', replacement = ';')
+
+          metadata_out[[machine_names[i]]]  <- stringr::str_replace(metadata_value, pattern = '^;|;$', replacement = '')
         }
         else{
           #Account for blank

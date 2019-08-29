@@ -74,4 +74,4 @@ weighting,sampling,weighting,study_desc$method$data_collection$weight,FALSE,,
 ,coverage,geographic unit,study_desc$study_info$geog_unit,FALSE,,
 ,scope,scope description,study_desc$study_info$notes,FALSE,,
 harvest_source_id,,,id,FALSE,,
-searchTags,,,study_desc$study_info,TRUE,keywords,keyword
+searchTags,,,study_desc$study_info$keywords,TRUE,keyword,

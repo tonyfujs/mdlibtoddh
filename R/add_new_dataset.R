@@ -40,10 +40,6 @@ add_new_dataset <- function(md_internal_id, md_token, master,
 
   temp <- add_constant_metadata_dataset(temp)
 
-  # Add search_tags
-  temp <- add_search_tags(metadata_list = temp,
-                          id = md_internal_id,
-                          token = md_token)
   # Add resource link
   temp <- add_link_to_resources(metadata_list = temp,
                                 md_internal_id = md_internal_id,
