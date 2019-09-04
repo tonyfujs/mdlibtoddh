@@ -32,6 +32,21 @@ update_existing_dataset <- function(md_internal_id, md_token, master,
   temp <- map_md_to_ddh(temp)
   temp <- add_constant_metadata_dataset(temp)
 
+  # Get variables from MD API
+  dico <- get_md_dictionary(id = md_internal_id, token = "")
+
+  if(is_blank(temp[['field_wbddh_search_tags']])){
+    ifelse(is_blank(dico), "", (temp[['field_wbddh_search_tags']] =  dico))
+  }
+  else{
+    ifelse(is_blank(dico), "", (temp[['field_wbddh_search_tags']] =  paste(temp[['field_wbddh_search_tags']], dico, sep = ';')))
+  }
+
+  # Check if Microdata API returned enough information
+  if(is.null(temp$title) & is.null(temp$body)){
+    stop("Microdata API didn't return Title or Description")
+  }
+
   # Add resource link
   temp <- add_link_to_resources(metadata_list = temp,
                                 md_internal_id = md_internal_id,
