@@ -38,10 +38,10 @@ update_existing_dataset <- function(md_internal_id, md_token, master,
   dico <- get_md_dictionary(id = md_internal_id, token = "")
 
   if(is_blank(temp[['field_wbddh_search_tags']])){
-    ifelse(is_blank(dico), "", (temp[['field_wbddh_search_tags']] =  dico))
+    ifelse(is_blank(dico), "", (temp[['field_wbddh_search_tags']] =  unique(dico)))
   }
   else{
-    ifelse(is_blank(dico), "", (temp[['field_wbddh_search_tags']] =  paste(temp[['field_wbddh_search_tags']], dico, sep = ';')))
+    ifelse(is_blank(dico), "", (temp[['field_wbddh_search_tags']] =  unique(paste(temp[['field_wbddh_search_tags']], dico, sep = ';'))))
   }
 
   # Check if Microdata API returned enough information
