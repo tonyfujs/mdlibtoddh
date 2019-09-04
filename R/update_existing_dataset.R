@@ -24,12 +24,14 @@ update_existing_dataset <- function(md_internal_id, md_token, master,
   # STEP 1: Get raw values from microdata API
   survey_mtdt <- get_md_metadata(id = md_internal_id, token = md_token)
 
-  # Add correct data classification information
-  temp <- add_data_classification(metadata_list = survey_mtdt,
-                                  md_internal_id,
-                                  master = master)
   # STEP 2: format raw metadata
-  temp <- map_md_to_ddh(temp)
+  temp <- map_md_to_ddh(survey_mtdt)
+
+  # Add correct data classification information
+  temp <- add_data_classification(metadata_list = temp,
+                                  md_internal_id = md_internal_id,
+                                  master = master)
+
   temp <- add_constant_metadata_dataset(temp)
 
   # Get variables from MD API
