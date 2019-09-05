@@ -42,7 +42,8 @@ handle_array_metadata <- function(metadata_in,
 
         # Handle Email fields
         if(machine_names[i] == "field_contact_email"){
-          metadata_value <- paste(metadata_value, collapse = "; ")
+          non_blanks    <-vapply(metadata_value, function(x){!is_blank(x)}, FUN.VALUE = FALSE)
+          metadata_value <- paste(metadata_value[non_blanks], collapse = "; ")
           metadata_value <- stringr::str_replace_all(metadata_value, pattern = '^; ?|;$|\\n', replacement = '')
           metadata_value <- stringr::str_replace_all(metadata_value, pattern = ' ', replacement = '')
           metadata_value <- stringr::str_trim(metadata_value, side = 'both')
