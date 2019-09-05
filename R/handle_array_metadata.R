@@ -31,7 +31,6 @@ handle_array_metadata <- function(metadata_in,
       metadata_out[[machine_names[i]]] <- "Not specified"
     }
     else if (!is.null(metadata_value)){
-
       # Handle for single Key
       if(is.na(lookup$key_2[which(lookup$ddh_machine_name == machine_names[i])])){
 
@@ -59,7 +58,8 @@ handle_array_metadata <- function(metadata_in,
         }
         # Handle search tags
         else if(machine_names[i] == "field_wbddh_search_tags"){
-          metadata_value <- paste(metadata_value, collapse = ";")
+          non_blanks     <-vapply(metadata_value, function(x){!is_blank(x)}, FUN.VALUE = FALSE)
+          metadata_value <- paste(metadata_value[non_blanks], collapse = ";")
           metadata_value <- stringr::str_replace_all(metadata_value, pattern = ' +', replacement = ' ')
           metadata_value <- stringr::str_replace_all(metadata_value, pattern = ', ?', replacement = ';')
 

@@ -12,12 +12,19 @@
 get_md_dictionary <- function(id, token) {
 
   out <- mdlibconnect::get_variables_by_study(id,token)
-  out <- lapply(out, function(x){
+  out_1 <- lapply(out, function(x){
 
       ifelse(!is.null(x[["labl"]]), x[["labl"]], "")
 
     })
 
+  out_2 <- lapply(out, function(x){
+
+    ifelse(!is.null(x[["name"]]), x[["name"]], "")
+
+  })
+
+  out <- c(out_1,out_2)
   out <- unique(out)
   out <- stringr::str_trim(out)
   out <- paste(out, collapse = ';')
