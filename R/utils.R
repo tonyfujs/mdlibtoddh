@@ -156,6 +156,9 @@ filter_dataset_fields <- function(metadata_temp,
                                   ddh_fields = ddhconnect::get_fields()) {
   dataset_fields <- ddh_fields$machine_name[ddh_fields$node_type == "dataset"]
   dataset_fields <- unique(dataset_fields)
+
+  # Add search_tags
+  dataset_fields <- c(dataset_fields,"field_wbddh_search_tags")
   metadata_temp <- metadata_temp[names(metadata_temp) %in% dataset_fields]
   return(metadata_temp)
 }
@@ -220,3 +223,4 @@ quick_map <- function(input, keys){
 
   return(paste(output, collapse = "; "))
 }
+

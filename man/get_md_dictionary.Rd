@@ -4,14 +4,12 @@
 \alias{get_md_dictionary}
 \title{get_md_dictionary}
 \usage{
-get_md_dictionary(id, token, limit = 10000)
+get_md_dictionary(id, token)
 }
 \arguments{
 \item{id}{character: survey unique id (internal id)}
 
 \item{token}{character: Microdata API authentication token}
-
-\item{limit}{numeric: Maximum number of variables to be returned}
 }
 \value{
 character vector

@@ -83,7 +83,6 @@ fields_remove <-
     "field_wbddh_other_producer",
     "field_wbddh_produced_by",
     "field_wbddh_related_indicators",
-    "field_wbddh_search_tags",
     "field_wbddh_series_code",
     "field_wbddh_subscription_date",
     "field_wbddh_type_of_license",

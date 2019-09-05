@@ -33,17 +33,23 @@ add_new_dataset <- function(md_internal_id, md_token, master,
                                   md_internal_id = md_internal_id,
                                   master = master)
 
+  # Get variables from MD API
+  dico <- get_md_dictionary(id = md_internal_id, token = "")
+
+  if(is_blank(temp[['field_wbddh_search_tags']])){
+    ifelse(is_blank(dico), "", (temp[['field_wbddh_search_tags']] =  unique(dico)))
+  }
+  else{
+    ifelse(is_blank(dico), "", (temp[['field_wbddh_search_tags']] =  unique(paste(temp[['field_wbddh_search_tags']], dico, sep = ';'))))
+  }
+
   # Check if Microdata API returned enough information
   if(is.null(temp$title) & is.null(temp$body)){
-    return("Microdata API didn't return Title or Description")
+    stop("Microdata API didn't return Title or Description")
   }
 
   temp <- add_constant_metadata_dataset(temp)
 
-  # Add search_tags
-  temp <- add_search_tags(metadata_list = temp,
-                          id = md_internal_id,
-                          token = md_token)
   # Add resource link
   temp <- add_link_to_resources(metadata_list = temp,
                                 md_internal_id = md_internal_id,
@@ -52,6 +58,7 @@ add_new_dataset <- function(md_internal_id, md_token, master,
   # STEP 3: Create dataset
   # Create JSON dataset
   temp_dataset <- filter_dataset_fields(temp, ddh_fields)
+
 
   #Filter out blank values
   non_blank     <- sapply(temp_dataset, function(x){!is_blank(x)})
