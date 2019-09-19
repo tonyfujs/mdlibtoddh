@@ -1,5 +1,6 @@
 library(dplyr)
 library(jsonlite)
+library(usethis)
 
 # Set root URL
 root_url <- ddhconnect:::production_root_url
@@ -202,7 +203,7 @@ json_template_attach <- fromJSON('./data-raw/ddh_schema_microdata_resource_attac
 # Save lookup table -------------------------------------------------------
 
 lookup <- as.data.frame(lookup)
-devtools::use_data(lookup,
+usethis::use_data(lookup,
                    md_placeholder,
                    md_ddh_lovs,
                    ddh_tid_lovs,
@@ -212,7 +213,7 @@ devtools::use_data(lookup,
                    overwrite = TRUE)
 
 microdata_date_fields <- readLines("data-raw/microdata_date_fields.txt")
-devtools::use_data(microdata_date_fields,
+usethis::use_data(microdata_date_fields,
                    overwrite = TRUE,
                    internal = TRUE)
 
