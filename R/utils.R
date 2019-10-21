@@ -155,6 +155,10 @@ expand_date <- function(date_value) {
 filter_dataset_fields <- function(metadata_temp,
                                   ddh_fields = ddhconnect::get_fields()) {
   dataset_fields <- ddh_fields$machine_name[ddh_fields$node_type == "dataset"]
+
+  # Not returned by API
+  dataset_fields <- c(dataset_fields, "field_wbddh_terms_of_use")
+
   dataset_fields <- unique(dataset_fields)
 
   # Add search_tags
