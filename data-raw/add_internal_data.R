@@ -61,7 +61,7 @@ assertthat::assert_that(length(taxonomy_machine_names[!taxonomy_machine_names %i
 
 # assert that all fields except for the specified ones are present in the lookup
 fields_machine_names <- sort(unique(c(fields$ddh_machine_name, "field_license_wbddh", "workflow_status","field_wbddh_publisher_name",
-                                      "field_wbddh_end_date", "field_wbddh_start_date"))) # TEMPORARY FIX (not returned by field service)
+                                      "field_wbddh_end_date", "field_wbddh_start_date", "field_wbddh_terms_of_use"))) # TEMPORARY FIX (not returned by field service)
 fields_remove <-
   c(
     "field_ddh_external_contact_email",
