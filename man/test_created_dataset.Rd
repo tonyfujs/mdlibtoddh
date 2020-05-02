@@ -4,10 +4,13 @@
 \alias{test_created_dataset}
 \title{test_created_dataset}
 \usage{
-test_created_dataset(dataset_metadata, metadata_list,
-  lovs = ddhconnect::get_lovs(), root_url = dkanr::get_url(),
-  credentials = list(cookie = dkanr::get_cookie(), token =
-  dkanr::get_token()))
+test_created_dataset(
+  dataset_metadata,
+  metadata_list,
+  lovs = ddhconnect::get_lovs(),
+  root_url = dkanr::get_url(),
+  credentials = list(cookie = dkanr::get_cookie(), token = dkanr::get_token())
+)
 }
 \arguments{
 \item{dataset_metadata}{character: The dataset metadata, returned from ddhconnect::get_metadata()}

@@ -23,6 +23,12 @@ extract_md_metadata <- function(metadata_in,
   for (i in seq_along(machine_names)) {
     mdlib_json_key <- unique(lookup$mdlib_json_field[lookup$ddh_machine_name == machine_names[i]])
     mdlib_json_key <- mdlib_json_key[!is.na(mdlib_json_key)]
+
+    # Skip for country field
+    if(machine_names[i] == "field_wbddh_country"){
+      next
+    }
+
     if (length(mdlib_json_key) == 0) {next}
 
     metadata_value <- find_metadata_value(mdlib_json_key, metadata_in)

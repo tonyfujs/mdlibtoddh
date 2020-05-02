@@ -4,9 +4,11 @@
 \alias{extract_md_metadata}
 \title{extract_md_metadata}
 \usage{
-extract_md_metadata(metadata_in,
+extract_md_metadata(
+  metadata_in,
   metadata_out = mdlibtoddh::md_placeholder,
-  lookup = mdlibtoddh::lookup)
+  lookup = mdlibtoddh::lookup
+)
 }
 \arguments{
 \item{metadata_in}{list: The output of mdlibconnect::get_survey_metadata}

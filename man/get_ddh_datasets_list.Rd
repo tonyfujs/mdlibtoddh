@@ -4,9 +4,10 @@
 \alias{get_ddh_datasets_list}
 \title{get_ddh_datasets_list}
 \usage{
-get_ddh_datasets_list(root_url = dkanr::get_url(),
-  credentials = list(cookie = dkanr::get_cookie(), token =
-  dkanr::get_token()))
+get_ddh_datasets_list(
+  root_url = dkanr::get_url(),
+  credentials = list(cookie = dkanr::get_cookie(), token = dkanr::get_token())
+)
 }
 \arguments{
 \item{root_url}{character: API root URL}
