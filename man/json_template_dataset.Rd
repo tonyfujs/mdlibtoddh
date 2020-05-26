@@ -4,7 +4,9 @@
 \name{json_template_dataset}
 \alias{json_template_dataset}
 \title{JSON template to create a dataset}
-\format{A list to be turned into a JSON object}
+\format{
+A list to be turned into a JSON object
+}
 \usage{
 json_template_dataset
 }

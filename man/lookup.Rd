@@ -4,7 +4,8 @@
 \name{lookup}
 \alias{lookup}
 \title{lookup data}
-\format{A data.frame with 827 observations and 13 variables:
+\format{
+A data.frame with 827 observations and 13 variables:
 \describe{
 \item{field_label}{Field label in the DDH user interface}
 \item{field_key}{Unique field key}
@@ -20,7 +21,8 @@
 \item{mdlib_json_field}{Microdata library json key}
 \item{tid}{DDH tid (Unique identifier for field_lovs)}
 
-}}
+}
+}
 \usage{
 lookup
 }

@@ -1,10 +1,11 @@
 #' add_constant_metadata_dataset
 #'
-#' Add metadata that have constant values across records (not pulled from Microdata API)
+#' Add metadata that have constant values across records
+#' (not pulled from Microdata API)
 #' Currently adds values for the following fields:
 #' field_wbddh_languages_supported ('English')
 #' field_wbddh_data_type ('Microdata')
-#' field_contact_email ('microdata@worldbank.org')
+#' field_contact_email ("microdata at worldbank.org")
 #' field_ddh_harvest_src ("Microdata")
 #'
 #' @param metadata_list list: List returned by flatten_md_metadata()

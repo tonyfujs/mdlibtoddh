@@ -10,7 +10,7 @@ map_md_metadata <- function(metadata_list) {
 
   survey_fields <- names(metadata_list)
   lkup_values <- mdlibtoddh::md_ddh_lovs
-  lkup_tids <- mdlibtoddh::ddh_tid_lovs
+  #lkup_tids <- mdlibtoddh::ddh_tid_lovs
 
   # Map values to DDH controlled vocabulary ---------------------------------
   controlled_variables <- survey_fields[survey_fields %in% names(lkup_values)]

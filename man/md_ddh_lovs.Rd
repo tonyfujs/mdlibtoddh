@@ -4,7 +4,9 @@
 \name{md_ddh_lovs}
 \alias{md_ddh_lovs}
 \title{Microdata to DDH values mapping}
-\format{A list of 6 named vectors.}
+\format{
+A list of 6 named vectors.
+}
 \usage{
 md_ddh_lovs
 }

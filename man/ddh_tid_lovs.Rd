@@ -4,7 +4,9 @@
 \name{ddh_tid_lovs}
 \alias{ddh_tid_lovs}
 \title{DDH values to DDH IDs mapping}
-\format{A list of 6 named vectors.}
+\format{
+A list of 6 named vectors.
+}
 \usage{
 ddh_tid_lovs
 }

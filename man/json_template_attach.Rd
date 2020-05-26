@@ -4,7 +4,9 @@
 \name{json_template_attach}
 \alias{json_template_attach}
 \title{JSON template to attach resources to datasets}
-\format{A list to be turned into a JSON object}
+\format{
+A list to be turned into a JSON object
+}
 \usage{
 json_template_attach
 }

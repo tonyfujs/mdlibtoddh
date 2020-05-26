@@ -1,15 +1,20 @@
 #' add_new_dataset()
 #'
-#' Add a full microdata record to DDH (metadata + resources)
+#' Add a full microdata record to DDH (metadata and resources)
 #'
-#' @param md_internal_id character: Microdata internal ID of the dataset to be added
+#' @param md_internal_id character: Microdata internal ID of the dataset to be
+#' added
 #' @param md_token character: Microdata API authentication token
 #' @param credentials list: DDH API authentication token and cookie
-#' @param master dataframe: Master lookup table, output of mdlibtoddh::get_ddh_records_status()
-#' @param ddh_fields dataframe: table of all the data catalog fields by node type
+#' @param master dataframe: Master lookup table, output of
+#' mdlibtoddh::get_ddh_records_status()
+#' @param ddh_fields dataframe: table of all the data catalog fields by
+#' node type
 #' @param lovs dataframe: lookup table of the data catalog tids and values
-#' @param root_url character: Root URL to use for the API (Staging or Production)
-#' @param iso_3_df dataframe: Table of iso_3 codes and corresponding country names
+#' @param root_url character: Root URL to use for the API
+#' (Staging or Production)
+#' @param iso_3_df dataframe: Table of iso_3 codes and corresponding country
+#' names
 #'
 #' @return character
 #' @export
