@@ -4,9 +4,11 @@
 \alias{get_ddh_records_status}
 \title{get_ddh_records_status}
 \usage{
-get_ddh_records_status(mdlib_token, root_url = dkanr::get_url(),
-  credentials = list(cookie = dkanr::get_cookie(), token =
-  dkanr::get_token()))
+get_ddh_records_status(
+  mdlib_token,
+  root_url = dkanr::get_url(),
+  credentials = list(cookie = dkanr::get_cookie(), token = dkanr::get_token())
+)
 }
 \arguments{
 \item{mdlib_token}{character: Microdatalib API authentication token}

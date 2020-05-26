@@ -4,10 +4,16 @@
 \alias{add_new_dataset}
 \title{add_new_dataset()}
 \usage{
-add_new_dataset(md_internal_id, md_token, master,
-  ddh_fields = ddhconnect::get_fields(), lovs = ddhconnect::get_lovs(),
-  root_url = dkanr::get_url(), credentials = list(cookie =
-  dkanr::get_cookie(), token = dkanr::get_token()))
+add_new_dataset(
+  md_internal_id,
+  md_token,
+  master,
+  ddh_fields = ddhconnect::get_fields(),
+  lovs = ddhconnect::get_lovs(),
+  root_url = dkanr::get_url(),
+  iso_3_df = ddhconnect::get_iso3(),
+  credentials = list(cookie = dkanr::get_cookie(), token = dkanr::get_token())
+)
 }
 \arguments{
 \item{md_internal_id}{character: Microdata internal ID of the dataset to be added}
@@ -21,6 +27,8 @@ add_new_dataset(md_internal_id, md_token, master,
 \item{lovs}{dataframe: lookup table of the data catalog tids and values}
 
 \item{root_url}{character: Root URL to use for the API (Staging or Production)}
+
+\item{iso_3_df}{dataframe: Table of iso_3 codes and corresponding country names}
 
 \item{credentials}{list: DDH API authentication token and cookie}
 }

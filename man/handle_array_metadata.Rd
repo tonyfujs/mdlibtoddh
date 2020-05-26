@@ -4,9 +4,11 @@
 \alias{handle_array_metadata}
 \title{handle_array_metadata}
 \usage{
-handle_array_metadata(metadata_in,
+handle_array_metadata(
+  metadata_in,
   metadata_out = mdlibtoddh::md_placeholder,
-  lookup = mdlibtoddh::lookup)
+  lookup = mdlibtoddh::lookup
+)
 }
 \arguments{
 \item{metadata_in}{list: The output of mdlibconnect::get_survey_metadata}

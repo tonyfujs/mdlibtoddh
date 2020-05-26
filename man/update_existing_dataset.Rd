@@ -4,10 +4,15 @@
 \alias{update_existing_dataset}
 \title{update_existing_dataset()}
 \usage{
-update_existing_dataset(md_internal_id, md_token, master,
-  ddh_fields = ddhconnect::get_fields(), lovs = ddhconnect::get_lovs(),
-  root_url = dkanr::get_url(), credentials = list(cookie =
-  dkanr::get_cookie(), token = dkanr::get_token()))
+update_existing_dataset(
+  md_internal_id,
+  md_token,
+  master,
+  ddh_fields = ddhconnect::get_fields(),
+  lovs = ddhconnect::get_lovs(),
+  root_url = dkanr::get_url(),
+  credentials = list(cookie = dkanr::get_cookie(), token = dkanr::get_token())
+)
 }
 \arguments{
 \item{md_internal_id}{character: Microdata internal ID of the dataset to be added}
