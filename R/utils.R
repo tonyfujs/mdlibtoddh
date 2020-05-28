@@ -224,3 +224,26 @@ quick_map <- function(input, keys){
   return(paste(output, collapse = "; "))
 }
 
+
+#' add_country
+#'
+#' Add country name based on iso3 code
+#' Use field_wbddh_reference_id to
+#' - Extract ISO 3 code
+#' - Map to country name using ddhconnect::get_iso3()
+#' Consider using tryCatch for multiple ISO3s
+#'
+#' @param metadata_in
+#' @param iso3_lkup data.frame: ddhconnect::get_iso3()
+#'
+#' @return list
+#'
+add_country <- function(metadata_in, iso3_lkup) {
+
+  iso_code <- stringr::str_extract(metadata_in$field_wbddh_reference_id,
+                                   "^\\w{3}")
+  metadata_in$field_wbddh_country <- iso3_lkup[which(iso3_lkup$iso3 == iso_code),
+                                               "country_name"]
+
+  return(metadata_in)
+}

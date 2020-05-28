@@ -27,14 +27,7 @@ update_existing_dataset <- function(md_internal_id, md_token, master,
   survey_mtdt <- get_md_metadata(id = md_internal_id, token = md_token)
 
   # STEP 2: format raw metadata
-  temp <- map_md_to_ddh(survey_mtdt)
-
-  # Use field_wbddh_reference_id to
-  ## - Extract ISO 3 code
-  ## - Map to country name using ddhconnect::get_iso3()
-  ## Consider using tryCatch for multiple ISO3s
-  iso_code <- stringr::str_extract(temp$field_wbddh_reference_id, "^\\w{3}")
-  temp$field_wbddh_country <- iso_3_df[which(iso_3_df$iso3 == iso_code), "country_name"]
+  temp <- map_md_to_ddh(survey_mtdt, iso3_lkup = iso_3_df)
 
   # Add correct data classification information
   temp <- add_data_classification(metadata_list = temp,

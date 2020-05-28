@@ -16,19 +16,24 @@ add_new_dataset(
 )
 }
 \arguments{
-\item{md_internal_id}{character: Microdata internal ID of the dataset to be added}
+\item{md_internal_id}{character: Microdata internal ID of the dataset to be
+added}
 
 \item{md_token}{character: Microdata API authentication token}
 
-\item{master}{dataframe: Master lookup table, output of mdlibtoddh::get_ddh_records_status()}
+\item{master}{dataframe: Master lookup table, output of
+mdlibtoddh::get_ddh_records_status()}
 
-\item{ddh_fields}{dataframe: table of all the data catalog fields by node type}
+\item{ddh_fields}{dataframe: table of all the data catalog fields by
+node type}
 
 \item{lovs}{dataframe: lookup table of the data catalog tids and values}
 
-\item{root_url}{character: Root URL to use for the API (Staging or Production)}
+\item{root_url}{character: Root URL to use for the API
+(Staging or Production)}
 
-\item{iso_3_df}{dataframe: Table of iso_3 codes and corresponding country names}
+\item{iso_3_df}{dataframe: Table of iso_3 codes and corresponding country
+names}
 
 \item{credentials}{list: DDH API authentication token and cookie}
 }
@@ -36,5 +41,5 @@ add_new_dataset(
 character
 }
 \description{
-Add a full microdata record to DDH (metadata + resources)
+Add a full microdata record to DDH (metadata and resources)
 }

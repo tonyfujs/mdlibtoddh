@@ -7,7 +7,8 @@
 add_constant_metadata_resource(metadata_list)
 }
 \arguments{
-\item{metadata_list}{list: List for machine names and their corresponding values}
+\item{metadata_list}{list: List for machine names and their corresponding
+values}
 }
 \value{
 list

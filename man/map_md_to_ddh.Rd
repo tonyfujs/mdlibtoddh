@@ -4,10 +4,12 @@
 \alias{map_md_to_ddh}
 \title{map_md_to_ddh}
 \usage{
-map_md_to_ddh(metadata_list)
+map_md_to_ddh(metadata_list, iso3_lkup)
 }
 \arguments{
 \item{metadata_list}{list: List of Microdata metadata (output from get_md_metadata())}
+
+\item{iso3_lkup}{data.frame: ddhconnect::get_iso3()}
 }
 \value{
 list
