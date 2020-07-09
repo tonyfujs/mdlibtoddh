@@ -4,6 +4,9 @@ library(usethis)
 
 # Set root URL
 root_url <- ddhconnect:::production_root_url
+dkanr::dkanr_setup(url = root_url,
+                   username = Sys.getenv("ddh_username"),
+                   password = Sys.getenv("ddh_prod_password"))
 
 # STEP 1: Get data --------------------------------------------------------
 
@@ -21,8 +24,8 @@ taxonomy <- ddhconnect::get_lovs(root_url = root_url)%>%
 #taxonomy <- readr::read_csv('./data-raw/taxonomy_cache.csv')
 
 fields <- ddhconnect::get_fields(root_url = root_url) %>%
-  filter(data_type == 'microdata') %>%
-  rename(ddh_machine_name = machine_name)
+  dplyr::filter(data_type == 'microdata') %>%
+  dplyr::rename(ddh_machine_name = machine_name)
 # TODO: Report type to IT
 fields$ddh_machine_name[fields$ddh_machine_name == "field__wbddh_depositor_notes"] <- "field_wbddh_depositor_notes"
 
@@ -177,6 +180,7 @@ md_ddh_lovs <- purrr::map(md_ddh_names, function(x){
   return(out)
 })
 names(md_ddh_lovs) <- md_ddh_names
+md_ddh_lovs$field_wbddh_country <- NULL # Remove country mapping. No longer necessary: Using iso3 codes now
 
 # STEP 6: Generate a lookup table to map DDH LOVs to tids -----------------
 
@@ -199,6 +203,8 @@ ddh_tid_lovs <- ddh_tid_lovs[purrr::map_int(ddh_tid_lovs, length) > 0]
 json_template_dataset <- fromJSON('./data-raw/ddh_schema_microdata_dataset.json')
 json_template_resource <- fromJSON('./data-raw/ddh_schema_microdata_resource.json')
 json_template_attach <- fromJSON('./data-raw/ddh_schema_microdata_resource_attach.json')
+
+dkanr::dkanr_logout()
 
 # Save lookup table -------------------------------------------------------
 
