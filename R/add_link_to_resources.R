@@ -21,13 +21,13 @@ add_link_to_resources <- function(metadata_list, md_internal_id, master) {
   # Add correct data classification
   if (data_class == 'public') {
     md_external_id <- master$md_external_id[master$md_internal_id == md_internal_id]
-    url <- paste0('http://microdata.worldbank.org/index.php/catalog/', md_external_id)
+    url <- paste0('https://microdata.worldbank.org/index.php/catalog/', md_external_id)
 
     metadata_list$field_link_api <- url
     return(metadata_list)
 
   } else if (data_class == 'official') {
-    url <- paste0('http://microdatalib.worldbank.org/index.php/catalog/', md_internal_id)
+    url <- paste0('https://microdatalib.worldbank.org/index.php/catalog/', md_internal_id)
 
     metadata_list$field_link_api <- url
     return(metadata_list)
